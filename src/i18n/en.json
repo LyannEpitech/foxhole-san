@@ -30,7 +30,19 @@
     "buildings": "Buildings",
     "sequence": "Build sequence",
     "timeline": "Timeline",
-    "energy": "Electricity & fuel"
+    "energy": "Electricity & fuel",
+    "flow": "Production flow"
+  },
+  "graph": {
+    "producedAt": "Produced at",
+    "gather": "Raw resource — gathered in the world (fields, mines)",
+    "batches": "Orders",
+    "timePerBatch": "Time per order",
+    "legend": {
+      "raw": "Raw resource",
+      "refined": "Refined material",
+      "item": "Finished product"
+    }
   },
   "timeline": {
     "none": "No timed production step",

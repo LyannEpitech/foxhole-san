@@ -3,6 +3,7 @@ import { BuildingList } from '../components/BuildingList';
 import { BuildSequence } from '../components/BuildSequence';
 import { Panel } from '../components/Panel';
 import { EnergyPanel, TimelinePanel } from '../components/PlanExtras';
+import { ProductionGraph } from '../components/ProductionGraph';
 import { RequirementTree } from '../components/RequirementTree';
 import { ResourceTotals } from '../components/ResourceTotals';
 import { TargetSelector } from '../components/TargetSelector';
@@ -26,6 +27,12 @@ export function ProductionModule() {
         <p className="text-slate-500 text-sm border border-dashed border-slate-700 rounded-xl p-8 text-center">
           {t('empty.hint')}
         </p>
+      )}
+
+      {result && (
+        <Panel title={t('panels.flow')}>
+          <ProductionGraph result={result} />
+        </Panel>
       )}
 
       {result && (

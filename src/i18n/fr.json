@@ -30,7 +30,19 @@
     "buildings": "Bâtiments",
     "sequence": "Séquence de construction",
     "timeline": "Chronologie",
-    "energy": "Électricité & carburant"
+    "energy": "Électricité & carburant",
+    "flow": "Flux de production"
+  },
+  "graph": {
+    "producedAt": "Produit à",
+    "gather": "Ressource brute — à récolter sur le terrain (champs, mines)",
+    "batches": "Commandes",
+    "timePerBatch": "Temps par commande",
+    "legend": {
+      "raw": "Ressource brute",
+      "refined": "Matériau raffiné",
+      "item": "Produit fini"
+    }
   },
   "timeline": {
     "none": "Aucune étape de production chronométrée",

@@ -44,6 +44,7 @@ export function useApiMarkers(): ApiMarker[] {
         if (item.flags & FLAG_BUILD_SITE) badges.push(t('map.tooltip.buildSite'));
         if (item.flags & FLAG_SCORCHED) badges.push(t('map.tooltip.scorched'));
         out.push({
+          iconType: item.iconType,
           buildSite: (item.flags & FLAG_BUILD_SITE) !== 0,
           x: minX + item.x * w,
           y: minY + item.y * h,

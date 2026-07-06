@@ -55,6 +55,31 @@ const NODE_COLORS: Record<DeployNode['kind'], string> = {
   output: '#f59e0b',
 };
 
+// War API iconTypes of world structures matching a plan node — used to
+// recommend a placement spot (deposits for sources, world industry for
+// town production buildings; facilities are player-built anywhere).
+const SOURCE_WORLD_TYPES: Record<string, number[]> = {
+  salvage: [20, 38],
+  components: [21, 40],
+  sulfur: [23, 32],
+  coal: [61],
+  oil: [62, 75],
+  petrol: [22],
+};
+const BUILDING_WORLD_TYPES: Record<string, number[]> = {
+  refinery: [17],
+  factory: [34],
+  mpf: [51],
+  garage: [12],
+  'dry-dock': [18],
+};
+
+function worldTypesFor(node: DeployNode): number[] {
+  if (node.kind === 'source') return SOURCE_WORLD_TYPES[node.refId] ?? [];
+  if (node.kind === 'building') return BUILDING_WORLD_TYPES[node.refId] ?? [];
+  return [];
+}
+
 
 export function DeployModule() {
   const { t } = useTranslation();
@@ -86,6 +111,33 @@ export function DeployModule() {
 
   const placedCount = graph.nodes.filter((n) => positions[n.key]).length;
   const visibleEdges = graph.edges.filter((e) => positions[e.from] && positions[e.to]);
+
+  // Placement guidance: world structures matching the armed node, with the
+  // one closest to its already-placed graph neighbors circled in red.
+  const guidance = useMemo(() => {
+    if (!placing) return null;
+    const node = graph.nodes.find((n) => n.key === placing);
+    if (!node) return null;
+    const types = new Set(worldTypesFor(node));
+    if (types.size === 0) return null;
+    const candidates = apiMarkers.filter((m) => m.iconType !== undefined && types.has(m.iconType));
+    if (candidates.length === 0) return null;
+    // Reference point: placed neighbors first, then any placed node.
+    const neighborKeys = graph.edges
+      .filter((e) => e.from === placing || e.to === placing)
+      .map((e) => (e.from === placing ? e.to : e.from));
+    const refKeys = [...neighborKeys, ...Object.keys(positions)].filter((k) => positions[k]);
+    let nearest = candidates[0];
+    if (refKeys.length > 0) {
+      const [rx, ry] = positions[refKeys[0]];
+      let best = Infinity;
+      for (const c of candidates) {
+        const d = (c.x - rx) ** 2 + (c.y - ry) ** 2;
+        if (d < best) { best = d; nearest = c; }
+      }
+    }
+    return { candidates, nearest };
+  }, [placing, graph, apiMarkers, positions]);
   const selected = graph.edges.find((e) => e.key === selectedEdge) ?? null;
   const selectedCargo = selected ? cargoClassOf(dataset, selected.resources) : null;
 
@@ -102,6 +154,22 @@ export function DeployModule() {
     const labelFs = vw * 0.008;
     return (
       <g>
+        {/* Placement guidance: candidate world structures + the recommended one in red */}
+        {guidance && (
+          <g pointerEvents="none">
+            {guidance.candidates.map((c, i) =>
+              c === guidance.nearest ? null : (
+                <circle key={`cand-${i}`} cx={c.x} cy={c.y} r={nodeR * 1.15}
+                  fill="none" stroke="#fbbf24" strokeWidth={nodeR * 0.09} opacity={0.55} />
+              ),
+            )}
+            <circle cx={guidance.nearest.x} cy={guidance.nearest.y} r={nodeR * 1.5}
+              fill="none" stroke="#ef4444" strokeWidth={nodeR * 0.18} />
+            <circle cx={guidance.nearest.x} cy={guidance.nearest.y} r={nodeR * 2.1}
+              fill="none" stroke="#ef4444" strokeWidth={nodeR * 0.07} opacity={0.6}
+              strokeDasharray={`${nodeR * 0.4} ${nodeR * 0.3}`} />
+          </g>
+        )}
         {visibleEdges.map((e) => {
           const [x1, y1] = positions[e.from];
           const [x2, y2] = positions[e.to];
@@ -188,6 +256,11 @@ export function DeployModule() {
         {placing && (
           <p className="block w-fit text-xs text-amber-300 bg-slate-900/85 backdrop-blur border border-amber-500/50 rounded-md px-3 py-1.5">
             {t('deploy.clickToPlace', { name: nodeLabel(graph.nodes.find((n) => n.key === placing)!) })}
+          </p>
+        )}
+        {placing && guidance && (
+          <p className="block w-fit text-xs text-red-300 bg-slate-900/85 backdrop-blur border border-red-500/50 rounded-md px-3 py-1.5">
+            🎯 {t('deploy.suggestion', { region: guidance.nearest.regionName })}
           </p>
         )}
       </div>

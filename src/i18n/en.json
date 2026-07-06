@@ -157,6 +157,7 @@
     "place": "Place",
     "move": "Move",
     "clickToPlace": "Click the map to place: {{name}}",
+    "suggestion": "Nearest matching world structure circled in red ({{region}})",
     "flows": "Flows",
     "placeBoth": "place both endpoints to draw the line",
     "noTransport": "no transport assigned — click to choose",

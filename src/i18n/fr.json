@@ -157,6 +157,7 @@
     "place": "Placer",
     "move": "Déplacer",
     "clickToPlace": "Cliquez sur la carte pour placer : {{name}}",
+    "suggestion": "Structure monde correspondante la plus proche entourée en rouge ({{region}})",
     "flows": "Flux",
     "placeBoth": "placez les deux extrémités pour tracer le trait",
     "noTransport": "aucun transport attribué — cliquez pour choisir",

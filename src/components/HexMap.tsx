@@ -27,6 +27,8 @@ export interface ApiMarker {
   badges: string[];
   /** Destroyed world structure awaiting reconstruction (IsBuildSite). */
   buildSite?: boolean;
+  /** War API icon type (for matching world structures to plan nodes). */
+  iconType?: number;
 }
 
 interface Props {

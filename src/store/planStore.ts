@@ -19,6 +19,8 @@ interface PlanState {
   setFaction: (faction: Exclude<Faction, 'Both'>) => void;
   setStock: (refId: string, qty: number) => void;
   removeStock: (refId: string) => void;
+  /** Replace the whole declared stock at once (stockpile import). */
+  setStockBulk: (stock: Record<string, number>) => void;
 }
 
 function compute(
@@ -87,6 +89,10 @@ export const usePlanStore = create<PlanState>()(persist((set, get) => ({
     const next = { ...stock };
     delete next[refId];
     set({ stock: next, ...compute(targets, faction, next) });
+  },
+  setStockBulk: (stock) => {
+    const { targets, faction } = get();
+    set({ stock, ...compute(targets, faction, stock) });
   },
 }), {
   name: 'fsak-plan',

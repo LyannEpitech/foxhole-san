@@ -11,7 +11,9 @@ import { RefineryCalculator } from '../components/RefineryCalculator';
 import { RequirementTree } from '../components/RequirementTree';
 import { ResourceTotals } from '../components/ResourceTotals';
 import { StockPanel } from '../components/StockPanel';
+import { StockpilePanel } from '../components/StockpilePanel';
 import { TargetSelector } from '../components/TargetSelector';
+import { TechPanel } from '../components/TechPanel';
 import { dataset } from '../data';
 import { useLocalized } from '../i18n';
 import { downloadText, planToCsv, planToDiscordMarkdown } from '../lib/export';
@@ -101,6 +103,26 @@ export function ProductionModule() {
         </summary>
         <div className="mt-3">
           <RefineryCalculator />
+        </div>
+      </details>
+
+      <details className="group bg-slate-800/60 border border-slate-700 rounded-xl px-4 py-3">
+        <summary className="cursor-pointer text-sm font-semibold text-slate-200 list-none flex items-center gap-2">
+          <span className="text-slate-500 transition-transform group-open:rotate-90">▸</span>
+          🏬 {t('stockpiles.title')}
+        </summary>
+        <div className="mt-3">
+          <StockpilePanel />
+        </div>
+      </details>
+
+      <details className="group bg-slate-800/60 border border-slate-700 rounded-xl px-4 py-3">
+        <summary className="cursor-pointer text-sm font-semibold text-slate-200 list-none flex items-center gap-2">
+          <span className="text-slate-500 transition-transform group-open:rotate-90">▸</span>
+          🔬 {t('tech.title')}
+        </summary>
+        <div className="mt-3">
+          <TechPanel />
         </div>
       </details>
 

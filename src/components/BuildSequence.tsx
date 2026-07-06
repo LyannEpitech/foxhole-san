@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { dataset } from '../data';
+import { useTechStore } from '../store/techStore';
 import type { PlanStep, PlanSummary } from '../engine/resolver';
 import { useLocalized } from '../i18n';
 import { refName } from '../lib/refs';
@@ -13,6 +14,7 @@ const BADGE: Record<PlanStep['type'], string> = {
 export function BuildSequence({ result }: { result: PlanSummary }) {
   const { t } = useTranslation();
   const localized = useLocalized();
+  const unlocked = useTechStore((s) => s.unlocked);
 
   const label = (step: PlanStep): string => {
     switch (step.type) {
@@ -46,6 +48,12 @@ export function BuildSequence({ result }: { result: PlanSummary }) {
             {t(`sequence.step.${step.type}`)}
           </span>
           <span className="text-slate-200">{label(step)}</span>
+          {step.type === 'tech' &&
+            (unlocked[step.techId] ? (
+              <span className="text-emerald-400 text-xs">✓ {t('tech.unlocked')}</span>
+            ) : (
+              <span className="text-yellow-400/90 text-xs">⚠ {t('tech.locked')}</span>
+            ))}
         </li>
       ))}
     </ol>

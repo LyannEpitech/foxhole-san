@@ -193,6 +193,22 @@
     "exportPng": "Exporter la vue actuelle en PNG",
     "zoomHint": "Zoomez pour révéler les structures live de la War API. Les outils marqueurs et flèches dessinent sur la carte ; les annotations sont sauvegardées localement."
   },
+  "tech": {
+    "title": "Technologies",
+    "hint": "Cochez ce que votre faction a débloqué cette guerre — la séquence signale les technos manquantes. Réinitialisé à chaque nouvelle guerre.",
+    "unlocked": "débloquée",
+    "locked": "pas encore débloquée"
+  },
+  "stockpiles": {
+    "title": "Stockpiles",
+    "namePlaceholder": "Nom du stockpile (ex. Seaport Westgate)…",
+    "add": "Ajouter",
+    "noRegion": "Région…",
+    "refreshHint": "Réinitialiser le timer de réservation de 50 h",
+    "expired": "expiré",
+    "useAsStock": "Utiliser comme stock du plan",
+    "empty": "Suivez le contenu de chaque base/port ; les timers préviennent avant l'expiration des 50 h."
+  },
   "arty": {
     "title": "Calculateur d'artillerie",
     "gunToSpotter": "Canon → observateur",

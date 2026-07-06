@@ -137,7 +137,7 @@ const GENERIC: Record<CargoClass, LocalizedString[]> = {
 
 const ITEM_OPTIONS: Record<CargoClass, string[]> = {
   liquid: ['dunne-fuelrunner-2d', 'rr-3-stolon-tanker', 'liquid-container'],
-  bulk: ['bms-scrap-hauler', 'resource-container', 'bms-bowhead'],
+  bulk: ['bms-scrap-hauler', 'r-5-atlas-hauler', 'dunne-loadlugger-3c', 'resource-container', 'bms-bowhead'],
   crate: [
     'r-1-hauler', 'dunne-transport', 'bms-packmule-flatbed', 'dunne-loadlugger-3c',
     'r-5-atlas-hauler', 'shipping-container', 'bms-bluefin', 'bms-longhook',

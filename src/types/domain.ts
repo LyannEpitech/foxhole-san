@@ -86,6 +86,8 @@ export type ItemCategory =
 export interface VehicleSpec {
   itemId: string;
   capacityCrates: number;
+  /** Max road speed in km/h (wiki), used for travel-time estimates. */
+  speedKmh?: number;
 }
 
 export interface Item {

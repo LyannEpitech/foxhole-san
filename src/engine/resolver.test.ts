@@ -180,6 +180,26 @@ describe('resolveMany — merged multi-target plans', () => {
   });
 });
 
+describe('estimateTravel — route distance and rotations (A3.3/A3.4)', () => {
+  it('measures the polyline through region centers and schedules rotations', async () => {
+    const { estimateTravel, routeDistanceKm, KM_PER_WORLD_UNIT } = await import('../lib/logistics');
+    const { getRegion } = await import('../data/regions');
+    const a = getRegion('DeadLandsHex')!;
+    const b = getRegion('UmbralWildwoodHex')!;
+    const expectedKm =
+      Math.hypot(b.center[0] - a.center[0], b.center[1] - a.center[1]) * KM_PER_WORLD_UNIT;
+    expect(routeDistanceKm(['DeadLandsHex', 'UmbralWildwoodHex'])).toBeCloseTo(expectedKm, 6);
+
+    const est = estimateTravel(['DeadLandsHex', 'UmbralWildwoodHex'], 62, 3)!;
+    expect(est.distanceKm).toBeCloseTo(expectedKm, 6);
+    expect(est.oneWayMinutes).toBeCloseTo((expectedKm / 62) * 60, 6);
+    expect(est.totalMinutes).toBeCloseTo(3 * (2 * est.oneWayMinutes + 5), 6);
+    // No speed or single waypoint -> no estimate.
+    expect(estimateTravel(['DeadLandsHex'], 62, 1)).toBeNull();
+    expect(estimateTravel(['DeadLandsHex', 'UmbralWildwoodHex'], undefined, 1)).toBeNull();
+  });
+});
+
 describe('planCargo — logistics crate/trip math', () => {
   const truck = { itemId: 'truck', capacityCrates: 15 };
 

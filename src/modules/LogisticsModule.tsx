@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BuildingList } from '../components/BuildingList';
 import { BuildSequence } from '../components/BuildSequence';
@@ -10,7 +10,8 @@ import { dataset, vehicles } from '../data';
 import { regionName } from '../data/regions';
 import { resolveMany, type MultiPlanResult } from '../engine/resolver';
 import { useLocalized } from '../i18n';
-import { planCargo } from '../lib/logistics';
+import { estimateTravel, planCargo } from '../lib/logistics';
+import { formatDuration, formatReadyAt, toLocalInputValue } from '../components/PlanExtras';
 import { useLogiStore } from '../store/logiStore';
 import { usePlanStore } from '../store/planStore';
 
@@ -26,8 +27,9 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 }
 
 export function LogisticsModule() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const localized = useLocalized();
+  const [departAt, setDepartAt] = useState(() => new Date());
   const faction = usePlanStore((s) => s.faction);
   const {
     cargo,
@@ -49,6 +51,10 @@ export function LogisticsModule() {
   const vehicle = factionVehicles.find((v) => v.itemId === vehicleItemId);
 
   const cargoPlan = planCargo(dataset, cargo, vehicle);
+  const travel = estimateTravel(waypoints, vehicle?.speedKmh, cargoPlan.trips);
+  const finishAt = travel
+    ? new Date(departAt.getTime() + travel.totalMinutes * 60_000)
+    : null;
 
   const production: { result: MultiPlanResult | null; error: string | null } = useMemo(() => {
     const targets = cargoPlan.rows.map((r) => ({ refId: r.itemId, qty: r.qty }));
@@ -205,6 +211,43 @@ export function LogisticsModule() {
               <dd className="font-mono text-amber-300">{cargoPlan.trips ?? '—'}</dd>
             </div>
           </dl>
+
+          {/* A3.3/A3.4 — travel estimate & rotation schedule */}
+          {travel && (
+            <div className="mt-4 border-t border-slate-800 pt-3 space-y-1.5 text-sm">
+              <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                {t('logi.travel')}
+              </h4>
+              <div className="flex justify-between">
+                <span className="text-slate-300">{t('logi.distance')}</span>
+                <span className="font-mono text-amber-300">≈ {travel.distanceKm.toFixed(1)} km</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-slate-300">{t('logi.oneWay')}</span>
+                <span className="font-mono text-amber-300">≈ {formatDuration(travel.oneWayMinutes * 60)}</span>
+              </div>
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-slate-300">{t('timeline.start')}</span>
+                <input
+                  type="datetime-local"
+                  value={toLocalInputValue(departAt)}
+                  onChange={(e) => e.target.value && setDepartAt(new Date(e.target.value))}
+                  className="bg-slate-900 border border-slate-600 rounded-md px-2 py-1 text-xs text-slate-100"
+                />
+              </div>
+              {cargoPlan.trips !== null && finishAt && (
+                <div className="flex justify-between">
+                  <span className="text-slate-300">
+                    {t('logi.rotation', { trips: cargoPlan.trips })}
+                  </span>
+                  <span className="font-mono text-emerald-300">
+                    ≈ {formatDuration(travel.totalMinutes * 60)} · {formatReadyAt(finishAt, i18n.language)}
+                  </span>
+                </div>
+              )}
+              <p className="text-xs text-slate-500">{t('logi.travelNote')}</p>
+            </div>
+          )}
         </Section>
 
         {/* Production cost — collapsed details */}

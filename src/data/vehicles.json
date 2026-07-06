@@ -1,4 +1,4 @@
 [
-  { "itemId": "r-1-hauler", "capacityCrates": 15 },
-  { "itemId": "dunne-transport", "capacityCrates": 15 }
+  { "itemId": "r-1-hauler", "capacityCrates": 15, "speedKmh": 62 },
+  { "itemId": "dunne-transport", "capacityCrates": 15, "speedKmh": 62 }
 ]

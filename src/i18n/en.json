@@ -231,6 +231,11 @@
     "mapHint": "Click a region to append it to the route. Drag to pan, scroll to zoom.",
     "emptyCargo": "Add items to the manifest to compute crates and trips.",
     "produceCargo": "Production cost of this cargo",
+    "travel": "Travel estimate",
+    "distance": "Route distance",
+    "oneWay": "One-way drive",
+    "rotation": "{{trips}} round trip(s)",
+    "travelNote": "Estimate: straight lines between region centers at road speed (~62 km/h) + 5 min handling per trip. Mud, detours and queues add time.",
     "sendToProduction": "The full production plan for this manifest is shown below."
   },
   "attack": {

@@ -231,6 +231,11 @@
     "mapHint": "Cliquez sur une région pour l'ajouter à l'itinéraire. Glissez pour déplacer, molette pour zoomer.",
     "emptyCargo": "Ajoutez des objets au manifeste pour calculer caisses et voyages.",
     "produceCargo": "Coût de production de cette cargaison",
+    "travel": "Estimation du trajet",
+    "distance": "Distance de l'itinéraire",
+    "oneWay": "Aller simple",
+    "rotation": "{{trips}} aller(s)-retour(s)",
+    "travelNote": "Estimation : lignes droites entre centres de régions à vitesse route (~62 km/h) + 5 min de manutention par voyage. Boue, détours et files ajoutent du temps.",
     "sendToProduction": "Le plan de production complet de ce manifeste est affiché ci-dessous."
   },
   "attack": {

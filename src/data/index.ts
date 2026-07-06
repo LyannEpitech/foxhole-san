@@ -165,6 +165,7 @@ export function buildDataset(
 const vehicleSchema = z.object({
   itemId: z.string().min(1),
   capacityCrates: z.number().int().positive(),
+  speedKmh: z.number().positive().optional(),
 });
 
 /** Game data, validated. Throws at module load if the JSON is malformed. */

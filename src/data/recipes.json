@@ -1,0 +1,30 @@
+[
+  {
+    "id": "refine-bmats",
+    "buildingId": "refinery",
+    "inputs": [{ "refId": "salvage", "qty": 2 }],
+    "outputs": [{ "refId": "bmats", "qty": 1 }],
+    "timeSeconds": 0.48
+  },
+  {
+    "id": "refine-rmats",
+    "buildingId": "refinery",
+    "inputs": [{ "refId": "components", "qty": 20 }],
+    "outputs": [{ "refId": "rmats", "qty": 1 }],
+    "timeSeconds": 40
+  },
+  {
+    "id": "refine-emats",
+    "buildingId": "refinery",
+    "inputs": [{ "refId": "salvage", "qty": 5 }],
+    "outputs": [{ "refId": "emats", "qty": 1 }],
+    "timeSeconds": 9.375
+  },
+  {
+    "id": "refine-hemats",
+    "buildingId": "refinery",
+    "inputs": [{ "refId": "sulfur", "qty": 5 }],
+    "outputs": [{ "refId": "hemats", "qty": 1 }],
+    "timeSeconds": 15
+  }
+]

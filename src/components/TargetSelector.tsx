@@ -1,0 +1,76 @@
+import { useTranslation } from 'react-i18next';
+import { dataset } from '../data';
+import { useLocalized } from '../i18n';
+import { usePlanStore } from '../store/planStore';
+import type { Item, ItemCategory } from '../types/domain';
+
+const CATEGORY_ORDER: ItemCategory[] = [
+  'smallArms',
+  'ammunition',
+  'explosives',
+  'heavyAmmunition',
+  'vehicle',
+];
+
+export function TargetSelector() {
+  const { t } = useTranslation();
+  const localized = useLocalized();
+  const { targetId, quantity, faction, setTarget, setQuantity, setFaction } = usePlanStore();
+
+  const available = [...dataset.items.values()].filter(
+    (item) => item.faction === 'Both' || item.faction === faction,
+  );
+  const byCategory = new Map<ItemCategory, Item[]>();
+  for (const item of available) {
+    const bucket = byCategory.get(item.category) ?? [];
+    bucket.push(item);
+    byCategory.set(item.category, bucket);
+  }
+
+  return (
+    <div className="flex flex-wrap items-end gap-4 bg-slate-800/60 border border-slate-700 rounded-xl p-4">
+      <label className="flex flex-col gap-1 text-sm text-slate-300">
+        {t('target.faction')}
+        <select
+          value={faction}
+          onChange={(e) => setFaction(e.target.value as 'Colonial' | 'Warden')}
+          className="bg-slate-900 border border-slate-600 rounded-md px-3 py-2 text-slate-100"
+        >
+          <option value="Colonial">{t('faction.Colonial')}</option>
+          <option value="Warden">{t('faction.Warden')}</option>
+        </select>
+      </label>
+
+      <label className="flex flex-col gap-1 text-sm text-slate-300 min-w-56 grow">
+        {t('target.label')}
+        <select
+          value={targetId ?? ''}
+          onChange={(e) => setTarget(e.target.value || null)}
+          className="bg-slate-900 border border-slate-600 rounded-md px-3 py-2 text-slate-100"
+        >
+          <option value="">{t('target.placeholder')}</option>
+          {CATEGORY_ORDER.filter((c) => byCategory.has(c)).map((category) => (
+            <optgroup key={category} label={t(`category.${category}`)}>
+              {byCategory.get(category)!.map((item) => (
+                <option key={item.id} value={item.id}>
+                  {localized(item.name)}
+                </option>
+              ))}
+            </optgroup>
+          ))}
+        </select>
+      </label>
+
+      <label className="flex flex-col gap-1 text-sm text-slate-300">
+        {t('target.quantity')}
+        <input
+          type="number"
+          min={1}
+          value={quantity}
+          onChange={(e) => setQuantity(Math.max(1, Number(e.target.value) || 1))}
+          className="bg-slate-900 border border-slate-600 rounded-md px-3 py-2 text-slate-100 w-28"
+        />
+      </label>
+    </div>
+  );
+}

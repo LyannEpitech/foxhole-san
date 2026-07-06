@@ -1,0 +1,58 @@
+{
+  "app": {
+    "title": "Foxhole Swiss Army Knife",
+    "subtitle": "Planificateur de chaînes de production"
+  },
+  "target": {
+    "label": "Objet cible",
+    "placeholder": "Choisir un objet…",
+    "quantity": "Quantité",
+    "faction": "Faction"
+  },
+  "faction": {
+    "Colonial": "Colonial",
+    "Warden": "Warden"
+  },
+  "category": {
+    "smallArms": "Armes légères",
+    "ammunition": "Munitions",
+    "explosives": "Explosifs",
+    "heavyAmmunition": "Munitions lourdes",
+    "vehicle": "Véhicules"
+  },
+  "panels": {
+    "tree": "Arbre des besoins",
+    "totals": "Totaux ressources",
+    "buildings": "Bâtiments",
+    "sequence": "Séquence de construction"
+  },
+  "tree": {
+    "batches": "{{count}} commande(s)",
+    "produced": "{{produced}} produits pour {{qty}} requis"
+  },
+  "totals": {
+    "raw": "Ressources brutes",
+    "refined": "Matériaux raffinés",
+    "empty": "Rien à collecter"
+  },
+  "buildings": {
+    "construction": "Coût de construction",
+    "prerequisites": "Prérequis",
+    "total": "Total construction",
+    "none": "Aucun bâtiment requis"
+  },
+  "sequence": {
+    "step": {
+      "tech": "Débloquer",
+      "build": "Construire",
+      "produce": "Produire"
+    },
+    "produceDetail": "{{produced}} unités en {{batches}} commande(s) — {{building}}"
+  },
+  "empty": {
+    "hint": "Choisissez un objet cible pour calculer son plan de production complet : ressources brutes, raffinage, bâtiments et séquence ordonnée."
+  },
+  "error": {
+    "title": "Impossible de calculer le plan"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "app": {
+    "title": "Foxhole Swiss Army Knife",
+    "subtitle": "Production chain planner"
+  },
+  "target": {
+    "label": "Target item",
+    "placeholder": "Select an item…",
+    "quantity": "Quantity",
+    "faction": "Faction"
+  },
+  "faction": {
+    "Colonial": "Colonial",
+    "Warden": "Warden"
+  },
+  "category": {
+    "smallArms": "Small arms",
+    "ammunition": "Ammunition",
+    "explosives": "Explosives",
+    "heavyAmmunition": "Heavy ammunition",
+    "vehicle": "Vehicles"
+  },
+  "panels": {
+    "tree": "Requirement tree",
+    "totals": "Resource totals",
+    "buildings": "Buildings",
+    "sequence": "Build sequence"
+  },
+  "tree": {
+    "batches": "{{count}} order(s)",
+    "produced": "{{produced}} produced for {{qty}} needed"
+  },
+  "totals": {
+    "raw": "Raw resources",
+    "refined": "Refined materials",
+    "empty": "Nothing to gather"
+  },
+  "buildings": {
+    "construction": "Construction cost",
+    "prerequisites": "Prerequisites",
+    "total": "Total construction",
+    "none": "No building required"
+  },
+  "sequence": {
+    "step": {
+      "tech": "Unlock",
+      "build": "Build",
+      "produce": "Produce"
+    },
+    "produceDetail": "{{produced}} units in {{batches}} order(s) at {{building}}"
+  },
+  "empty": {
+    "hint": "Pick a target item to compute its full production plan: raw resources, refining, buildings and an ordered build sequence."
+  },
+  "error": {
+    "title": "Cannot compute plan"
+  }
+}

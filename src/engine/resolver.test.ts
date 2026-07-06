@@ -1,0 +1,134 @@
+import { describe, expect, it } from 'vitest';
+import { buildDataset, dataset } from '../data';
+import type { Building, Item, Recipe, Resource } from '../types/domain';
+import { CycleError, FactionError, resolve } from './resolver';
+
+// ---------------------------------------------------------------------------
+// Fixture: a tiny self-contained dataset exercising every engine feature.
+// ---------------------------------------------------------------------------
+
+const name = (s: string) => ({ en: s, fr: s });
+
+const resources: Resource[] = [
+  { id: 'salvage', name: name('Salvage'), kind: 'raw' },
+  { id: 'sulfur', name: name('Sulfur'), kind: 'raw' },
+  { id: 'bmats', name: name('Basic Materials'), kind: 'refined' },
+  { id: 'hemats', name: name('Heavy Explosive Powder'), kind: 'refined' },
+];
+
+const industry = { techId: 'tech-industry', name: name('Industry') };
+
+const buildings: Building[] = [
+  { id: 'refinery', name: name('Refinery'), kind: 'Refinery', constructionCost: { bmats: 100 }, prerequisites: [industry] },
+  { id: 'factory', name: name('Factory'), kind: 'Factory', constructionCost: { bmats: 200 }, prerequisites: [industry] },
+];
+
+const recipes: Recipe[] = [
+  { id: 'refine-bmats', buildingId: 'refinery', inputs: [{ refId: 'salvage', qty: 2 }], outputs: [{ refId: 'bmats', qty: 1 }], timeSeconds: 1 },
+  { id: 'refine-hemats', buildingId: 'refinery', inputs: [{ refId: 'sulfur', qty: 5 }], outputs: [{ refId: 'hemats', qty: 1 }], timeSeconds: 15 },
+];
+
+const items: Item[] = [
+  { id: 'rifle', name: name('Rifle'), category: 'smallArms', faction: 'Colonial', cost: { bmats: 100 }, amountProduced: 10, producedBy: 'factory' },
+  { id: 'shell', name: name('Shell'), category: 'heavyAmmunition', faction: 'Both', cost: { bmats: 120, hemats: 10 }, amountProduced: 5, producedBy: 'factory' },
+];
+
+const data = buildDataset(resources, buildings, recipes, items);
+
+describe('resolve — requirement tree', () => {
+  it('decomposes a multi-level chain down to raw resources', () => {
+    // 25 rifles -> 3 crates of 10 -> 300 bmats -> 600 salvage
+    const plan = resolve(data, 'rifle', 25, 'Colonial');
+
+    expect(plan.tree.refId).toBe('rifle');
+    expect(plan.tree.batches).toBe(3);
+    expect(plan.tree.produced).toBe(30);
+
+    const bmatsNode = plan.tree.children[0];
+    expect(bmatsNode.refId).toBe('bmats');
+    expect(bmatsNode.qty).toBe(300);
+    expect(bmatsNode.children[0]).toMatchObject({ refId: 'salvage', qty: 600 });
+
+    expect(plan.totals.raw).toEqual({ salvage: 600 });
+    expect(plan.totals.refined).toEqual({ bmats: 300 });
+  });
+
+  it('does not round up when the quantity is an exact number of crates', () => {
+    const plan = resolve(data, 'rifle', 20, 'Colonial');
+    expect(plan.tree.batches).toBe(2);
+    expect(plan.tree.produced).toBe(20);
+    expect(plan.totals.raw.salvage).toBe(400);
+  });
+});
+
+describe('resolve — buildings and prerequisites', () => {
+  it('lists each building once, sums construction costs, dedupes tech prereqs', () => {
+    const plan = resolve(data, 'shell', 5, 'Colonial');
+
+    expect(plan.buildings.map((b) => b.id)).toEqual(['factory', 'refinery']);
+    expect(plan.constructionTotal).toEqual({ bmats: 300 });
+    expect(plan.prerequisites).toHaveLength(1);
+    expect(plan.prerequisites[0].techId).toBe('tech-industry');
+  });
+});
+
+describe('resolve — build sequence', () => {
+  it('orders steps: tech, then build, then produce with inputs before outputs', () => {
+    const plan = resolve(data, 'shell', 5, 'Colonial');
+    const types = plan.sequence.map((s) => s.type);
+
+    // tech* build* produce* — no interleaving
+    expect(types).toEqual(['tech', 'build', 'build', 'produce', 'produce', 'produce']);
+
+    const produceIds = plan.sequence.flatMap((s) => (s.type === 'produce' ? [s.refId] : []));
+    expect(produceIds.indexOf('bmats')).toBeLessThan(produceIds.indexOf('shell'));
+    expect(produceIds.indexOf('hemats')).toBeLessThan(produceIds.indexOf('shell'));
+  });
+
+  it('aggregates produce steps per product across the tree', () => {
+    const plan = resolve(data, 'shell', 5, 'Colonial');
+    const bmatsSteps = plan.sequence.filter((s) => s.type === 'produce' && s.refId === 'bmats');
+    expect(bmatsSteps).toHaveLength(1);
+    expect(bmatsSteps[0]).toMatchObject({ batches: 120, produced: 120 });
+  });
+});
+
+describe('resolve — guards', () => {
+  it('rejects items not available to the selected faction', () => {
+    expect(() => resolve(data, 'rifle', 1, 'Warden')).toThrow(FactionError);
+  });
+
+  it('rejects unknown targets and non-positive quantities', () => {
+    expect(() => resolve(data, 'nope', 1, 'Colonial')).toThrow(/Unknown target/);
+    expect(() => resolve(data, 'rifle', 0, 'Colonial')).toThrow(/positive/);
+    expect(() => resolve(data, 'rifle', -3, 'Colonial')).toThrow(/positive/);
+  });
+
+  it('detects recipe cycles', () => {
+    const cyclicResources: Resource[] = [
+      { id: 'r1', name: name('R1'), kind: 'refined' },
+      { id: 'r2', name: name('R2'), kind: 'refined' },
+    ];
+    const cyclicRecipes: Recipe[] = [
+      { id: 'make-r1', buildingId: 'refinery', inputs: [{ refId: 'r2', qty: 1 }], outputs: [{ refId: 'r1', qty: 1 }], timeSeconds: 1 },
+      { id: 'make-r2', buildingId: 'refinery', inputs: [{ refId: 'r1', qty: 1 }], outputs: [{ refId: 'r2', qty: 1 }], timeSeconds: 1 },
+    ];
+    const cyclic = buildDataset(cyclicResources, buildings, cyclicRecipes, []);
+    expect(() => resolve(cyclic, 'r1', 1, 'Colonial')).toThrow(CycleError);
+  });
+});
+
+describe('resolve — real curated dataset', () => {
+  it('plans 10x 120mm shells (2 crates): 240 bmats + 20 hemats -> 480 salvage + 100 sulfur', () => {
+    const plan = resolve(dataset, 'shell-120mm', 10, 'Warden');
+    expect(plan.tree.batches).toBe(2);
+    expect(plan.totals.refined).toEqual({ bmats: 240, hemats: 20 });
+    expect(plan.totals.raw).toEqual({ salvage: 480, sulfur: 100 });
+    expect(plan.buildings.map((b) => b.id).sort()).toEqual(['factory', 'refinery']);
+  });
+
+  it('enforces faction on real items', () => {
+    expect(() => resolve(dataset, 'argenti', 10, 'Warden')).toThrow(FactionError);
+    expect(resolve(dataset, 'argenti', 10, 'Colonial').totals.raw.salvage).toBe(200);
+  });
+});

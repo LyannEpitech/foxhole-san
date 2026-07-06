@@ -1,0 +1,61 @@
+[
+  {
+    "id": "argenti",
+    "name": { "en": "Argenti r.II Rifle", "fr": "Fusil Argenti r.II" },
+    "category": "smallArms",
+    "faction": "Colonial",
+    "cost": { "bmats": 100 },
+    "amountProduced": 20,
+    "producedBy": "factory",
+    "isMfpCraftable": true
+  },
+  {
+    "id": "loughcaster",
+    "name": { "en": "No.2 Loughcaster", "fr": "No.2 Loughcaster" },
+    "category": "smallArms",
+    "faction": "Warden",
+    "cost": { "bmats": 100 },
+    "amountProduced": 20,
+    "producedBy": "factory",
+    "isMfpCraftable": true
+  },
+  {
+    "id": "ammo-762",
+    "name": { "en": "7.62mm", "fr": "7,62 mm" },
+    "category": "ammunition",
+    "faction": "Both",
+    "cost": { "bmats": 80 },
+    "amountProduced": 40,
+    "producedBy": "factory",
+    "isMfpCraftable": true
+  },
+  {
+    "id": "bomastone",
+    "name": { "en": "Bomastone Grenade", "fr": "Grenade Bomastone" },
+    "category": "explosives",
+    "faction": "Colonial",
+    "cost": { "bmats": 100, "emats": 40 },
+    "amountProduced": 25,
+    "producedBy": "factory",
+    "isMfpCraftable": true
+  },
+  {
+    "id": "harpa",
+    "name": { "en": "A3 Harpa Fragmentation Grenade", "fr": "Grenade à fragmentation A3 Harpa" },
+    "category": "explosives",
+    "faction": "Warden",
+    "cost": { "bmats": 100, "emats": 40 },
+    "amountProduced": 20,
+    "producedBy": "factory",
+    "isMfpCraftable": true
+  },
+  {
+    "id": "shell-120mm",
+    "name": { "en": "120mm Shell", "fr": "Obus de 120 mm" },
+    "category": "heavyAmmunition",
+    "faction": "Both",
+    "cost": { "bmats": 120, "hemats": 10 },
+    "amountProduced": 5,
+    "producedBy": "factory"
+  }
+]

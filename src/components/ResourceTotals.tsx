@@ -1,0 +1,38 @@
+import { useTranslation } from 'react-i18next';
+import type { PlanResult } from '../engine/resolver';
+import { useLocalized } from '../i18n';
+import { refName } from '../lib/refs';
+
+function TotalsBlock({ title, totals }: { title: string; totals: Record<string, number> }) {
+  const { t } = useTranslation();
+  const localized = useLocalized();
+  const entries = Object.entries(totals);
+
+  return (
+    <div>
+      <h3 className="text-xs uppercase tracking-wide text-slate-400 mb-2">{title}</h3>
+      {entries.length === 0 ? (
+        <p className="text-sm text-slate-500">{t('totals.empty')}</p>
+      ) : (
+        <ul className="space-y-1 text-sm">
+          {entries.map(([refId, qty]) => (
+            <li key={refId} className="flex justify-between gap-4">
+              <span className="text-slate-200">{localized(refName(refId))}</span>
+              <span className="font-mono text-amber-300">{qty}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+export function ResourceTotals({ result }: { result: PlanResult }) {
+  const { t } = useTranslation();
+  return (
+    <div className="space-y-4">
+      <TotalsBlock title={t('totals.raw')} totals={result.totals.raw} />
+      <TotalsBlock title={t('totals.refined')} totals={result.totals.refined} />
+    </div>
+  );
+}

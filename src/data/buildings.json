@@ -1,0 +1,47 @@
+[
+  {
+    "id": "refinery",
+    "name": { "en": "Refinery", "fr": "Raffinerie" },
+    "kind": "Refinery",
+    "constructionCost": { "bmats": 400 },
+    "prerequisites": [
+      {
+        "techId": "industry-upgrade",
+        "name": {
+          "en": "Town Base \"Industry\" upgrade",
+          "fr": "Amélioration « Industrie » de la base de ville"
+        }
+      }
+    ]
+  },
+  {
+    "id": "factory",
+    "name": { "en": "Factory", "fr": "Usine" },
+    "kind": "Factory",
+    "constructionCost": { "bmats": 400 },
+    "prerequisites": [
+      {
+        "techId": "industry-upgrade",
+        "name": {
+          "en": "Town Base \"Industry\" upgrade",
+          "fr": "Amélioration « Industrie » de la base de ville"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mpf",
+    "name": { "en": "Mass Production Factory", "fr": "Usine de production de masse" },
+    "kind": "MassProductionFactory",
+    "constructionCost": { "bmats": 400 },
+    "prerequisites": [
+      {
+        "techId": "industry-upgrade",
+        "name": {
+          "en": "Town Base \"Industry\" upgrade",
+          "fr": "Amélioration « Industrie » de la base de ville"
+        }
+      }
+    ]
+  }
+]

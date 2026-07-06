@@ -169,7 +169,7 @@ export function PlanMap({
         out.push({
           x: minX + item.x * w,
           y: minY + item.y * h,
-          iconUrl: `/icons/${def.icon}.png`,
+          iconUrl: `${import.meta.env.BASE_URL}icons/${def.icon}.png`,
           ringColor: TEAM_COLORS[item.teamId] ?? TEAM_COLORS.NONE,
           label: localized(def.label),
           kindLabel: t(`map.layer.${def.kind}`),

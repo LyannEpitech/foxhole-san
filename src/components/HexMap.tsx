@@ -297,7 +297,7 @@ export function HexMap({
         return (
           <image
             key={`img-${region.id}`}
-            href={`/maps/${region.id}.png`}
+            href={`${import.meta.env.BASE_URL}maps/${region.id}.png`}
             x={minX}
             y={minY}
             width={Math.max(...xs) - minX}

@@ -7,6 +7,7 @@
     "label": "Target item",
     "placeholder": "Select an item…",
     "searchPlaceholder": "Search an item…",
+    "allCategories": "All",
     "quantity": "Quantity",
     "faction": "Faction"
   },

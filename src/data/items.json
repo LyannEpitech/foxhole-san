@@ -923,22 +923,6 @@
   "isMfpCraftable": true
  },
  {
-  "id": "250mm",
-  "name": {
-   "en": "250mm",
-   "fr": "250mm"
-  },
-  "category": "heavyArms",
-  "faction": "Both",
-  "cost": {
-   "bmats": 120,
-   "hemats": 25
-  },
-  "amountProduced": 5,
-  "producedBy": "factory",
-  "isMfpCraftable": true
- },
- {
   "id": "green-ash-grenade",
   "name": {
    "en": "Green Ash Grenade",
@@ -1960,9 +1944,7 @@
   "producedBy": "garage",
   "isMfpCraftable": true,
   "ammo": [
-   "250mm \"Purity\" Shell",
-   "250mm \"Fury\" Shell",
-   "250mm"
+   "250mm \"Purity\" Shell"
   ]
  },
  {
@@ -3779,9 +3761,7 @@
   "producedBy": "garage",
   "isMfpCraftable": true,
   "ammo": [
-   "250mm \"Purity\" Shell",
-   "250mm \"Fury\" Shell",
-   "250mm"
+   "250mm \"Purity\" Shell"
   ]
  },
  {

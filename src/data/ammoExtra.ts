@@ -11,6 +11,9 @@ export const AMMO_STRUCTURE_USERS: Record<string, LocalizedString[]> = {
     { en: 'Tempest Cannon RA-2 (emplacement)', fr: 'Tempest Cannon RA-2 (emplacement)' },
     { en: 'Long-Range Artillery Car (rail)', fr: "Wagon d'artillerie longue portée (rail)" },
   ],
+  '250mm-fury-shell': [
+    { en: '40-250 "Alekto" Heavy Cannon (not in dataset yet)', fr: '40-250 « Alekto » Heavy Cannon (pas encore dans le jeu de données)' },
+  ],
   'quillback-torpedo': [
     { en: 'Submarines (Nakki, AC-b "Trident")', fr: 'Sous-marins (Nakki, AC-b « Trident »)' },
   ],

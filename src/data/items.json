@@ -675,22 +675,6 @@
   "isMfpCraftable": true
  },
  {
-  "id": "68mm-at",
-  "name": {
-   "en": "68mm AT",
-   "fr": "68mm AT"
-  },
-  "category": "heavyArms",
-  "faction": "Both",
-  "cost": {
-   "bmats": 120,
-   "emats": 120
-  },
-  "amountProduced": 20,
-  "producedBy": "factory",
-  "isMfpCraftable": true
- },
- {
   "id": "cutler-launcher-4",
   "name": {
    "en": "Cutler Launcher 4",
@@ -799,22 +783,6 @@
   ]
  },
  {
-  "id": "atrpg-shell",
-  "name": {
-   "en": "A.T.R.P.G Shell",
-   "fr": "A.T.R.P.G Shell"
-  },
-  "category": "heavyArms",
-  "faction": "Colonial",
-  "cost": {
-   "bmats": 60,
-   "emats": 75
-  },
-  "amountProduced": 15,
-  "producedBy": "factory",
-  "isMfpCraftable": true
- },
- {
   "id": "bonesaw-mk3",
   "name": {
    "en": "Bonesaw MK.3",
@@ -851,22 +819,6 @@
   "ammo": [
    "ARC/RPG"
   ]
- },
- {
-  "id": "atrpg-indirect-shell",
-  "name": {
-   "en": "A.T.R.P.G. Indirect Shell",
-   "fr": "A.T.R.P.G. Indirect Shell"
-  },
-  "category": "heavyArms",
-  "faction": "Warden",
-  "cost": {
-   "bmats": 60,
-   "emats": 75
-  },
-  "amountProduced": 15,
-  "producedBy": "factory",
-  "isMfpCraftable": true
  },
  {
   "id": "cremari-mortar",
@@ -1505,7 +1457,10 @@
   },
   "amountProduced": 3,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "68mm"
+  ]
  },
  {
   "id": "50-500-thunderbolt-cannon",
@@ -1520,7 +1475,10 @@
   },
   "amountProduced": 3,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "150mm"
+  ]
  },
  {
   "id": "huber-exalt-150mm",
@@ -1535,7 +1493,10 @@
   },
   "amountProduced": 3,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "150mm"
+  ]
  },
  {
   "id": "huber-lariat-120mm",
@@ -1550,7 +1511,10 @@
   },
   "amountProduced": 3,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "120mm"
+  ]
  },
  {
   "id": "127-anti-infantry-flak-gun",
@@ -1775,7 +1739,10 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "40mm"
+  ]
  },
  {
   "id": "obrien-v110",
@@ -1835,7 +1802,10 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "68mm"
+  ]
  },
  {
   "id": "68-45-smelter-heavy-field-gun",
@@ -1850,7 +1820,10 @@
   },
   "amountProduced": 1,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "68mm"
+  ]
  },
  {
   "id": "120-68-koronides-field-gun",
@@ -1865,7 +1838,10 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "120mm"
+  ]
  },
  {
   "id": "g40-sagittarii",
@@ -1895,7 +1871,10 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "68mm"
+  ]
  },
  {
   "id": "collins-cannon-68mm",
@@ -1910,7 +1889,10 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "68mm"
+  ]
  },
  {
   "id": "balfour-rampart-40mm",
@@ -1925,7 +1907,10 @@
   },
   "amountProduced": 1,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "40mm"
+  ]
  },
  {
   "id": "balfour-wolfhound-40mm",
@@ -1940,7 +1925,10 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "40mm"
+  ]
  },
  {
   "id": "swallowtail-988-127-2",
@@ -1970,7 +1958,12 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "250mm \"Purity\" Shell",
+   "250mm \"Fury\" Shell",
+   "250mm"
+  ]
  },
  {
   "id": "bms-packmule-flatbed",
@@ -2000,7 +1993,12 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "Mortar Shell",
+   "Mortar Shrapnel Shell",
+   "Mortar Flare Shell"
+  ]
  },
  {
   "id": "hh-a-javelin",
@@ -2045,7 +2043,10 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "68mm"
+  ]
  },
  {
   "id": "niska-mk-i-gun-motor-carriage",
@@ -2150,7 +2151,10 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "40mm"
+  ]
  },
  {
   "id": "h-8-kranesca",
@@ -2165,7 +2169,10 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "40mm"
+  ]
  },
  {
   "id": "h-10-pelekys",
@@ -2180,7 +2187,10 @@
   },
   "amountProduced": 1,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "68mm"
+  ]
  },
  {
   "id": "86k-a-bardiche",
@@ -2195,7 +2205,10 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "68mm"
+  ]
  },
  {
   "id": "85k-b-falchion",
@@ -2210,7 +2223,10 @@
   },
   "amountProduced": 5,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "40mm"
+  ]
  },
  {
   "id": "85k-a-spatha",
@@ -2225,7 +2241,10 @@
   },
   "amountProduced": 1,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "40mm"
+  ]
  },
  {
   "id": "hc-7-ballista",
@@ -2420,7 +2439,12 @@
   },
   "amountProduced": 1,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "Mortar Shell",
+   "Mortar Shrapnel Shell",
+   "Mortar Flare Shell"
+  ]
  },
  {
   "id": "devitt-ironhide-mk-iv",
@@ -2435,7 +2459,10 @@
   },
   "amountProduced": 1,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "40mm"
+  ]
  },
  {
   "id": "devitt-mk-iii",
@@ -2450,7 +2477,10 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "40mm"
+  ]
  },
  {
   "id": "gallagher-outlaw-mk-ii",
@@ -2465,7 +2495,10 @@
   },
   "amountProduced": 1,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "40mm"
+  ]
  },
  {
   "id": "silverhand-chieftain-mk-vi",
@@ -2495,7 +2528,11 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "40mm",
+   "68mm"
+  ]
  },
  {
   "id": "kivela-power-wheel-80-1",
@@ -2705,7 +2742,12 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "Mortar Shell",
+   "Mortar Shrapnel Shell",
+   "Mortar Flare Shell"
+  ]
  },
  {
   "id": "74c-2-ronan-meteora-gunship",
@@ -3597,7 +3639,10 @@
   },
   "amountProduced": 3,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "68mm"
+  ]
  },
  {
   "id": "dae-5b-zeal",
@@ -3732,7 +3777,12 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "250mm \"Purity\" Shell",
+   "250mm \"Fury\" Shell",
+   "250mm"
+  ]
  },
  {
   "id": "ha-1-sagaris",
@@ -3762,7 +3812,10 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "68mm"
+  ]
  },
  {
   "id": "gallagher-brigand-mk-i",
@@ -3897,7 +3950,10 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "68mm"
+  ]
  },
  {
   "id": "strider",
@@ -3912,7 +3968,10 @@
   },
   "amountProduced": 3,
   "producedBy": "garage",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "40mm"
+  ]
  },
  {
   "id": "rinnspeir-ornitier-class-gunship",
@@ -4116,7 +4175,10 @@
   "faction": "Colonial",
   "cost": {},
   "amountProduced": 1,
-  "producedBy": "large-assembly-station"
+  "producedBy": "large-assembly-station",
+  "ammo": [
+   "150mm"
+  ]
  },
  {
   "id": "flood-mk-ix-stain",
@@ -4128,6 +4190,9 @@
   "faction": "Warden",
   "cost": {},
   "amountProduced": 1,
-  "producedBy": "large-assembly-station"
+  "producedBy": "large-assembly-station",
+  "ammo": [
+   "150mm"
+  ]
  }
 ]

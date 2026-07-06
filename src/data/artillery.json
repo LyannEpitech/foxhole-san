@@ -1,0 +1,15 @@
+[
+  { "id": "cremari-mortar", "min": 45, "max": 80 },
+  { "id": "120-68-koronides-field-gun", "min": 100, "max": 250 },
+  { "id": "huber-lariat-120mm", "min": 100, "max": 300 },
+  { "id": "huber-exalt-150mm", "min": 100, "max": 300 },
+  { "id": "50-500-thunderbolt-cannon", "min": 200, "max": 350 },
+  { "id": "lance-46-sarissa", "min": 120, "max": 250 },
+  { "id": "flood-mk-ix-stain", "min": 120, "max": 250 },
+  { "id": "r-17-retiarius-skirmisher", "min": 375, "max": 500 },
+  { "id": "niska-rycker-mk-ix-skycaller", "min": 275, "max": 350 },
+  { "id": "rycker-4-3-f-wasp-nest", "min": 375, "max": 450 },
+  { "id": "t13-deioneus-rocket-battery", "min": 350, "max": 400 },
+  { "id": "tempest-cannon-ra-2", "min": 350, "max": 500 },
+  { "id": "storm-cannon", "min": 400, "max": 1000 }
+]

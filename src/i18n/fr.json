@@ -193,6 +193,14 @@
     "exportPng": "Exporter la vue actuelle en PNG",
     "zoomHint": "Zoomez pour révéler les structures live de la War API. Les outils marqueurs et flèches dessinent sur la carte ; les annotations sont sauvegardées localement."
   },
+  "arty": {
+    "title": "Calculateur d'artillerie",
+    "gunToSpotter": "Canon → observateur",
+    "spotterToTarget": "Observateur → cible",
+    "solution": "Solution de tir",
+    "outOfRange": "Hors de portée pour cette pièce ({{min}}–{{max}} m)",
+    "note": "Portées wiki. Vent et dispersion non modélisés — corrigez à l'observation."
+  },
   "plans": {
     "title": "Plans",
     "namePlaceholder": "Nom du plan…",

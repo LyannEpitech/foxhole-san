@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { ArtilleryCalculator } from '../components/ArtilleryCalculator';
 import { BuildingList } from '../components/BuildingList';
 import { BuildSequence } from '../components/BuildSequence';
 import { Drawer } from '../components/Drawer';
@@ -365,6 +366,17 @@ export function AttackModule() {
             </button>
           </Section>
         )}
+
+        {/* B4 — artillery calculator */}
+        <details className="group border-t border-slate-800 pt-3">
+          <summary className="cursor-pointer text-sm font-semibold text-slate-200 list-none flex items-center gap-2">
+            <span className="text-slate-500 transition-transform group-open:rotate-90">▸</span>
+            🎯 {t('arty.title')}
+          </summary>
+          <div className="mt-3">
+            <ArtilleryCalculator />
+          </div>
+        </details>
 
         {/* Production cost — collapsed details */}
         {production.error && (

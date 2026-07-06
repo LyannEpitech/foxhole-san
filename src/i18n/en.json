@@ -193,6 +193,14 @@
     "exportPng": "Export the current view as PNG",
     "zoomHint": "Zoom in to reveal live War API structures. Marker and arrow tools draw on the map; annotations are saved locally."
   },
+  "arty": {
+    "title": "Artillery calculator",
+    "gunToSpotter": "Gun → spotter",
+    "spotterToTarget": "Spotter → target",
+    "solution": "Firing solution",
+    "outOfRange": "Out of range for this piece ({{min}}–{{max}} m)",
+    "note": "Wiki ranges. Wind and accuracy dispersion are not modeled — correct on observation."
+  },
   "plans": {
     "title": "Plans",
     "namePlaceholder": "Plan name…",

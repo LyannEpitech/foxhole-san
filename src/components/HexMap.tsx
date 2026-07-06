@@ -134,10 +134,18 @@ export function HexMap({
   const isPointTool = tool === 'friendly' || tool === 'enemy' || tool === 'danger';
   const isDrawTool = tool === 'drawFriendly' || tool === 'drawEnemy';
 
-  /** Convert a mouse event into world coordinates. */
+  /** Convert a mouse event into world coordinates — via the SVG's screen
+      matrix, so letterboxing from preserveAspectRatio can't skew clicks. */
   const toWorld = useCallback(
     (e: { clientX: number; clientY: number }): [number, number] => {
-      const rect = svgRef.current!.getBoundingClientRect();
+      const svg = svgRef.current!;
+      const ctm = svg.getScreenCTM();
+      if (ctm) {
+        const p = new DOMPoint(e.clientX, e.clientY).matrixTransform(ctm.inverse());
+        return [p.x, p.y];
+      }
+      // Fallback (should not happen once mounted)
+      const rect = svg.getBoundingClientRect();
       const px = (e.clientX - rect.left) / rect.width;
       const py = (e.clientY - rect.top) / rect.height;
       return [center[0] - vw / 2 + px * vw, center[1] - vh / 2 + py * vh];
@@ -192,8 +200,11 @@ export function HexMap({
     const dx = e.clientX - drag.current.x;
     const dy = e.clientY - drag.current.y;
     if (Math.abs(dx) + Math.abs(dy) > 3) drag.current.moved = true;
-    const rect = svgRef.current!.getBoundingClientRect();
-    setCenter(([cx, cy]) => [cx - (dx / rect.width) * vw, cy - (dy / rect.height) * vh]);
+    // Pan using the real screen scale (px per world unit) from the CTM.
+    const ctm = svgRef.current!.getScreenCTM();
+    const sx = ctm?.a || 1;
+    const sy = ctm?.d || sx;
+    setCenter(([cx, cy]) => [cx - dx / sx, cy - dy / sy]);
     drag.current.x = e.clientX;
     drag.current.y = e.clientY;
   };

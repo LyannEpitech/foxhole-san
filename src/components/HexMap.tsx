@@ -123,6 +123,8 @@ export function HexMap({
   const [center, setCenter] = useState<[number, number]>([VIEW.x + VIEW.w / 2, VIEW.y + VIEW.h / 2]);
   const [hovered, setHovered] = useState<string | null>(null);
   const drag = useRef<{ x: number; y: number; moved: boolean } | null>(null);
+  /** A2.4 — touch gestures: one finger pans, two fingers pinch-zoom. */
+  const touch = useRef<{ x: number; y: number; dist: number | null } | null>(null);
   const [drawStart, setDrawStart] = useState<[number, number] | null>(null);
   const [drawEnd, setDrawEnd] = useState<[number, number] | null>(null);
   const [strokePoints, setStrokePoints] = useState<[number, number][] | null>(null);
@@ -253,6 +255,51 @@ export function HexMap({
     setStrokePoints(null);
   };
 
+  // --- Touch (mobile): pan + pinch zoom ---------------------------------
+  const onTouchStart = (e: React.TouchEvent) => {
+    if (e.touches.length === 2) {
+      const [a, b] = [e.touches[0], e.touches[1]];
+      touch.current = {
+        x: (a.clientX + b.clientX) / 2,
+        y: (a.clientY + b.clientY) / 2,
+        dist: Math.hypot(b.clientX - a.clientX, b.clientY - a.clientY),
+      };
+    } else if (e.touches.length === 1) {
+      touch.current = { x: e.touches[0].clientX, y: e.touches[0].clientY, dist: null };
+    }
+  };
+  const onTouchMove = (e: React.TouchEvent) => {
+    const state = touch.current;
+    if (!state) return;
+    const ctm = svgRef.current!.getScreenCTM();
+    const sx = ctm?.a || 1;
+    const sy = ctm?.d || sx;
+    if (e.touches.length === 2 && state.dist !== null) {
+      const [a, b] = [e.touches[0], e.touches[1]];
+      const dist = Math.hypot(b.clientX - a.clientX, b.clientY - a.clientY);
+      const midX = (a.clientX + b.clientX) / 2;
+      const midY = (a.clientY + b.clientY) / 2;
+      const next = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, zoom * (dist / state.dist)));
+      const [wx, wy] = toWorld({ clientX: midX, clientY: midY });
+      const scale = zoom / next;
+      setCenter([wx - (wx - center[0]) * scale, wy - (wy - center[1]) * scale]);
+      setZoom(next);
+      touch.current = { x: midX, y: midY, dist };
+    } else if (e.touches.length === 1 && state.dist === null) {
+      const dx = e.touches[0].clientX - state.x;
+      const dy = e.touches[0].clientY - state.y;
+      setCenter(([cx, cy]) => [cx - dx / sx, cy - dy / sy]);
+      touch.current = { x: e.touches[0].clientX, y: e.touches[0].clientY, dist: null };
+    }
+  };
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (e.touches.length === 1) {
+      touch.current = { x: e.touches[0].clientX, y: e.touches[0].clientY, dist: null };
+    } else if (e.touches.length === 0) {
+      touch.current = null;
+    }
+  };
+
   const clickRegion = (region: Region) => {
     // Region selection only in pan mode, and not at the end of a pan gesture.
     if (tool !== 'pan' || drag.current?.moved) return;
@@ -329,7 +376,10 @@ export function HexMap({
       onMouseMove={onMouseMove}
       onMouseUp={onMouseUp}
       onMouseLeave={endDrag}
-      className={`${className ?? 'w-full h-full block'} ${cursorClass} select-none`}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+      className={`${className ?? 'w-full h-full block'} ${cursorClass} select-none touch-none`}
       role="img"
     >
       <defs>

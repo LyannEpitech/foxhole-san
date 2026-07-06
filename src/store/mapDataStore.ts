@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 import { REGIONS } from '../data/regions';
 import type { MapIconKind } from '../data/mapIcons';
 import { fetchAllDynamic, type ApiMapItem } from '../lib/warapi';
@@ -22,7 +23,7 @@ interface MapDataState {
   refresh: () => Promise<void>;
 }
 
-export const useMapDataStore = create<MapDataState>((set, get) => ({
+export const useMapDataStore = create<MapDataState>()(persist((set, get) => ({
   items: {},
   loading: false,
   progress: null,
@@ -54,4 +55,9 @@ export const useMapDataStore = create<MapDataState>((set, get) => ({
       });
     }
   },
+}), {
+  // B6 — keep the last war snapshot so the map still shows structures
+  // offline (PWA); refreshed on the next successful fetch.
+  name: 'fsak-mapdata',
+  partialize: (s) => ({ items: s.items, loadedAt: s.loadedAt }),
 }));

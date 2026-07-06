@@ -51,8 +51,10 @@ interface Props {
   className?: string;
   /** Plain click on the map in pan mode (world coordinates). */
   onMapClick?: (pos: [number, number]) => void;
-  /** Extra SVG rendered in world coordinates (above regions, below badges). */
-  overlay?: React.ReactNode;
+  /** Extra SVG rendered in world coordinates (above regions, below badges).
+      Pass a function to receive the current viewport width in world units,
+      so overlay elements can keep a constant on-screen size. */
+  overlay?: React.ReactNode | ((ctx: { vw: number; zoom: number }) => React.ReactNode);
 }
 
 const [BX, BY, BW, BH] = WORLD_BOUNDS;
@@ -385,7 +387,7 @@ export function HexMap({
       ))}
 
       {/* Module-specific world-coordinate overlay */}
-      {overlay}
+      {typeof overlay === 'function' ? overlay({ vw, zoom }) : overlay}
 
       {/* Route polyline */}
       {routePoints.length > 1 && (

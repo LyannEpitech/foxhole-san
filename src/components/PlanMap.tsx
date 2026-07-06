@@ -1,11 +1,9 @@
-import { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { MAP_ICONS, TEAM_COLORS, type MapIconKind } from '../data/mapIcons';
-import { REGIONS, type Region } from '../data/regions';
-import { useLocalized } from '../i18n';
+import type { Region } from '../data/regions';
 import { useAnnotationStore, type ToolId } from '../store/annotationStore';
-import { useMapDataStore } from '../store/mapDataStore';
-import { HexMap, type ApiMarker, type MapMarker } from './HexMap';
+import { HexMap, type MapMarker } from './HexMap';
+import { MapLayersControl } from './MapLayersControl';
+import { useApiMarkers } from './useApiMarkers';
 
 interface Props {
   onRegionClick?: (region: Region) => void;
@@ -116,8 +114,6 @@ const TOOL_GROUPS: { id: ToolId; color: string }[][] = [
   [{ id: 'erase', color: 'text-slate-200' }],
 ];
 
-const LAYERS: MapIconKind[] = ['town', 'industry', 'field', 'military'];
-
 /**
  * Fullscreen HexMap + planning chrome overlaid on the map: annotation tool
  * palette (top-left), War API layers and refresh (top-right), contextual
@@ -132,61 +128,9 @@ export function PlanMap({
   extraControls,
 }: Props) {
   const { t } = useTranslation();
-  const localized = useLocalized();
-  const { items, loading, progress, loadedAt, layers, toggleLayer, refresh } = useMapDataStore();
   const { annotations, tool, setTool, addPoint, addArrow, addStroke, addText, remove, clear } =
     useAnnotationStore();
-
-  // Load live war data once per session.
-  useEffect(() => {
-    if (!loadedAt) void refresh();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // War API flags bitmask (see clapfoot/warapi README).
-  const FLAG_VICTORY_BASE = 0x01;
-  const FLAG_SCORCHED = 0x10;
-
-  // Project API items (bbox fractions) into world coordinates, with all
-  // tooltip strings pre-localized.
-  const apiMarkers: ApiMarker[] = useMemo(() => {
-    const out: ApiMarker[] = [];
-    for (const region of REGIONS) {
-      const regionItems = items[region.id];
-      if (!regionItems) continue;
-      const xs = region.polygon.map((p) => p[0]);
-      const ys = region.polygon.map((p) => p[1]);
-      const minX = Math.min(...xs);
-      const minY = Math.min(...ys);
-      const w = Math.max(...xs) - minX;
-      const h = Math.max(...ys) - minY;
-      for (const item of regionItems) {
-        const def = MAP_ICONS[item.iconType];
-        if (!def || !layers[def.kind]) continue;
-        const badges: string[] = [];
-        if (item.flags & FLAG_VICTORY_BASE) badges.push(t('map.tooltip.victory'));
-        if (item.flags & FLAG_SCORCHED) badges.push(t('map.tooltip.scorched'));
-        out.push({
-          x: minX + item.x * w,
-          y: minY + item.y * h,
-          iconUrl: `${import.meta.env.BASE_URL}icons/${def.icon}.png`,
-          ringColor: TEAM_COLORS[item.teamId] ?? TEAM_COLORS.NONE,
-          label: localized(def.label),
-          kindLabel: t(`map.layer.${def.kind}`),
-          regionName: region.name,
-          factionLabel:
-            item.teamId === 'WARDENS'
-              ? t('faction.Warden')
-              : item.teamId === 'COLONIALS'
-                ? t('faction.Colonial')
-                : t('map.tooltip.neutral'),
-          badges,
-        });
-      }
-    }
-    return out;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [items, layers, localized, t]);
+  const apiMarkers = useApiMarkers();
 
   const onAddPoint = (pos: [number, number]) => {
     if (tool === 'friendly' || tool === 'enemy' || tool === 'danger') addPoint(tool, pos);
@@ -258,29 +202,7 @@ export function PlanMap({
         {extraControls}
 
         {/* Layers + war data (in the left stack so the drawer never hides it) */}
-        <div className="inline-flex items-center gap-2 bg-slate-900/85 backdrop-blur border border-slate-700 rounded-lg px-3 py-2 shadow-lg">
-          {LAYERS.map((kind) => (
-            <label key={kind} className="flex items-center gap-1 text-xs text-slate-300">
-              <input
-                type="checkbox"
-                checked={layers[kind]}
-                onChange={() => toggleLayer(kind)}
-                className="accent-amber-500"
-              />
-              {t(`map.layer.${kind}`)}
-            </label>
-          ))}
-          <button
-            type="button"
-            onClick={() => void refresh()}
-            disabled={loading}
-            className="h-7 px-2 rounded-md bg-slate-700 hover:bg-slate-600 text-slate-100 text-xs disabled:opacity-50"
-          >
-            {loading && progress
-              ? `${t('map.loading')} ${progress[0]}/${progress[1]}`
-              : `⟳ ${t('map.refresh')}`}
-          </button>
-        </div>
+        <MapLayersControl />
 
         {tool !== 'pan' && (
           <p className="inline-block text-xs text-amber-300 bg-slate-900/85 backdrop-blur border border-slate-700 rounded-md px-2 py-1">

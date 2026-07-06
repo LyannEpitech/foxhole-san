@@ -2,6 +2,8 @@ import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Drawer } from '../components/Drawer';
 import { HexMap } from '../components/HexMap';
+import { MapLayersControl } from '../components/MapLayersControl';
+import { useApiMarkers } from '../components/useApiMarkers';
 import { dataset } from '../data';
 import { resolve, type PlanResult } from '../engine/resolver';
 import { useLocalized } from '../i18n';
@@ -53,7 +55,6 @@ const NODE_COLORS: Record<DeployNode['kind'], string> = {
   output: '#f59e0b',
 };
 
-const NODE_R = 300;
 
 export function DeployModule() {
   const { t } = useTranslation();
@@ -64,6 +65,7 @@ export function DeployModule() {
     positions, transports, placing, selectedEdge,
     setPlacing, place, removeNode, selectEdge, setTransport, reset,
   } = useDeployStore();
+  const apiMarkers = useApiMarkers();
 
   const plan: PlanResult | null = useMemo(() => {
     if (!targetId) return null;
@@ -92,63 +94,70 @@ export function DeployModule() {
     else selectEdge(null);
   };
 
-  // ---- SVG overlay: flows + placed nodes -------------------------------
-  const overlay = (
-    <g>
-      {visibleEdges.map((e) => {
-        const [x1, y1] = positions[e.from];
-        const [x2, y2] = positions[e.to];
-        const mx = (x1 + x2) / 2;
-        const my = (y1 + y2) / 2;
-        const hasTransport = !!transports[e.key];
-        const isSel = e.key === selectedEdge;
-        const color = isSel ? '#f59e0b' : hasTransport ? '#34d399' : '#94a3b8';
-        return (
-          <g key={e.key}>
-            <line x1={x1} y1={y1} x2={x2} y2={y2}
-              stroke={color} strokeWidth={isSel ? 90 : 60}
-              strokeDasharray={hasTransport ? undefined : '220 160'} opacity={0.9} />
-            {/* generous invisible hit area */}
-            <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="transparent" strokeWidth={900}
-              className="cursor-pointer"
-              onClick={(ev) => { ev.stopPropagation(); selectEdge(e.key); }} />
-            <circle cx={mx} cy={my} r={260} fill={color} pointerEvents="none" />
-            <text x={mx} y={my} textAnchor="middle" dominantBaseline="central"
-              fontSize={300} fontWeight={700} fill="#0f172a" pointerEvents="none">
-              {e.order}
-            </text>
-          </g>
-        );
-      })}
-      {graph.nodes.filter((n) => positions[n.key]).map((n) => {
-        const [x, y] = positions[n.key];
-        const color = NODE_COLORS[n.kind];
-        const icon = nodeIcon(n);
-        return (
-          <g key={n.key} className="cursor-pointer"
-            onClick={(ev) => { ev.stopPropagation(); setPlacing(n.key); }}>
-            <circle cx={x} cy={y} r={NODE_R} fill="rgba(15,23,42,0.85)"
-              stroke={color} strokeWidth={placing === n.key ? 90 : 50} />
-            {icon ? (
-              <image href={`${import.meta.env.BASE_URL}icons/${icon}.png`}
-                x={x - NODE_R * 0.62} y={y - NODE_R * 0.62}
-                width={NODE_R * 1.24} height={NODE_R * 1.24} pointerEvents="none" />
-            ) : (
-              <text x={x} y={y} textAnchor="middle" dominantBaseline="central"
-                fontSize={NODE_R * 0.9} fontWeight={700} fill={color} pointerEvents="none">
-                {n.kind === 'output' ? '★' : nodeLabel(n).slice(0, 2)}
+  // ---- SVG overlay: flows + placed nodes, constant on-screen size ------
+  const overlay = ({ vw }: { vw: number }) => {
+    const nodeR = vw * 0.011;
+    const lineW = vw * 0.0035;
+    const badgeR = vw * 0.008;
+    const labelFs = vw * 0.008;
+    return (
+      <g>
+        {visibleEdges.map((e) => {
+          const [x1, y1] = positions[e.from];
+          const [x2, y2] = positions[e.to];
+          const mx = (x1 + x2) / 2;
+          const my = (y1 + y2) / 2;
+          const hasTransport = !!transports[e.key];
+          const isSel = e.key === selectedEdge;
+          const color = isSel ? '#f59e0b' : hasTransport ? '#34d399' : '#94a3b8';
+          return (
+            <g key={e.key}>
+              <line x1={x1} y1={y1} x2={x2} y2={y2}
+                stroke={color} strokeWidth={isSel ? lineW * 1.6 : lineW}
+                strokeDasharray={hasTransport ? undefined : `${lineW * 3.5} ${lineW * 2.5}`}
+                opacity={0.9} />
+              {/* generous invisible hit area */}
+              <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="transparent"
+                strokeWidth={vw * 0.03} className="cursor-pointer"
+                onClick={(ev) => { ev.stopPropagation(); selectEdge(e.key); }} />
+              <circle cx={mx} cy={my} r={badgeR} fill={color} pointerEvents="none" />
+              <text x={mx} y={my} textAnchor="middle" dominantBaseline="central"
+                fontSize={badgeR * 1.2} fontWeight={700} fill="#0f172a" pointerEvents="none">
+                {e.order}
               </text>
-            )}
-            <text x={x} y={y + NODE_R + 180} textAnchor="middle" fontSize={220}
-              fontWeight={600} fill="#f8fafc" stroke="#0f172a" strokeWidth={20}
-              style={{ paintOrder: 'stroke' }} pointerEvents="none">
-              {nodeLabel(n)}
-            </text>
-          </g>
-        );
-      })}
-    </g>
-  );
+            </g>
+          );
+        })}
+        {graph.nodes.filter((n) => positions[n.key]).map((n) => {
+          const [x, y] = positions[n.key];
+          const color = NODE_COLORS[n.kind];
+          const icon = nodeIcon(n);
+          return (
+            <g key={n.key} className="cursor-pointer"
+              onClick={(ev) => { ev.stopPropagation(); setPlacing(n.key); }}>
+              <circle cx={x} cy={y} r={nodeR} fill="rgba(15,23,42,0.85)"
+                stroke={color} strokeWidth={nodeR * (placing === n.key ? 0.28 : 0.15)} />
+              {icon ? (
+                <image href={`${import.meta.env.BASE_URL}icons/${icon}.png`}
+                  x={x - nodeR * 0.62} y={y - nodeR * 0.62}
+                  width={nodeR * 1.24} height={nodeR * 1.24} pointerEvents="none" />
+              ) : (
+                <text x={x} y={y} textAnchor="middle" dominantBaseline="central"
+                  fontSize={nodeR * 0.9} fontWeight={700} fill={color} pointerEvents="none">
+                  {n.kind === 'output' ? '★' : nodeLabel(n).slice(0, 2)}
+                </text>
+              )}
+              <text x={x} y={y + nodeR + labelFs * 0.9} textAnchor="middle" fontSize={labelFs}
+                fontWeight={600} fill="#f8fafc" stroke="#0f172a" strokeWidth={labelFs * 0.09}
+                style={{ paintOrder: 'stroke' }} pointerEvents="none">
+                {nodeLabel(n)}
+              </text>
+            </g>
+          );
+        })}
+      </g>
+    );
+  };
 
   if (!plan || !targetId) {
     return (
@@ -165,14 +174,17 @@ export function DeployModule() {
   return (
     <div className="relative h-[calc(100vh-7.25rem)] overflow-hidden">
       <div className="absolute inset-0 bg-slate-950">
-        <HexMap onMapClick={onMapClick} overlay={overlay} />
+        <HexMap onMapClick={onMapClick} overlay={overlay} apiMarkers={apiMarkers} />
       </div>
 
-      {/* Placement hint */}
+      {/* Placement hint + world layers */}
       <div className="absolute top-2 left-2 z-10 space-y-1">
         <p className="inline-block text-xs text-slate-200 bg-slate-900/85 backdrop-blur border border-slate-700 rounded-md px-3 py-1.5">
           🏗 {localized(refName(targetId))} × {quantity} — {placedCount}/{graph.nodes.length}
         </p>
+        <div className="block">
+          <MapLayersControl />
+        </div>
         {placing && (
           <p className="block w-fit text-xs text-amber-300 bg-slate-900/85 backdrop-blur border border-amber-500/50 rounded-md px-3 py-1.5">
             {t('deploy.clickToPlace', { name: nodeLabel(graph.nodes.find((n) => n.key === placing)!) })}

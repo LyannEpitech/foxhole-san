@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build/
+.git/
+graphify-out/
+*.log
+.env
+.env.*
+coverage/
+.DS_Store

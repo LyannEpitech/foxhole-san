@@ -130,6 +130,7 @@
     "tooltip": {
       "neutral": "Neutral",
       "victory": "Victory base",
+      "buildSite": "Destroyed — awaiting reconstruction",
       "scorched": "Scorched"
     },
     "layer": {

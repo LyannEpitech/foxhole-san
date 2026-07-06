@@ -25,6 +25,8 @@ export interface ApiMarker {
   factionLabel: string;
   /** Extra state badges (victory base, scorched…). */
   badges: string[];
+  /** Destroyed world structure awaiting reconstruction (IsBuildSite). */
+  buildSite?: boolean;
 }
 
 interface Props {
@@ -389,8 +391,9 @@ export function HexMap({
                   cy={c.members[0].y}
                   r={apiIconSize * 0.62}
                   fill="rgba(15,23,42,0.72)"
-                  stroke={c.members[0].ringColor}
+                  stroke={c.members[0].buildSite ? '#fb923c' : c.members[0].ringColor}
                   strokeWidth={apiIconSize * 0.09}
+                  strokeDasharray={c.members[0].buildSite ? `${apiIconSize * 0.18} ${apiIconSize * 0.12}` : undefined}
                 />
                 <image
                   href={c.members[0].iconUrl}
@@ -398,6 +401,7 @@ export function HexMap({
                   y={c.members[0].y - apiIconSize / 2}
                   width={apiIconSize}
                   height={apiIconSize}
+                  opacity={c.members[0].buildSite ? 0.55 : 1}
                 />
               </g>
             ) : (
@@ -448,8 +452,9 @@ export function HexMap({
             cy={m.y}
             r={apiIconSize * 0.62}
             fill="rgba(15,23,42,0.72)"
-            stroke={m.ringColor}
+            stroke={m.buildSite ? '#fb923c' : m.ringColor}
             strokeWidth={apiIconSize * (hoverInfo?.marker === m ? 0.16 : 0.09)}
+            strokeDasharray={m.buildSite ? `${apiIconSize * 0.18} ${apiIconSize * 0.12}` : undefined}
           />
           <image
             href={m.iconUrl}
@@ -457,6 +462,7 @@ export function HexMap({
             y={m.y - apiIconSize / 2}
             width={apiIconSize}
             height={apiIconSize}
+            opacity={m.buildSite ? 0.55 : 1}
             pointerEvents="none"
           />
         </g>

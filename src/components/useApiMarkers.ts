@@ -22,6 +22,7 @@ export function useApiMarkers(): ApiMarker[] {
   }, []);
 
   const FLAG_VICTORY_BASE = 0x01;
+  const FLAG_BUILD_SITE = 0x04;
   const FLAG_SCORCHED = 0x10;
 
   return useMemo(() => {
@@ -40,8 +41,10 @@ export function useApiMarkers(): ApiMarker[] {
         if (!def || !layers[def.kind]) continue;
         const badges: string[] = [];
         if (item.flags & FLAG_VICTORY_BASE) badges.push(t('map.tooltip.victory'));
+        if (item.flags & FLAG_BUILD_SITE) badges.push(t('map.tooltip.buildSite'));
         if (item.flags & FLAG_SCORCHED) badges.push(t('map.tooltip.scorched'));
         out.push({
+          buildSite: (item.flags & FLAG_BUILD_SITE) !== 0,
           x: minX + item.x * w,
           y: minY + item.y * h,
           iconUrl: `${import.meta.env.BASE_URL}icons/${def.icon}.png`,

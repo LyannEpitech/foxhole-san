@@ -10,7 +10,7 @@
   "cost": {
    "bmats": 60
   },
-  "amountProduced": 20,
+  "amountProduced": 40,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -40,7 +40,7 @@
   "cost": {
    "bmats": 60
   },
-  "amountProduced": 20,
+  "amountProduced": 30,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -326,9 +326,9 @@
   "category": "smallArms",
   "faction": "Warden",
   "cost": {
-   "bmats": 165
+   "rmats": 15
   },
-  "amountProduced": 10,
+  "amountProduced": 20,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -341,9 +341,9 @@
   "category": "smallArms",
   "faction": "Warden",
   "cost": {
-   "bmats": 165
+   "rmats": 15
   },
-  "amountProduced": 10,
+  "amountProduced": 20,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -356,9 +356,9 @@
   "category": "smallArms",
   "faction": "Colonial",
   "cost": {
-   "bmats": 165
+   "rmats": 15
   },
-  "amountProduced": 10,
+  "amountProduced": 20,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -371,9 +371,9 @@
   "category": "smallArms",
   "faction": "Colonial",
   "cost": {
-   "bmats": 165
+   "rmats": 15
   },
-  "amountProduced": 10,
+  "amountProduced": 20,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -448,9 +448,9 @@
   "category": "smallArms",
   "faction": "Colonial",
   "cost": {
-   "rmats": 30
+   "rmats": 25
   },
-  "amountProduced": 10,
+  "amountProduced": 5,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -463,9 +463,9 @@
   "category": "smallArms",
   "faction": "Warden",
   "cost": {
-   "rmats": 30
+   "rmats": 25
   },
-  "amountProduced": 10,
+  "amountProduced": 5,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -493,9 +493,9 @@
   "category": "smallArms",
   "faction": "Both",
   "cost": {
-   "bmats": 120
+   "bmats": 80
   },
-  "amountProduced": 10,
+  "amountProduced": 15,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -508,7 +508,8 @@
   "category": "heavyArms",
   "faction": "Colonial",
   "cost": {
-   "bmats": 150
+   "bmats": 100,
+   "rmats": 5
   },
   "amountProduced": 5,
   "producedBy": "factory",
@@ -525,7 +526,7 @@
   "cost": {
    "bmats": 150
   },
-  "amountProduced": 5,
+  "amountProduced": 3,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -538,9 +539,9 @@
   "category": "heavyArms",
   "faction": "Both",
   "cost": {
-   "bmats": 100
+   "bmats": 120
   },
-  "amountProduced": 10,
+  "amountProduced": 5,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -553,7 +554,8 @@
   "category": "heavyArms",
   "faction": "Colonial",
   "cost": {
-   "bmats": 150
+   "bmats": 100,
+   "rmats": 5
   },
   "amountProduced": 5,
   "producedBy": "factory",
@@ -569,7 +571,7 @@
   "faction": "Both",
   "cost": {
    "bmats": 80,
-   "emats": 20
+   "emats": 40
   },
   "amountProduced": 20,
   "producedBy": "factory",
@@ -585,7 +587,7 @@
   "faction": "Both",
   "cost": {
    "bmats": 160,
-   "emats": 120
+   "emats": 240
   },
   "amountProduced": 20,
   "producedBy": "factory",
@@ -617,7 +619,7 @@
   "faction": "Warden",
   "cost": {
    "bmats": 100,
-   "rmats": 25
+   "rmats": 35
   },
   "amountProduced": 5,
   "producedBy": "factory",
@@ -632,7 +634,8 @@
   "category": "heavyArms",
   "faction": "Warden",
   "cost": {
-   "bmats": 200
+   "bmats": 100,
+   "rmats": 5
   },
   "amountProduced": 5,
   "producedBy": "factory",
@@ -648,7 +651,7 @@
   "faction": "Both",
   "cost": {
    "bmats": 60,
-   "emats": 75
+   "emats": 90
   },
   "amountProduced": 15,
   "producedBy": "factory",
@@ -664,7 +667,7 @@
   "faction": "Colonial",
   "cost": {
    "bmats": 100,
-   "rmats": 25
+   "rmats": 15
   },
   "amountProduced": 5,
   "producedBy": "factory",
@@ -679,10 +682,10 @@
   "category": "heavyArms",
   "faction": "Colonial",
   "cost": {
-   "bmats": 60,
-   "emats": 50
+   "bmats": 85,
+   "emats": 70
   },
-  "amountProduced": 15,
+  "amountProduced": 10,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -696,7 +699,7 @@
   "faction": "Colonial",
   "cost": {
    "bmats": 150,
-   "rmats": 45
+   "rmats": 40
   },
   "amountProduced": 5,
   "producedBy": "factory",
@@ -743,7 +746,8 @@
   "category": "heavyArms",
   "faction": "Warden",
   "cost": {
-   "bmats": 200
+   "bmats": 100,
+   "rmats": 5
   },
   "amountProduced": 5,
   "producedBy": "factory",
@@ -791,7 +795,7 @@
   "faction": "Both",
   "cost": {
    "bmats": 60,
-   "emats": 35
+   "emats": 70
   },
   "amountProduced": 15,
   "producedBy": "factory",
@@ -807,7 +811,7 @@
   "faction": "Both",
   "cost": {
    "bmats": 60,
-   "emats": 15
+   "emats": 20
   },
   "amountProduced": 15,
   "producedBy": "factory",
@@ -823,7 +827,7 @@
   "faction": "Both",
   "cost": {
    "bmats": 60,
-   "emats": 10
+   "emats": 15
   },
   "amountProduced": 15,
   "producedBy": "factory",
@@ -856,7 +860,7 @@
   "faction": "Both",
   "cost": {
    "bmats": 120,
-   "hemats": 10
+   "hemats": 60
   },
   "amountProduced": 5,
   "producedBy": "factory",
@@ -884,12 +888,12 @@
    "en": "Green Ash Grenade",
    "fr": "Green Ash Grenade"
   },
-  "category": "heavyArms",
+  "category": "smallArms",
   "faction": "Both",
   "cost": {
    "bmats": 140
   },
-  "amountProduced": 20,
+  "amountProduced": 10,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -899,7 +903,7 @@
    "en": "Bomastone Grenade",
    "fr": "Bomastone Grenade"
   },
-  "category": "heavyArms",
+  "category": "smallArms",
   "faction": "Colonial",
   "cost": {
    "bmats": 100,
@@ -916,7 +920,7 @@
    "en": "A3 Harpa Fragmentation Grenade",
    "fr": "A3 Harpa Fragmentation Grenade"
   },
-  "category": "heavyArms",
+  "category": "smallArms",
   "faction": "Warden",
   "cost": {
    "bmats": 100,
@@ -937,9 +941,9 @@
   "faction": "Both",
   "cost": {
    "bmats": 100,
-   "emats": 10
+   "emats": 20
   },
-  "amountProduced": 25,
+  "amountProduced": 20,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -953,7 +957,7 @@
   "faction": "Both",
   "cost": {
    "bmats": 50,
-   "emats": 50
+   "emats": 100
   },
   "amountProduced": 10,
   "producedBy": "factory",
@@ -969,9 +973,9 @@
   "faction": "Warden",
   "cost": {
    "bmats": 100,
-   "emats": 50
+   "emats": 80
   },
-  "amountProduced": 15,
+  "amountProduced": 10,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -1014,7 +1018,8 @@
   "category": "heavyArms",
   "faction": "Colonial",
   "cost": {
-   "bmats": 150
+   "bmats": 100,
+   "rmats": 5
   },
   "amountProduced": 5,
   "producedBy": "factory",
@@ -1029,7 +1034,8 @@
   "category": "heavyArms",
   "faction": "Warden",
   "cost": {
-   "bmats": 150
+   "bmats": 100,
+   "rmats": 5
   },
   "amountProduced": 5,
   "producedBy": "factory",
@@ -1128,7 +1134,7 @@
   "category": "utilities",
   "faction": "Both",
   "cost": {
-   "bmats": 100
+   "bmats": 75
   },
   "amountProduced": 5,
   "producedBy": "factory"
@@ -1185,7 +1191,7 @@
   "faction": "Colonial",
   "cost": {
    "bmats": 100,
-   "emats": 40
+   "emats": 80
   },
   "amountProduced": 5,
   "producedBy": "factory"
@@ -1197,10 +1203,10 @@
    "fr": "Alligator Charge"
   },
   "category": "utilities",
-  "faction": "Both",
+  "faction": "Warden",
   "cost": {
    "bmats": 100,
-   "hemats": 15
+   "emats": 80
   },
   "amountProduced": 5,
   "producedBy": "factory"
@@ -1243,9 +1249,9 @@
   "category": "utilities",
   "faction": "Both",
   "cost": {
-   "bmats": 120
+   "bmats": 150
   },
-  "amountProduced": 3,
+  "amountProduced": 5,
   "producedBy": "factory"
  },
  {
@@ -1271,9 +1277,9 @@
   "category": "medical",
   "faction": "Both",
   "cost": {
-   "bmats": 160
+   "bmats": 80
   },
-  "amountProduced": 80,
+  "amountProduced": 50,
   "producedBy": "factory"
  },
  {
@@ -1315,7 +1321,7 @@
   "cost": {
    "bmats": 80
   },
-  "amountProduced": 80,
+  "amountProduced": 50,
   "producedBy": "factory"
  },
  {
@@ -1400,7 +1406,7 @@
   "category": "shippables",
   "faction": "Colonial",
   "cost": {
-   "rmats": 195
+   "rmats": 585
   },
   "amountProduced": 3,
   "producedBy": "factory",
@@ -1565,9 +1571,9 @@
   "category": "vehicles",
   "faction": "Colonial",
   "cost": {
-   "rmats": 120
+   "rmats": 75
   },
-  "amountProduced": 1,
+  "amountProduced": 3,
   "producedBy": "garage",
   "isMfpCraftable": true
  },
@@ -1580,7 +1586,7 @@
   "category": "vehicles",
   "faction": "Colonial",
   "cost": {
-   "bmats": 150
+   "rmats": 105
   },
   "amountProduced": 3,
   "producedBy": "garage",
@@ -1670,9 +1676,9 @@
   "category": "vehicles",
   "faction": "Warden",
   "cost": {
-   "rmats": 105
+   "rmats": 75
   },
-  "amountProduced": 1,
+  "amountProduced": 3,
   "producedBy": "garage",
   "isMfpCraftable": true
  },
@@ -1715,7 +1721,7 @@
   "category": "vehicles",
   "faction": "Colonial",
   "cost": {
-   "rmats": 90
+   "rmats": 60
   },
   "amountProduced": 3,
   "producedBy": "garage",
@@ -1760,7 +1766,7 @@
   "category": "vehicles",
   "faction": "Colonial",
   "cost": {
-   "rmats": 75
+   "rmats": 60
   },
   "amountProduced": 3,
   "producedBy": "garage",
@@ -1777,7 +1783,7 @@
   "cost": {
    "rmats": 480
   },
-  "amountProduced": 1,
+  "amountProduced": 3,
   "producedBy": "garage",
   "isMfpCraftable": true
  },
@@ -1790,9 +1796,9 @@
   "category": "vehicles",
   "faction": "Warden",
   "cost": {
-   "rmats": 90
+   "rmats": 60
   },
-  "amountProduced": 1,
+  "amountProduced": 3,
   "producedBy": "garage",
   "isMfpCraftable": true
  },
@@ -1820,9 +1826,9 @@
   "category": "vehicles",
   "faction": "Warden",
   "cost": {
-   "rmats": 90
+   "rmats": 60
   },
-  "amountProduced": 1,
+  "amountProduced": 3,
   "producedBy": "garage",
   "isMfpCraftable": true
  },
@@ -1835,7 +1841,7 @@
   "category": "vehicles",
   "faction": "Warden",
   "cost": {
-   "rmats": 75
+   "rmats": 60
   },
   "amountProduced": 3,
   "producedBy": "garage",
@@ -1942,7 +1948,7 @@
   "cost": {
    "rmats": 180
   },
-  "amountProduced": 1,
+  "amountProduced": 3,
   "producedBy": "garage",
   "isMfpCraftable": true
  },
@@ -1972,7 +1978,7 @@
   "cost": {
    "rmats": 60
   },
-  "amountProduced": 1,
+  "amountProduced": 3,
   "producedBy": "garage",
   "isMfpCraftable": true
  },
@@ -2015,7 +2021,7 @@
   "category": "vehicles",
   "faction": "Colonial",
   "cost": {
-   "rmats": 420
+   "rmats": 300
   },
   "amountProduced": 3,
   "producedBy": "garage",
@@ -2030,7 +2036,7 @@
   "category": "vehicles",
   "faction": "Colonial",
   "cost": {
-   "rmats": 405
+   "rmats": 345
   },
   "amountProduced": 3,
   "producedBy": "garage",
@@ -2075,9 +2081,9 @@
   "category": "vehicles",
   "faction": "Colonial",
   "cost": {
-   "rmats": 525
+   "rmats": 495
   },
-  "amountProduced": 1,
+  "amountProduced": 3,
   "producedBy": "garage",
   "isMfpCraftable": true
  },
@@ -2090,9 +2096,9 @@
   "category": "vehicles",
   "faction": "Colonial",
   "cost": {
-   "rmats": 495
+   "rmats": 405
   },
-  "amountProduced": 1,
+  "amountProduced": 5,
   "producedBy": "garage",
   "isMfpCraftable": true
  },
@@ -2330,9 +2336,9 @@
   "category": "vehicles",
   "faction": "Warden",
   "cost": {
-   "rmats": 420
+   "rmats": 360
   },
-  "amountProduced": 1,
+  "amountProduced": 3,
   "producedBy": "garage",
   "isMfpCraftable": true
  },
@@ -2375,9 +2381,9 @@
   "category": "vehicles",
   "faction": "Warden",
   "cost": {
-   "rmats": 510
+   "rmats": 465
   },
-  "amountProduced": 1,
+  "amountProduced": 3,
   "producedBy": "garage",
   "isMfpCraftable": true
  },
@@ -2435,9 +2441,9 @@
   "category": "vehicles",
   "faction": "Warden",
   "cost": {
-   "rmats": 240
+   "rmats": 210
   },
-  "amountProduced": 1,
+  "amountProduced": 3,
   "producedBy": "garage",
   "isMfpCraftable": true
  },
@@ -2585,7 +2591,7 @@
   "category": "vehicles",
   "faction": "Colonial",
   "cost": {
-   "rmats": 480
+   "rmats": 420
   },
   "amountProduced": 3,
   "producedBy": "garage",
@@ -2615,9 +2621,9 @@
   "category": "vehicles",
   "faction": "Warden",
   "cost": {
-   "rmats": 480
+   "rmats": 420
   },
-  "amountProduced": 1,
+  "amountProduced": 3,
   "producedBy": "garage",
   "isMfpCraftable": true
  },
@@ -2677,7 +2683,7 @@
   "cost": {
    "bmats": 100
   },
-  "amountProduced": 20,
+  "amountProduced": 15,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -2692,7 +2698,7 @@
   "cost": {
    "bmats": 100
   },
-  "amountProduced": 20,
+  "amountProduced": 15,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -2707,7 +2713,7 @@
   "cost": {
    "bmats": 100
   },
-  "amountProduced": 20,
+  "amountProduced": 15,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -2722,7 +2728,7 @@
   "cost": {
    "bmats": 100
   },
-  "amountProduced": 20,
+  "amountProduced": 15,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -2737,7 +2743,7 @@
   "cost": {
    "bmats": 100
   },
-  "amountProduced": 20,
+  "amountProduced": 15,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -2752,7 +2758,7 @@
   "cost": {
    "bmats": 100
   },
-  "amountProduced": 20,
+  "amountProduced": 15,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -2767,7 +2773,7 @@
   "cost": {
    "bmats": 100
   },
-  "amountProduced": 20,
+  "amountProduced": 15,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -2782,7 +2788,7 @@
   "cost": {
    "bmats": 100
   },
-  "amountProduced": 20,
+  "amountProduced": 15,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -2797,7 +2803,7 @@
   "cost": {
    "bmats": 100
   },
-  "amountProduced": 20,
+  "amountProduced": 15,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -2812,7 +2818,7 @@
   "cost": {
    "bmats": 100
   },
-  "amountProduced": 20,
+  "amountProduced": 15,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -2827,7 +2833,7 @@
   "cost": {
    "bmats": 100
   },
-  "amountProduced": 20,
+  "amountProduced": 15,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -2842,7 +2848,7 @@
   "cost": {
    "bmats": 100
   },
-  "amountProduced": 20,
+  "amountProduced": 15,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -2857,8 +2863,1133 @@
   "cost": {
    "bmats": 100
   },
+  "amountProduced": 15,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "catena-rtiv-auto-rifle",
+  "name": {
+   "en": "Catena rt.IV Auto-Rifle",
+   "fr": "Catena rt.IV Auto-Rifle"
+  },
+  "category": "smallArms",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 120
+  },
+  "amountProduced": 15,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "no-2b-hawthorne",
+  "name": {
+   "en": "No. 2B Hawthorne",
+   "fr": "No. 2B Hawthorne"
+  },
+  "category": "smallArms",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 70
+  },
+  "amountProduced": 15,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "krf1-750-dragonfly",
+  "name": {
+   "en": "KRF1-750 Dragonfly",
+   "fr": "KRF1-750 Dragonfly"
+  },
+  "category": "smallArms",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 130
+  },
   "amountProduced": 20,
   "producedBy": "factory",
   "isMfpCraftable": true
+ },
+ {
+  "id": "no4-the-pillory-scattergun",
+  "name": {
+   "en": "No.4 The Pillory Scattergun",
+   "fr": "No.4 The Pillory Scattergun"
+  },
+  "category": "smallArms",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 80
+  },
+  "amountProduced": 15,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "145mm",
+  "name": {
+   "en": "14.5mm",
+   "fr": "14.5mm"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 10,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "carnyx-anti-tank-rocket-launcher",
+  "name": {
+   "en": "Carnyx Anti-Tank Rocket Launcher",
+   "fr": "Carnyx Anti-Tank Rocket Launcher"
+  },
+  "category": "heavyArms",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 125,
+   "rmats": 15
+  },
+  "amountProduced": 5,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "ap-rpg",
+  "name": {
+   "en": "AP/RPG",
+   "fr": "AP/RPG"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 60,
+   "emats": 150
+  },
+  "amountProduced": 15,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "arc-rpg",
+  "name": {
+   "en": "ARC/RPG",
+   "fr": "ARC/RPG"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 60,
+   "emats": 150
+  },
+  "amountProduced": 15,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "molten-wind-vii-flame-torch",
+  "name": {
+   "en": "\"Molten Wind\" v.II Flame Torch",
+   "fr": "\"Molten Wind\" v.II Flame Torch"
+  },
+  "category": "heavyArms",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 185,
+   "rmats": 25
+  },
+  "amountProduced": 10,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "klg901-2-lunaire-f",
+  "name": {
+   "en": "KLG901-2 Lunaire F",
+   "fr": "KLG901-2 Lunaire F"
+  },
+  "category": "heavyArms",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 50,
+   "rmats": 15
+  },
+  "amountProduced": 5,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "mounted-fissura-gdi",
+  "name": {
+   "en": "Mounted Fissura gd.I",
+   "fr": "Mounted Fissura gd.I"
+  },
+  "category": "heavyArms",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 100,
+   "rmats": 5
+  },
+  "amountProduced": 5,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "willows-bane-model-845",
+  "name": {
+   "en": "Willow's Bane Model 845",
+   "fr": "Willow's Bane Model 845"
+  },
+  "category": "heavyArms",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 165,
+   "rmats": 30
+  },
+  "amountProduced": 10,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "tremola-grenade-gpb-1",
+  "name": {
+   "en": "Tremola Grenade GPb-1",
+   "fr": "Tremola Grenade GPb-1"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 75,
+   "emats": 100
+  },
+  "amountProduced": 20,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "b2-varsi-anti-tank-grenade",
+  "name": {
+   "en": "B2 Varsi Anti-Tank Grenade",
+   "fr": "B2 Varsi Anti-Tank Grenade"
+  },
+  "category": "heavyArms",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 95,
+   "emats": 125
+  },
+  "amountProduced": 20,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "950-70b-anti-aircraft-shell",
+  "name": {
+   "en": "950-70b Anti-Aircraft Shell",
+   "fr": "950-70b Anti-Aircraft Shell"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 100,
+   "hemats": 15
+  },
+  "amountProduced": 5,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "shatter-missle",
+  "name": {
+   "en": "Shatter Missle",
+   "fr": "Shatter Missle"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 250,
+   "hemats": 250
+  },
+  "amountProduced": 5,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "absol-anti-aircraft-rounds",
+  "name": {
+   "en": "Absol Anti-Aircraft Rounds",
+   "fr": "Absol Anti-Aircraft Rounds"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 150,
+   "emats": 160
+  },
+  "amountProduced": 5,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "quillback-torpedo",
+  "name": {
+   "en": "Quillback Torpedo",
+   "fr": "Quillback Torpedo"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 125,
+   "emats": 75
+  },
+  "amountProduced": 5,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "250mm-purity-shell",
+  "name": {
+   "en": "250mm \"Purity\" Shell",
+   "fr": "250mm \"Purity\" Shell"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 120,
+   "hemats": 100
+  },
+  "amountProduced": 5,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "250mm-fury-shell",
+  "name": {
+   "en": "250mm \"Fury\" Shell",
+   "fr": "250mm \"Fury\" Shell"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 250,
+   "hemats": 200
+  },
+  "amountProduced": 5,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "e6881-b-hullbreaker-mine",
+  "name": {
+   "en": "E6881-B Hullbreaker Mine",
+   "fr": "E6881-B Hullbreaker Mine"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 125,
+   "emats": 35
+  },
+  "amountProduced": 5,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "68mm",
+  "name": {
+   "en": "68mm",
+   "fr": "68mm"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 120,
+   "emats": 240
+  },
+  "amountProduced": 20,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "barbed-wire",
+  "name": {
+   "en": "Barbed Wire",
+   "fr": "Barbed Wire"
+  },
+  "category": "utilities",
+  "faction": "Both",
+  "cost": {
+   "bmats": 15
+  },
+  "amountProduced": 5,
+  "producedBy": "factory"
+ },
+ {
+  "id": "havoc-charge",
+  "name": {
+   "en": "Havoc Charge",
+   "fr": "Havoc Charge"
+  },
+  "category": "utilities",
+  "faction": "Both",
+  "cost": {
+   "bmats": 75,
+   "hemats": 40
+  },
+  "amountProduced": 5,
+  "producedBy": "factory"
+ },
+ {
+  "id": "willows-bane-ammo",
+  "name": {
+   "en": "Willow's Bane Ammo",
+   "fr": "Willow's Bane Ammo"
+  },
+  "category": "utilities",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 135,
+   "hemats": 20
+  },
+  "amountProduced": 10,
+  "producedBy": "factory"
+ },
+ {
+  "id": "molten-wind-vii-ammo",
+  "name": {
+   "en": "\"Molten Wind\" v.II Ammo",
+   "fr": "\"Molten Wind\" v.II Ammo"
+  },
+  "category": "utilities",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 160,
+   "hemats": 20
+  },
+  "amountProduced": 10,
+  "producedBy": "factory"
+ },
+ {
+  "id": "falias-raiding-club",
+  "name": {
+   "en": "Falias Raiding Club",
+   "fr": "Falias Raiding Club"
+  },
+  "category": "utilities",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 200
+  },
+  "amountProduced": 10,
+  "producedBy": "factory"
+ },
+ {
+  "id": "metal-beam",
+  "name": {
+   "en": "Metal Beam",
+   "fr": "Metal Beam"
+  },
+  "category": "utilities",
+  "faction": "Both",
+  "cost": {
+   "bmats": 25
+  },
+  "amountProduced": 5,
+  "producedBy": "factory"
+ },
+ {
+  "id": "sandbag",
+  "name": {
+   "en": "Sandbag",
+   "fr": "Sandbag"
+  },
+  "category": "utilities",
+  "faction": "Both",
+  "cost": {
+   "bmats": 15
+  },
+  "amountProduced": 5,
+  "producedBy": "factory"
+ },
+ {
+  "id": "havoc-charge-detonator",
+  "name": {
+   "en": "Havoc Charge Detonator",
+   "fr": "Havoc Charge Detonator"
+  },
+  "category": "utilities",
+  "faction": "Both",
+  "cost": {
+   "bmats": 75,
+   "hemats": 20
+  },
+  "amountProduced": 5,
+  "producedBy": "factory"
+ },
+ {
+  "id": "eleos-infantry-dagger",
+  "name": {
+   "en": "Eleos Infantry Dagger",
+   "fr": "Eleos Infantry Dagger"
+  },
+  "category": "utilities",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 200
+  },
+  "amountProduced": 10,
+  "producedBy": "factory"
+ },
+ {
+  "id": "wind-sock",
+  "name": {
+   "en": "Wind Sock",
+   "fr": "Wind Sock"
+  },
+  "category": "utilities",
+  "faction": "Both",
+  "cost": {
+   "bmats": 150
+  },
+  "amountProduced": 5,
+  "producedBy": "factory"
+ },
+ {
+  "id": "water-bucket",
+  "name": {
+   "en": "Water Bucket",
+   "fr": "Water Bucket"
+  },
+  "category": "utilities",
+  "faction": "Both",
+  "cost": {
+   "bmats": 80
+  },
+  "amountProduced": 50,
+  "producedBy": "factory"
+ },
+ {
+  "id": "the-ospreay",
+  "name": {
+   "en": "The Ospreay",
+   "fr": "The Ospreay"
+  },
+  "category": "utilities",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 85,
+   "rmats": 10
+  },
+  "amountProduced": 20,
+  "producedBy": "factory"
+ },
+ {
+  "id": "liason-transmitter",
+  "name": {
+   "en": "Liason Transmitter",
+   "fr": "Liason Transmitter"
+  },
+  "category": "utilities",
+  "faction": "Both",
+  "cost": {
+   "bmats": 75
+  },
+  "amountProduced": 5,
+  "producedBy": "factory"
+ },
+ {
+  "id": "maintenance-supplies",
+  "name": {
+   "en": "Maintenance Supplies",
+   "fr": "Maintenance Supplies"
+  },
+  "category": "supplies",
+  "faction": "Both",
+  "cost": {
+   "bmats": 250
+  },
+  "amountProduced": 100,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "material-pallet",
+  "name": {
+   "en": "Material pallet",
+   "fr": "Material pallet"
+  },
+  "category": "shippables",
+  "faction": "Both",
+  "cost": {
+   "bmats": 75
+  },
+  "amountProduced": 3,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "leary-aa-70-bolas",
+  "name": {
+   "en": "Leary AA-70 Bolas",
+   "fr": "Leary AA-70 Bolas"
+  },
+  "category": "shippables",
+  "faction": "Warden",
+  "cost": {
+   "rmats": 525
+  },
+  "amountProduced": 3,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "leary-shellbore-68mm",
+  "name": {
+   "en": "Leary Shellbore 68mm",
+   "fr": "Leary Shellbore 68mm"
+  },
+  "category": "shippables",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 450
+  },
+  "amountProduced": 3,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "dae-5b-zeal",
+  "name": {
+   "en": "DAE 5b \"Zeal\"",
+   "fr": "DAE 5b \"Zeal\""
+  },
+  "category": "shippables",
+  "faction": "Colonial",
+  "cost": {
+   "rmats": 525
+  },
+  "amountProduced": 3,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "leary-snare-trap-127",
+  "name": {
+   "en": "Leary Snare Trap 127",
+   "fr": "Leary Snare Trap 127"
+  },
+  "category": "shippables",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 225
+  },
+  "amountProduced": 3,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "dae-1o-3-polybolos",
+  "name": {
+   "en": "DAE 1o-3 \"Polybolos\"",
+   "fr": "DAE 1o-3 \"Polybolos\""
+  },
+  "category": "shippables",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 375
+  },
+  "amountProduced": 3,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "dae-1b-2-serra",
+  "name": {
+   "en": "DAE 1b-2 \"Serra\"",
+   "fr": "DAE 1b-2 \"Serra\""
+  },
+  "category": "shippables",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 300
+  },
+  "amountProduced": 3,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "construction-equipment",
+  "name": {
+   "en": "Construction Equipment",
+   "fr": "Construction Equipment"
+  },
+  "category": "shippables",
+  "faction": "Both",
+  "cost": {
+   "rmats": 150
+  },
+  "amountProduced": 3,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "liquid-container",
+  "name": {
+   "en": "Liquid Container",
+   "fr": "Liquid Container"
+  },
+  "category": "shippables",
+  "faction": "Both",
+  "cost": {
+   "bmats": 300
+  },
+  "amountProduced": 3,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "obrien-v190-knave",
+  "name": {
+   "en": "O'Brien v.190 Knave",
+   "fr": "O'Brien v.190 Knave"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {
+   "rmats": 120
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "sharkey-devitt-birdeater-mk-i",
+  "name": {
+   "en": "Sharkey-Devitt Birdeater Mk. I",
+   "fr": "Sharkey-Devitt Birdeater Mk. I"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {
+   "rmats": 375
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "30-250-tisiphone-field-cannon",
+  "name": {
+   "en": "30-250 \"Tisiphone\" Field Cannon",
+   "fr": "30-250 \"Tisiphone\" Field Cannon"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {
+   "rmats": 105
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "ha-1-sagaris",
+  "name": {
+   "en": "HA-1 \"Sagaris\"",
+   "fr": "HA-1 \"Sagaris\""
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {
+   "rmats": 375
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "90t-v-nemesis",
+  "name": {
+   "en": "90T-v \"Nemesis\"",
+   "fr": "90T-v \"Nemesis\""
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {
+   "rmats": 450
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "gallagher-brigand-mk-i",
+  "name": {
+   "en": "Gallagher Brigand Mk. I",
+   "fr": "Gallagher Brigand Mk. I"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {
+   "rmats": 450
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "rooster-lamploader",
+  "name": {
+   "en": "Rooster - Lamploader",
+   "fr": "Rooster - Lamploader"
+  },
+  "category": "vehicles",
+  "faction": "Both",
+  "cost": {
+   "bmats": 300
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "rooster-tumblebox",
+  "name": {
+   "en": "Rooster - Tumblebox",
+   "fr": "Rooster - Tumblebox"
+  },
+  "category": "vehicles",
+  "faction": "Both",
+  "cost": {
+   "bmats": 300
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "rooster-junkwagon",
+  "name": {
+   "en": "Rooster - Junkwagon",
+   "fr": "Rooster - Junkwagon"
+  },
+  "category": "vehicles",
+  "faction": "Both",
+  "cost": {
+   "bmats": 300
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "type-b-lucian",
+  "name": {
+   "en": "Type B - \"Lucian\"",
+   "fr": "Type B - \"Lucian\""
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {
+   "rmats": 300
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "81f-f-ronan-blackguard",
+  "name": {
+   "en": "81f-f Ronan Blackguard",
+   "fr": "81f-f Ronan Blackguard"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {
+   "rmats": 300
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "das-krokodil-by-vac",
+  "name": {
+   "en": "Das Krokodil by VAC",
+   "fr": "Das Krokodil by VAC"
+  },
+  "category": "vehicles",
+  "faction": "Both",
+  "cost": {
+   "bmats": 300
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "k-81e-sombre",
+  "name": {
+   "en": "K-81e \"Sombre\"",
+   "fr": "K-81e \"Sombre\""
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 600
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "68a-4-ronan-fathomer",
+  "name": {
+   "en": "68A-4 Ronan Fathomer",
+   "fr": "68A-4 Ronan Fathomer"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 750
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "strider",
+  "name": {
+   "en": "Strider",
+   "fr": "Strider"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 1500
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "rinnspeir-ornitier-class-gunship",
+  "name": {
+   "en": "Rinnspeir Ornitier-Class Gunship",
+   "fr": "Rinnspeir Ornitier-Class Gunship"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 1350
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "bellweather-by-vac",
+  "name": {
+   "en": "Bellweather by VAC",
+   "fr": "Bellweather by VAC"
+  },
+  "category": "vehicles",
+  "faction": "Both",
+  "cost": {
+   "bmats": 450
+  },
+  "amountProduced": 3,
+  "producedBy": "garage",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "velian-flak-vest",
+  "name": {
+   "en": "Velian Flak Vest",
+   "fr": "Velian Flak Vest"
+  },
+  "category": "uniforms",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 200
+  },
+  "amountProduced": 10,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "remex-garb",
+  "name": {
+   "en": "Remex Garb",
+   "fr": "Remex Garb"
+  },
+  "category": "uniforms",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 15,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "officialis-attire",
+  "name": {
+   "en": "Officialis' Attire",
+   "fr": "Officialis' Attire"
+  },
+  "category": "uniforms",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 3,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "gunners-breastplate",
+  "name": {
+   "en": "Gunner's Breastplate",
+   "fr": "Gunner's Breastplate"
+  },
+  "category": "uniforms",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 150
+  },
+  "amountProduced": 5,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "gentlemans-peacoat",
+  "name": {
+   "en": "Gentleman's Peacoat",
+   "fr": "Gentleman's Peacoat"
+  },
+  "category": "uniforms",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 15,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "officers-regalia",
+  "name": {
+   "en": "Officer's Regalia",
+   "fr": "Officer's Regalia"
+  },
+  "category": "uniforms",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 3,
+  "producedBy": "factory",
+  "isMfpCraftable": true
+ },
+ {
+  "id": "r-17-retiarius-skirmisher",
+  "name": {
+   "en": "R-17 \"Retiarius\" Skirmisher",
+   "fr": "R-17 \"Retiarius\" Skirmisher"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "niska-rycker-mk-ix-skycaller",
+  "name": {
+   "en": "Niska-Rycker Mk. IX Skycaller",
+   "fr": "Niska-Rycker Mk. IX Skycaller"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "t13-deioneus-rocket-battery",
+  "name": {
+   "en": "T13 \"Deioneus\" Rocket Battery",
+   "fr": "T13 \"Deioneus\" Rocket Battery"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "rycker-4-3-f-wasp-nest",
+  "name": {
+   "en": "Rycker 4/3-F Wasp Nest",
+   "fr": "Rycker 4/3-F Wasp Nest"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "dae-3b-2-hades-net",
+  "name": {
+   "en": "DAE 3b-2 \"Hades' Net\"",
+   "fr": "DAE 3b-2 \"Hades' Net\""
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "obrien-v200-squire",
+  "name": {
+   "en": "O'Brien V.200 Squire",
+   "fr": "O'Brien V.200 Squire"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "lance-46-sarissa",
+  "name": {
+   "en": "Lance-46 \"Sarissa\"",
+   "fr": "Lance-46 \"Sarissa\""
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "flood-mk-ix-stain",
+  "name": {
+   "en": "Flood Mk. IX Stain",
+   "fr": "Flood Mk. IX Stain"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
  }
 ]

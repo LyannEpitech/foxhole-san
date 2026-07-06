@@ -16,12 +16,15 @@ export interface Resource {
   kind: ResourceKind;
 }
 
-/** Cost expressed in the four standard refined materials. */
+/** Cost keyed by resource id (standard refined + facility materials). */
 export interface MaterialCost {
   bmats?: number;
   rmats?: number;
   emats?: number;
   hemats?: number;
+  cmats?: number;
+  pcmats?: number;
+  scmats?: number;
 }
 
 /** A tech / world prerequisite (e.g. Town Base "Industry" upgrade). */
@@ -35,7 +38,10 @@ export type BuildingKind =
   | 'Factory'
   | 'MassProductionFactory'
   | 'MaterialsFactory'
-  | 'AssemblyStation';
+  | 'AssemblyStation'
+  | 'CoalRefinery'
+  | 'Metalworks'
+  | 'LargeAssemblyStation';
 
 export interface Building {
   id: string;

@@ -91,5 +91,57 @@
   },
   "powerRequired": 2,
   "prerequisites": []
+ },
+ {
+  "id": "coal-refinery",
+  "name": {
+   "en": "Coal Refinery",
+   "fr": "Raffinerie de charbon"
+  },
+  "kind": "CoalRefinery",
+  "constructionCost": {
+   "cmats": 50
+  },
+  "powerRequired": 3,
+  "prerequisites": []
+ },
+ {
+  "id": "metalworks",
+  "name": {
+   "en": "Metalworks Factory",
+   "fr": "Usine métallurgique"
+  },
+  "kind": "Metalworks",
+  "constructionCost": {
+   "cmats": 125
+  },
+  "powerRequired": 5,
+  "prerequisites": []
+ },
+ {
+  "id": "small-assembly-station",
+  "name": {
+   "en": "Small Assembly Station",
+   "fr": "Petite station d’assemblage"
+  },
+  "kind": "AssemblyStation",
+  "constructionCost": {
+   "cmats": 75
+  },
+  "powerRequired": 2,
+  "prerequisites": []
+ },
+ {
+  "id": "large-assembly-station",
+  "name": {
+   "en": "Large Assembly Station",
+   "fr": "Grande station d’assemblage"
+  },
+  "kind": "LargeAssemblyStation",
+  "constructionCost": {
+   "pcmats": 250
+  },
+  "powerRequired": 8,
+  "prerequisites": []
  }
 ]

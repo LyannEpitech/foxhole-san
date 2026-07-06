@@ -24,6 +24,9 @@ const materialCost = z.object({
   rmats: z.number().int().positive().optional(),
   emats: z.number().int().positive().optional(),
   hemats: z.number().int().positive().optional(),
+  cmats: z.number().int().positive().optional(),
+  pcmats: z.number().int().positive().optional(),
+  scmats: z.number().int().positive().optional(),
 });
 
 const techRequirement = z.object({ techId: z.string().min(1), name: localizedString });
@@ -37,7 +40,16 @@ const resourceSchema = z.object({
 const buildingSchema = z.object({
   id: z.string().min(1),
   name: localizedString,
-  kind: z.enum(['Refinery', 'Factory', 'MassProductionFactory', 'MaterialsFactory', 'AssemblyStation']),
+  kind: z.enum([
+    'Refinery',
+    'Factory',
+    'MassProductionFactory',
+    'MaterialsFactory',
+    'AssemblyStation',
+    'CoalRefinery',
+    'Metalworks',
+    'LargeAssemblyStation',
+  ]),
   constructionCost: materialCost,
   powerRequired: z.number().positive().optional(),
   prerequisites: z.array(techRequirement),

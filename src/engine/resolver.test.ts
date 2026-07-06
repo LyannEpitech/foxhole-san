@@ -245,13 +245,31 @@ describe('resolve — real curated dataset', () => {
     expect(plan.buildings.map((b) => b.id).sort()).toEqual(['factory', 'refinery']);
   });
 
+  it('resolves facility-built rocket artillery through the full chain', () => {
+    // Retiarius = R-1 Hauler + 70 pcmats + 10 AM I + 8 AM III (wiki-verified).
+    const plan = resolve(dataset, 'r-17-retiarius-skirmisher', 1, 'Colonial');
+    const buildings = plan.buildings.map((b) => b.id);
+    for (const b of ['small-assembly-station', 'metalworks', 'materials-factory', 'coal-refinery', 'garage']) {
+      expect(buildings).toContain(b);
+    }
+    // Facility chain pulls coal (coke) and sulfur (AM III) down to raw.
+    expect(plan.totals.raw.coal).toBeGreaterThan(0);
+    expect(plan.totals.raw.sulfur).toBeGreaterThan(0);
+    expect(plan.totals.refined.pcmats).toBe(70);
+    expect(plan.totals.refined.amats1).toBe(10);
+    expect(plan.totals.refined.amats3).toBe(8);
+    // Powered facilities -> a real electricity plan.
+    expect(plan.power).not.toBeNull();
+    expect(plan.power!.totalMW).toBeGreaterThan(0);
+  });
+
   it('enforces faction on real items', () => {
     expect(() => resolve(dataset, 'argenti-rii-rifle', 10, 'Warden')).toThrow(FactionError);
     expect(resolve(dataset, 'argenti-rii-rifle', 10, 'Colonial').totals.raw.salvage).toBe(200);
   });
 
-  it('loads the full community dataset (190 items, all referentially valid)', () => {
-    expect(dataset.items.size).toBe(190);
+  it('loads the full merged dataset (250+ items, all referentially valid)', () => {
+    expect(dataset.items.size).toBeGreaterThanOrEqual(250);
     // Every item resolves without throwing for a compatible faction.
     for (const item of dataset.items.values()) {
       const faction = item.faction === 'Both' ? 'Colonial' : item.faction;

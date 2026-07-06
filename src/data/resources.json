@@ -78,5 +78,85 @@
    "fr": "Matériaux de construction"
   },
   "kind": "refined"
+ },
+ {
+  "id": "petrol",
+  "name": {
+   "en": "Petrol (L)",
+   "fr": "Essence (L)"
+  },
+  "kind": "raw"
+ },
+ {
+  "id": "heavy-oil",
+  "name": {
+   "en": "Heavy Oil (L)",
+   "fr": "Huile lourde (L)"
+  },
+  "kind": "raw"
+ },
+ {
+  "id": "coke",
+  "name": {
+   "en": "Coke",
+   "fr": "Coke"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "pcmats",
+  "name": {
+   "en": "Processed Construction Materials",
+   "fr": "Matériaux de construction traités"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "scmats",
+  "name": {
+   "en": "Steel Construction Materials",
+   "fr": "Matériaux de construction en acier"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "amats1",
+  "name": {
+   "en": "Assembly Materials I",
+   "fr": "Matériaux d’assemblage I"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "amats2",
+  "name": {
+   "en": "Assembly Materials II",
+   "fr": "Matériaux d’assemblage II"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "amats3",
+  "name": {
+   "en": "Assembly Materials III",
+   "fr": "Matériaux d’assemblage III"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "amats4",
+  "name": {
+   "en": "Assembly Materials IV",
+   "fr": "Matériaux d’assemblage IV"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "amats5",
+  "name": {
+   "en": "Assembly Materials V",
+   "fr": "Matériaux d’assemblage V"
+  },
+  "kind": "refined"
  }
 ]

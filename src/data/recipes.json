@@ -100,5 +100,409 @@
    }
   ],
   "timeSeconds": 25
+ },
+ {
+  "id": "make-coke",
+  "buildingId": "coal-refinery",
+  "inputs": [
+   {
+    "refId": "coal",
+    "qty": 200
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "coke",
+    "qty": 180
+   }
+  ],
+  "timeSeconds": 270
+ },
+ {
+  "id": "make-pcmats",
+  "buildingId": "metalworks",
+  "inputs": [
+   {
+    "refId": "cmats",
+    "qty": 3
+   },
+   {
+    "refId": "components",
+    "qty": 20
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "pcmats",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 60
+ },
+ {
+  "id": "make-scmats",
+  "buildingId": "metalworks",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 3
+   },
+   {
+    "refId": "coke",
+    "qty": 200
+   },
+   {
+    "refId": "sulfur",
+    "qty": 65
+   },
+   {
+    "refId": "heavy-oil",
+    "qty": 35
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "scmats",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 90
+ },
+ {
+  "id": "make-amats1",
+  "buildingId": "materials-factory",
+  "inputs": [
+   {
+    "refId": "salvage",
+    "qty": 15
+   },
+   {
+    "refId": "coke",
+    "qty": 75
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "amats1",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 60
+ },
+ {
+  "id": "make-amats2",
+  "buildingId": "materials-factory",
+  "inputs": [
+   {
+    "refId": "salvage",
+    "qty": 15
+   },
+   {
+    "refId": "petrol",
+    "qty": 50
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "amats2",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 60
+ },
+ {
+  "id": "make-amats3",
+  "buildingId": "metalworks",
+  "inputs": [
+   {
+    "refId": "cmats",
+    "qty": 3
+   },
+   {
+    "refId": "sulfur",
+    "qty": 20
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "amats3",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 120
+ },
+ {
+  "id": "make-amats4",
+  "buildingId": "metalworks",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 1
+   },
+   {
+    "refId": "heavy-oil",
+    "qty": 66
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "amats4",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 120
+ },
+ {
+  "id": "make-amats5",
+  "buildingId": "metalworks",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 3
+   },
+   {
+    "refId": "coke",
+    "qty": 245
+   },
+   {
+    "refId": "amats1",
+    "qty": 10
+   },
+   {
+    "refId": "amats2",
+    "qty": 10
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "amats5",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 120
+ },
+ {
+  "id": "asm-retiarius",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "r-1-hauler",
+    "qty": 1
+   },
+   {
+    "refId": "pcmats",
+    "qty": 70
+   },
+   {
+    "refId": "amats1",
+    "qty": 10
+   },
+   {
+    "refId": "amats3",
+    "qty": 8
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "r-17-retiarius-skirmisher",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "asm-skycaller",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "niska-mk-i-gun-motor-carriage",
+    "qty": 1
+   },
+   {
+    "refId": "pcmats",
+    "qty": 10
+   },
+   {
+    "refId": "amats1",
+    "qty": 10
+   },
+   {
+    "refId": "amats3",
+    "qty": 8
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "niska-rycker-mk-ix-skycaller",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "asm-deioneus",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "t12-actaeon-tankette",
+    "qty": 1
+   },
+   {
+    "refId": "pcmats",
+    "qty": 20
+   },
+   {
+    "refId": "amats1",
+    "qty": 15
+   },
+   {
+    "refId": "amats3",
+    "qty": 3
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "t13-deioneus-rocket-battery",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 600
+ },
+ {
+  "id": "asm-wasp-nest",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 20
+   },
+   {
+    "refId": "amats2",
+    "qty": 15
+   },
+   {
+    "refId": "amats4",
+    "qty": 3
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "rycker-4-3-f-wasp-nest",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 600
+ },
+ {
+  "id": "asm-hades-net",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 20
+   },
+   {
+    "refId": "amats2",
+    "qty": 15
+   },
+   {
+    "refId": "amats4",
+    "qty": 3
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "dae-3b-2-hades-net",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 600
+ },
+ {
+  "id": "asm-squire",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "obrien-v190-knave",
+    "qty": 1
+   },
+   {
+    "refId": "pcmats",
+    "qty": 35
+   },
+   {
+    "refId": "amats1",
+    "qty": 10
+   },
+   {
+    "refId": "amats3",
+    "qty": 8
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "obrien-v200-squire",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "asm-sarissa",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 150
+   },
+   {
+    "refId": "amats3",
+    "qty": 65
+   },
+   {
+    "refId": "amats4",
+    "qty": 40
+   },
+   {
+    "refId": "amats5",
+    "qty": 85
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "lance-46-sarissa",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 86400
+ },
+ {
+  "id": "asm-stain",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 150
+   },
+   {
+    "refId": "amats3",
+    "qty": 65
+   },
+   {
+    "refId": "amats4",
+    "qty": 40
+   },
+   {
+    "refId": "amats5",
+    "qty": 85
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "flood-mk-ix-stain",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 86400
  }
 ]

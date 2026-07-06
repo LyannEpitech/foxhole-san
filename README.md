@@ -15,11 +15,22 @@ modules. UI bilingue **FR/EN**, filtrage par faction (Colonial / Warden).
 - 📋 **La séquence ordonnée** : débloquer → construire → produire (tri
   topologique, les entrées avant les sorties).
 
+## 🗺️ Carte interactive (Logistique & Attaque)
+
+- **Fond de carte officiel** : les 53 hexes rendus avec les vraies images du
+  jeu (glisser pour déplacer, molette pour zoomer vers le curseur).
+- **Marqueurs live de la War API** : villes, bases, industrie (usines,
+  raffineries, ports…), champs de ressources et structures militaires, avec
+  l'anneau coloré selon la faction qui les contrôle (bleu Warden / vert
+  Colonial). Couches filtrables, bouton « Données de guerre » pour rafraîchir.
+- **Annotations custom** : marqueurs allié ⬤ / ennemi ✖ / danger ⚠ (clic) et
+  flèches alliées/ennemies (glisser), gomme et « tout effacer » — persistées
+  en localStorage, partagées entre les modules.
+
 ## 🚚 Logistique — planificateur de routes
 
-- **Carte interactive** des 53 hexes du monde (SVG : glisser pour déplacer,
-  molette pour zoomer) — cliquer une région l'ajoute à l'itinéraire, les
-  étapes sont numérotées sur la carte et le tracé est dessiné.
+- Cliquer une région l'ajoute à l'itinéraire, les étapes sont numérotées sur
+  la carte et le tracé est dessiné.
 - **Manifeste de cargaison** : objets + quantités → nombre de caisses (arrondi
   par taille de caisse).
 - **Véhicule** : choix d'un camion (R-1 Hauler / Dunne Transport, 15 caisses) →
@@ -83,6 +94,11 @@ src/
   assets mis à disposition pour les outils communautaires ; même pipeline que
   foxholestats / warden.express.
 - **Recettes de raffinage & bâtiments** : vérifiés sur le Wiki (2026-07-06).
+- **Icônes de structures (`public/icons/*.png`)** : assets officiels
+  `Images/MapIcons/*.TGA` du dépôt warapi, convertis en PNG.
+- **Marqueurs live** : appels directs (CORS ouvert) à
+  `war-service-live.foxholeservices.com/api/worldconquest/maps/<hex>/dynamic/public`,
+  mapping iconType aligné sur foxhole-map-annotate.
 
 ## Étendre les données
 

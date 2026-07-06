@@ -58,6 +58,27 @@
   "error": {
     "title": "Impossible de calculer le plan"
   },
+  "map": {
+    "tool": {
+      "pan": "Déplacer / sélectionner",
+      "friendly": "Marqueur allié",
+      "enemy": "Marqueur ennemi",
+      "danger": "Marqueur danger",
+      "arrowFriendly": "Flèche alliée (glisser)",
+      "arrowEnemy": "Flèche ennemie (glisser)",
+      "erase": "Effacer une annotation",
+      "clear": "Tout effacer"
+    },
+    "layer": {
+      "town": "Villes",
+      "industry": "Industrie",
+      "field": "Ressources",
+      "military": "Militaire"
+    },
+    "refresh": "Données de guerre",
+    "loading": "Chargement…",
+    "zoomHint": "Zoomez pour révéler les structures live de la War API. Les outils marqueurs et flèches dessinent sur la carte ; les annotations sont sauvegardées localement."
+  },
   "nav": {
     "production": "Production",
     "logistics": "Logistique",

@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BuildingList } from '../components/BuildingList';
 import { BuildSequence } from '../components/BuildSequence';
-import { HexMap } from '../components/HexMap';
+import { PlanMap } from '../components/PlanMap';
 import { ItemSelect } from '../components/ItemSelect';
 import { Panel } from '../components/Panel';
 import { ResourceTotals } from '../components/ResourceTotals';
@@ -68,15 +68,12 @@ export function LogisticsModule() {
         <div className="xl:col-span-2">
           <Panel title={t('logi.route')}>
             <p className="text-xs text-slate-500 mb-2">{t('logi.mapHint')}</p>
-            <div className="rounded-lg overflow-hidden border border-slate-700 bg-slate-950">
-              <HexMap
-                onRegionClick={(region) => addWaypoint(region.id)}
-                highlighted={highlighted}
-                route={waypoints}
-                markers={markers}
-                className="w-full h-[520px] cursor-grab active:cursor-grabbing select-none"
-              />
-            </div>
+            <PlanMap
+              onRegionClick={(region) => addWaypoint(region.id)}
+              highlighted={highlighted}
+              route={waypoints}
+              markers={markers}
+            />
             {waypoints.length === 0 ? (
               <p className="text-sm text-slate-500 mt-3">{t('logi.emptyRoute')}</p>
             ) : (

@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BuildingList } from '../components/BuildingList';
 import { BuildSequence } from '../components/BuildSequence';
-import { HexMap } from '../components/HexMap';
+import { PlanMap } from '../components/PlanMap';
 import { ItemSelect } from '../components/ItemSelect';
 import { Panel } from '../components/Panel';
 import { ResourceTotals } from '../components/ResourceTotals';
@@ -127,16 +127,13 @@ export function AttackModule() {
               )}
             </div>
             <p className="text-xs text-slate-500 mb-2">{t('attack.mapHint')}</p>
-            <div className="rounded-lg overflow-hidden border border-slate-700 bg-slate-950">
-              <HexMap
-                onRegionClick={onRegionClick}
-                highlighted={highlighted}
-                route={route}
-                routeColor="#ef4444"
-                markers={markers}
-                className="w-full h-[520px] cursor-grab active:cursor-grabbing select-none"
-              />
-            </div>
+            <PlanMap
+              onRegionClick={onRegionClick}
+              highlighted={highlighted}
+              route={route}
+              routeColor="#ef4444"
+              markers={markers}
+            />
             <div className="flex flex-wrap gap-4 mt-3 text-sm">
               <span>
                 <span className="text-sky-300">🏕 {t('attack.staging')}:</span>{' '}

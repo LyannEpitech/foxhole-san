@@ -58,6 +58,27 @@
   "error": {
     "title": "Cannot compute plan"
   },
+  "map": {
+    "tool": {
+      "pan": "Pan / select",
+      "friendly": "Friendly marker",
+      "enemy": "Enemy marker",
+      "danger": "Danger marker",
+      "arrowFriendly": "Friendly arrow (drag)",
+      "arrowEnemy": "Enemy arrow (drag)",
+      "erase": "Erase annotation",
+      "clear": "Clear all"
+    },
+    "layer": {
+      "town": "Towns",
+      "industry": "Industry",
+      "field": "Resources",
+      "military": "Military"
+    },
+    "refresh": "War data",
+    "loading": "Loading…",
+    "zoomHint": "Zoom in to reveal live War API structures. Marker and arrow tools draw on the map; annotations are saved locally."
+  },
   "nav": {
     "production": "Production",
     "logistics": "Logistics",

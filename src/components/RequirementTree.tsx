@@ -19,6 +19,11 @@ function TreeNode({ node, depth }: { node: RequirementNode; depth: number }) {
           {localized(refName(node.refId))}
         </span>
         <span className="font-mono text-amber-300">× {node.qty}</span>
+        {node.fromStock !== undefined && (
+          <span className="text-xs text-emerald-300">
+            ({t('tree.fromStock', { count: node.fromStock })})
+          </span>
+        )}
         {node.batches !== undefined && (
           <span className="text-xs text-slate-400">
             {t('tree.batches', { count: node.batches })}
@@ -38,10 +43,12 @@ function TreeNode({ node, depth }: { node: RequirementNode; depth: number }) {
   );
 }
 
-export function RequirementTree({ root }: { root: RequirementNode }) {
+export function RequirementTree({ roots }: { roots: RequirementNode[] }) {
   return (
-    <ul className="text-sm">
-      <TreeNode node={root} depth={0} />
+    <ul className="text-sm space-y-2">
+      {roots.map((root, i) => (
+        <TreeNode key={`${root.refId}-${i}`} node={root} depth={0} />
+      ))}
     </ul>
   );
 }

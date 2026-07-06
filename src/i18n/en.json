@@ -8,6 +8,8 @@
     "placeholder": "Select an item…",
     "searchPlaceholder": "Search an item…",
     "allCategories": "All",
+    "addRow": "Add article",
+    "emptyOrder": "Add articles to the order — the plan merges their chains.",
     "quantity": "Quantity",
     "faction": "Faction"
   },
@@ -92,12 +94,20 @@
   },
   "tree": {
     "batches": "{{count}} order(s)",
-    "produced": "{{produced}} produced for {{qty}} needed"
+    "produced": "{{produced}} produced for {{qty}} needed",
+    "fromStock": "{{count}} from stock"
   },
   "totals": {
     "raw": "Raw resources",
     "refined": "Refined materials",
-    "empty": "Nothing to gather"
+    "empty": "Nothing to gather",
+    "fromStock": "Taken from stock"
+  },
+  "stock": {
+    "title": "Available stock",
+    "items": "Items",
+    "add": "Add a resource or item…",
+    "empty": "Declare what you already have — it is deducted from the plan."
   },
   "buildings": {
     "construction": "Construction cost",
@@ -186,6 +196,7 @@
     "move": "Move",
     "clickToPlace": "Click the map to place: {{name}}",
     "suggestion": "Nearest matching world structure circled in red ({{region}})",
+    "multiTargets": "{{count}} articles",
     "flows": "Flows",
     "placeBoth": "place both endpoints to draw the line",
     "noTransport": "no transport assigned — click to choose",
@@ -222,6 +233,7 @@
     "applyDefault": "Apply default loadout",
     "totalNeeds": "Total operation needs",
     "sendToLogistics": "Send to logistics",
+    "sendToProduction": "Send to production",
     "emptyLoadout": "Add equipment lines to size the operation.",
     "cost": "Production cost of the operation",
     "objective": "Objective",

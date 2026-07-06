@@ -8,7 +8,8 @@ test('loads, navigates the four tabs, plans and persists', async ({ page }) => {
   await page.goto('/');
   await expect(page).toHaveTitle(/Foxhole Swiss Army Knife/);
 
-  // Production: pick a target through the searchable combobox.
+  // Production: pick a target through the searchable combobox (A1.1 —
+  // the empty order shows a quick-add search row).
   const combo = page.locator('input[role="combobox"]').first();
   await combo.click();
   await combo.fill('120mm');

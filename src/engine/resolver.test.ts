@@ -120,6 +120,26 @@ describe('resolve — guards', () => {
   });
 });
 
+describe('resolve — stock deduction (A1.2)', () => {
+  it('deducts declared stock before computing batches', () => {
+    // 25 rifles, 120 bmats in stock: still 3 crates (300 needed - 120 = 180
+    // to refine -> 360 salvage instead of 600).
+    const plan = resolve(data, 'rifle', 25, 'Colonial', { stock: { bmats: 120 } });
+    expect(plan.totals.raw.salvage).toBe(360);
+    expect(plan.totals.refined.bmats).toBe(180);
+    expect(plan.stockUsed).toEqual({ bmats: 120 });
+    const bmatsNode = plan.tree.children[0];
+    expect(bmatsNode.fromStock).toBe(120);
+  });
+
+  it('skips whole branches fully covered by stock', () => {
+    const plan = resolve(data, 'rifle', 10, 'Colonial', { stock: { rifle: 10 } });
+    expect(plan.totals.raw).toEqual({});
+    expect(plan.sequence.filter((s) => s.type === 'produce')).toHaveLength(0);
+    expect(plan.stockUsed).toEqual({ rifle: 10 });
+  });
+});
+
 describe('resolveMany — merged multi-target plans', () => {
   it('merges totals, dedupes buildings and aggregates shared produce steps', () => {
     // 10 rifles (1 crate, 100 bmats) + 5 shells (1 crate, 120 bmats + 10 hemats)
@@ -241,7 +261,7 @@ describe('buildDeployGraph — production plan projected on the map', () => {
   it('creates source/building/output nodes and ordered flows', () => {
     // shell: salvage+sulfur -> refinery -> factory -> product
     const plan = resolve(data, 'shell', 5, 'Colonial');
-    const g = buildDeployGraph(data, plan, 'shell');
+    const g = buildDeployGraph(data, plan, [{ refId: 'shell', qty: 5 }]);
 
     const keys = g.nodes.map((n) => n.key).sort();
     expect(keys).toEqual(['bld:factory', 'bld:refinery', 'out:shell', 'src:salvage', 'src:sulfur'].sort());

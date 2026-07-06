@@ -22,10 +22,11 @@ const CATEGORY_ORDER: ItemCategory[] = [
 
 type CategoryFilter = 'all' | 'materials' | ItemCategory;
 
+/** A1.1 — multi-target production order: one searchable row per article. */
 export function TargetSelector() {
   const { t } = useTranslation();
   const localized = useLocalized();
-  const { targetId, quantity, faction, setTarget, setQuantity } = usePlanStore();
+  const { targets, faction, addTarget, updateTarget, removeTarget } = usePlanStore();
   const [filter, setFilter] = useState<CategoryFilter>('all');
 
   const available = [...dataset.items.values()].filter(
@@ -38,7 +39,6 @@ export function TargetSelector() {
     byCategory.set(item.category, bucket);
   }
 
-  // Producible refined resources (bmats, diesel, cmats…) are valid targets too.
   const materials = [...dataset.resources.values()].filter(
     (r) => r.kind === 'refined' && dataset.recipeByOutput.has(r.id),
   );
@@ -83,28 +83,56 @@ export function TargetSelector() {
         {allGroups.map((g) => chip(g.key, g.label, g.options.length))}
       </div>
 
-      <div className="flex flex-wrap items-end gap-4">
-        <label className="flex flex-col gap-1 text-sm text-slate-300 min-w-56 grow">
-          {t('target.label')}
-          <SearchSelect
-            groups={groups}
-            value={targetId ?? ''}
-            onChange={(v) => setTarget(v || null)}
-            placeholder={t('target.searchPlaceholder')}
-          />
-        </label>
-
-        <label className="flex flex-col gap-1 text-sm text-slate-300">
-          {t('target.quantity')}
-          <input
-            type="number"
-            min={1}
-            value={quantity}
-            onChange={(e) => setQuantity(Math.max(1, Number(e.target.value) || 1))}
-            className="bg-slate-900 border border-slate-600 rounded-md px-3 py-2 text-slate-100 w-28"
-          />
-        </label>
+      {/* Order rows */}
+      <div className="space-y-2">
+        {targets.map((target, i) => (
+          <div key={i} className="flex items-center gap-2">
+            <SearchSelect
+              groups={groups}
+              value={target.refId}
+              onChange={(refId) => updateTarget(i, { ...target, refId })}
+              placeholder={t('target.searchPlaceholder')}
+              className="grow min-w-0"
+            />
+            <input
+              type="number"
+              min={1}
+              value={target.qty}
+              onChange={(e) =>
+                updateTarget(i, { ...target, qty: Math.max(1, Number(e.target.value) || 1) })
+              }
+              className="bg-slate-900 border border-slate-600 rounded-md px-3 py-2 text-slate-100 w-24"
+            />
+            <button
+              type="button"
+              onClick={() => removeTarget(i)}
+              className="text-red-400 hover:text-red-300 px-1"
+              aria-label="remove"
+            >
+              ✕
+            </button>
+          </div>
+        ))}
+        {targets.length === 0 && (
+          <>
+            <SearchSelect
+              groups={groups}
+              value=""
+              onChange={(refId) => refId && addTarget(refId)}
+              placeholder={t('target.searchPlaceholder')}
+            />
+            <p className="text-xs text-slate-500">{t('target.emptyOrder')}</p>
+          </>
+        )}
       </div>
+
+      <button
+        type="button"
+        onClick={() => addTarget('')}
+        className="text-sm px-3 py-1.5 rounded-md bg-slate-700 hover:bg-slate-600 text-slate-100"
+      >
+        + {t('target.addRow')}
+      </button>
     </div>
   );
 }

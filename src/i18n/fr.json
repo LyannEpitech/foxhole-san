@@ -8,6 +8,8 @@
     "placeholder": "Choisir un objet…",
     "searchPlaceholder": "Rechercher un objet…",
     "allCategories": "Toutes",
+    "addRow": "Ajouter un article",
+    "emptyOrder": "Ajoutez des articles à la commande — le plan fusionne leurs chaînes.",
     "quantity": "Quantité",
     "faction": "Faction"
   },
@@ -92,12 +94,20 @@
   },
   "tree": {
     "batches": "{{count}} commande(s)",
-    "produced": "{{produced}} produits pour {{qty}} requis"
+    "produced": "{{produced}} produits pour {{qty}} requis",
+    "fromStock": "{{count}} du stock"
   },
   "totals": {
     "raw": "Ressources brutes",
     "refined": "Matériaux raffinés",
-    "empty": "Rien à collecter"
+    "empty": "Rien à collecter",
+    "fromStock": "Pris sur le stock"
+  },
+  "stock": {
+    "title": "Stocks disponibles",
+    "items": "Objets",
+    "add": "Ajouter une ressource ou un objet…",
+    "empty": "Déclarez ce que vous avez déjà — c'est déduit du plan."
   },
   "buildings": {
     "construction": "Coût de construction",
@@ -186,6 +196,7 @@
     "move": "Déplacer",
     "clickToPlace": "Cliquez sur la carte pour placer : {{name}}",
     "suggestion": "Structure monde correspondante la plus proche entourée en rouge ({{region}})",
+    "multiTargets": "{{count}} articles",
     "flows": "Flux",
     "placeBoth": "placez les deux extrémités pour tracer le trait",
     "noTransport": "aucun transport attribué — cliquez pour choisir",
@@ -222,6 +233,7 @@
     "applyDefault": "Appliquer l'équipement type",
     "totalNeeds": "Besoins totaux de l'opération",
     "sendToLogistics": "Envoyer vers la logistique",
+    "sendToProduction": "Envoyer vers la production",
     "emptyLoadout": "Ajoutez des lignes d'équipement pour dimensionner l'opération.",
     "cost": "Coût de production de l'opération",
     "objective": "Objectif",

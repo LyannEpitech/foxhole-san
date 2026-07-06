@@ -17,6 +17,8 @@ export interface RequirementNode {
   refId: string;
   /** Quantity needed by the parent. */
   qty: number;
+  /** Portion of `qty` covered by declared stock (A1.2). */
+  fromStock?: number;
   /** Recipe used to produce it (absent on leaves: raw resources / unproducible refs). */
   recipeId?: string;
   buildingId?: string;
@@ -73,6 +75,8 @@ export interface PlanSummary {
   timesIncomplete: boolean;
   /** Electricity/fuel plan, or null when no powered facility is involved. */
   power: PowerPlan | null;
+  /** Declared stock actually consumed by the plan, per refId. */
+  stockUsed: Record<string, number>;
 }
 
 export interface PlanResult extends PlanSummary {
@@ -116,10 +120,16 @@ export class FactionError extends Error {
  * Batches are rounded up per node (`ceil(needed / outputQty)`), matching how
  * orders are actually queued in-game (you can't queue a fraction of a crate).
  */
+export interface ResolveOptions {
+  /** Quantities already on hand, deducted before computing batches (A1.2). */
+  stock?: Record<string, number>;
+}
+
 export function resolveMany(
   data: Dataset,
   targets: PlanTarget[],
   faction: Faction,
+  options: ResolveOptions = {},
 ): MultiPlanResult {
   for (const { refId, qty } of targets) {
     if (!Number.isFinite(qty) || qty <= 0) {
@@ -135,6 +145,8 @@ export function resolveMany(
   }
 
   const totals = { raw: {} as Record<string, number>, refined: {} as Record<string, number> };
+  const remainingStock: Record<string, number> = { ...(options.stock ?? {}) };
+  const stockUsed: Record<string, number> = {};
   const buildingsUsed = new Map<string, Building>();
   // Production totals per refId, accumulated across all trees so the
   // sequence shows one aggregated step per product.
@@ -146,25 +158,40 @@ export function resolveMany(
   function expand(refId: string, qty: number, path: string[]): RequirementNode {
     if (path.includes(refId)) throw new CycleError([...path, refId]);
 
+    // A1.2 — consume declared stock first; only the remainder is produced.
+    const avail = remainingStock[refId] ?? 0;
+    const fromStock = Math.min(avail, qty);
+    if (fromStock > 0) {
+      remainingStock[refId] = avail - fromStock;
+      stockUsed[refId] = (stockUsed[refId] ?? 0) + fromStock;
+    }
+    const need = qty - fromStock;
+    const stockField = fromStock > 0 ? { fromStock } : {};
+
     const resource = data.resources.get(refId);
     const recipe = data.recipeByOutput.get(refId);
+
+    // Fully covered by stock: nothing to gather or produce.
+    if (need === 0) {
+      return { refId, qty, ...stockField, children: [] };
+    }
 
     // Leaf: raw resource, or nothing knows how to produce it.
     if (!recipe || resource?.kind === 'raw') {
       if (resource) {
         const bucket = resource.kind === 'raw' ? totals.raw : totals.refined;
-        bucket[refId] = (bucket[refId] ?? 0) + qty;
+        bucket[refId] = (bucket[refId] ?? 0) + need;
       }
-      return { refId, qty, children: [] };
+      return { refId, qty, ...stockField, children: [] };
     }
 
     // Intermediate refined resources also show up in the totals panel.
     if (resource?.kind === 'refined') {
-      totals.refined[refId] = (totals.refined[refId] ?? 0) + qty;
+      totals.refined[refId] = (totals.refined[refId] ?? 0) + need;
     }
 
     const output = recipe.outputs.find((o) => o.refId === refId)!;
-    const batches = Math.ceil(qty / output.qty);
+    const batches = Math.ceil(need / output.qty);
     const produced = batches * output.qty;
 
     const building = data.buildings.get(recipe.buildingId)!;
@@ -188,6 +215,7 @@ export function resolveMany(
     return {
       refId,
       qty,
+      ...stockField,
       recipeId: recipe.id,
       buildingId: recipe.buildingId,
       batches,
@@ -289,6 +317,7 @@ export function resolveMany(
     buildingTimes,
     timesIncomplete,
     power,
+    stockUsed,
   };
 }
 
@@ -298,7 +327,13 @@ export function resolve(
   targetId: string,
   quantity: number,
   faction: Faction,
+  options: ResolveOptions = {},
 ): PlanResult {
-  const { trees, ...summary } = resolveMany(data, [{ refId: targetId, qty: quantity }], faction);
+  const { trees, ...summary } = resolveMany(
+    data,
+    [{ refId: targetId, qty: quantity }],
+    faction,
+    options,
+  );
   return { tree: trees[0], ...summary };
 }

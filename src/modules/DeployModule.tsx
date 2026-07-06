@@ -5,7 +5,6 @@ import { HexMap } from '../components/HexMap';
 import { MapLayersControl } from '../components/MapLayersControl';
 import { useApiMarkers } from '../components/useApiMarkers';
 import { dataset } from '../data';
-import { resolve, type PlanResult } from '../engine/resolver';
 import { useLocalized } from '../i18n';
 import {
   buildDeployGraph,
@@ -84,7 +83,11 @@ function worldTypesFor(node: DeployNode): number[] {
 export function DeployModule() {
   const { t } = useTranslation();
   const localized = useLocalized();
-  const { targetId, quantity, faction } = usePlanStore();
+  const { targets, faction, result: plan } = usePlanStore();
+  const validTargets = useMemo(
+    () => targets.filter((x) => x.refId && x.qty > 0),
+    [targets],
+  );
   const setActive = useUiStore((s) => s.setActive);
   const {
     positions, transports, placing, selectedEdge,
@@ -92,14 +95,12 @@ export function DeployModule() {
   } = useDeployStore();
   const apiMarkers = useApiMarkers();
 
-  const plan: PlanResult | null = useMemo(() => {
-    if (!targetId) return null;
-    try { return resolve(dataset, targetId, quantity, faction); } catch { return null; }
-  }, [targetId, quantity, faction]);
-
   const graph = useMemo(
-    () => (plan && targetId ? buildDeployGraph(dataset, plan, targetId) : { nodes: [], edges: [] }),
-    [plan, targetId],
+    () =>
+      plan && validTargets.length > 0
+        ? buildDeployGraph(dataset, plan, validTargets)
+        : { nodes: [], edges: [] },
+    [plan, validTargets],
   );
 
   const nodeLabel = (n: DeployNode) =>
@@ -227,7 +228,7 @@ export function DeployModule() {
     );
   };
 
-  if (!plan || !targetId) {
+  if (!plan || validTargets.length === 0) {
     return (
       <div className="max-w-2xl mx-auto px-4 py-16 text-center space-y-4">
         <p className="text-slate-400">{t('deploy.empty')}</p>
@@ -248,7 +249,11 @@ export function DeployModule() {
       {/* Placement hint + world layers */}
       <div className="absolute top-2 left-2 z-10 space-y-1">
         <p className="inline-block text-xs text-slate-200 bg-slate-900/85 backdrop-blur border border-slate-700 rounded-md px-3 py-1.5">
-          🏗 {localized(refName(targetId))} × {quantity} — {placedCount}/{graph.nodes.length}
+          🏗{' '}
+          {validTargets.length === 1
+            ? `${localized(refName(validTargets[0].refId))} × ${validTargets[0].qty}`
+            : t('deploy.multiTargets', { count: validTargets.length })}{' '}
+          — {placedCount}/{graph.nodes.length}
         </p>
         <div className="block">
           <MapLayersControl />

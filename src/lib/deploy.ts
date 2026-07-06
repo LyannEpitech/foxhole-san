@@ -1,5 +1,5 @@
 import type { Dataset } from '../data';
-import type { PlanResult } from '../engine/resolver';
+import type { PlanSummary, PlanTarget } from '../engine/resolver';
 import type { Faction, LocalizedString } from '../types/domain';
 
 // ---------------------------------------------------------------------------
@@ -35,11 +35,15 @@ export interface DeployGraph {
 
 /**
  * Build the deployment graph from a resolved plan: one source node per raw
- * resource, one node per building used, one node for the finished product.
+ * resource, one node per building used, one node per finished product.
  * Edges follow the aggregated produce steps (inputs before outputs), so the
  * numbering matches the production order.
  */
-export function buildDeployGraph(data: Dataset, plan: PlanResult, targetId: string): DeployGraph {
+export function buildDeployGraph(
+  data: Dataset,
+  plan: PlanSummary,
+  targets: PlanTarget[],
+): DeployGraph {
   const nodes = new Map<string, DeployNode>();
   const edges = new Map<string, DeployEdge>();
   const ensureNode = (key: string, kind: DeployNodeKind, refId: string) => {
@@ -75,12 +79,13 @@ export function buildDeployGraph(data: Dataset, plan: PlanResult, targetId: stri
     }
   }
 
-  // Final delivery: producing building -> finished product marker.
-  const targetRecipe = data.recipeByOutput.get(targetId);
-  if (targetRecipe) {
+  // Final delivery: producing building -> finished product marker(s).
+  for (const target of targets) {
+    const targetRecipe = data.recipeByOutput.get(target.refId);
+    if (!targetRecipe) continue;
     const from = ensureNode(`bld:${targetRecipe.buildingId}`, 'building', targetRecipe.buildingId);
-    const out = ensureNode(`out:${targetId}`, 'output', targetId);
-    addFlow(from, out, targetId, plan.tree.qty);
+    const out = ensureNode(`out:${target.refId}`, 'output', target.refId);
+    addFlow(from, out, target.refId, target.qty);
   }
 
   // Number edges by the first produce step that consumes them (topological).

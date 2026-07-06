@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { dataset } from '../data';
-import type { PlanResult, RequirementNode } from '../engine/resolver';
+import type { RequirementNode } from '../engine/resolver';
 import { useLocalized } from '../i18n';
 import { refName } from '../lib/refs';
 import { formatDuration } from './PlanExtras';
@@ -40,7 +40,7 @@ const KIND_COLORS: Record<GraphNode['kind'], string> = {
  * Hovering a node shows where it is produced (building), order count and
  * time per order.
  */
-export function ProductionGraph({ result }: { result: PlanResult }) {
+export function ProductionGraph({ trees }: { trees: RequirementNode[] }) {
   const { t } = useTranslation();
   const localized = useLocalized();
   const [hovered, setHovered] = useState<string | null>(null);
@@ -59,7 +59,7 @@ export function ProductionGraph({ result }: { result: PlanResult }) {
         visit(child);
       }
     };
-    visit(result.tree);
+    for (const tree of trees) visit(tree);
 
     // 2. Longest-path layering: raw/leaf = 0, product = 1 + max(inputs).
     const layerById = new Map<string, number>();
@@ -106,7 +106,7 @@ export function ProductionGraph({ result }: { result: PlanResult }) {
     }
 
     return { nodes, edges: [...edgeMap.values()], width, height };
-  }, [result]);
+  }, [trees]);
 
   const nodeById = new Map(nodes.map((n) => [n.refId, n]));
   const hoveredNode = hovered ? nodeById.get(hovered) : undefined;

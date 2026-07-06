@@ -144,8 +144,25 @@
   },
   "nav": {
     "production": "Production",
+    "deploy": "Deployment",
     "logistics": "Logistics",
     "attack": "Attack"
+  },
+  "deploy": {
+    "openInMap": "Open in the map",
+    "empty": "Pick a production target first — the deployment planner places its whole chain on the map.",
+    "hint": "Place each element on the map (button then click). Flows connect automatically in production order; click a line to assign a compatible transport.",
+    "palette": "Elements to place",
+    "place": "Place",
+    "move": "Move",
+    "clickToPlace": "Click the map to place: {{name}}",
+    "flows": "Flows",
+    "placeBoth": "place both endpoints to draw the line",
+    "noTransport": "no transport assigned — click to choose",
+    "transport": "Transport",
+    "reset": "Reset layout",
+    "kind": { "source": "deposit", "building": "building", "output": "product" },
+    "cargo": { "liquid": "liquids", "bulk": "raw resources", "crate": "crates" }
   },
   "logi": {
     "cargo": "Cargo manifest",

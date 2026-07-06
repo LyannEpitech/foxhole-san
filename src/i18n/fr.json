@@ -144,8 +144,25 @@
   },
   "nav": {
     "production": "Production",
+    "deploy": "Déploiement",
     "logistics": "Logistique",
     "attack": "Attaque"
+  },
+  "deploy": {
+    "openInMap": "Ouvrir dans la carte",
+    "empty": "Choisissez d'abord un objet cible en Production — le planificateur de déploiement place toute sa chaîne sur la carte.",
+    "hint": "Placez chaque élément sur la carte (bouton puis clic). Les flux se relient automatiquement dans l'ordre de production ; cliquez sur un trait pour attribuer un transport compatible.",
+    "palette": "Éléments à placer",
+    "place": "Placer",
+    "move": "Déplacer",
+    "clickToPlace": "Cliquez sur la carte pour placer : {{name}}",
+    "flows": "Flux",
+    "placeBoth": "placez les deux extrémités pour tracer le trait",
+    "noTransport": "aucun transport attribué — cliquez pour choisir",
+    "transport": "Transport",
+    "reset": "Réinitialiser le placement",
+    "kind": { "source": "gisement", "building": "bâtiment", "output": "produit" },
+    "cargo": { "liquid": "liquides", "bulk": "ressources brutes", "crate": "caisses" }
   },
   "logi": {
     "cargo": "Manifeste de cargaison",

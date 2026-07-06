@@ -49,6 +49,10 @@ interface Props {
   textPlaceholder?: string;
   /** Height of the map viewport (CSS). */
   className?: string;
+  /** Plain click on the map in pan mode (world coordinates). */
+  onMapClick?: (pos: [number, number]) => void;
+  /** Extra SVG rendered in world coordinates (above regions, below badges). */
+  overlay?: React.ReactNode;
 }
 
 const [BX, BY, BW, BH] = WORLD_BOUNDS;
@@ -99,6 +103,8 @@ export function HexMap({
   onEraseAnnotation,
   textPlaceholder = '…',
   className,
+  onMapClick,
+  overlay,
 }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
   const [zoom, setZoom] = useState(1);
@@ -206,6 +212,9 @@ export function HexMap({
     }
     if (tool === 'text' && !drag.current?.moved && !pendingText) {
       setPendingText(toWorld(e));
+    }
+    if (tool === 'pan' && !drag.current?.moved) {
+      onMapClick?.(toWorld(e));
     }
     drag.current = null;
   };
@@ -374,6 +383,9 @@ export function HexMap({
           />
         </g>
       ))}
+
+      {/* Module-specific world-coordinate overlay */}
+      {overlay}
 
       {/* Route polyline */}
       {routePoints.length > 1 && (

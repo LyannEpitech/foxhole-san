@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-export type ModuleId = 'production' | 'logistics' | 'attack';
+export type ModuleId = 'production' | 'deploy' | 'logistics' | 'attack';
 
 interface UiState {
   active: ModuleId;

@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { buildDataset, dataset } from '../data';
+import { buildDeployGraph, cargoClassOf, transportOptions } from '../lib/deploy';
 import { planCargo } from '../lib/logistics';
 import type { Building, Item, Recipe, Resource } from '../types/domain';
 import { CycleError, FactionError, resolve, resolveMany } from './resolver';
@@ -233,6 +234,45 @@ describe('resolve — timeline and power', () => {
     // 250 L -> 3 batches of 100 L -> 30 salvage, 36s of refinery time.
     expect(plan.totals.raw.salvage).toBe(30);
     expect(plan.buildingTimes.find((bt) => bt.buildingId === 'refinery')?.seconds).toBe(36);
+  });
+});
+
+describe('buildDeployGraph — production plan projected on the map', () => {
+  it('creates source/building/output nodes and ordered flows', () => {
+    // shell: salvage+sulfur -> refinery -> factory -> product
+    const plan = resolve(data, 'shell', 5, 'Colonial');
+    const g = buildDeployGraph(data, plan, 'shell');
+
+    const keys = g.nodes.map((n) => n.key).sort();
+    expect(keys).toEqual(['bld:factory', 'bld:refinery', 'out:shell', 'src:salvage', 'src:sulfur'].sort());
+
+    const byKey = Object.fromEntries(g.edges.map((e) => [e.key, e]));
+    expect(byKey['src:salvage->bld:refinery'].resources).toEqual([{ refId: 'salvage', qty: 240 }]);
+    expect(byKey['src:sulfur->bld:refinery'].resources).toEqual([{ refId: 'sulfur', qty: 50 }]);
+    expect(byKey['bld:refinery->bld:factory'].resources).toEqual(
+      expect.arrayContaining([{ refId: 'bmats', qty: 120 }, { refId: 'hemats', qty: 10 }]),
+    );
+    expect(byKey['bld:factory->out:shell'].resources).toEqual([{ refId: 'shell', qty: 5 }]);
+
+    // Ordering: sources feed the refinery before the refinery feeds the
+    // factory, and delivery of the finished product comes last.
+    const orderOf = (k: string) => byKey[k].order;
+    expect(orderOf('src:salvage->bld:refinery')).toBeLessThan(orderOf('bld:refinery->bld:factory'));
+    expect(orderOf('bld:factory->out:shell')).toBe(g.edges.length);
+  });
+
+  it('classifies cargo and proposes compatible faction-filtered transports', () => {
+    expect(cargoClassOf(dataset, [{ refId: 'diesel' }])).toBe('liquid');
+    expect(cargoClassOf(dataset, [{ refId: 'salvage' }, { refId: 'bmats' }])).toBe('bulk');
+    expect(cargoClassOf(dataset, [{ refId: 'bmats' }])).toBe('crate');
+
+    const liquidW = transportOptions(dataset, 'liquid', 'Warden').map((o) => o.itemId);
+    expect(liquidW).toContain('dunne-fuelrunner-2d');
+    expect(liquidW).not.toContain('rr-3-stolon-tanker'); // Colonial tanker filtered out
+    const liquidC = transportOptions(dataset, 'liquid', 'Colonial').map((o) => o.itemId);
+    expect(liquidC).toContain('rr-3-stolon-tanker');
+    // Generic train option always closes the list
+    expect(transportOptions(dataset, 'crate', 'Warden').some((o) => o.itemId === null)).toBe(true);
   });
 });
 

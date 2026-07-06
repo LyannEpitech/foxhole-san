@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 import { dataset } from '../data';
 import { resolve, type PlanResult } from '../engine/resolver';
 import type { Faction } from '../types/domain';
@@ -27,7 +28,7 @@ function compute(
   }
 }
 
-export const usePlanStore = create<PlanState>((set, get) => ({
+export const usePlanStore = create<PlanState>()(persist((set, get) => ({
   targetId: null,
   quantity: 1,
   faction: 'Colonial',
@@ -49,5 +50,14 @@ export const usePlanStore = create<PlanState>((set, get) => ({
     const keep = !item || item.faction === 'Both' || item.faction === faction;
     const nextTarget = keep ? targetId : null;
     set({ faction, targetId: nextTarget, ...compute(nextTarget, quantity, faction) });
+  },
+}), {
+  name: 'fsak-plan',
+  partialize: (s) => ({ targetId: s.targetId, quantity: s.quantity, faction: s.faction }),
+  onRehydrateStorage: () => (state) => {
+    // Recompute the plan for the restored target on page load.
+    if (state?.targetId) {
+      Object.assign(state, compute(state.targetId, state.quantity, state.faction));
+    }
   },
 }));

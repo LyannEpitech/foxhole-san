@@ -9,16 +9,28 @@ import { RequirementTree } from '../components/RequirementTree';
 import { ResourceTotals } from '../components/ResourceTotals';
 import { TargetSelector } from '../components/TargetSelector';
 import { usePlanStore } from '../store/planStore';
+import { useUiStore } from '../store/uiStore';
 
 export function ProductionModule() {
   const { t } = useTranslation();
   const { result, error, targetId, setTarget } = usePlanStore();
+  const setActive = useUiStore((s) => s.setActive);
 
   return (
     <div className="space-y-4">
       <TargetSelector />
 
       {targetId && <AmmoCompatibility targetId={targetId} onPick={setTarget} />}
+
+      {result && (
+        <button
+          type="button"
+          onClick={() => setActive('deploy')}
+          className="px-4 py-2 rounded-md bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold text-sm"
+        >
+          🗺 {t('deploy.openInMap')}
+        </button>
+      )}
 
       {error && (
         <div className="border border-red-500/40 bg-red-500/10 text-red-300 rounded-xl p-4 text-sm">

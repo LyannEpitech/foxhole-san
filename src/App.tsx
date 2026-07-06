@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { LanguageToggle } from './components/LanguageToggle';
 import { AttackModule } from './modules/AttackModule';
+import { DeployModule } from './modules/DeployModule';
 import { LogisticsModule } from './modules/LogisticsModule';
 import { ProductionModule } from './modules/ProductionModule';
 import { usePlanStore } from './store/planStore';
@@ -8,6 +9,7 @@ import { useUiStore, type ModuleId } from './store/uiStore';
 
 const MODULES: { id: ModuleId; icon: string }[] = [
   { id: 'production', icon: '🏭' },
+  { id: 'deploy', icon: '🏗️' },
   { id: 'logistics', icon: '🚚' },
   { id: 'attack', icon: '⚔️' },
 ];
@@ -63,6 +65,7 @@ export default function App() {
           <ProductionModule />
         </div>
       )}
+      {active === 'deploy' && <DeployModule />}
       {active === 'logistics' && <LogisticsModule />}
       {active === 'attack' && <AttackModule />}
     </div>

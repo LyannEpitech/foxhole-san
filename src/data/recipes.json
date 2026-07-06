@@ -968,5 +968,205 @@
    }
   ],
   "timeSeconds": 0
+ },
+ {
+  "id": "make-intel-center-parts",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 50
+   },
+   {
+    "refId": "ralloys",
+    "qty": 3
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "intel-center-parts",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 1500
+ },
+ {
+  "id": "make-weather-station-parts",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 150
+   },
+   {
+    "refId": "amats1",
+    "qty": 150
+   },
+   {
+    "refId": "amats2",
+    "qty": 150
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "weather-station-parts",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 1500
+ },
+ {
+  "id": "make-underground-fortress-parts",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 200
+   },
+   {
+    "refId": "ralloys",
+    "qty": 5
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 35
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "underground-fortress-parts",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 1500
+ },
+ {
+  "id": "make-aircraft-radar-parts",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 50
+   },
+   {
+    "refId": "ralloys",
+    "qty": 3
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "aircraft-radar-parts",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 1500
+ },
+ {
+  "id": "build-intelligence-center",
+  "buildingId": "construction-site",
+  "inputs": [
+   {
+    "refId": "fort-construction-parts",
+    "qty": 1
+   },
+   {
+    "refId": "fort-structure-parts",
+    "qty": 1
+   },
+   {
+    "refId": "intel-center-parts",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "intelligence-center",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 0
+ },
+ {
+  "id": "build-weather-station",
+  "buildingId": "construction-site",
+  "inputs": [
+   {
+    "refId": "fort-construction-parts",
+    "qty": 1
+   },
+   {
+    "refId": "fort-structure-parts",
+    "qty": 1
+   },
+   {
+    "refId": "weather-station-parts",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "weather-station",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 0
+ },
+ {
+  "id": "build-underground-fortress",
+  "buildingId": "construction-site",
+  "inputs": [
+   {
+    "refId": "fort-construction-parts",
+    "qty": 1
+   },
+   {
+    "refId": "fort-structure-parts",
+    "qty": 1
+   },
+   {
+    "refId": "underground-fortress-parts",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "underground-fortress",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 0
+ },
+ {
+  "id": "build-sc-3-aerial-interceptor-array",
+  "buildingId": "construction-site",
+  "inputs": [
+   {
+    "refId": "fort-construction-parts",
+    "qty": 1
+   },
+   {
+    "refId": "fort-structure-parts",
+    "qty": 1
+   },
+   {
+    "refId": "aircraft-radar-parts",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "sc-3-aerial-interceptor-array",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 0
  }
 ]

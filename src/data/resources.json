@@ -230,5 +230,37 @@
    "fr": "Pièces de Storm Cannon"
   },
   "kind": "refined"
+ },
+ {
+  "id": "intel-center-parts",
+  "name": {
+   "en": "Intelligence Center Parts",
+   "fr": "Pièces de centre de renseignement"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "weather-station-parts",
+  "name": {
+   "en": "Weather Station Parts",
+   "fr": "Pièces de station météo"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "underground-fortress-parts",
+  "name": {
+   "en": "Underground Fortress Parts",
+   "fr": "Pièces de forteresse souterraine"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "aircraft-radar-parts",
+  "name": {
+   "en": "Aircraft Radar Parts",
+   "fr": "Pièces de radar aérien"
+  },
+  "kind": "refined"
  }
 ]

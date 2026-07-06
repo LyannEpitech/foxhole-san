@@ -178,14 +178,6 @@
   },
   "kind": "AssemblyStation",
   "constructionCost": {},
-  "prerequisites": [
-   {
-    "techId": "unlock-long-range-artillery",
-    "name": {
-     "en": "Long-Range Artillery tech",
-     "fr": "Technologie artillerie longue portée"
-    }
-   }
-  ]
+  "prerequisites": []
  }
 ]

@@ -4363,6 +4363,89 @@
   "producedBy": "construction-site",
   "ammo": [
    "300mm"
-  ]
+  ],
+  "techRequirement": {
+   "techId": "unlock-long-range-artillery",
+   "name": {
+    "en": "Long-Range Artillery tech",
+    "fr": "Technologie artillerie longue portée"
+   }
+  }
+ },
+ {
+  "id": "intelligence-center",
+  "name": {
+   "en": "Intelligence Center",
+   "fr": "Intelligence Center"
+  },
+  "category": "shippables",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "construction-site",
+  "techRequirement": {
+   "techId": "unlock-intelligence-center",
+   "name": {
+    "en": "Intelligence Center tech",
+    "fr": "Technologie centre de renseignement"
+   }
+  }
+ },
+ {
+  "id": "weather-station",
+  "name": {
+   "en": "Weather Station",
+   "fr": "Weather Station"
+  },
+  "category": "shippables",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "construction-site",
+  "techRequirement": {
+   "techId": "unlock-weather-station",
+   "name": {
+    "en": "Weather Station tech",
+    "fr": "Technologie station météo"
+   }
+  }
+ },
+ {
+  "id": "underground-fortress",
+  "name": {
+   "en": "Underground Fortress",
+   "fr": "Underground Fortress"
+  },
+  "category": "shippables",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "construction-site",
+  "techRequirement": {
+   "techId": "unlock-underground-fortress",
+   "name": {
+    "en": "Underground Fortress tech",
+    "fr": "Technologie forteresse souterraine"
+   }
+  }
+ },
+ {
+  "id": "sc-3-aerial-interceptor-array",
+  "name": {
+   "en": "SC-3 Aerial Interceptor Array",
+   "fr": "SC-3 Aerial Interceptor Array"
+  },
+  "category": "shippables",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "construction-site",
+  "techRequirement": {
+   "techId": "unlock-aircraft-radar",
+   "name": {
+    "en": "Aircraft Radar tech",
+    "fr": "Technologie radar aérien"
+   }
+  }
  }
 ]

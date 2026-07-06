@@ -1,5 +1,12 @@
 # Roadmap — Foxhole Swiss Army Knife
 
+> **Statut (2026-07-07) : intégralement implémentée** (phases 1–4).
+> Écarts assumés : A3.2 limité aux capacités *vérifiées* (les camions-bennes
+> Atlas/Loadlugger sont classés vrac, aucune capacité de caisse inventée) ;
+> B2 sans agrégat de pertes (endpoint warReport coûteux pour un intérêt
+> faible) ; B4 sans modèle de vent (non documenté de façon fiable) ;
+> Tisiphone/Falconer hors calculateur d'artillerie (infobox wiki incohérente).
+
 Plan d'amélioration de l'application : renforcer les quatre modules existants et ajouter les fonctionnalités qui répondent aux besoins réels des joueurs (logisticiens solo comme officiers de régiment).
 
 ## 1. Vue d'ensemble

@@ -3,6 +3,14 @@
 Outil de planification pour [Foxhole](https://www.foxholegame.com/), en trois
 modules. UI bilingue **FR/EN**, filtrage par faction (Colonial / Warden).
 
+**Fonctionnalités transverses** : plans nommés sauvegardés + partage par
+lien (hash compressé) + export/import JSON (menu « Plans ») · export PNG de
+la carte · exports Discord/CSV des totaux · PWA installable avec cache
+hors-ligne · tactile (pan/pinch) · tableau de bord de guerre (n°, jour,
+contrôle des régions) · noms des villes (War API statique, cache par
+guerre) · suivi de stockpiles (timers 50 h) · suivi des technologies par
+guerre · calculateurs de raffinerie, MPF et artillerie.
+
 ## 🏭 Production
 
 À partir d'un objet cible et d'une quantité :

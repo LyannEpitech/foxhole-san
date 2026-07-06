@@ -1,4 +1,5 @@
 import type { Dataset } from '../data';
+import { DIESEL_POWER_PLANT } from '../data/power';
 import type {
   Building,
   Faction,
@@ -30,6 +31,30 @@ export type PlanStep =
   | { type: 'build'; buildingId: string }
   | { type: 'produce'; refId: string; recipeId: string; buildingId: string; batches: number; produced: number };
 
+/** Busy time of one building's production queue. */
+export interface BuildingTime {
+  buildingId: string;
+  seconds: number;
+}
+
+/** Electricity plan when the chain involves powered facilities. */
+export interface PowerPlan {
+  /** Peak grid load: sum of the MW draw of every powered building used. */
+  totalMW: number;
+  /** Diesel Power Plants needed to cover that load. */
+  plants: number;
+  /** Construction cost of those plants (not counted in constructionTotal). */
+  plantCost: MaterialCost;
+  /** Diesel burn at that load, liters per hour (scales with grid load). */
+  fuelLitersPerHour: number;
+  /** Makespan estimate in hours (longest building queue), when known. */
+  durationHours: number | null;
+  /** Total diesel for the run (fuelLitersPerHour x duration), when known. */
+  fuelLitersTotal: number | null;
+  /** Salvage to refine that diesel (10 salvage -> 100 L), when known. */
+  fuelSalvage: number | null;
+}
+
 /** Everything a plan reports besides the requirement tree(s). */
 export interface PlanSummary {
   /** Total quantities needed, keyed by resource id. */
@@ -42,6 +67,12 @@ export interface PlanSummary {
   prerequisites: TechRequirement[];
   /** Topologically ordered steps: tech -> build -> produce (inputs before outputs). */
   sequence: PlanStep[];
+  /** Production queue time per building (0-time recipes excluded). */
+  buildingTimes: BuildingTime[];
+  /** True when some recipe times are unknown — the timeline is a lower bound. */
+  timesIncomplete: boolean;
+  /** Electricity/fuel plan, or null when no powered facility is involved. */
+  power: PowerPlan | null;
 }
 
 export interface PlanResult extends PlanSummary {
@@ -183,6 +214,54 @@ export function resolveMany(
   }
   const prerequisites = [...prereqById.values()];
 
+  // Production time per building queue (aggregated produce steps).
+  const timeByBuilding = new Map<string, number>();
+  let timesIncomplete = false;
+  for (const [, agg] of produceTotals) {
+    if (agg.recipe.timeSeconds <= 0) {
+      timesIncomplete = true;
+      continue;
+    }
+    const prev = timeByBuilding.get(agg.recipe.buildingId) ?? 0;
+    timeByBuilding.set(agg.recipe.buildingId, prev + agg.batches * agg.recipe.timeSeconds);
+  }
+  const buildingTimes: BuildingTime[] = [...timeByBuilding.entries()].map(
+    ([buildingId, seconds]) => ({ buildingId, seconds }),
+  );
+
+  // Electricity: powered facilities -> generators -> diesel.
+  const totalMW = buildings.reduce((sum, b) => sum + (b.powerRequired ?? 0), 0);
+  let power: PowerPlan | null = null;
+  if (totalMW > 0) {
+    const plants = Math.ceil(totalMW / DIESEL_POWER_PLANT.outputMW);
+    const plantCost: MaterialCost = {};
+    for (const [mat, amount] of Object.entries(DIESEL_POWER_PLANT.constructionCost)) {
+      if (typeof amount !== 'number') continue;
+      plantCost[mat as keyof MaterialCost] = amount * plants;
+    }
+    // Consumption scales with actual load, not plant capacity.
+    const fuelLitersPerHour =
+      (totalMW / DIESEL_POWER_PLANT.outputMW) * DIESEL_POWER_PLANT.fuelLitersPerHour;
+    // Queues run in parallel: the makespan is the longest one. Only the
+    // powered buildings burn fuel, but the grid usually stays up for the
+    // whole run — use the global makespan as the honest estimate.
+    const makespan = buildingTimes.reduce((max, bt) => Math.max(max, bt.seconds), 0);
+    const durationHours = makespan > 0 ? makespan / 3600 : null;
+    const fuelLitersTotal =
+      durationHours !== null ? Math.ceil(fuelLitersPerHour * durationHours) : null;
+    const fuelSalvage =
+      fuelLitersTotal !== null ? Math.ceil(fuelLitersTotal / 100) * 10 : null;
+    power = {
+      totalMW,
+      plants,
+      plantCost,
+      fuelLitersPerHour,
+      durationHours,
+      fuelLitersTotal,
+      fuelSalvage,
+    };
+  }
+
   // Sequence: unlock tech, build the buildings, then produce in dependency order.
   const sequence: PlanStep[] = [
     ...prerequisites.map((req): PlanStep => ({ type: 'tech', techId: req.techId })),
@@ -200,7 +279,17 @@ export function resolveMany(
     }),
   ];
 
-  return { trees, totals, buildings, constructionTotal, prerequisites, sequence };
+  return {
+    trees,
+    totals,
+    buildings,
+    constructionTotal,
+    prerequisites,
+    sequence,
+    buildingTimes,
+    timesIncomplete,
+    power,
+  };
 }
 
 /** Single-target convenience wrapper around {@link resolveMany}. */

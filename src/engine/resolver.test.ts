@@ -198,6 +198,44 @@ describe('planCargo — logistics crate/trip math', () => {
   });
 });
 
+describe('resolve — timeline and power', () => {
+  it('sums production time per building queue', () => {
+    // 5 shells: 1 crate. bmats: 120 batches x 1s; hemats: 10 batches x 15s = 150s.
+    const plan = resolve(data, 'shell', 5, 'Colonial');
+    const refinery = plan.buildingTimes.find((bt) => bt.buildingId === 'refinery');
+    expect(refinery?.seconds).toBe(120 * 1 + 10 * 15);
+    // Fixture items have no craft time -> timeline flagged incomplete, no power.
+    expect(plan.timesIncomplete).toBe(true);
+    expect(plan.power).toBeNull();
+  });
+
+  it('computes MW, generators and diesel for facility chains (cmats)', () => {
+    // 100 cmats at the Materials Factory (2 MW): 100 batches x 25s = 2500s.
+    const plan = resolve(dataset, 'cmats', 100, 'Colonial');
+    expect(plan.totals.raw.salvage).toBe(1000);
+    expect(plan.timesIncomplete).toBe(false);
+    const mf = plan.buildingTimes.find((bt) => bt.buildingId === 'materials-factory');
+    expect(mf?.seconds).toBe(2500);
+
+    const power = plan.power!;
+    expect(power.totalMW).toBe(2);
+    expect(power.plants).toBe(1); // one 5 MW diesel plant covers 2 MW
+    expect(power.plantCost).toEqual({ bmats: 150 });
+    expect(power.fuelLitersPerHour).toBeCloseTo((2 / 5) * 2000, 5);
+    expect(power.durationHours).toBeCloseTo(2500 / 3600, 5);
+    // ceil(800 L/h * 0.694h) = 556 L -> ceil(556/100)*10 = 60 salvage
+    expect(power.fuelLitersTotal).toBe(556);
+    expect(power.fuelSalvage).toBe(60);
+  });
+
+  it('resolves diesel itself through the refinery recipe', () => {
+    const plan = resolve(dataset, 'diesel', 250, 'Warden');
+    // 250 L -> 3 batches of 100 L -> 30 salvage, 36s of refinery time.
+    expect(plan.totals.raw.salvage).toBe(30);
+    expect(plan.buildingTimes.find((bt) => bt.buildingId === 'refinery')?.seconds).toBe(36);
+  });
+});
+
 describe('resolve — real curated dataset', () => {
   it('plans 10x 120mm shells (2 crates): 240 bmats + 20 hemats -> 480 salvage + 100 sulfur', () => {
     const plan = resolve(dataset, '120mm', 10, 'Warden');

@@ -260,7 +260,7 @@ export function HexMap({
           : 'cursor-crosshair';
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full h-full">
     <svg
       ref={svgRef}
       viewBox={viewBox}
@@ -269,7 +269,7 @@ export function HexMap({
       onMouseMove={onMouseMove}
       onMouseUp={onMouseUp}
       onMouseLeave={endDrag}
-      className={`${className ?? 'w-full h-[520px]'} ${cursorClass} select-none`}
+      className={`${className ?? 'w-full h-full block'} ${cursorClass} select-none`}
       role="img"
     >
       <defs>

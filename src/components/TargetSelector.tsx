@@ -30,6 +30,11 @@ export function TargetSelector() {
     byCategory.set(item.category, bucket);
   }
 
+  // Producible refined resources (bmats, diesel, cmats…) are valid targets too.
+  const materials = [...dataset.resources.values()].filter(
+    (r) => r.kind === 'refined' && dataset.recipeByOutput.has(r.id),
+  );
+
   return (
     <div className="flex flex-wrap items-end gap-4 bg-slate-800/60 border border-slate-700 rounded-xl p-4">
       <label className="flex flex-col gap-1 text-sm text-slate-300 min-w-56 grow">
@@ -40,6 +45,13 @@ export function TargetSelector() {
           className="bg-slate-900 border border-slate-600 rounded-md px-3 py-2 text-slate-100"
         >
           <option value="">{t('target.placeholder')}</option>
+          <optgroup label={t('category.materials')}>
+            {materials.map((r) => (
+              <option key={r.id} value={r.id}>
+                {localized(r.name)}
+              </option>
+            ))}
+          </optgroup>
           {CATEGORY_ORDER.filter((c) => byCategory.has(c)).map((category) => (
             <optgroup key={category} label={t(`category.${category}`)}>
               {byCategory.get(category)!.map((item) => (

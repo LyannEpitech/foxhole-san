@@ -14,6 +14,7 @@
     "Warden": "Warden"
   },
   "category": {
+    "materials": "Materials",
     "smallArms": "Small arms",
     "heavyArms": "Heavy arms",
     "utilities": "Utilities",
@@ -27,7 +28,24 @@
     "tree": "Requirement tree",
     "totals": "Resource totals",
     "buildings": "Buildings",
-    "sequence": "Build sequence"
+    "sequence": "Build sequence",
+    "timeline": "Timeline",
+    "energy": "Electricity & fuel"
+  },
+  "timeline": {
+    "none": "No timed production step",
+    "makespan": "Total duration (parallel queues)",
+    "incomplete": "Partial: some craft times are unknown — this is a lower bound."
+  },
+  "energy": {
+    "none": "No powered facility in this chain",
+    "load": "Grid load",
+    "plants": "Generators",
+    "fuelRate": "Diesel burn",
+    "duration": "Powered duration",
+    "fuelTotal": "Total diesel",
+    "fuelSalvage": "≈ salvage to refine that diesel",
+    "note": "Diesel Power Plant: 5 MW for 25 L / 45 s; consumption scales with grid load. Refinery makes 100 L from 10 salvage."
   },
   "tree": {
     "batches": "{{count}} order(s)",

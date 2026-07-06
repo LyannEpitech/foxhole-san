@@ -13,6 +13,8 @@ interface Props {
   route?: string[];
   routeColor?: string;
   markers?: MapMarker[];
+  /** Module-specific controls rendered under the tool palette overlay. */
+  extraControls?: React.ReactNode;
 }
 
 /** Small 24x24 stroke icon used in the toolbar. */
@@ -117,10 +119,18 @@ const TOOL_GROUPS: { id: ToolId; color: string }[][] = [
 const LAYERS: MapIconKind[] = ['town', 'industry', 'field', 'military'];
 
 /**
- * HexMap + shared planning chrome: annotation tool palette, War API layer
- * toggles and refresh. Used by the logistics and attack planners.
+ * Fullscreen HexMap + planning chrome overlaid on the map: annotation tool
+ * palette (top-left), War API layers and refresh (top-right), contextual
+ * hints (bottom-left). Used by the logistics and attack planners.
  */
-export function PlanMap({ onRegionClick, highlighted, route, routeColor, markers }: Props) {
+export function PlanMap({
+  onRegionClick,
+  highlighted,
+  route,
+  routeColor,
+  markers,
+  extraControls,
+}: Props) {
   const { t } = useTranslation();
   const localized = useLocalized();
   const { items, loading, progress, loadedAt, layers, toggleLayer, refresh } = useMapDataStore();
@@ -189,14 +199,31 @@ export function PlanMap({ onRegionClick, highlighted, route, routeColor, markers
   };
 
   return (
-    <div>
-      {/* Toolbar: annotation tools + layers + war data */}
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-2 text-sm">
-        <div className="flex items-center gap-2" role="toolbar">
+    <div className="absolute inset-0 bg-slate-950">
+      <HexMap
+        onRegionClick={onRegionClick}
+        highlighted={highlighted}
+        route={route}
+        routeColor={routeColor}
+        markers={markers}
+        apiMarkers={apiMarkers}
+        annotations={annotations}
+        tool={tool}
+        onAddPoint={onAddPoint}
+        onAddArrow={onAddArrow}
+        onAddStroke={onAddStroke}
+        onAddText={addText}
+        onEraseAnnotation={remove}
+        textPlaceholder={t('map.textPlaceholder')}
+      />
+
+      {/* Top-left overlay: tool palette + module controls */}
+      <div className="absolute top-2 left-2 z-10 space-y-2">
+        <div className="flex flex-wrap items-center gap-2" role="toolbar">
           {TOOL_GROUPS.map((group, gi) => (
             <div
               key={gi}
-              className="flex items-center gap-1 bg-slate-900/60 border border-slate-700 rounded-lg p-1"
+              className="flex items-center gap-1 bg-slate-900/85 backdrop-blur border border-slate-700 rounded-lg p-1 shadow-lg"
             >
               {group.map(({ id, color }) => (
                 <button
@@ -221,15 +248,17 @@ export function PlanMap({ onRegionClick, highlighted, route, routeColor, markers
               type="button"
               title={t('map.tool.clear')}
               onClick={clear}
-              className="h-9 px-2 flex items-center gap-1 rounded-lg border bg-slate-900/60 border-slate-700 hover:bg-slate-700 text-red-300 text-xs"
+              className="h-9 px-2 flex items-center gap-1 rounded-lg border bg-slate-900/85 backdrop-blur border-slate-700 hover:bg-slate-700 text-red-300 text-xs shadow-lg"
             >
               {TOOL_ICONS.clear}
               {t('map.tool.clear')}
             </button>
           )}
         </div>
+        {extraControls}
 
-        <div className="flex items-center gap-2 ml-auto">
+        {/* Layers + war data (in the left stack so the drawer never hides it) */}
+        <div className="inline-flex items-center gap-2 bg-slate-900/85 backdrop-blur border border-slate-700 rounded-lg px-3 py-2 shadow-lg">
           {LAYERS.map((kind) => (
             <label key={kind} className="flex items-center gap-1 text-xs text-slate-300">
               <input
@@ -245,39 +274,25 @@ export function PlanMap({ onRegionClick, highlighted, route, routeColor, markers
             type="button"
             onClick={() => void refresh()}
             disabled={loading}
-            className="h-8 px-3 rounded-md bg-slate-700 hover:bg-slate-600 text-slate-100 text-xs disabled:opacity-50"
+            className="h-7 px-2 rounded-md bg-slate-700 hover:bg-slate-600 text-slate-100 text-xs disabled:opacity-50"
           >
             {loading && progress
               ? `${t('map.loading')} ${progress[0]}/${progress[1]}`
               : `⟳ ${t('map.refresh')}`}
           </button>
         </div>
+
+        {tool !== 'pan' && (
+          <p className="inline-block text-xs text-amber-300 bg-slate-900/85 backdrop-blur border border-slate-700 rounded-md px-2 py-1">
+            {t(`map.tool.${tool}`)} — {t(`map.hint.${tool}`)}
+          </p>
+        )}
       </div>
 
-      {/* Active tool hint */}
-      <p className="text-xs text-amber-300/80 mb-2 min-h-4">
-        {tool !== 'pan' && `${t(`map.tool.${tool}`)} — ${t(`map.hint.${tool}`)}`}
+      {/* Bottom-left hint */}
+      <p className="absolute bottom-2 left-2 z-10 text-xs text-slate-400 bg-slate-900/80 backdrop-blur rounded-md px-2 py-1 max-w-md">
+        {t('map.zoomHint')}
       </p>
-
-      <div className="rounded-lg overflow-hidden border border-slate-700 bg-slate-950">
-        <HexMap
-          onRegionClick={onRegionClick}
-          highlighted={highlighted}
-          route={route}
-          routeColor={routeColor}
-          markers={markers}
-          apiMarkers={apiMarkers}
-          annotations={annotations}
-          tool={tool}
-          onAddPoint={onAddPoint}
-          onAddArrow={onAddArrow}
-          onAddStroke={onAddStroke}
-          onAddText={addText}
-          onEraseAnnotation={remove}
-          textPlaceholder={t('map.textPlaceholder')}
-        />
-      </div>
-      <p className="text-xs text-slate-500 mt-1">{t('map.zoomHint')}</p>
     </div>
   );
 }

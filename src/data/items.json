@@ -87,7 +87,8 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "craftTimeSeconds": 70
  },
  {
   "id": "blakerow-871",
@@ -147,7 +148,8 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "craftTimeSeconds": 70
  },
  {
   "id": "fuscina-pii",
@@ -207,7 +209,8 @@
   },
   "amountProduced": 40,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "craftTimeSeconds": 50
  },
  {
   "id": "fiddler-submachine-gun-model-868",
@@ -840,7 +843,8 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "craftTimeSeconds": 55
  },
  {
   "id": "150mm",
@@ -903,7 +907,8 @@
   },
   "amountProduced": 25,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "craftTimeSeconds": 100
  },
  {
   "id": "a3-harpa-fragmentation-grenade",
@@ -919,7 +924,8 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "craftTimeSeconds": 100
  },
  {
   "id": "mammon-91-b",

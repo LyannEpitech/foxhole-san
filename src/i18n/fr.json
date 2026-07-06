@@ -14,6 +14,7 @@
     "Warden": "Warden"
   },
   "category": {
+    "materials": "Matériaux",
     "smallArms": "Armes légères",
     "heavyArms": "Armes lourdes",
     "utilities": "Utilitaires",
@@ -27,7 +28,24 @@
     "tree": "Arbre des besoins",
     "totals": "Totaux ressources",
     "buildings": "Bâtiments",
-    "sequence": "Séquence de construction"
+    "sequence": "Séquence de construction",
+    "timeline": "Chronologie",
+    "energy": "Électricité & carburant"
+  },
+  "timeline": {
+    "none": "Aucune étape de production chronométrée",
+    "makespan": "Durée totale (files en parallèle)",
+    "incomplete": "Partiel : certains temps de fabrication sont inconnus — c'est une borne basse."
+  },
+  "energy": {
+    "none": "Aucune installation électrifiée dans cette chaîne",
+    "load": "Charge du réseau",
+    "plants": "Générateurs",
+    "fuelRate": "Consommation diesel",
+    "duration": "Durée sous tension",
+    "fuelTotal": "Diesel total",
+    "fuelSalvage": "≈ ferraille pour raffiner ce diesel",
+    "note": "Centrale au diesel : 5 MW pour 25 L / 45 s ; la consommation suit la charge du réseau. La raffinerie produit 100 L avec 10 ferrailles."
   },
   "tree": {
     "batches": "{{count}} commande(s)",

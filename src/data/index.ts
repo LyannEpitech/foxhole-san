@@ -72,6 +72,7 @@ const itemSchema = z.object({
   producedBy: z.string().min(1),
   techRequirement: techRequirement.optional(),
   isMfpCraftable: z.boolean().optional(),
+  craftTimeSeconds: z.number().positive().optional(),
 });
 
 // ---------------------------------------------------------------------------
@@ -98,7 +99,8 @@ export function itemToRecipe(item: Item): Recipe {
     buildingId: item.producedBy,
     inputs,
     outputs: [{ refId: item.id, qty: item.amountProduced }],
-    timeSeconds: 0,
+    // 0 means "unknown" — the timeline reports itself as incomplete then.
+    timeSeconds: item.craftTimeSeconds ?? 0,
   };
 }
 

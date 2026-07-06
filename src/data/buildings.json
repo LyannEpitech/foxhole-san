@@ -1,62 +1,95 @@
 [
-  {
-    "id": "refinery",
-    "name": { "en": "Refinery", "fr": "Raffinerie" },
-    "kind": "Refinery",
-    "constructionCost": { "bmats": 400 },
-    "prerequisites": [
-      {
-        "techId": "industry-upgrade",
-        "name": {
-          "en": "Town Base \"Industry\" upgrade",
-          "fr": "Amélioration « Industrie » de la base de ville"
-        }
-      }
-    ]
+ {
+  "id": "refinery",
+  "name": {
+   "en": "Refinery",
+   "fr": "Raffinerie"
   },
-  {
-    "id": "factory",
-    "name": { "en": "Factory", "fr": "Usine" },
-    "kind": "Factory",
-    "constructionCost": { "bmats": 400 },
-    "prerequisites": [
-      {
-        "techId": "industry-upgrade",
-        "name": {
-          "en": "Town Base \"Industry\" upgrade",
-          "fr": "Amélioration « Industrie » de la base de ville"
-        }
-      }
-    ]
+  "kind": "Refinery",
+  "constructionCost": {
+   "bmats": 400
   },
-  {
-    "id": "mpf",
-    "name": { "en": "Mass Production Factory", "fr": "Usine de production de masse" },
-    "kind": "MassProductionFactory",
-    "constructionCost": { "bmats": 400 },
-    "prerequisites": [
-      {
-        "techId": "industry-upgrade",
-        "name": {
-          "en": "Town Base \"Industry\" upgrade",
-          "fr": "Amélioration « Industrie » de la base de ville"
-        }
-      }
-    ]
+  "prerequisites": [
+   {
+    "techId": "industry-upgrade",
+    "name": {
+     "en": "Town Base \"Industry\" upgrade",
+     "fr": "Amélioration « Industrie » de la base de ville"
+    }
+   }
+  ]
+ },
+ {
+  "id": "factory",
+  "name": {
+   "en": "Factory",
+   "fr": "Usine"
   },
-  {
-    "id": "garage",
-    "name": { "en": "Garage", "fr": "Garage" },
-    "kind": "AssemblyStation",
-    "constructionCost": { "bmats": 400 },
-    "prerequisites": [
-      {
-        "techId": "industry-upgrade",
-        "name": {
-          "en": "Town Base \"Industry\" upgrade",
-          "fr": "Amélioration « Industrie » de la base de ville"
-        }
-      }
-    ]
-  }
+  "kind": "Factory",
+  "constructionCost": {
+   "bmats": 400
+  },
+  "prerequisites": [
+   {
+    "techId": "industry-upgrade",
+    "name": {
+     "en": "Town Base \"Industry\" upgrade",
+     "fr": "Amélioration « Industrie » de la base de ville"
+    }
+   }
+  ]
+ },
+ {
+  "id": "mpf",
+  "name": {
+   "en": "Mass Production Factory",
+   "fr": "Usine de production de masse"
+  },
+  "kind": "MassProductionFactory",
+  "constructionCost": {
+   "bmats": 400
+  },
+  "prerequisites": [
+   {
+    "techId": "industry-upgrade",
+    "name": {
+     "en": "Town Base \"Industry\" upgrade",
+     "fr": "Amélioration « Industrie » de la base de ville"
+    }
+   }
+  ]
+ },
+ {
+  "id": "garage",
+  "name": {
+   "en": "Garage",
+   "fr": "Garage"
+  },
+  "kind": "AssemblyStation",
+  "constructionCost": {
+   "bmats": 400
+  },
+  "prerequisites": [
+   {
+    "techId": "industry-upgrade",
+    "name": {
+     "en": "Town Base \"Industry\" upgrade",
+     "fr": "Amélioration « Industrie » de la base de ville"
+    }
+   }
+  ]
+ },
+ {
+  "id": "materials-factory",
+  "name": {
+   "en": "Materials Factory",
+   "fr": "Usine de matériaux"
+  },
+  "kind": "MaterialsFactory",
+  "constructionCost": {
+   "bmats": 200
+  },
+  "powerRequired": 2,
+  "prerequisites": []
+ }
 ]

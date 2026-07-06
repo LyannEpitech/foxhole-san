@@ -1,10 +1,82 @@
 [
-  { "id": "salvage", "name": { "en": "Salvage", "fr": "Ferraille" }, "kind": "raw" },
-  { "id": "components", "name": { "en": "Components", "fr": "Composants" }, "kind": "raw" },
-  { "id": "sulfur", "name": { "en": "Sulfur", "fr": "Soufre" }, "kind": "raw" },
-  { "id": "coal", "name": { "en": "Coal", "fr": "Charbon" }, "kind": "raw" },
-  { "id": "bmats", "name": { "en": "Basic Materials", "fr": "Matériaux de base" }, "kind": "refined" },
-  { "id": "rmats", "name": { "en": "Refined Materials", "fr": "Matériaux raffinés" }, "kind": "refined" },
-  { "id": "emats", "name": { "en": "Explosive Powder", "fr": "Poudre explosive" }, "kind": "refined" },
-  { "id": "hemats", "name": { "en": "Heavy Explosive Powder", "fr": "Poudre explosive lourde" }, "kind": "refined" }
+ {
+  "id": "salvage",
+  "name": {
+   "en": "Salvage",
+   "fr": "Ferraille"
+  },
+  "kind": "raw"
+ },
+ {
+  "id": "components",
+  "name": {
+   "en": "Components",
+   "fr": "Composants"
+  },
+  "kind": "raw"
+ },
+ {
+  "id": "sulfur",
+  "name": {
+   "en": "Sulfur",
+   "fr": "Soufre"
+  },
+  "kind": "raw"
+ },
+ {
+  "id": "coal",
+  "name": {
+   "en": "Coal",
+   "fr": "Charbon"
+  },
+  "kind": "raw"
+ },
+ {
+  "id": "bmats",
+  "name": {
+   "en": "Basic Materials",
+   "fr": "Matériaux de base"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "rmats",
+  "name": {
+   "en": "Refined Materials",
+   "fr": "Matériaux raffinés"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "emats",
+  "name": {
+   "en": "Explosive Powder",
+   "fr": "Poudre explosive"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "hemats",
+  "name": {
+   "en": "Heavy Explosive Powder",
+   "fr": "Poudre explosive lourde"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "diesel",
+  "name": {
+   "en": "Diesel (L)",
+   "fr": "Diesel (L)"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "cmats",
+  "name": {
+   "en": "Construction Materials",
+   "fr": "Matériaux de construction"
+  },
+  "kind": "refined"
+ }
 ]

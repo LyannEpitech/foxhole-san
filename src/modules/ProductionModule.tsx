@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { BuildingList } from '../components/BuildingList';
 import { BuildSequence } from '../components/BuildSequence';
 import { Panel } from '../components/Panel';
+import { EnergyPanel, TimelinePanel } from '../components/PlanExtras';
 import { RequirementTree } from '../components/RequirementTree';
 import { ResourceTotals } from '../components/ResourceTotals';
 import { TargetSelector } from '../components/TargetSelector';
@@ -40,6 +41,12 @@ export function ProductionModule() {
           </Panel>
           <Panel title={t('panels.sequence')}>
             <BuildSequence result={result} />
+          </Panel>
+          <Panel title={t('panels.timeline')}>
+            <TimelinePanel result={result} />
+          </Panel>
+          <Panel title={t('panels.energy')}>
+            <EnergyPanel result={result} />
           </Panel>
         </div>
       )}

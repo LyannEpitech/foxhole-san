@@ -19,11 +19,11 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
-      <div className="max-w-6xl mx-auto px-4 py-6 space-y-6">
+      <div className="max-w-none mx-auto px-4 pt-3">
         <header className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-amber-400">{t('app.title')}</h1>
-            <p className="text-sm text-slate-400">{t('app.subtitle')}</p>
+            <h1 className="text-xl font-bold text-amber-400">{t('app.title')}</h1>
+            <p className="text-xs text-slate-400">{t('app.subtitle')}</p>
           </div>
           <div className="flex items-center gap-3">
             <select
@@ -39,7 +39,7 @@ export default function App() {
           </div>
         </header>
 
-        <nav className="flex gap-2 border-b border-slate-800 pb-px">
+        <nav className="flex gap-2 border-b border-slate-800 pb-px mt-2">
           {MODULES.map(({ id, icon }) => (
             <button
               key={id}
@@ -55,11 +55,16 @@ export default function App() {
             </button>
           ))}
         </nav>
-
-        {active === 'production' && <ProductionModule />}
-        {active === 'logistics' && <LogisticsModule />}
-        {active === 'attack' && <AttackModule />}
       </div>
+
+      {/* Production scrolls as a page; the map planners take the full screen. */}
+      {active === 'production' && (
+        <div className="max-w-6xl mx-auto px-4 py-4 space-y-4">
+          <ProductionModule />
+        </div>
+      )}
+      {active === 'logistics' && <LogisticsModule />}
+      {active === 'attack' && <AttackModule />}
     </div>
   );
 }

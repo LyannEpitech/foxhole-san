@@ -91,4 +91,6 @@ export interface Item {
   producedBy: string;
   techRequirement?: TechRequirement;
   isMfpCraftable?: boolean;
+  /** Factory time for one order/crate, in seconds (wiki-verified). */
+  craftTimeSeconds?: number;
 }

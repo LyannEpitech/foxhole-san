@@ -1,30 +1,104 @@
 [
-  {
-    "id": "refine-bmats",
-    "buildingId": "refinery",
-    "inputs": [{ "refId": "salvage", "qty": 2 }],
-    "outputs": [{ "refId": "bmats", "qty": 1 }],
-    "timeSeconds": 0.48
-  },
-  {
-    "id": "refine-rmats",
-    "buildingId": "refinery",
-    "inputs": [{ "refId": "components", "qty": 20 }],
-    "outputs": [{ "refId": "rmats", "qty": 1 }],
-    "timeSeconds": 40
-  },
-  {
-    "id": "refine-emats",
-    "buildingId": "refinery",
-    "inputs": [{ "refId": "salvage", "qty": 5 }],
-    "outputs": [{ "refId": "emats", "qty": 1 }],
-    "timeSeconds": 9.375
-  },
-  {
-    "id": "refine-hemats",
-    "buildingId": "refinery",
-    "inputs": [{ "refId": "sulfur", "qty": 5 }],
-    "outputs": [{ "refId": "hemats", "qty": 1 }],
-    "timeSeconds": 15
-  }
+ {
+  "id": "refine-bmats",
+  "buildingId": "refinery",
+  "inputs": [
+   {
+    "refId": "salvage",
+    "qty": 2
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "bmats",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 0.48
+ },
+ {
+  "id": "refine-rmats",
+  "buildingId": "refinery",
+  "inputs": [
+   {
+    "refId": "components",
+    "qty": 20
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "rmats",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 40
+ },
+ {
+  "id": "refine-emats",
+  "buildingId": "refinery",
+  "inputs": [
+   {
+    "refId": "salvage",
+    "qty": 5
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "emats",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 9.375
+ },
+ {
+  "id": "refine-hemats",
+  "buildingId": "refinery",
+  "inputs": [
+   {
+    "refId": "sulfur",
+    "qty": 5
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "hemats",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 15
+ },
+ {
+  "id": "refine-diesel",
+  "buildingId": "refinery",
+  "inputs": [
+   {
+    "refId": "salvage",
+    "qty": 10
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "diesel",
+    "qty": 100
+   }
+  ],
+  "timeSeconds": 12
+ },
+ {
+  "id": "make-cmats",
+  "buildingId": "materials-factory",
+  "inputs": [
+   {
+    "refId": "salvage",
+    "qty": 10
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "cmats",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 25
+ }
 ]

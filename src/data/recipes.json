@@ -868,5 +868,105 @@
    }
   ],
   "timeSeconds": 28800
+ },
+ {
+  "id": "make-fort-construction-parts",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 250
+   },
+   {
+    "refId": "amats1",
+    "qty": 225
+   },
+   {
+    "refId": "amats2",
+    "qty": 225
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "fort-construction-parts",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "make-fort-structure-parts",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 50
+   },
+   {
+    "refId": "amats4",
+    "qty": 40
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "fort-structure-parts",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "make-storm-cannon-parts",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 300
+   },
+   {
+    "refId": "ralloys",
+    "qty": 20
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 45
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "storm-cannon-parts",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 1500
+ },
+ {
+  "id": "build-storm-cannon",
+  "buildingId": "construction-site",
+  "inputs": [
+   {
+    "refId": "fort-construction-parts",
+    "qty": 1
+   },
+   {
+    "refId": "fort-structure-parts",
+    "qty": 1
+   },
+   {
+    "refId": "storm-cannon-parts",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "storm-cannon",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 0
  }
 ]

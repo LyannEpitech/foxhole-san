@@ -4349,5 +4349,20 @@
   "cost": {},
   "amountProduced": 1,
   "producedBy": "dry-dock"
+ },
+ {
+  "id": "storm-cannon",
+  "name": {
+   "en": "Storm Cannon",
+   "fr": "Storm Cannon"
+  },
+  "category": "shippables",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "construction-site",
+  "ammo": [
+   "300mm"
+  ]
  }
 ]

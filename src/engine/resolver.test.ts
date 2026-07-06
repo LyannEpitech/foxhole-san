@@ -293,6 +293,19 @@ describe('resolve — real curated dataset', () => {
     expect(rocket.totals.raw.sulfur).toBe(200);
   });
 
+  it('resolves the Storm Cannon through fort parts down to the facility tree', () => {
+    const plan = resolve(dataset, 'storm-cannon', 1, 'Colonial');
+    expect(plan.totals.refined['fort-construction-parts']).toBe(1);
+    expect(plan.totals.refined['fort-structure-parts']).toBe(1);
+    expect(plan.totals.refined['storm-cannon-parts']).toBe(1);
+    // 250+50+300 pcmats direct, plus deeper pulls (ralloys, thermal shielding).
+    expect(plan.totals.refined.pcmats).toBeGreaterThanOrEqual(600);
+    expect(plan.totals.raw['rare-metal']).toBeGreaterThan(0);
+    expect(plan.buildings.map((b) => b.id)).toContain('construction-site');
+    // Its 300mm ammo link resolves both ways.
+    expect(dataset.items.get('storm-cannon')!.ammo).toEqual(['300mm']);
+  });
+
   it('enforces faction on real items', () => {
     expect(() => resolve(dataset, 'argenti-rii-rifle', 10, 'Warden')).toThrow(FactionError);
     expect(resolve(dataset, 'argenti-rii-rifle', 10, 'Colonial').totals.raw.salvage).toBe(200);

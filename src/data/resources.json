@@ -206,5 +206,29 @@
    "fr": "Composants de turbine navale"
   },
   "kind": "refined"
+ },
+ {
+  "id": "fort-construction-parts",
+  "name": {
+   "en": "Construction Parts",
+   "fr": "Pièces de construction"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "fort-structure-parts",
+  "name": {
+   "en": "Structure Parts",
+   "fr": "Pièces de structure"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "storm-cannon-parts",
+  "name": {
+   "en": "Storm Cannon Parts",
+   "fr": "Pièces de Storm Cannon"
+  },
+  "kind": "refined"
  }
 ]

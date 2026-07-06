@@ -169,5 +169,23 @@
   },
   "powerRequired": 10,
   "prerequisites": []
+ },
+ {
+  "id": "construction-site",
+  "name": {
+   "en": "On-site construction (Construction Vehicle)",
+   "fr": "Construction sur site (véhicule de construction)"
+  },
+  "kind": "AssemblyStation",
+  "constructionCost": {},
+  "prerequisites": [
+   {
+    "techId": "unlock-long-range-artillery",
+    "name": {
+     "en": "Long-Range Artillery tech",
+     "fr": "Technologie artillerie longue portée"
+    }
+   }
+  ]
  }
 ]

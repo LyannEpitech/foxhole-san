@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { dataset } from '../data';
 import { useLocalized } from '../i18n';
 import { usePlanStore } from '../store/planStore';
+import { SearchSelect, type SearchGroup } from './SearchSelect';
 import type { Item, ItemCategory } from '../types/domain';
 
 const CATEGORY_ORDER: ItemCategory[] = [
@@ -35,33 +36,29 @@ export function TargetSelector() {
     (r) => r.kind === 'refined' && dataset.recipeByOutput.has(r.id),
   );
 
+  const groups: SearchGroup[] = [
+    {
+      label: t('category.materials'),
+      options: materials.map((r) => ({ value: r.id, label: localized(r.name) })),
+    },
+    ...CATEGORY_ORDER.filter((c) => byCategory.has(c)).map((category) => ({
+      label: t(`category.${category}`),
+      options: byCategory
+        .get(category)!
+        .map((item) => ({ value: item.id, label: localized(item.name) })),
+    })),
+  ];
+
   return (
     <div className="flex flex-wrap items-end gap-4 bg-slate-800/60 border border-slate-700 rounded-xl p-4">
       <label className="flex flex-col gap-1 text-sm text-slate-300 min-w-56 grow">
         {t('target.label')}
-        <select
+        <SearchSelect
+          groups={groups}
           value={targetId ?? ''}
-          onChange={(e) => setTarget(e.target.value || null)}
-          className="bg-slate-900 border border-slate-600 rounded-md px-3 py-2 text-slate-100"
-        >
-          <option value="">{t('target.placeholder')}</option>
-          <optgroup label={t('category.materials')}>
-            {materials.map((r) => (
-              <option key={r.id} value={r.id}>
-                {localized(r.name)}
-              </option>
-            ))}
-          </optgroup>
-          {CATEGORY_ORDER.filter((c) => byCategory.has(c)).map((category) => (
-            <optgroup key={category} label={t(`category.${category}`)}>
-              {byCategory.get(category)!.map((item) => (
-                <option key={item.id} value={item.id}>
-                  {localized(item.name)}
-                </option>
-              ))}
-            </optgroup>
-          ))}
-        </select>
+          onChange={(v) => setTarget(v || null)}
+          placeholder={t('target.searchPlaceholder')}
+        />
       </label>
 
       <label className="flex flex-col gap-1 text-sm text-slate-300">

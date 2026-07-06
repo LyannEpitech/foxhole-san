@@ -6,6 +6,7 @@
   "target": {
     "label": "Target item",
     "placeholder": "Select an item…",
+    "searchPlaceholder": "Search an item…",
     "quantity": "Quantity",
     "faction": "Faction"
   },
@@ -87,6 +88,10 @@
   },
   "error": {
     "title": "Cannot compute plan"
+  },
+  "search": {
+    "placeholder": "Search…",
+    "noResults": "No results"
   },
   "map": {
     "tool": {

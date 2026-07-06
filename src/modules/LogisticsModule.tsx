@@ -141,7 +141,7 @@ export function LogisticsModule() {
                     value={row.itemId}
                     onChange={(itemId) => updateCargoRow(i, { ...row, itemId })}
                     faction={faction}
-                    className={`${inputCls} grow min-w-0 text-sm`}
+                    className="grow min-w-0 text-sm"
                   />
                   <input
                     type="number"

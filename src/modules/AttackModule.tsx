@@ -207,7 +207,7 @@ export function AttackModule() {
                   value={row.itemId}
                   onChange={(itemId) => updateLoadoutRow(i, { ...row, itemId })}
                   faction={faction}
-                  className={`${inputCls} grow min-w-0 text-sm`}
+                  className="grow min-w-0 text-sm"
                 />
                 <input
                   type="number"
@@ -250,7 +250,7 @@ export function AttackModule() {
                   value={row.itemId}
                   onChange={(itemId) => updateSupportRow(i, { ...row, itemId })}
                   faction={faction}
-                  className={`${inputCls} grow min-w-0 text-sm`}
+                  className="grow min-w-0 text-sm"
                 />
                 <input
                   type="number"

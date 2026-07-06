@@ -6,6 +6,7 @@
   "target": {
     "label": "Objet cible",
     "placeholder": "Choisir un objet…",
+    "searchPlaceholder": "Rechercher un objet…",
     "quantity": "Quantité",
     "faction": "Faction"
   },
@@ -87,6 +88,10 @@
   },
   "error": {
     "title": "Impossible de calculer le plan"
+  },
+  "search": {
+    "placeholder": "Rechercher…",
+    "noResults": "Aucun résultat"
   },
   "map": {
     "tool": {

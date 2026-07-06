@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { dataset } from '../data';
 import { useLocalized } from '../i18n';
+import { SearchSelect, type SearchGroup } from './SearchSelect';
 import type { Faction, Item, ItemCategory } from '../types/domain';
 
 const CATEGORY_ORDER: ItemCategory[] = [
@@ -23,7 +24,7 @@ interface Props {
   className?: string;
 }
 
-/** Faction-filtered item dropdown, grouped by category. */
+/** Faction-filtered searchable item picker, grouped by category. */
 export function ItemSelect({ value, onChange, faction, categories, className }: Props) {
   const { t } = useTranslation();
   const localized = useLocalized();
@@ -40,25 +41,22 @@ export function ItemSelect({ value, onChange, faction, categories, className }: 
     byCategory.set(item.category, bucket);
   }
 
+  const groups: SearchGroup[] = CATEGORY_ORDER.filter((c) => byCategory.has(c)).map(
+    (category) => ({
+      label: t(`category.${category}`),
+      options: byCategory
+        .get(category)!
+        .map((item) => ({ value: item.id, label: localized(item.name) })),
+    }),
+  );
+
   return (
-    <select
+    <SearchSelect
+      groups={groups}
       value={value}
-      onChange={(e) => onChange(e.target.value)}
-      className={
-        className ??
-        'bg-slate-900 border border-slate-600 rounded-md px-3 py-2 text-slate-100'
-      }
-    >
-      <option value="">{t('target.placeholder')}</option>
-      {CATEGORY_ORDER.filter((c) => byCategory.has(c)).map((category) => (
-        <optgroup key={category} label={t(`category.${category}`)}>
-          {byCategory.get(category)!.map((item) => (
-            <option key={item.id} value={item.id}>
-              {localized(item.name)}
-            </option>
-          ))}
-        </optgroup>
-      ))}
-    </select>
+      onChange={onChange}
+      placeholder={t('target.searchPlaceholder')}
+      className={className}
+    />
   );
 }

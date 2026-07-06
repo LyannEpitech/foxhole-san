@@ -76,6 +76,12 @@ src/
 - **Régions (53)** : géométrie des hexes issue de
   [foxhole-map-annotate](https://github.com/attrib/foxhole-map-annotate)
   (`public/static.json`), mêmes ids que la War API officielle.
+- **Fonds de carte (`public/maps/*.png`)** : images officielles des régions
+  (1024×888, coins transparents) fournies par le jeu via le dépôt
+  [clapfoot/warapi](https://github.com/clapfoot/warapi) (`Images/Maps/*.TGA`),
+  récupérées en PNG depuis le [Wiki](https://foxhole.wiki.gg). © Siege Camp —
+  assets mis à disposition pour les outils communautaires ; même pipeline que
+  foxholestats / warden.express.
 - **Recettes de raffinage & bâtiments** : vérifiés sur le Wiki (2026-07-06).
 
 ## Étendre les données

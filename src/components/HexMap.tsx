@@ -112,18 +112,40 @@ export function HexMap({
       className={className ?? 'w-full h-[480px] cursor-grab active:cursor-grabbing select-none'}
       role="img"
     >
-      {/* Hexes */}
+      {/* Official region map art (from the game's War API assets, 1024x888
+          per hex) drawn on each hex's bounding box — corners are transparent
+          so neighbouring hexes tile seamlessly. */}
+      {REGIONS.map((region) => {
+        const xs = region.polygon.map((p) => p[0]);
+        const ys = region.polygon.map((p) => p[1]);
+        const minX = Math.min(...xs);
+        const minY = Math.min(...ys);
+        return (
+          <image
+            key={`img-${region.id}`}
+            href={`/maps/${region.id}.png`}
+            x={minX}
+            y={minY}
+            width={Math.max(...xs) - minX}
+            height={Math.max(...ys) - minY}
+            preserveAspectRatio="none"
+            pointerEvents="none"
+          />
+        );
+      })}
+
+      {/* Interaction / highlight layer */}
       {REGIONS.map((region) => {
         const fill =
           highlighted?.get(region.id) ??
-          (hovered === region.id ? 'rgba(148,163,184,0.25)' : 'rgba(30,41,59,0.6)');
+          (hovered === region.id ? 'rgba(255,255,255,0.12)' : 'transparent');
         return (
           <g key={region.id}>
             <polygon
               points={region.polygon.map((p) => p.join(',')).join(' ')}
               fill={fill}
-              stroke="#475569"
-              strokeWidth={30}
+              stroke="rgba(15,23,42,0.5)"
+              strokeWidth={12}
               onMouseEnter={() => setHovered(region.id)}
               onMouseLeave={() => setHovered((h) => (h === region.id ? null : h))}
               onClick={() => clickRegion(region)}
@@ -135,7 +157,11 @@ export function HexMap({
               textAnchor="middle"
               dominantBaseline="middle"
               fontSize={fontSize}
-              fill="#cbd5e1"
+              fill="#f8fafc"
+              stroke="#0f172a"
+              strokeWidth={fontSize / 14}
+              style={{ paintOrder: 'stroke' }}
+              fontWeight={600}
               pointerEvents="none"
             >
               {region.name}

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LanguageToggle } from './components/LanguageToggle';
+import { PlansMenu } from './components/PlansMenu';
 import { dayOfWar, useWarStore } from './store/warStore';
 import { AttackModule } from './modules/AttackModule';
 import { DeployModule } from './modules/DeployModule';
@@ -45,6 +46,7 @@ export default function App() {
                 {day !== null && <span className="text-slate-500"> · {t('war.day', { day })}</span>}
               </span>
             )}
+            <PlansMenu />
             <select
               value={faction}
               onChange={(e) => setFaction(e.target.value as 'Colonial' | 'Warden')}

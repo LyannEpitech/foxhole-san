@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Region } from '../data/regions';
+import { exportMapPng } from '../lib/exportMapPng';
 import { useAnnotationStore, type ToolId } from '../store/annotationStore';
 import { useMapDataStore } from '../store/mapDataStore';
 import { HexMap, type MapMarker } from './HexMap';
@@ -146,7 +147,13 @@ export function PlanMap({
   const { annotations, tool, setTool, addPoint, addArrow, addStroke, addText, remove, clear,
     undo, redo, past, future } = useAnnotationStore();
   const apiMarkers = useApiMarkers();
+  const mapRef = useRef<HTMLDivElement>(null);
   const { showControl, showLabels } = useMapDataStore();
+
+  const exportPng = () => {
+    const svg = mapRef.current?.querySelector('svg');
+    if (svg) void exportMapPng(svg, 'foxhole-map.png');
+  };
   const regionTint = useRegionControl(showControl);
   const staticLabels = useStaticLabels(showLabels);
 
@@ -180,7 +187,7 @@ export function PlanMap({
   };
 
   return (
-    <div className="absolute inset-0 bg-slate-950">
+    <div ref={mapRef} className="absolute inset-0 bg-slate-950">
       <HexMap
         onRegionClick={onRegionClick}
         highlighted={highlighted}
@@ -263,7 +270,17 @@ export function PlanMap({
         {extraControls}
 
         {/* Layers + war data (in the left stack so the drawer never hides it) */}
-        <MapLayersControl />
+        <div className="flex items-center gap-2">
+          <MapLayersControl />
+          <button
+            type="button"
+            onClick={exportPng}
+            title={t('map.exportPng')}
+            className="h-9 px-3 rounded-lg bg-slate-900/85 backdrop-blur border border-slate-700 hover:bg-slate-700 text-slate-100 text-xs shadow-lg"
+          >
+            📷 PNG
+          </button>
+        </div>
 
         {tool !== 'pan' && (
           <p className="inline-block text-xs text-amber-300 bg-slate-900/85 backdrop-blur border border-slate-700 rounded-md px-2 py-1">

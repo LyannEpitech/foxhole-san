@@ -190,7 +190,22 @@
     },
     "refresh": "Données de guerre",
     "loading": "Chargement…",
+    "exportPng": "Exporter la vue actuelle en PNG",
     "zoomHint": "Zoomez pour révéler les structures live de la War API. Les outils marqueurs et flèches dessinent sur la carte ; les annotations sont sauvegardées localement."
+  },
+  "plans": {
+    "title": "Plans",
+    "namePlaceholder": "Nom du plan…",
+    "unnamed": "Plan partagé",
+    "saved": "Plan sauvegardé",
+    "load": "Charger",
+    "loaded": "Chargé : {{name}}",
+    "imported": "Importé : {{name}}",
+    "importError": "Impossible d'importer ce plan",
+    "copyLink": "Copier le lien",
+    "linkCopied": "Lien de partage copié",
+    "exportJson": "Télécharger le JSON",
+    "importJson": "Importer un JSON"
   },
   "war": {
     "chip": "Guerre {{number}}",

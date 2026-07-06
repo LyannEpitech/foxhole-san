@@ -190,7 +190,22 @@
     },
     "refresh": "War data",
     "loading": "Loading…",
+    "exportPng": "Export the current view as PNG",
     "zoomHint": "Zoom in to reveal live War API structures. Marker and arrow tools draw on the map; annotations are saved locally."
+  },
+  "plans": {
+    "title": "Plans",
+    "namePlaceholder": "Plan name…",
+    "unnamed": "Shared plan",
+    "saved": "Plan saved",
+    "load": "Load",
+    "loaded": "Loaded: {{name}}",
+    "imported": "Imported: {{name}}",
+    "importError": "Could not import this plan",
+    "copyLink": "Copy link",
+    "linkCopied": "Share link copied",
+    "exportJson": "Download JSON",
+    "importJson": "Import JSON"
   },
   "war": {
     "chip": "War {{number}}",

@@ -69,6 +69,12 @@ export type ItemCategory =
   | 'heavyAmmunition'
   | 'vehicle';
 
+/** Transport capacity of a vehicle item (crates in its inventory). */
+export interface VehicleSpec {
+  itemId: string;
+  capacityCrates: number;
+}
+
 export interface Item {
   id: string;
   name: LocalizedString;

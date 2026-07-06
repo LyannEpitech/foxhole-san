@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { dataset } from '../data';
-import type { PlanResult, PlanStep } from '../engine/resolver';
+import type { PlanStep, PlanSummary } from '../engine/resolver';
 import { useLocalized } from '../i18n';
 import { refName } from '../lib/refs';
 
@@ -10,7 +10,7 @@ const BADGE: Record<PlanStep['type'], string> = {
   produce: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40',
 };
 
-export function BuildSequence({ result }: { result: PlanResult }) {
+export function BuildSequence({ result }: { result: PlanSummary }) {
   const { t } = useTranslation();
   const localized = useLocalized();
 

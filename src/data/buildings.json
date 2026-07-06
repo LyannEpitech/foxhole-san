@@ -43,5 +43,20 @@
         }
       }
     ]
+  },
+  {
+    "id": "garage",
+    "name": { "en": "Garage", "fr": "Garage" },
+    "kind": "AssemblyStation",
+    "constructionCost": { "bmats": 400 },
+    "prerequisites": [
+      {
+        "techId": "industry-upgrade",
+        "name": {
+          "en": "Town Base \"Industry\" upgrade",
+          "fr": "Amélioration « Industrie » de la base de ville"
+        }
+      }
+    ]
   }
 ]

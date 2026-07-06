@@ -15,7 +15,7 @@ const CATEGORY_ORDER: ItemCategory[] = [
 export function TargetSelector() {
   const { t } = useTranslation();
   const localized = useLocalized();
-  const { targetId, quantity, faction, setTarget, setQuantity, setFaction } = usePlanStore();
+  const { targetId, quantity, faction, setTarget, setQuantity } = usePlanStore();
 
   const available = [...dataset.items.values()].filter(
     (item) => item.faction === 'Both' || item.faction === faction,
@@ -29,18 +29,6 @@ export function TargetSelector() {
 
   return (
     <div className="flex flex-wrap items-end gap-4 bg-slate-800/60 border border-slate-700 rounded-xl p-4">
-      <label className="flex flex-col gap-1 text-sm text-slate-300">
-        {t('target.faction')}
-        <select
-          value={faction}
-          onChange={(e) => setFaction(e.target.value as 'Colonial' | 'Warden')}
-          className="bg-slate-900 border border-slate-600 rounded-md px-3 py-2 text-slate-100"
-        >
-          <option value="Colonial">{t('faction.Colonial')}</option>
-          <option value="Warden">{t('faction.Warden')}</option>
-        </select>
-      </label>
-
       <label className="flex flex-col gap-1 text-sm text-slate-300 min-w-56 grow">
         {t('target.label')}
         <select

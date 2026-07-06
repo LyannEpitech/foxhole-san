@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import type { PlanResult } from '../engine/resolver';
+import type { PlanSummary } from '../engine/resolver';
 import { useLocalized } from '../i18n';
 import { refName } from '../lib/refs';
 
@@ -27,7 +27,7 @@ function TotalsBlock({ title, totals }: { title: string; totals: Record<string, 
   );
 }
 
-export function ResourceTotals({ result }: { result: PlanResult }) {
+export function ResourceTotals({ result }: { result: PlanSummary }) {
   const { t } = useTranslation();
   return (
     <div className="space-y-4">

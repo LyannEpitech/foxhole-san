@@ -54,5 +54,40 @@
   },
   "error": {
     "title": "Impossible de calculer le plan"
+  },
+  "nav": {
+    "production": "Production",
+    "logistics": "Logistique",
+    "attack": "Attaque"
+  },
+  "logi": {
+    "cargo": "Manifeste de cargaison",
+    "addRow": "Ajouter un objet",
+    "item": "Objet",
+    "qty": "Qté",
+    "crates": "caisses",
+    "vehicle": "Véhicule",
+    "noVehicle": "Aucun véhicule sélectionné",
+    "capacity": "{{count}} caisses / voyage",
+    "totalCrates": "Caisses totales",
+    "trips": "Allers-retours",
+    "route": "Itinéraire",
+    "addWaypoint": "Ajouter une région…",
+    "emptyRoute": "Ajoutez des régions pour tracer l'itinéraire (dans l'ordre de conduite).",
+    "emptyCargo": "Ajoutez des objets au manifeste pour calculer caisses et voyages.",
+    "produceCargo": "Coût de production de cette cargaison",
+    "sendToProduction": "Le plan de production complet de ce manifeste est affiché ci-dessous."
+  },
+  "attack": {
+    "soldiers": "Soldats",
+    "loadout": "Équipement par soldat",
+    "perSoldier": "par soldat",
+    "support": "Soutien (quantités fixes)",
+    "addRow": "Ajouter un objet",
+    "applyDefault": "Appliquer l'équipement type",
+    "totalNeeds": "Besoins totaux de l'opération",
+    "sendToLogistics": "Envoyer vers la logistique",
+    "emptyLoadout": "Ajoutez des lignes d'équipement pour dimensionner l'opération.",
+    "cost": "Coût de production de l'opération"
   }
 }

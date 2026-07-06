@@ -54,5 +54,40 @@
   },
   "error": {
     "title": "Cannot compute plan"
+  },
+  "nav": {
+    "production": "Production",
+    "logistics": "Logistics",
+    "attack": "Attack"
+  },
+  "logi": {
+    "cargo": "Cargo manifest",
+    "addRow": "Add item",
+    "item": "Item",
+    "qty": "Qty",
+    "crates": "crates",
+    "vehicle": "Vehicle",
+    "noVehicle": "No vehicle selected",
+    "capacity": "{{count}} crates / trip",
+    "totalCrates": "Total crates",
+    "trips": "Round trips",
+    "route": "Route",
+    "addWaypoint": "Add region…",
+    "emptyRoute": "Add regions to sketch the route (in driving order).",
+    "emptyCargo": "Add items to the manifest to compute crates and trips.",
+    "produceCargo": "Production cost of this cargo",
+    "sendToProduction": "The full production plan for this manifest is shown below."
+  },
+  "attack": {
+    "soldiers": "Soldiers",
+    "loadout": "Loadout per soldier",
+    "perSoldier": "per soldier",
+    "support": "Support (flat quantities)",
+    "addRow": "Add item",
+    "applyDefault": "Apply default loadout",
+    "totalNeeds": "Total operation needs",
+    "sendToLogistics": "Send to logistics",
+    "emptyLoadout": "Add equipment lines to size the operation.",
+    "cost": "Production cost of the operation"
   }
 }

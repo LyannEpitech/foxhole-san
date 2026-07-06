@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import type { PlanResult } from '../engine/resolver';
+import type { PlanSummary } from '../engine/resolver';
 import { useLocalized } from '../i18n';
 import { costEntries, refName } from '../lib/refs';
 import type { MaterialCost } from '../types/domain';
@@ -15,7 +15,7 @@ function Cost({ cost }: { cost: MaterialCost }) {
   );
 }
 
-export function BuildingList({ result }: { result: PlanResult }) {
+export function BuildingList({ result }: { result: PlanSummary }) {
   const { t } = useTranslation();
   const localized = useLocalized();
 

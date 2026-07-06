@@ -30,8 +30,8 @@ export type PlanStep =
   | { type: 'build'; buildingId: string }
   | { type: 'produce'; refId: string; recipeId: string; buildingId: string; batches: number; produced: number };
 
-export interface PlanResult {
-  tree: RequirementNode;
+/** Everything a plan reports besides the requirement tree(s). */
+export interface PlanSummary {
   /** Total quantities needed, keyed by resource id. */
   totals: { raw: Record<string, number>; refined: Record<string, number> };
   /** Distinct buildings involved, in first-use order. */
@@ -42,6 +42,21 @@ export interface PlanResult {
   prerequisites: TechRequirement[];
   /** Topologically ordered steps: tech -> build -> produce (inputs before outputs). */
   sequence: PlanStep[];
+}
+
+export interface PlanResult extends PlanSummary {
+  tree: RequirementNode;
+}
+
+export interface MultiPlanResult extends PlanSummary {
+  /** One requirement tree per requested target, in input order. */
+  trees: RequirementNode[];
+}
+
+/** A production goal: `qty` units of `refId`. */
+export interface PlanTarget {
+  refId: string;
+  qty: number;
 }
 
 export class CycleError extends Error {
@@ -63,33 +78,34 @@ export class FactionError extends Error {
 // ---------------------------------------------------------------------------
 
 /**
- * Resolve a production target into a full plan: requirement tree, resource
- * totals, buildings (with construction cost + prerequisites) and an ordered
- * build/production sequence.
+ * Resolve several production targets into one merged plan. Shared
+ * intermediates (e.g. bmats needed by two different items) are aggregated
+ * into a single produce step; buildings and tech prerequisites are deduped.
  *
  * Batches are rounded up per node (`ceil(needed / outputQty)`), matching how
  * orders are actually queued in-game (you can't queue a fraction of a crate).
  */
-export function resolve(
+export function resolveMany(
   data: Dataset,
-  targetId: string,
-  quantity: number,
+  targets: PlanTarget[],
   faction: Faction,
-): PlanResult {
-  if (!Number.isFinite(quantity) || quantity <= 0) {
-    throw new Error(`Quantity must be a positive number, got ${quantity}`);
-  }
-  const targetItem = data.items.get(targetId);
-  if (targetItem && targetItem.faction !== 'Both' && targetItem.faction !== faction) {
-    throw new FactionError(targetId, faction);
-  }
-  if (!targetItem && !data.resources.has(targetId)) {
-    throw new Error(`Unknown target "${targetId}"`);
+): MultiPlanResult {
+  for (const { refId, qty } of targets) {
+    if (!Number.isFinite(qty) || qty <= 0) {
+      throw new Error(`Quantity must be a positive number, got ${qty} for "${refId}"`);
+    }
+    const item = data.items.get(refId);
+    if (item && item.faction !== 'Both' && item.faction !== faction) {
+      throw new FactionError(refId, faction);
+    }
+    if (!item && !data.resources.has(refId)) {
+      throw new Error(`Unknown target "${refId}"`);
+    }
   }
 
   const totals = { raw: {} as Record<string, number>, refined: {} as Record<string, number> };
   const buildingsUsed = new Map<string, Building>();
-  // Production totals per refId, accumulated across the whole tree so the
+  // Production totals per refId, accumulated across all trees so the
   // sequence shows one aggregated step per product.
   const produceTotals = new Map<string, { recipe: Recipe; batches: number; produced: number }>();
   // Post-order of first appearance: inputs are always recorded before the
@@ -149,7 +165,7 @@ export function resolve(
     };
   }
 
-  const tree = expand(targetId, quantity, []);
+  const trees = targets.map((t) => expand(t.refId, t.qty, []));
 
   // Buildings, construction total, prerequisites (deduped by techId).
   const buildings = [...buildingsUsed.values()];
@@ -184,5 +200,16 @@ export function resolve(
     }),
   ];
 
-  return { tree, totals, buildings, constructionTotal, prerequisites, sequence };
+  return { trees, totals, buildings, constructionTotal, prerequisites, sequence };
+}
+
+/** Single-target convenience wrapper around {@link resolveMany}. */
+export function resolve(
+  data: Dataset,
+  targetId: string,
+  quantity: number,
+  faction: Faction,
+): PlanResult {
+  const { trees, ...summary } = resolveMany(data, [{ refId: targetId, qty: quantity }], faction);
+  return { tree: trees[0], ...summary };
 }

@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { buildDataset, dataset } from '../data';
+import { planCargo } from '../lib/logistics';
 import type { Building, Item, Recipe, Resource } from '../types/domain';
-import { CycleError, FactionError, resolve } from './resolver';
+import { CycleError, FactionError, resolve, resolveMany } from './resolver';
 
 // ---------------------------------------------------------------------------
 // Fixture: a tiny self-contained dataset exercising every engine feature.
@@ -115,6 +116,85 @@ describe('resolve — guards', () => {
     ];
     const cyclic = buildDataset(cyclicResources, buildings, cyclicRecipes, []);
     expect(() => resolve(cyclic, 'r1', 1, 'Colonial')).toThrow(CycleError);
+  });
+});
+
+describe('resolveMany — merged multi-target plans', () => {
+  it('merges totals, dedupes buildings and aggregates shared produce steps', () => {
+    // 10 rifles (1 crate, 100 bmats) + 5 shells (1 crate, 120 bmats + 10 hemats)
+    const plan = resolveMany(
+      data,
+      [
+        { refId: 'rifle', qty: 10 },
+        { refId: 'shell', qty: 5 },
+      ],
+      'Colonial',
+    );
+
+    expect(plan.trees.map((tr) => tr.refId)).toEqual(['rifle', 'shell']);
+    expect(plan.totals.refined.bmats).toBe(220);
+    expect(plan.totals.raw).toEqual({ salvage: 440, sulfur: 50 });
+
+    // factory + refinery once each, even though both targets use them.
+    expect(plan.buildings.map((b) => b.id)).toEqual(['factory', 'refinery']);
+    expect(plan.constructionTotal).toEqual({ bmats: 300 });
+    expect(plan.prerequisites).toHaveLength(1);
+
+    // One aggregated bmats produce step covering both targets.
+    const bmatsSteps = plan.sequence.filter((s) => s.type === 'produce' && s.refId === 'bmats');
+    expect(bmatsSteps).toHaveLength(1);
+    expect(bmatsSteps[0]).toMatchObject({ batches: 220 });
+
+    // Inputs still come before every output that consumes them.
+    const produceIds = plan.sequence.flatMap((s) => (s.type === 'produce' ? [s.refId] : []));
+    expect(produceIds.indexOf('bmats')).toBeLessThan(produceIds.indexOf('rifle'));
+    expect(produceIds.indexOf('bmats')).toBeLessThan(produceIds.indexOf('shell'));
+    expect(produceIds.indexOf('hemats')).toBeLessThan(produceIds.indexOf('shell'));
+  });
+
+  it('validates every target', () => {
+    expect(() =>
+      resolveMany(data, [{ refId: 'shell', qty: 5 }, { refId: 'rifle', qty: 1 }], 'Warden'),
+    ).toThrow(FactionError);
+  });
+});
+
+describe('planCargo — logistics crate/trip math', () => {
+  const truck = { itemId: 'truck', capacityCrates: 15 };
+
+  it('rounds crates up per item and trips up per vehicle load', () => {
+    // 25 rifles -> 3 crates; 12 shells -> 3 crates (crate of 5) => 6 crates, 1 trip
+    const plan = planCargo(
+      data,
+      [
+        { itemId: 'rifle', qty: 25 },
+        { itemId: 'shell', qty: 12 },
+      ],
+      truck,
+    );
+    expect(plan.rows.map((r) => r.crates)).toEqual([3, 3]);
+    expect(plan.totalCrates).toBe(6);
+    expect(plan.trips).toBe(1);
+  });
+
+  it('needs a second trip past vehicle capacity, and ignores empty/unknown rows', () => {
+    const plan = planCargo(
+      data,
+      [
+        { itemId: 'rifle', qty: 160 }, // 16 crates > 15
+        { itemId: 'rifle', qty: 0 },
+        { itemId: 'ghost', qty: 5 },
+      ],
+      truck,
+    );
+    expect(plan.totalCrates).toBe(16);
+    expect(plan.trips).toBe(2);
+    expect(plan.rows).toHaveLength(1);
+  });
+
+  it('returns null trips when no vehicle is selected', () => {
+    const plan = planCargo(data, [{ itemId: 'rifle', qty: 10 }], undefined);
+    expect(plan.trips).toBeNull();
   });
 });
 

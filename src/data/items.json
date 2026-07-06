@@ -57,5 +57,23 @@
     "cost": { "bmats": 120, "hemats": 10 },
     "amountProduced": 5,
     "producedBy": "factory"
+  },
+  {
+    "id": "r1-hauler",
+    "name": { "en": "R-1 Hauler", "fr": "R-1 Hauler" },
+    "category": "vehicle",
+    "faction": "Colonial",
+    "cost": { "bmats": 100 },
+    "amountProduced": 1,
+    "producedBy": "garage"
+  },
+  {
+    "id": "dunne-transport",
+    "name": { "en": "Dunne Transport", "fr": "Dunne Transport" },
+    "category": "vehicle",
+    "faction": "Warden",
+    "cost": { "bmats": 100 },
+    "amountProduced": 1,
+    "producedBy": "garage"
   }
 ]

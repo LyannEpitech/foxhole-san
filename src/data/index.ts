@@ -4,11 +4,13 @@ import type {
   Item,
   Recipe,
   Resource,
+  VehicleSpec,
 } from '../types/domain';
 import resourcesJson from './resources.json';
 import buildingsJson from './buildings.json';
 import recipesJson from './recipes.json';
 import itemsJson from './items.json';
+import vehiclesJson from './vehicles.json';
 
 // ---------------------------------------------------------------------------
 // Zod schemas — validate the hand-curated JSON at load time so data-entry
@@ -132,6 +134,11 @@ export function buildDataset(
   };
 }
 
+const vehicleSchema = z.object({
+  itemId: z.string().min(1),
+  capacityCrates: z.number().int().positive(),
+});
+
 /** Game data, validated. Throws at module load if the JSON is malformed. */
 export const dataset: Dataset = buildDataset(
   z.array(resourceSchema).parse(resourcesJson),
@@ -139,3 +146,11 @@ export const dataset: Dataset = buildDataset(
   z.array(recipeSchema).parse(recipesJson),
   z.array(itemSchema).parse(itemsJson),
 );
+
+/** Transport vehicles (must reference existing items). */
+export const vehicles: VehicleSpec[] = z.array(vehicleSchema).parse(vehiclesJson);
+for (const v of vehicles) {
+  if (!dataset.items.has(v.itemId)) {
+    throw new Error(`Vehicle spec references unknown item "${v.itemId}"`);
+  }
+}

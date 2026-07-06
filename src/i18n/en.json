@@ -84,6 +84,11 @@
       "erase": "click an annotation to remove it"
     },
     "textPlaceholder": "Text…",
+    "tooltip": {
+      "neutral": "Neutral",
+      "victory": "Victory base",
+      "scorched": "Scorched"
+    },
     "layer": {
       "town": "Towns",
       "industry": "Industry",

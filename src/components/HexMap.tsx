@@ -9,13 +9,22 @@ export interface MapMarker {
   color: string;
 }
 
-/** A live marker from the War API, already resolved to world coordinates. */
+/** A live marker from the War API, already resolved to world coordinates.
+    All display strings arrive pre-localized so the map stays i18n-agnostic. */
 export interface ApiMarker {
   x: number;
   y: number;
   iconUrl: string;
   ringColor: string;
-  title: string;
+  /** Structure name, e.g. "Raffinerie". */
+  label: string;
+  /** Marker family, e.g. "Industrie". */
+  kindLabel: string;
+  regionName: string;
+  /** Owner faction display name (or "Neutre"). */
+  factionLabel: string;
+  /** Extra state badges (victory base, scorched…). */
+  badges: string[];
 }
 
 interface Props {
@@ -100,6 +109,10 @@ export function HexMap({
   const [drawEnd, setDrawEnd] = useState<[number, number] | null>(null);
   const [strokePoints, setStrokePoints] = useState<[number, number][] | null>(null);
   const [pendingText, setPendingText] = useState<[number, number] | null>(null);
+  /** Hovered API marker + its position in CSS pixels inside the wrapper. */
+  const [hoverInfo, setHoverInfo] = useState<{ marker: ApiMarker; px: number; py: number } | null>(
+    null,
+  );
 
   const vw = VIEW.w / zoom;
   const vh = VIEW.h / zoom;
@@ -129,6 +142,7 @@ export function HexMap({
     const scale = zoom / next;
     setCenter([wx - (wx - center[0]) * scale, wy - (wy - center[1]) * scale]);
     setZoom(next);
+    setHoverInfo(null);
   };
 
   const onMouseDown = (e: React.MouseEvent) => {
@@ -246,6 +260,7 @@ export function HexMap({
           : 'cursor-crosshair';
 
   return (
+    <div className="relative w-full">
     <svg
       ref={svgRef}
       viewBox={viewBox}
@@ -331,14 +346,23 @@ export function HexMap({
 
       {/* Live War API structures / resource fields */}
       {visibleApiMarkers.map((m, i) => (
-        <g key={`api-${i}`} pointerEvents="none">
+        <g
+          key={`api-${i}`}
+          // Hoverable only in pan mode so drawing tools are never blocked.
+          pointerEvents={tool === 'pan' ? 'auto' : 'none'}
+          onMouseEnter={(e) => {
+            const rect = svgRef.current!.getBoundingClientRect();
+            setHoverInfo({ marker: m, px: e.clientX - rect.left, py: e.clientY - rect.top });
+          }}
+          onMouseLeave={() => setHoverInfo((h) => (h?.marker === m ? null : h))}
+        >
           <circle
             cx={m.x}
             cy={m.y}
             r={apiIconSize * 0.62}
             fill="rgba(15,23,42,0.72)"
             stroke={m.ringColor}
-            strokeWidth={apiIconSize * 0.09}
+            strokeWidth={apiIconSize * (hoverInfo?.marker === m ? 0.16 : 0.09)}
           />
           <image
             href={m.iconUrl}
@@ -346,9 +370,8 @@ export function HexMap({
             y={m.y - apiIconSize / 2}
             width={apiIconSize}
             height={apiIconSize}
-          >
-            <title>{m.title}</title>
-          </image>
+            pointerEvents="none"
+          />
         </g>
       ))}
 
@@ -544,5 +567,33 @@ export function HexMap({
         );
       })}
     </svg>
+
+    {/* Rich hover tooltip for War API structures */}
+    {hoverInfo && (
+      <div
+        className="absolute z-10 pointer-events-none rounded-lg border bg-slate-900/95 px-3 py-2 text-xs shadow-xl max-w-56"
+        style={{
+          left: hoverInfo.px,
+          top: hoverInfo.py,
+          borderColor: hoverInfo.marker.ringColor,
+          transform: `translate(${hoverInfo.px > 0.6 * (svgRef.current?.clientWidth ?? 600) ? 'calc(-100% - 14px)' : '14px'}, calc(-50% ))`,
+        }}
+      >
+        <div className="font-semibold text-slate-100 text-sm leading-tight">
+          {hoverInfo.marker.label}
+        </div>
+        <div className="text-slate-400">{hoverInfo.marker.kindLabel}</div>
+        <div className="mt-1 text-slate-300">📍 {hoverInfo.marker.regionName}</div>
+        <div style={{ color: hoverInfo.marker.ringColor }}>
+          ⚑ {hoverInfo.marker.factionLabel}
+        </div>
+        {hoverInfo.marker.badges.map((badge) => (
+          <div key={badge} className="text-amber-300">
+            ★ {badge}
+          </div>
+        ))}
+      </div>
+    )}
+    </div>
   );
 }

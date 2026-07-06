@@ -84,6 +84,11 @@
       "erase": "cliquez sur une annotation pour la supprimer"
     },
     "textPlaceholder": "Texte…",
+    "tooltip": {
+      "neutral": "Neutre",
+      "victory": "Base de victoire",
+      "scorched": "Incendiée"
+    },
     "layer": {
       "town": "Villes",
       "industry": "Industrie",

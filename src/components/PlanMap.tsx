@@ -133,7 +133,12 @@ export function PlanMap({ onRegionClick, highlighted, route, routeColor, markers
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Project API items (bbox fractions) into world coordinates.
+  // War API flags bitmask (see clapfoot/warapi README).
+  const FLAG_VICTORY_BASE = 0x01;
+  const FLAG_SCORCHED = 0x10;
+
+  // Project API items (bbox fractions) into world coordinates, with all
+  // tooltip strings pre-localized.
   const apiMarkers: ApiMarker[] = useMemo(() => {
     const out: ApiMarker[] = [];
     for (const region of REGIONS) {
@@ -148,17 +153,30 @@ export function PlanMap({ onRegionClick, highlighted, route, routeColor, markers
       for (const item of regionItems) {
         const def = MAP_ICONS[item.iconType];
         if (!def || !layers[def.kind]) continue;
+        const badges: string[] = [];
+        if (item.flags & FLAG_VICTORY_BASE) badges.push(t('map.tooltip.victory'));
+        if (item.flags & FLAG_SCORCHED) badges.push(t('map.tooltip.scorched'));
         out.push({
           x: minX + item.x * w,
           y: minY + item.y * h,
           iconUrl: `/icons/${def.icon}.png`,
           ringColor: TEAM_COLORS[item.teamId] ?? TEAM_COLORS.NONE,
-          title: `${localized(def.label)} — ${region.name}`,
+          label: localized(def.label),
+          kindLabel: t(`map.layer.${def.kind}`),
+          regionName: region.name,
+          factionLabel:
+            item.teamId === 'WARDENS'
+              ? t('faction.Warden')
+              : item.teamId === 'COLONIALS'
+                ? t('faction.Colonial')
+                : t('map.tooltip.neutral'),
+          badges,
         });
       }
     }
     return out;
-  }, [items, layers, localized]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [items, layers, localized, t]);
 
   const onAddPoint = (pos: [number, number]) => {
     if (tool === 'friendly' || tool === 'enemy' || tool === 'danger') addPoint(tool, pos);

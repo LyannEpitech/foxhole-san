@@ -262,5 +262,125 @@
    "fr": "Pièces de radar aérien"
   },
   "kind": "refined"
+ },
+ {
+  "id": "oil",
+  "name": {
+   "en": "Oil (L)",
+   "fr": "Pétrole (L)"
+  },
+  "kind": "raw"
+ },
+ {
+  "id": "water",
+  "name": {
+   "en": "Water (L)",
+   "fr": "Eau (L)"
+  },
+  "kind": "raw"
+ },
+ {
+  "id": "gravel",
+  "name": {
+   "en": "Gravel",
+   "fr": "Gravier"
+  },
+  "kind": "raw"
+ },
+ {
+  "id": "aluminum",
+  "name": {
+   "en": "Aluminum",
+   "fr": "Aluminium"
+  },
+  "kind": "raw"
+ },
+ {
+  "id": "iron",
+  "name": {
+   "en": "Iron",
+   "fr": "Fer"
+  },
+  "kind": "raw"
+ },
+ {
+  "id": "copper",
+  "name": {
+   "en": "Copper",
+   "fr": "Cuivre"
+  },
+  "kind": "raw"
+ },
+ {
+  "id": "damaged-components",
+  "name": {
+   "en": "Damaged Components",
+   "fr": "Composants endommagés"
+  },
+  "kind": "raw"
+ },
+ {
+  "id": "enriched-oil",
+  "name": {
+   "en": "Enriched Oil (L)",
+   "fr": "Pétrole enrichi (L)"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "unstable-substances",
+  "name": {
+   "en": "Unstable Substances",
+   "fr": "Substances instables"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "concrete-materials",
+  "name": {
+   "en": "Concrete Materials",
+   "fr": "Matériaux en béton"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "flame-ammo",
+  "name": {
+   "en": "Flame Ammo",
+   "fr": "Munitions incendiaires"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "maintenance-supplies",
+  "name": {
+   "en": "Maintenance Supplies",
+   "fr": "Fournitures de maintenance"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "aluminum-alloy",
+  "name": {
+   "en": "Aluminum Alloy",
+   "fr": "Alliage d’aluminium"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "iron-alloy",
+  "name": {
+   "en": "Iron Alloy",
+   "fr": "Alliage de fer"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "copper-alloy",
+  "name": {
+   "en": "Copper Alloy",
+   "fr": "Alliage de cuivre"
+  },
+  "kind": "refined"
  }
 ]

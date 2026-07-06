@@ -837,8 +837,8 @@
   "isMfpCraftable": true,
   "ammo": [
    "Mortar Shell",
-   "Mortar Shrapnel Shell",
-   "Mortar Flare Shell"
+   "Shrapnel Mortar Shell",
+   "Flare Mortar Shell"
   ]
  },
  {
@@ -860,8 +860,8 @@
  {
   "id": "mortar-shrapnel-shell",
   "name": {
-   "en": "Mortar Shrapnel Shell",
-   "fr": "Mortar Shrapnel Shell"
+   "en": "Shrapnel Mortar Shell",
+   "fr": "Shrapnel Mortar Shell"
   },
   "category": "heavyArms",
   "faction": "Both",
@@ -876,8 +876,8 @@
  {
   "id": "mortar-flare-shell",
   "name": {
-   "en": "Mortar Flare Shell",
-   "fr": "Mortar Flare Shell"
+   "en": "Flare Mortar Shell",
+   "fr": "Flare Mortar Shell"
   },
   "category": "heavyArms",
   "faction": "Both",
@@ -1260,8 +1260,8 @@
  {
   "id": "abisme-at-99",
   "name": {
-   "en": "Abisme AT-99",
-   "fr": "Abisme AT-99"
+   "en": "Abisme AT-99 Mine",
+   "fr": "Abisme AT-99 Mine"
   },
   "category": "utilities",
   "faction": "Both",
@@ -1275,8 +1275,8 @@
  {
   "id": "rocket-booster",
   "name": {
-   "en": "Rocket Booster",
-   "fr": "Rocket Booster"
+   "en": "A0E-9 Rocket Booster",
+   "fr": "A0E-9 Rocket Booster"
   },
   "category": "utilities",
   "faction": "Both",
@@ -1978,8 +1978,8 @@
   "isMfpCraftable": true,
   "ammo": [
    "Mortar Shell",
-   "Mortar Shrapnel Shell",
-   "Mortar Flare Shell"
+   "Shrapnel Mortar Shell",
+   "Flare Mortar Shell"
   ]
  },
  {
@@ -2424,8 +2424,8 @@
   "isMfpCraftable": true,
   "ammo": [
    "Mortar Shell",
-   "Mortar Shrapnel Shell",
-   "Mortar Flare Shell"
+   "Shrapnel Mortar Shell",
+   "Flare Mortar Shell"
   ]
  },
  {
@@ -2727,8 +2727,8 @@
   "isMfpCraftable": true,
   "ammo": [
    "Mortar Shell",
-   "Mortar Shrapnel Shell",
-   "Mortar Flare Shell"
+   "Shrapnel Mortar Shell",
+   "Flare Mortar Shell"
   ]
  },
  {
@@ -3267,8 +3267,8 @@
  {
   "id": "shatter-missle",
   "name": {
-   "en": "Shatter Missle",
-   "fr": "Shatter Missle"
+   "en": "Shatter Missile",
+   "fr": "Shatter Missile"
   },
   "category": "heavyArms",
   "faction": "Both",
@@ -3347,8 +3347,8 @@
  {
   "id": "e6881-b-hullbreaker-mine",
   "name": {
-   "en": "E6881-B Hullbreaker Mine",
-   "fr": "E6881-B Hullbreaker Mine"
+   "en": "E681-B Hullbreaker Mine",
+   "fr": "E681-B Hullbreaker Mine"
   },
   "category": "heavyArms",
   "faction": "Both",
@@ -3552,8 +3552,8 @@
  {
   "id": "liason-transmitter",
   "name": {
-   "en": "Liason Transmitter",
-   "fr": "Liason Transmitter"
+   "en": "Liaison Transmitter",
+   "fr": "Liaison Transmitter"
   },
   "category": "utilities",
   "faction": "Both",
@@ -4160,7 +4160,7 @@
   "amountProduced": 1,
   "producedBy": "small-assembly-station",
   "ammo": [
-   "Shatter Missle"
+   "Shatter Missile"
   ]
  },
  {
@@ -4447,5 +4447,1286 @@
     "fr": "Technologie radar aérien"
    }
   }
+ },
+ {
+  "id": "colonial-aircraft-engine-large",
+  "name": {
+   "en": "Colonial Aircraft Engine (Large)",
+   "fr": "Colonial Aircraft Engine (Large)"
+  },
+  "category": "aircraft",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "warden-aircraft-engine-large",
+  "name": {
+   "en": "Warden Aircraft Engine (Large)",
+   "fr": "Warden Aircraft Engine (Large)"
+  },
+  "category": "aircraft",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "colonial-aircraft-mechanical-parts-large",
+  "name": {
+   "en": "Colonial Aircraft Mechanical Parts (Large)",
+   "fr": "Colonial Aircraft Mechanical Parts (Large)"
+  },
+  "category": "aircraft",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "warden-aircraft-mechanical-parts-large",
+  "name": {
+   "en": "Warden Aircraft Mechanical Parts (Large)",
+   "fr": "Warden Aircraft Mechanical Parts (Large)"
+  },
+  "category": "aircraft",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "colonial-aircraft-engine-small",
+  "name": {
+   "en": "Colonial Aircraft Engine (Small)",
+   "fr": "Colonial Aircraft Engine (Small)"
+  },
+  "category": "aircraft",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "warden-aircraft-engine-small",
+  "name": {
+   "en": "Warden Aircraft Engine (Small)",
+   "fr": "Warden Aircraft Engine (Small)"
+  },
+  "category": "aircraft",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "colonial-aircraft-mechanical-parts-small",
+  "name": {
+   "en": "Colonial Aircraft Mechanical Parts (Small)",
+   "fr": "Colonial Aircraft Mechanical Parts (Small)"
+  },
+  "category": "aircraft",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "warden-aircraft-mechanical-parts-small",
+  "name": {
+   "en": "Warden Aircraft Mechanical Parts (Small)",
+   "fr": "Warden Aircraft Mechanical Parts (Small)"
+  },
+  "category": "aircraft",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "tenta-torpedo",
+  "name": {
+   "en": "Tenta Torpedo",
+   "fr": "Tenta Torpedo"
+  },
+  "category": "aircraft",
+  "faction": "Both",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "945mm",
+  "name": {
+   "en": "94.5mm",
+   "fr": "94.5mm"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 200,
+   "hemats": 20
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "228-satterley-heavy-storm-rifle",
+  "name": {
+   "en": "228 Satterley Heavy Storm Rifle",
+   "fr": "228 Satterley Heavy Storm Rifle"
+  },
+  "category": "smallArms",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 150
+  },
+  "amountProduced": 5,
+  "producedBy": "factory"
+ },
+ {
+  "id": "booker-greyhound-model-910",
+  "name": {
+   "en": "Booker Greyhound Model 910",
+   "fr": "Booker Greyhound Model 910"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 150
+  },
+  "amountProduced": 3,
+  "producedBy": "factory"
+ },
+ {
+  "id": "dawn-veii",
+  "name": {
+   "en": "“Dawn” Ve.II",
+   "fr": "“Dawn” Ve.II"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 150
+  },
+  "amountProduced": 3,
+  "producedBy": "factory"
+ },
+ {
+  "id": "quickhatch-rti",
+  "name": {
+   "en": "“Quickhatch” Rt.I",
+   "fr": "“Quickhatch” Rt.I"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 150
+  },
+  "amountProduced": 3,
+  "producedBy": "factory"
+ },
+ {
+  "id": "neville-anti-tank-rifle",
+  "name": {
+   "en": "Neville Anti-Tank Rifle",
+   "fr": "Neville Anti-Tank Rifle"
+  },
+  "category": "smallArms",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 150
+  },
+  "amountProduced": 3,
+  "producedBy": "factory"
+ },
+ {
+  "id": "legion-vexillum",
+  "name": {
+   "en": "Legion Vexillum",
+   "fr": "Legion Vexillum"
+  },
+  "category": "utilities",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 150
+  },
+  "amountProduced": 5,
+  "producedBy": "factory"
+ },
+ {
+  "id": "war-ensign",
+  "name": {
+   "en": "War Ensign",
+   "fr": "War Ensign"
+  },
+  "category": "utilities",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 150
+  },
+  "amountProduced": 5,
+  "producedBy": "factory"
+ },
+ {
+  "id": "75mm",
+  "name": {
+   "en": "75mm",
+   "fr": "75mm"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 200,
+   "hemats": 20
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "mark-ii-raidbreaker",
+  "name": {
+   "en": "Mark II Raidbreaker",
+   "fr": "Mark II Raidbreaker"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 200
+  },
+  "amountProduced": 5,
+  "producedBy": "factory"
+ },
+ {
+  "id": "model-7-evie",
+  "name": {
+   "en": "Model-7 “Evie”",
+   "fr": "Model-7 “Evie”"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "912-shrike-rounds",
+  "name": {
+   "en": "912 Shrike Rounds",
+   "fr": "912 Shrike Rounds"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 120
+  },
+  "amountProduced": 5,
+  "producedBy": "factory"
+ },
+ {
+  "id": "crows-foot-mine",
+  "name": {
+   "en": "Crow’s Foot Mine",
+   "fr": "Crow’s Foot Mine"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 100,
+   "emats": 20
+  },
+  "amountProduced": 10,
+  "producedBy": "factory"
+ },
+ {
+  "id": "incendiary-mortar-shell",
+  "name": {
+   "en": "Incendiary Mortar Shell",
+   "fr": "Incendiary Mortar Shell"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 60,
+   "emats": 70
+  },
+  "amountProduced": 15,
+  "producedBy": "factory"
+ },
+ {
+  "id": "paratroopers-ruck",
+  "name": {
+   "en": "Paratrooper’s Ruck",
+   "fr": "Paratrooper’s Ruck"
+  },
+  "category": "uniforms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 10,
+  "producedBy": "factory"
+ },
+ {
+  "id": "austers-harness",
+  "name": {
+   "en": "Auster’s Harness",
+   "fr": "Auster’s Harness"
+  },
+  "category": "uniforms",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 150
+  },
+  "amountProduced": 15,
+  "producedBy": "factory"
+ },
+ {
+  "id": "cloudrunners-vesture",
+  "name": {
+   "en": "Cloudrunner’s Vesture",
+   "fr": "Cloudrunner’s Vesture"
+  },
+  "category": "uniforms",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 150
+  },
+  "amountProduced": 15,
+  "producedBy": "factory"
+ },
+ {
+  "id": "lodesmans-lorica",
+  "name": {
+   "en": "Lodesman’s Lorica",
+   "fr": "Lodesman’s Lorica"
+  },
+  "category": "uniforms",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 150
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "aviators-raiment",
+  "name": {
+   "en": "Aviator’s Raiment",
+   "fr": "Aviator’s Raiment"
+  },
+  "category": "uniforms",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 150
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "pipe",
+  "name": {
+   "en": "Pipe",
+   "fr": "Pipe"
+  },
+  "category": "utilities",
+  "faction": "Both",
+  "cost": {
+   "bmats": 50
+  },
+  "amountProduced": 2,
+  "producedBy": "factory"
+ },
+ {
+  "id": "ferro-879",
+  "name": {
+   "en": "Ferro 879",
+   "fr": "Ferro 879"
+  },
+  "category": "smallArms",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 60
+  },
+  "amountProduced": 20,
+  "producedBy": "factory"
+ },
+ {
+  "id": "ahti-model-2",
+  "name": {
+   "en": "Ahti Model 2",
+   "fr": "Ahti Model 2"
+  },
+  "category": "smallArms",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 60
+  },
+  "amountProduced": 20,
+  "producedBy": "factory"
+ },
+ {
+  "id": "44-mag",
+  "name": {
+   "en": ".44 Mag",
+   "fr": ".44 Mag"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 40
+  },
+  "amountProduced": 40,
+  "producedBy": "factory"
+ },
+ {
+  "id": "rpg",
+  "name": {
+   "en": "RPG",
+   "fr": "RPG"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 60,
+   "emats": 90
+  },
+  "amountProduced": 15,
+  "producedBy": "factory"
+ },
+ {
+  "id": "9mm",
+  "name": {
+   "en": "9mm",
+   "fr": "9mm"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 80
+  },
+  "amountProduced": 40,
+  "producedBy": "factory"
+ },
+ {
+  "id": "legionary-fatigues",
+  "name": {
+   "en": "Legionary Fatigues",
+   "fr": "Legionary Fatigues"
+  },
+  "category": "uniforms",
+  "faction": "Colonial",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 15,
+  "producedBy": "factory"
+ },
+ {
+  "id": "infantry-battledress",
+  "name": {
+   "en": "Infantry Battledress",
+   "fr": "Infantry Battledress"
+  },
+  "category": "uniforms",
+  "faction": "Warden",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 15,
+  "producedBy": "factory"
+ },
+ {
+  "id": "moray-torpedo",
+  "name": {
+   "en": "Moray Torpedo",
+   "fr": "Moray Torpedo"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 100
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "unexploded-ordnance",
+  "name": {
+   "en": "Unexploded Ordnance",
+   "fr": "Unexploded Ordnance"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {
+   "bmats": 100,
+   "hemats": 60
+  },
+  "amountProduced": 5,
+  "producedBy": "factory"
+ },
+ {
+  "id": "e680-s-rudder-lock",
+  "name": {
+   "en": "E680-S Rudder Lock",
+   "fr": "E680-S Rudder Lock"
+  },
+  "category": "utilities",
+  "faction": "Both",
+  "cost": {
+   "rmats": 40
+  },
+  "amountProduced": 1,
+  "producedBy": "factory"
+ },
+ {
+  "id": "hammer",
+  "name": {
+   "en": "Hammer",
+   "fr": "Hammer"
+  },
+  "category": "utilities",
+  "faction": "Both",
+  "cost": {
+   "bmats": 20
+  },
+  "amountProduced": 20,
+  "producedBy": "factory"
+ },
+ {
+  "id": "concrete-materials",
+  "name": {
+   "en": "Concrete Materials",
+   "fr": "Concrete Materials"
+  },
+  "category": "vehicles",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "concrete-mixer"
+ },
+ {
+  "id": "mercy",
+  "name": {
+   "en": "Mercy",
+   "fr": "Mercy"
+  },
+  "category": "naval",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "dry-dock"
+ },
+ {
+  "id": "poseidon",
+  "name": {
+   "en": "Poseidon",
+   "fr": "Poseidon"
+  },
+  "category": "naval",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "dry-dock"
+ },
+ {
+  "id": "bms-black-bolt",
+  "name": {
+   "en": "BMS Black Bolt",
+   "fr": "BMS Black Bolt"
+  },
+  "category": "trains",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "bms-rockhold",
+  "name": {
+   "en": "BMS Rockhold",
+   "fr": "BMS Rockhold"
+  },
+  "category": "trains",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "bms-holdout",
+  "name": {
+   "en": "BMS Holdout",
+   "fr": "BMS Holdout"
+  },
+  "category": "trains",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "bms-longrider",
+  "name": {
+   "en": "BMS Longrider",
+   "fr": "BMS Longrider"
+  },
+  "category": "trains",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "bms-roadhouse",
+  "name": {
+   "en": "BMS Roadhouse",
+   "fr": "BMS Roadhouse"
+  },
+  "category": "trains",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "toxot-902-blind-silver",
+  "name": {
+   "en": "Toxot-902 “Blind Silver”",
+   "fr": "Toxot-902 “Blind Silver”"
+  },
+  "category": "aircraft",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "luminary-mk-ii-harbinger",
+  "name": {
+   "en": "Luminary Mk. II Harbinger",
+   "fr": "Luminary Mk. II Harbinger"
+  },
+  "category": "aircraft",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "tulka-i19-white-raven",
+  "name": {
+   "en": "Tulka I1.9 White Raven",
+   "fr": "Tulka I1.9 White Raven"
+  },
+  "category": "aircraft",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "mergo-4-myrmidon",
+  "name": {
+   "en": "Mergo-4 “Myrmidon”",
+   "fr": "Mergo-4 “Myrmidon”"
+  },
+  "category": "aircraft",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "m925-austringer-man-o-war",
+  "name": {
+   "en": "M925 Austringer Man-O-War",
+   "fr": "M925 Austringer Man-O-War"
+  },
+  "category": "aircraft",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "v-5b-pegasus",
+  "name": {
+   "en": "V-5b Pegasus",
+   "fr": "V-5b Pegasus"
+  },
+  "category": "aircraft",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "rinnspeir-mk-i-zealot",
+  "name": {
+   "en": "Rinnspeir Mk. I Zealot",
+   "fr": "Rinnspeir Mk. I Zealot"
+  },
+  "category": "aircraft",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "v-1-tzykalia",
+  "name": {
+   "en": "V-1 Tzykalia",
+   "fr": "V-1 Tzykalia"
+  },
+  "category": "aircraft",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "tulka-p4-welkinrive",
+  "name": {
+   "en": "Tulka P4 Welkinrive",
+   "fr": "Tulka P4 Welkinrive"
+  },
+  "category": "aircraft",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "aegis-steelbreaker-k5a",
+  "name": {
+   "en": "Aegis Steelbreaker K5a",
+   "fr": "Aegis Steelbreaker K5a"
+  },
+  "category": "trains",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "obrien-warsmith-v215",
+  "name": {
+   "en": "O’Brien Warsmith v.215",
+   "fr": "O’Brien Warsmith v.215"
+  },
+  "category": "trains",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "bms-bloodtender",
+  "name": {
+   "en": "BMS Bloodtender",
+   "fr": "BMS Bloodtender"
+  },
+  "category": "trains",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "tempest-cannon-ra-2",
+  "name": {
+   "en": "Tempest Cannon RA-2",
+   "fr": "Tempest Cannon RA-2"
+  },
+  "category": "trains",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station",
+  "ammo": [
+   "300mm"
+  ]
+ },
+ {
+  "id": "lance-36",
+  "name": {
+   "en": "Lance-36",
+   "fr": "Lance-36"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "flood-mk-i",
+  "name": {
+   "en": "Flood Mk. I",
+   "fr": "Flood Mk. I"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "lance-25-hasta",
+  "name": {
+   "en": "Lance-25 “Hasta”",
+   "fr": "Lance-25 “Hasta”"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "flood-juggernaut-mk-vii",
+  "name": {
+   "en": "Flood Juggernaut Mk. VII",
+   "fr": "Flood Juggernaut Mk. VII"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station",
+  "ammo": [
+   "75mm"
+  ]
+ },
+ {
+  "id": "o-75b-ares",
+  "name": {
+   "en": "O-75b \"Ares\"",
+   "fr": "O-75b \"Ares\""
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station",
+  "ammo": [
+   "75mm"
+  ]
+ },
+ {
+  "id": "cullen-predator-mk-iii",
+  "name": {
+   "en": "Cullen Predator Mk. III",
+   "fr": "Cullen Predator Mk. III"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "large-assembly-station"
+ },
+ {
+  "id": "bms-mineseeker",
+  "name": {
+   "en": "BMS Mineseeker",
+   "fr": "BMS Mineseeker"
+  },
+  "category": "trains",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "bms-railtruck",
+  "name": {
+   "en": "BMS Railtruck",
+   "fr": "BMS Railtruck"
+  },
+  "category": "trains",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "bms-linerunner",
+  "name": {
+   "en": "BMS Linerunner",
+   "fr": "BMS Linerunner"
+  },
+  "category": "trains",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "r-12b-salva-flame-truck",
+  "name": {
+   "en": "R-12b - “Salva” Flame Truck",
+   "fr": "R-12b - “Salva” Flame Truck"
+  },
+  "category": "uniforms",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "dunne-dousing-engine-3r",
+  "name": {
+   "en": "Dunne Dousing Engine 3r",
+   "fr": "Dunne Dousing Engine 3r"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "bms-tinderbox",
+  "name": {
+   "en": "BMS Tinderbox",
+   "fr": "BMS Tinderbox"
+  },
+  "category": "trains",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "bms-stowheel",
+  "name": {
+   "en": "BMS Stowheel",
+   "fr": "BMS Stowheel"
+  },
+  "category": "trains",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "t14-vesta-tankette",
+  "name": {
+   "en": "T14 “Vesta” Tankette",
+   "fr": "T14 “Vesta” Tankette"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "obrien-v130-wild-jack",
+  "name": {
+   "en": "O’Brien V.130 Wild Jack",
+   "fr": "O’Brien V.130 Wild Jack"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "ga6-cestus",
+  "name": {
+   "en": "GA6 “Cestus”",
+   "fr": "GA6 “Cestus”"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "duncans-coin-145mm",
+  "name": {
+   "en": "Duncan’s Coin 14.5mm",
+   "fr": "Duncan’s Coin 14.5mm"
+  },
+  "category": "heavyArms",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "king-jester-mk-i-1",
+  "name": {
+   "en": "King Jester Mk. I-1",
+   "fr": "King Jester Mk. I-1"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "niska-mk-iii-scar-twin",
+  "name": {
+   "en": "Niska Mk. III Scar Twin",
+   "fr": "Niska Mk. III Scar Twin"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "40-45-smelter",
+  "name": {
+   "en": "40-45 “Smelter”",
+   "fr": "40-45 “Smelter”"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "balfour-rampart-68mm",
+  "name": {
+   "en": "Balfour Rampart 68mm",
+   "fr": "Balfour Rampart 68mm"
+  },
+  "category": "heavyArms",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "au-a150-taurine-rigger",
+  "name": {
+   "en": "AU-A150 Taurine Rigger",
+   "fr": "AU-A150 Taurine Rigger"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "cnute-cliffwrest",
+  "name": {
+   "en": "Cnute Cliffwrest",
+   "fr": "Cnute Cliffwrest"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "noble-firebrand-mk-xvii",
+  "name": {
+   "en": "Noble Firebrand Mk. XVII",
+   "fr": "Noble Firebrand Mk. XVII"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "h-19-vulcan",
+  "name": {
+   "en": "H-19 “Vulcan”",
+   "fr": "H-19 “Vulcan”"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "86k-c-ranseur",
+  "name": {
+   "en": "86K-c “Ranseur”",
+   "fr": "86K-c “Ranseur”"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "dae-2a-1-ruptura",
+  "name": {
+   "en": "DAE 2a-1 “Ruptura”",
+   "fr": "DAE 2a-1 “Ruptura”"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "gallagher-highwayman-mk-iii",
+  "name": {
+   "en": "Gallagher Highwayman Mk. III",
+   "fr": "Gallagher Highwayman Mk. III"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "huber-starbreaker-945mm",
+  "name": {
+   "en": "Huber Starbreaker 94.5mm",
+   "fr": "Huber Starbreaker 94.5mm"
+  },
+  "category": "heavyArms",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station",
+  "ammo": [
+   "94.5mm"
+  ]
+ },
+ {
+  "id": "85v-g-talos",
+  "name": {
+   "en": "85V-g \"Talos\"",
+   "fr": "85V-g \"Talos\""
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "gallagher-thornfall-mk-vi",
+  "name": {
+   "en": "Gallagher Thornfall Mk. VI",
+   "fr": "Gallagher Thornfall Mk. VI"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "silverhand-lordscar-mk-x",
+  "name": {
+   "en": "Silverhand Lordscar - Mk. X",
+   "fr": "Silverhand Lordscar - Mk. X"
+  },
+  "category": "vehicles",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "945g-stygian-bolt",
+  "name": {
+   "en": "945g “Stygian Bolt”",
+   "fr": "945g “Stygian Bolt”"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "balfour-stockade-75mm",
+  "name": {
+   "en": "Balfour Stockade 75mm",
+   "fr": "Balfour Stockade 75mm"
+  },
+  "category": "heavyArms",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station",
+  "ammo": [
+   "75mm"
+  ]
+ },
+ {
+  "id": "40-250-alekto-heavy-cannon",
+  "name": {
+   "en": "40-250 “Alekto” Heavy Cannon",
+   "fr": "40-250 “Alekto” Heavy Cannon"
+  },
+  "category": "vehicles",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station",
+  "ammo": [
+   "250mm \"Fury\" Shell",
+   "250mm \"Purity\" Shell"
+  ]
+ },
+ {
+  "id": "a0e-9-rocket-body",
+  "name": {
+   "en": "A0E-9 Rocket Body",
+   "fr": "A0E-9 Rocket Body"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
+ },
+ {
+  "id": "a0e-9-rocket-warhead",
+  "name": {
+   "en": "A0E-9 Rocket Warhead",
+   "fr": "A0E-9 Rocket Warhead"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "small-assembly-station"
  }
 ]

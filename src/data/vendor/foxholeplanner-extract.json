@@ -9,7 +9,9 @@
     "heavyexplosive": 15
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "aircraftammo": {
    "name": "20mm",
@@ -17,49 +19,65 @@
     "cloth": 120
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "aircraftbomberc": {
    "name": "V-1 Tzykalia",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "aircraftbomberw": {
    "name": "Tulka P4 Welkinrive",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "aircraftdivec": {
    "name": "Mergo-4 “Myrmidon”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "aircraftfighterc": {
    "name": "Toxot-902 “Blind Silver”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "aircraftfighterw": {
    "name": "Luminary Mk. II Harbinger",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "aircraftparatrooperc": {
    "name": "V-5b Pegasus",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "aircraftparatrooperw": {
    "name": "Rinnspeir Mk. I Zealot",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "aircraftpartlargeenginec": {
    "name": "Colonial Aircraft Engine (Large)",
@@ -67,7 +85,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "c"
   },
   "aircraftpartlargeenginew": {
    "name": "Warden Aircraft Engine (Large)",
@@ -75,7 +95,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "w"
   },
   "aircraftpartlargeenginewreckedc": {
    "name": "Damaged Colonial Aircraft Engine (Large)",
@@ -83,7 +105,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "c"
   },
   "aircraftpartlargeenginewreckedw": {
    "name": "Damaged Warden Aircraft Engine (Large)",
@@ -91,7 +115,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "w"
   },
   "aircraftpartlargemechanicalc": {
    "name": "Colonial Aircraft Mechanical Parts (Large)",
@@ -99,7 +125,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "c"
   },
   "aircraftpartlargemechanicalw": {
    "name": "Warden Aircraft Mechanical Parts (Large)",
@@ -107,7 +135,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "w"
   },
   "aircraftpartlargemechanicalwreckedc": {
    "name": "Damaged Colonial Aircraft Mechanical Parts (Large)",
@@ -115,7 +145,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "c"
   },
   "aircraftpartlargemechanicalwreckedw": {
    "name": "Damaged Warden Aircraft Mechanical Parts (Large)",
@@ -123,7 +155,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "w"
   },
   "aircraftpartsmallenginec": {
    "name": "Colonial Aircraft Engine (Small)",
@@ -131,7 +165,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "c"
   },
   "aircraftpartsmallenginew": {
    "name": "Warden Aircraft Engine (Small)",
@@ -139,7 +175,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "w"
   },
   "aircraftpartsmallenginewreckedc": {
    "name": "Damaged Colonial Aircraft Engine (Small)",
@@ -147,7 +185,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "c"
   },
   "aircraftpartsmallenginewreckedw": {
    "name": "Damaged Warden Aircraft Engine (Small)",
@@ -155,7 +195,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "w"
   },
   "aircraftpartsmallmechanicalc": {
    "name": "Colonial Aircraft Mechanical Parts (Small)",
@@ -163,7 +205,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "c"
   },
   "aircraftpartsmallmechanicalw": {
    "name": "Warden Aircraft Mechanical Parts (Small)",
@@ -171,7 +215,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "w"
   },
   "aircraftpartsmallmechanicalwreckedc": {
    "name": "Damaged Colonial Aircraft Mechanical Parts (Small)",
@@ -179,7 +225,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "c"
   },
   "aircraftpartsmallmechanicalwreckedw": {
    "name": "Damaged Warden Aircraft Mechanical Parts (Small)",
@@ -187,7 +235,9 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "parts",
+   "faction": "w"
   },
   "aircrafttorpedoammo": {
    "name": "Tenta Torpedo",
@@ -195,25 +245,33 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": "w"
   },
   "aircrafttorpedow": {
    "name": "M925 Austringer Man-O-War",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "aircraftwaterw": {
    "name": "Tulka I1.9 White Raven",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "aluminum": {
    "name": "Aluminum",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": true
+   "isRawResource": true,
+   "category": "supplies",
+   "faction": null
   },
   "aluminuma": {
    "name": "Aluminum Alloy",
@@ -221,31 +279,41 @@
     "aluminuma": 20
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "ambulancec": {
    "name": "R-12 - “Salus” Ambulance",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "ambulanceflamec": {
    "name": "R-12b - “Salva” Flame Truck",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "ambulanceflamew": {
    "name": "Dunne Dousing Engine 3r",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "ambulancew": {
    "name": "Dunne Responder 3e",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "ammouniformw": {
    "name": "Specialist’s Overcoat",
@@ -253,67 +321,89 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "w"
   },
   "armoredcar2largew": {
    "name": "O’Brien V.101 Freeman",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "armoredcar2multiw": {
    "name": "O’Brien v.200 Squire",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "armoredcar2twinw": {
    "name": "O’Brien V.190 Knave",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "armoredcaratw": {
    "name": "O’Brien V.113 Gravekeeper",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "armoredcarc": {
    "name": "T3 “Xiphos”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "armoredcarflamew": {
    "name": "O’Brien V.130 Wild Jack",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "armoredcarmobilityw": {
    "name": "O’Brien V.121 Highlander",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "armoredcaroffensivec": {
    "name": "T5 “Percutio”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "armoredcartwinc": {
    "name": "T8 “Gemini”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "armoredcarw": {
    "name": "O’Brien V.110",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "armouruniformc": {
    "name": "Velian Flak Vest",
@@ -321,7 +411,9 @@
     "cloth": 200
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "c"
   },
   "armouruniformw": {
    "name": "Gunner’s Breastplate",
@@ -329,7 +421,9 @@
     "cloth": 150
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "w"
   },
   "assaultrifleammo": {
    "name": "7.92mm",
@@ -337,7 +431,9 @@
     "cloth": 120
    },
    "crateQuantity": 30,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": null
   },
   "assaultriflec": {
    "name": "Catara mo.II",
@@ -345,7 +441,9 @@
     "wood": 15
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "c"
   },
   "assaultrifleheavyc": {
    "name": "“Dusk” ce.III",
@@ -353,7 +451,9 @@
     "wood": 15
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "c"
   },
   "assaultrifleheavyw": {
    "name": "Booker Storm Rifle Model 838",
@@ -361,7 +461,9 @@
     "wood": 15
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "assaultriflew": {
    "name": "Aalto Storm Rifle 24",
@@ -369,7 +471,9 @@
     "wood": 15
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "atammo": {
    "name": "68mm",
@@ -378,7 +482,9 @@
     "explosive": 240
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "atgrenadew": {
    "name": "BF5 White Ash Flask Grenade",
@@ -387,7 +493,9 @@
     "explosive": 80
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "w"
   },
   "atlargeammo": {
    "name": "94.5mm",
@@ -396,7 +504,9 @@
     "heavyexplosive": 20
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "atlaunchedgrenadew": {
    "name": "B2 Varsi Anti-Tank Grenade",
@@ -405,7 +515,9 @@
     "explosive": 125
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "w"
   },
   "atrifleammo": {
    "name": "14.5mm",
@@ -413,7 +525,9 @@
     "cloth": 100
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": null
   },
   "atrifleassaultw": {
    "name": "228 Satterley Heavy Storm Rifle",
@@ -421,7 +535,9 @@
     "cloth": 150
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "w"
   },
   "atrifleautomaticw": {
    "name": "Booker Greyhound Model 910",
@@ -429,7 +545,9 @@
     "cloth": 150
    },
    "crateQuantity": 3,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "w"
   },
   "atriflelightc": {
    "name": "“Dawn” Ve.II",
@@ -437,7 +555,9 @@
     "cloth": 150
    },
    "crateQuantity": 3,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "c"
   },
   "atriflesniperc": {
    "name": "“Quickhatch” Rt.I",
@@ -445,7 +565,9 @@
     "cloth": 150
    },
    "crateQuantity": 3,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "c"
   },
   "atrifletc": {
    "name": "“Typhon” ra.XII",
@@ -454,7 +576,9 @@
     "wood": 5
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "c"
   },
   "atriflew": {
    "name": "Neville Anti-Tank Rifle",
@@ -462,7 +586,9 @@
     "cloth": 150
    },
    "crateQuantity": 3,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "w"
   },
   "atrpgammo": {
    "name": "AP/RPG",
@@ -471,7 +597,9 @@
     "explosive": 150
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": null
   },
   "atrpgc": {
    "name": "Venom c.II 35",
@@ -480,7 +608,9 @@
     "wood": 15
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "c"
   },
   "atrpgheavyc": {
    "name": "Bane 45",
@@ -489,7 +619,9 @@
     "wood": 40
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "c"
   },
   "atrpgheavyw": {
    "name": "Carnyx Anti-Tank Rocket Launcher",
@@ -498,7 +630,9 @@
     "wood": 15
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "w"
   },
   "atrpgindirectammo": {
    "name": "ARC/RPG",
@@ -507,7 +641,9 @@
     "explosive": 150
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": null
   },
   "atrpglightc": {
    "name": "Ignifist 30",
@@ -516,7 +652,9 @@
     "explosive": 70
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "c"
   },
   "atrpgtw": {
    "name": "Mounted Bonesaw MK.3",
@@ -525,7 +663,9 @@
     "wood": 5
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "w"
   },
   "atrpgw": {
    "name": "Bonesaw MK.3",
@@ -534,7 +674,9 @@
     "wood": 25
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "w"
   },
   "bandages": {
    "name": "Bandages",
@@ -542,7 +684,9 @@
     "cloth": 80
    },
    "crateQuantity": 50,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "medical",
+   "faction": null
   },
   "bannertc": {
    "name": "Legion Vexillum",
@@ -550,7 +694,9 @@
     "cloth": 150
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": "c"
   },
   "bannertw": {
    "name": "War Ensign",
@@ -558,7 +704,9 @@
     "cloth": 150
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": "w"
   },
   "barbedwirematerials": {
    "name": "Barbed Wire",
@@ -566,7 +714,9 @@
     "cloth": 15
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "battletankammo": {
    "name": "75mm",
@@ -575,43 +725,57 @@
     "heavyexplosive": 20
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "battletankatc": {
    "name": "Lance-25 “Hasta”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "battletankc": {
    "name": "Lance-36",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "battletankdefensivew": {
    "name": "Flood Juggernaut Mk. VII",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "battletankheavyartilleryc": {
    "name": "Lance-46 “Sarissa”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "battletankheavyartilleryw": {
    "name": "Flood Mk. IX Stain",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "battletankw": {
    "name": "Flood Mk. I",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "bayonet": {
    "name": "Buckhorn CCQ-18",
@@ -619,7 +783,9 @@
     "cloth": 40
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "binoculars": {
    "name": "Binoculars",
@@ -627,7 +793,9 @@
     "cloth": 75
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "bloodplasma": {
    "name": "Blood Plasma",
@@ -635,7 +803,9 @@
     "cloth": 80
    },
    "crateQuantity": 50,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "medical",
+   "faction": null
   },
   "bomberammo": {
    "name": "Mark II Raidbreaker",
@@ -643,7 +813,9 @@
     "cloth": 200
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "cloth": {
    "name": "Basic Materials",
@@ -651,7 +823,9 @@
     "cloth": 100
    },
    "crateQuantity": 100,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "coal": {
    "name": "Coal",
@@ -659,7 +833,9 @@
     "coal": 100
    },
    "crateQuantity": 100,
-   "isRawResource": true
+   "isRawResource": true,
+   "category": "supplies",
+   "faction": null
   },
   "components": {
    "name": "Components",
@@ -667,31 +843,41 @@
     "components": 70
    },
    "crateQuantity": 100,
-   "isRawResource": true
+   "isRawResource": true,
+   "category": "supplies",
+   "faction": null
   },
   "concrete": {
    "name": "Concrete Materials",
    "crateCost": null,
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "construction": {
    "name": "BMS - Universal Assembly Rig",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "constructionutility": {
    "name": "BMS - Fabricator",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "copper": {
    "name": "Copper",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": true
+   "isRawResource": true,
+   "category": "supplies",
+   "faction": null
   },
   "coppera": {
    "name": "Copper Alloy",
@@ -699,13 +885,17 @@
     "coppera": 20
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "crate": {
    "name": "Crate",
    "crateCost": null,
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "criticalsoldier": {
    "name": "Critically Wounded Soldier",
@@ -713,7 +903,9 @@
     "cloth": 50
    },
    "crateQuantity": 50,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "demolitionrocketammo": {
    "name": "Shatter Missile",
@@ -722,7 +914,9 @@
     "heavyexplosive": 250
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "depthchargeammo": {
    "name": "Model-7 “Evie”",
@@ -730,25 +924,33 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "destroyertankflamew": {
    "name": "Noble Firebrand Mk. XVII",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "destroyertankw": {
    "name": "Noble Widow MK. XIV",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "diesel": {
    "name": "Diesel",
    "crateCost": null,
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "divebomberammo": {
    "name": "912 Shrike Rounds",
@@ -756,37 +958,49 @@
     "cloth": 120
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": "c"
   },
   "emplacedaircraftc": {
    "name": "DAE 5b “Zeal”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "emplacedaircraftw": {
    "name": "Leary AA-70 Bolas",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "emplacedatlargew": {
    "name": "Huber Starbreaker 94.5mm",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "emplacedcannonlargec": {
    "name": "DAE 2a-1 “Ruptura”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "emplacedmultic": {
    "name": "DAE 3b-2 “Hades’ Net”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "engineeruniformc": {
    "name": "Fabri Rucksack",
@@ -794,7 +1008,9 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "c"
   },
   "engineeruniformw": {
    "name": "Sapper Gear",
@@ -802,7 +1018,9 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "w"
   },
   "excavation": {
    "name": "Excavation (No Materials)",
@@ -810,7 +1028,9 @@
     "cloth": 200
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "explosive": {
    "name": "Explosive Powder",
@@ -818,7 +1038,9 @@
     "explosive": 200
    },
    "crateQuantity": 40,
-   "isRawResource": true
+   "isRawResource": true,
+   "category": "supplies",
+   "faction": null
   },
   "explosivelightc": {
    "name": "Hydra’s Whisper",
@@ -827,7 +1049,9 @@
     "explosive": 80
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": "c"
   },
   "explosivetripod": {
    "name": "Havoc Charge",
@@ -836,7 +1060,9 @@
     "heavyexplosive": 40
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "facilitycoal1": {
    "name": "Coke",
@@ -844,7 +1070,9 @@
     "cloth": 1
    },
    "crateQuantity": 1,
-   "isRawResource": true
+   "isRawResource": true,
+   "category": "supplies",
+   "faction": null
   },
   "facilitycomponents1": {
    "name": "Damaged Components",
@@ -852,7 +1080,9 @@
     "components": 70
    },
    "crateQuantity": 100,
-   "isRawResource": true
+   "isRawResource": true,
+   "category": "supplies",
+   "faction": null
   },
   "facilitymaterials1": {
    "name": "Construction Materials",
@@ -860,7 +1090,9 @@
     "cloth": 50
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "facilitymaterials10": {
    "name": "Unstable Substances",
@@ -868,7 +1100,9 @@
     "cloth": 50
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "facilitymaterials11": {
    "name": "Thermal Shielding",
@@ -876,7 +1110,9 @@
     "cloth": 50
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "facilitymaterials12": {
    "name": "Rare Materials",
@@ -884,7 +1120,9 @@
     "cloth": 50
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "facilitymaterials2": {
    "name": "Processed Construction Materials",
@@ -892,7 +1130,9 @@
     "cloth": 50
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "facilitymaterials3": {
    "name": "Steel Construction Materials",
@@ -900,7 +1140,9 @@
     "cloth": 50
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "facilitymaterials4": {
    "name": "Assembly Materials I",
@@ -908,7 +1150,9 @@
     "cloth": 50
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "facilitymaterials5": {
    "name": "Assembly Materials II",
@@ -916,7 +1160,9 @@
     "cloth": 50
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "facilitymaterials6": {
    "name": "Assembly Materials III",
@@ -924,7 +1170,9 @@
     "cloth": 50
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "facilitymaterials7": {
    "name": "Assembly Materials IV",
@@ -932,7 +1180,9 @@
     "cloth": 50
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "facilitymaterials8": {
    "name": "Assembly Materials V",
@@ -940,7 +1190,9 @@
     "cloth": 50
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "facilitymaterials9": {
    "name": "Rare Alloys",
@@ -948,7 +1200,9 @@
     "cloth": 50
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "facilityoil1": {
    "name": "Heavy Oil",
@@ -956,13 +1210,17 @@
     "cloth": 50
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "facilityoil1can": {
    "name": "Heavy Oil (Canned)",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "facilityoil2": {
    "name": "Enriched Oil",
@@ -970,73 +1228,97 @@
     "cloth": 50
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "facilityoil2can": {
    "name": "Enriched Oil (Canned)",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "fieldat2c": {
    "name": "GA6 “Cestus”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "fieldat2w": {
    "name": "Duncan’s Coin 14.5mm",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "fieldatc": {
    "name": "AA-2 \"Battering Ram\"",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "fieldatdamagew": {
    "name": "Balfour Rampart 68mm",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "fieldatw": {
    "name": "Collins Cannon 68mm",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "fieldcannondamagec": {
    "name": "40-45 “Smelter”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "fieldcannonw": {
    "name": "Balfour Wolfhound 40mm",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "fieldmgc": {
    "name": "G40 “Sagittarii”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "fieldmgw": {
    "name": "Swallowtail 988/127-2",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "fieldmortarc": {
    "name": "30-250 “Tisiphone” Field Cannon",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "firerocketammo": {
    "name": "4C-Fire Rocket",
@@ -1045,7 +1327,9 @@
     "explosive": 15
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "firstaidkit": {
    "name": "First Aid Kit",
@@ -1053,7 +1337,9 @@
     "cloth": 60
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "medical",
+   "faction": null
   },
   "flameammo": {
    "name": "Flame Ammo",
@@ -1062,7 +1348,9 @@
     "explosive": 45
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "flamebackpackc": {
    "name": "“Molten Wind” v.II Ammo",
@@ -1071,7 +1359,9 @@
     "heavyexplosive": 20
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": "c"
   },
   "flamebackpackw": {
    "name": "Willow's Bane Ammo",
@@ -1080,7 +1370,9 @@
     "heavyexplosive": 20
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": "w"
   },
   "flametorchc": {
    "name": "“Molten Wind” v.II Flame Torch",
@@ -1089,7 +1381,9 @@
     "wood": 25
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "c"
   },
   "flametorchw": {
    "name": "Willow’s Bane Model 845",
@@ -1098,49 +1392,65 @@
     "wood": 30
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "w"
   },
   "fortconstructionpart": {
    "name": "Construction Parts",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "fortgarrisonstationpart": {
    "name": "Underground Fortress Parts",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "fortintelcenterpart": {
    "name": "Intelligence Center Parts",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "fortlargeradarpart": {
    "name": "Aircraft Radar Parts",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "fortlrartillerypart": {
    "name": "Storm Cannon Parts",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "fortstructurepart": {
    "name": "Structure Parts",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "fortweatherstationpart": {
    "name": "Weather Station Parts",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "gasmask": {
    "name": "Gas Mask",
@@ -1148,7 +1458,9 @@
     "cloth": 160
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "gasmaskfilter": {
    "name": "Gas Mask Filter",
@@ -1156,7 +1468,9 @@
     "cloth": 100
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "greenash": {
    "name": "Green Ash Grenade",
@@ -1164,7 +1478,9 @@
     "cloth": 140
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": null
   },
   "grenadeadapter": {
    "name": "The Ospreay",
@@ -1173,7 +1489,9 @@
     "wood": 10
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": "w"
   },
   "grenadec": {
    "name": "Bomastone Grenade",
@@ -1182,7 +1500,9 @@
     "explosive": 40
    },
    "crateQuantity": 25,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "c"
   },
   "grenadelauncherc": {
    "name": "KLG901-2 Lunaire F",
@@ -1191,7 +1511,9 @@
     "wood": 15
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "c"
   },
   "grenadelaunchertc": {
    "name": "Mounted Fissura gd.I",
@@ -1200,7 +1522,9 @@
     "wood": 5
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "c"
   },
   "grenadeuniformc": {
    "name": "Grenadier’s Baldric",
@@ -1208,7 +1532,9 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "c"
   },
   "grenadew": {
    "name": "A3 Harpa Fragmentation Grenade",
@@ -1217,7 +1543,9 @@
     "explosive": 40
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "groundmaterials": {
    "name": "Gravel",
@@ -1225,55 +1553,73 @@
     "coal": 100
    },
    "crateQuantity": 20,
-   "isRawResource": true
+   "isRawResource": true,
+   "category": "supplies",
+   "faction": null
   },
   "halftrackartilleryc": {
    "name": "HH-d “Peltast”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "halftrackc": {
    "name": "HH-a “Javelin”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "halftrackdefensivec": {
    "name": "HH-b “Hoplite”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "halftrackmultiw": {
    "name": "Niska-Rycker Mk. IX Skycaller",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "halftrackoffensivew": {
    "name": "Niska Mk. II Blinder",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "halftracktwinw": {
    "name": "Niska Mk. III Scar Twin",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "halftrackw": {
    "name": "Niska Mk. I Gun Motor Carriage",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "harvester": {
    "name": "BMS - Scrap Hauler",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "heavyartilleryammo": {
    "name": "150mm",
@@ -1282,7 +1628,9 @@
     "heavyexplosive": 60
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "heavyexplosive": {
    "name": "Heavy Explosive Powder",
@@ -1290,19 +1638,25 @@
     "heavyexplosive": 400
    },
    "crateQuantity": 30,
-   "isRawResource": true
+   "isRawResource": true,
+   "category": "supplies",
+   "faction": null
   },
   "heavytruckc": {
    "name": "AU-A150 Taurine Rigger",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "heavytruckw": {
    "name": "Cnute Cliffwrest",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "hegrenade": {
    "name": "Mammon 91-b",
@@ -1311,7 +1665,9 @@
     "explosive": 20
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": null
   },
   "helaunchedgrenade": {
    "name": "Tremola Grenade GPb-1",
@@ -1320,7 +1676,9 @@
     "explosive": 100
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": null
   },
   "herocketammo": {
    "name": "3C-High Explosive Rocket",
@@ -1329,7 +1687,9 @@
     "explosive": 15
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "infantrymine": {
    "name": "Crow’s Foot Mine",
@@ -1338,13 +1698,17 @@
     "explosive": 20
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "iron": {
    "name": "Iron",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": true
+   "isRawResource": true,
+   "category": "supplies",
+   "faction": null
   },
   "irona": {
    "name": "Iron Alloy",
@@ -1352,7 +1716,9 @@
     "irona": 20
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "isgtc": {
    "name": "Daucus isg.III",
@@ -1361,109 +1727,145 @@
     "wood": 5
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "c"
   },
   "landingcraftc": {
    "name": "AB-8 “Acheron”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "landingcraftoffensivec": {
    "name": "AB-11 “Doru”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "largefieldatc": {
    "name": "945g “Stygian Bolt”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "largefieldcannonw": {
    "name": "Balfour Stockade 75mm",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "largefieldmortarc": {
    "name": "40-250 “Alekto” Heavy Cannon",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "largefieldmultiw": {
    "name": "Rycker 4/3-F Wasp Nest",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "largeshipaircraftc": {
    "name": "Poseidon",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "largeshipbaseship": {
    "name": "BMS - Longhook",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "largeshipbattleshipaircraftw": {
    "name": "Mercy",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "largeshipbattleshipc": {
    "name": "Titan",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "largeshipbattleshipw": {
    "name": "Callahan",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "largeshipdestroyerc": {
    "name": "Conqueror",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "largeshipdestroyerw": {
    "name": "Blacksteele",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "largeshipresourceship": {
    "name": "BMS - Bowhead",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "largeshipstorageship": {
    "name": "BMS - Bluefin",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "largeshipsubmarinec": {
    "name": "AC-b “Trident”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "largeshipsubmarinew": {
    "name": "Nakki",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "lightaaammo": {
    "name": "Absol Anti-Aircraft Rounds",
@@ -1472,7 +1874,9 @@
     "explosive": 160
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "lightartilleryammo": {
    "name": "120mm",
@@ -1481,13 +1885,17 @@
     "heavyexplosive": 10
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "lighttank2infantryc": {
    "name": "HC-2 “Scorpion”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "lighttankammo": {
    "name": "40mm",
@@ -1496,49 +1904,65 @@
     "explosive": 240
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "lighttankartilleryw": {
    "name": "Devitt-Caine Mk. IV MMR",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "lighttankc": {
    "name": "H-5 \"Hatchet\"",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "lighttankdefensivew": {
    "name": "Devitt Ironhide Mk. IV",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "lighttankflamec": {
    "name": "H-19 “Vulcan”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "lighttankmobilityc": {
    "name": "H-8 “Kranesca”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "lighttankoffensivec": {
    "name": "H-10 “Pelekys”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "lighttankw": {
    "name": "Devitt Mk. III",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "listeningkit": {
    "name": "Listening Kit",
@@ -1546,7 +1970,9 @@
     "cloth": 150
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "lrartilleryammo": {
    "name": "300mm",
@@ -1555,7 +1981,9 @@
     "heavyexplosive": 45
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "macew": {
    "name": "Falias Raiding Club",
@@ -1563,7 +1991,9 @@
     "cloth": 200
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": "w"
   },
   "maintenancesupplies": {
    "name": "Maintenance Supplies",
@@ -1571,13 +2001,17 @@
     "cloth": 250
    },
    "crateQuantity": 100,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "materialplatform": {
    "name": "Material Pallet",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "medicuniformc": {
    "name": "Medic Fatigues",
@@ -1585,7 +2019,9 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "c"
   },
   "medicuniformw": {
    "name": "Physician’s Jacket",
@@ -1593,79 +2029,105 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "w"
   },
   "mediumtank2c": {
    "name": "86K-a “Bardiche”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "mediumtank2indirectw": {
    "name": "Gallagher Thornfall Mk. VI",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "mediumtank2multiw": {
    "name": "Gallagher Highwayman Mk. III",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "mediumtank2rangew": {
    "name": "Gallagher Outlaw Mk. II",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "mediumtank2twinc": {
    "name": "86K-c “Ranseur”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "mediumtank2w": {
    "name": "Gallagher Brigand Mk. I",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "mediumtankatw": {
    "name": "Silverhand Lordscar - Mk. X",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "mediumtankc": {
    "name": "85K-b “Falchion”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "mediumtanklargec": {
    "name": "85V-g \"Talos\"",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "mediumtankoffensivec": {
    "name": "85K-a “Spatha”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "mediumtanksiegew": {
    "name": "Silverhand Chieftain - Mk. VI",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "mediumtankw": {
    "name": "Silverhand - Mk. IV",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "metal": {
    "name": "Salvage",
@@ -1673,7 +2135,9 @@
     "metal": 45
    },
    "crateQuantity": 100,
-   "isRawResource": true
+   "isRawResource": true,
+   "category": "supplies",
+   "faction": null
   },
   "metalbeammaterials": {
    "name": "Metal Beam",
@@ -1681,7 +2145,9 @@
     "cloth": 25
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "mgammo": {
    "name": "12.7mm",
@@ -1689,7 +2155,9 @@
     "cloth": 100
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": null
   },
   "mgc": {
    "name": "KRN886-127 Gast Machine Gun",
@@ -1697,7 +2165,9 @@
     "wood": 25
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "c"
   },
   "mgtc": {
    "name": "Lamentum mm.IV",
@@ -1706,7 +2176,9 @@
     "wood": 5
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "c"
   },
   "mgtw": {
    "name": "Malone Ratcatcher MK.1",
@@ -1715,7 +2187,9 @@
     "wood": 5
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "w"
   },
   "mgw": {
    "name": "Malone MK.2",
@@ -1723,7 +2197,9 @@
     "wood": 25
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "minitankammo": {
    "name": "30mm",
@@ -1732,7 +2208,9 @@
     "explosive": 40
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": null
   },
   "minitorpedoammo": {
    "name": "Quillback Torpedo",
@@ -1741,7 +2219,9 @@
     "explosive": 75
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "mortar": {
    "name": "Cremari Mortar",
@@ -1750,7 +2230,9 @@
     "wood": 25
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": null
   },
   "mortarammo": {
    "name": "Mortar Shell",
@@ -1759,7 +2241,9 @@
     "explosive": 70
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": null
   },
   "mortarammofl": {
    "name": "Flare Mortar Shell",
@@ -1768,7 +2252,9 @@
     "explosive": 15
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": null
   },
   "mortarammoflame": {
    "name": "Incendiary Mortar Shell",
@@ -1777,7 +2263,9 @@
     "explosive": 70
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": null
   },
   "mortarammosh": {
    "name": "Shrapnel Mortar Shell",
@@ -1786,7 +2274,9 @@
     "explosive": 20
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": null
   },
   "mortartankammo": {
    "name": "250mm \"Purity\" Shell",
@@ -1795,7 +2285,9 @@
     "heavyexplosive": 100
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "mortartankammobr": {
    "name": "250mm \"Fury\" Shell",
@@ -1804,25 +2296,33 @@
     "heavyexplosive": 200
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "mortartankc": {
    "name": "HC-7 \"Ballista\"",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "motorcyclec": {
    "name": "03MM “Caster”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "motorcycleoffensivec": {
    "name": "00MS “Stinger”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "navaluniformc": {
    "name": "Remex Garb",
@@ -1830,7 +2330,9 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "c"
   },
   "navaluniformw": {
    "name": "Gentleman’s Peacoat",
@@ -1838,7 +2340,9 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "w"
   },
   "officeruniformc": {
    "name": "Officialis’ Attire",
@@ -1846,7 +2350,9 @@
     "cloth": 100
    },
    "crateQuantity": 3,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "c"
   },
   "officeruniformw": {
    "name": "Officer’s Regalia",
@@ -1854,7 +2360,9 @@
     "cloth": 100
    },
    "crateQuantity": 3,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "w"
   },
   "oil": {
    "name": "Oil",
@@ -1862,13 +2370,17 @@
     "oil": 2
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "oilcan": {
    "name": "Oil (Canned)",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "paratrooperbackpack": {
    "name": "Paratrooper’s Ruck",
@@ -1876,7 +2388,9 @@
     "cloth": 100
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "paratrooperuniformc": {
    "name": "Auster’s Harness",
@@ -1884,7 +2398,9 @@
     "cloth": 150
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "c"
   },
   "paratrooperuniformw": {
    "name": "Cloudrunner’s Vesture",
@@ -1892,13 +2408,17 @@
     "cloth": 150
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "w"
   },
   "petrol": {
    "name": "Petrol",
    "crateCost": null,
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "pilotuniformc": {
    "name": "Lodesman’s Lorica",
@@ -1906,7 +2426,9 @@
     "cloth": 150
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "c"
   },
   "pilotuniformw": {
    "name": "Aviator’s Raiment",
@@ -1914,7 +2436,9 @@
     "cloth": 150
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "w"
   },
   "pipematerials": {
    "name": "Pipe",
@@ -1922,7 +2446,9 @@
     "cloth": 50
    },
    "crateQuantity": 2,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "pistolammo": {
    "name": "8mm",
@@ -1930,7 +2456,9 @@
     "cloth": 40
    },
    "crateQuantity": 40,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": null
   },
   "pistolc": {
    "name": "Ferro 879",
@@ -1938,7 +2466,9 @@
     "cloth": 60
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "c"
   },
   "pistollightw": {
    "name": "Cascadier 873",
@@ -1946,7 +2476,9 @@
     "cloth": 60
    },
    "crateQuantity": 40,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "pistolw": {
    "name": "Ahti Model 2",
@@ -1954,7 +2486,9 @@
     "cloth": 60
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "radio": {
    "name": "Radio",
@@ -1962,7 +2496,9 @@
     "cloth": 75
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "radioaircraft": {
    "name": "Liaison Transmitter",
@@ -1970,7 +2506,9 @@
     "cloth": 75
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "radiobackpack": {
    "name": "Radio Backpack",
@@ -1978,7 +2516,9 @@
     "cloth": 150
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "rainuniformc": {
    "name": "Legionary’s Oilcoat",
@@ -1986,7 +2526,9 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "c"
   },
   "raremetal": {
    "name": "Rare Metal",
@@ -1994,7 +2536,9 @@
     "components": 100
    },
    "crateQuantity": 100,
-   "isRawResource": true
+   "isRawResource": true,
+   "category": "supplies",
+   "faction": null
   },
   "relicmaterials": {
    "name": "Relic Materials",
@@ -2002,7 +2546,9 @@
     "relicmaterials": 100
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "reservepower": {
    "name": "Reserve Power",
@@ -2010,7 +2556,9 @@
     "cloth": 200
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "revolver": {
    "name": "Cometa T2-9",
@@ -2018,7 +2566,9 @@
     "cloth": 60
    },
    "crateQuantity": 30,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": null
   },
   "revolverammo": {
    "name": ".44 Mag",
@@ -2026,7 +2576,9 @@
     "cloth": 40
    },
    "crateQuantity": 40,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": null
   },
   "rifleammo": {
    "name": "7.62mm",
@@ -2034,7 +2586,9 @@
     "cloth": 80
    },
    "crateQuantity": 40,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": null
   },
   "rifleautomaticc": {
    "name": "Catena rt.IV Auto-Rifle",
@@ -2042,7 +2596,9 @@
     "cloth": 120
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "c"
   },
   "rifleautomaticw": {
    "name": "Sampo Auto-Rifle 77",
@@ -2050,7 +2606,9 @@
     "cloth": 125
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "riflec": {
    "name": "Argenti r.II Rifle",
@@ -2058,7 +2616,9 @@
     "cloth": 100
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "c"
   },
   "rifleheavyc": {
    "name": "Volta r.I Repeater",
@@ -2066,7 +2626,9 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "c"
   },
   "rifleheavyw": {
    "name": "The Hangman 757",
@@ -2074,7 +2636,9 @@
     "cloth": 125
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "riflelightc": {
    "name": "Fuscina pi.I",
@@ -2082,7 +2646,9 @@
     "cloth": 140
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "c"
   },
   "riflelightw": {
    "name": "Blakerow 871",
@@ -2090,7 +2656,9 @@
     "cloth": 140
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "riflelongc": {
    "name": "KRR2-790 Omen",
@@ -2098,7 +2666,9 @@
     "cloth": 155
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "c"
   },
   "riflelongw": {
    "name": "Clancy Cinder M3",
@@ -2106,7 +2676,9 @@
     "cloth": 130
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "rifleshortw": {
    "name": "No.2B Hawthorne",
@@ -2114,7 +2686,9 @@
     "cloth": 70
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "riflew": {
    "name": "No.2 Loughcaster",
@@ -2122,25 +2696,33 @@
     "cloth": 100
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "rocketpartbottom": {
    "name": "A0E-9 Rocket Booster",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "rocketpartcenter": {
    "name": "A0E-9 Rocket Body",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "rocketparttop": {
    "name": "A0E-9 Rocket Warhead",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "rpgammo": {
    "name": "RPG",
@@ -2149,7 +2731,9 @@
     "explosive": 90
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": null
   },
   "rpgtw": {
    "name": "Cutler Foebreaker",
@@ -2158,7 +2742,9 @@
     "wood": 5
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "w"
   },
   "rpgw": {
    "name": "Cutler Launcher 4",
@@ -2167,7 +2753,9 @@
     "wood": 35
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": "w"
   },
   "sandbagmaterials": {
    "name": "Sandbag",
@@ -2175,7 +2763,9 @@
     "cloth": 15
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "satchelcharget": {
    "name": "Havoc Charge Detonator",
@@ -2184,7 +2774,9 @@
     "heavyexplosive": 20
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "satchelchargew": {
    "name": "Alligator Charge",
@@ -2193,25 +2785,33 @@
     "explosive": 80
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": "w"
   },
   "scouttankmultiw": {
    "name": "King Jester Mk. I-1",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "scouttankoffensivew": {
    "name": "King Gallant Mk. II",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "scouttankw": {
    "name": "King Spire Mk. I",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "scoutuniformc": {
    "name": "Recon Camo",
@@ -2219,7 +2819,9 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "c"
   },
   "scoutuniformw": {
    "name": "Outrider’s Mantle",
@@ -2227,61 +2829,81 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "w"
   },
   "scoutvehiclemobilityc": {
    "name": "UV-05a “Argonaut”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "scoutvehicleoffensivec": {
    "name": "UV-24 “Icarus”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "scoutvehicleoffensivew": {
    "name": "Drummond Spitfire 100d",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "scoutvehicleutilityc": {
    "name": "UV-5c “Odyssey”",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "scoutvehicleutilityw": {
    "name": "Drummond Loscann 55c",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "scoutvehiclew": {
    "name": "Drummond 100a",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "shippart1": {
    "name": "Naval Hull Segments",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "shippart2": {
    "name": "Naval Shell Plating",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "shippart3": {
    "name": "Naval Turbine Components",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "shotgunammo": {
    "name": "Buckshot",
@@ -2289,7 +2911,9 @@
     "cloth": 80
    },
    "crateQuantity": 40,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": null
   },
   "shotgunc": {
    "name": "KRF1-750 Dragonfly",
@@ -2297,7 +2921,9 @@
     "cloth": 130
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "c"
   },
   "shotgunw": {
    "name": "No.4 The Pillory Scattergun",
@@ -2305,7 +2931,9 @@
     "cloth": 80
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "shovel": {
    "name": "Shovel",
@@ -2313,7 +2941,9 @@
     "cloth": 200
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "sledgehammer": {
    "name": "Sledge Hammer",
@@ -2321,37 +2951,49 @@
     "cloth": 200
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "smalltrainengine": {
    "name": "BMS Mineseeker",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "smalltrainliquid": {
    "name": "BMS Tinderbox",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "smalltrainmaterial": {
    "name": "BMS Linerunner",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "smalltrainresource": {
    "name": "BMS Railtruck",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "smalltrainshipping": {
    "name": "BMS Stowheel",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "smgammo": {
    "name": "9mm",
@@ -2359,7 +3001,9 @@
     "cloth": 80
    },
    "crateQuantity": 40,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": null
   },
   "smgc": {
    "name": "“The Pitch Gun” mc.V",
@@ -2367,7 +3011,9 @@
     "cloth": 80
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "c"
   },
   "smgheavyc": {
    "name": "“Lionclaw” mc.VIII",
@@ -2375,7 +3021,9 @@
     "cloth": 120
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "c"
   },
   "smgheavyw": {
    "name": "No.1 “The Liar” Submachinegun",
@@ -2383,7 +3031,9 @@
     "cloth": 120
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "smgw": {
    "name": "Fiddler Submachine Gun Model 868",
@@ -2391,7 +3041,9 @@
     "cloth": 120
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "smokegrenade": {
    "name": "PT-815 Smoke Grenade",
@@ -2399,7 +3051,9 @@
     "cloth": 80
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": null
   },
   "sniperriflec": {
    "name": "KRR3-792 Auger",
@@ -2408,7 +3062,9 @@
     "wood": 30
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "c"
   },
   "sniperriflew": {
    "name": "Clancy-Raca M4",
@@ -2417,7 +3073,9 @@
     "wood": 25
    },
    "crateQuantity": 3,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "smallarms",
+   "faction": "w"
   },
   "snowuniformc": {
    "name": "Heavy Topcoat",
@@ -2425,7 +3083,9 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "c"
   },
   "snowuniformw": {
    "name": "Caoivish Parka",
@@ -2433,7 +3093,9 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "w"
   },
   "soldiersupplies": {
    "name": "Soldier Supplies",
@@ -2441,7 +3103,9 @@
     "cloth": 80
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "medical",
+   "faction": null
   },
   "soldieruniformc": {
    "name": "Legionary Fatigues",
@@ -2449,7 +3113,9 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "c"
   },
   "soldieruniformw": {
    "name": "Infantry Battledress",
@@ -2457,7 +3123,9 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "w"
   },
   "stickybomb": {
    "name": "Anti-Tank Sticky Bomb",
@@ -2466,7 +3134,9 @@
     "explosive": 100
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyarms",
+   "faction": null
   },
   "sulfur": {
    "name": "Sulfur",
@@ -2474,19 +3144,25 @@
     "sulfur": 105
    },
    "crateQuantity": 100,
-   "isRawResource": true
+   "isRawResource": true,
+   "category": "supplies",
+   "faction": null
   },
   "supertankc": {
    "name": "O-75b \"Ares\"",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "supertankw": {
    "name": "Cullen Predator Mk. III",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "surfacewatermine": {
    "name": "E681-B Hullbreaker Mine",
@@ -2495,7 +3171,9 @@
     "explosive": 35
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "swordc": {
    "name": "Eleos Infantry Dagger",
@@ -2503,31 +3181,41 @@
     "cloth": 200
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": "c"
   },
   "tankettec": {
    "name": "T12 “Actaeon” Tankette",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "tanketteflamec": {
    "name": "T14 “Vesta” Tankette",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "tankettemultic": {
    "name": "T13 “Deioneus” Rocket Battery",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "tanketteoffensivec": {
    "name": "T20 “Ixion” Tankette",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "tankmine": {
    "name": "Abisme AT-99 Mine",
@@ -2536,7 +3224,9 @@
     "explosive": 20
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "tankuniformc": {
    "name": "Tankman’s Coveralls",
@@ -2544,7 +3234,9 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "c"
   },
   "tankuniformw": {
    "name": "Padded Boiler Suit",
@@ -2552,7 +3244,9 @@
     "cloth": 100
    },
    "crateQuantity": 15,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "uniforms",
+   "faction": "w"
   },
   "torpedoammo": {
    "name": "Moray Torpedo",
@@ -2560,61 +3254,81 @@
     "cloth": 100
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "heavyammo",
+   "faction": null
   },
   "traincaboose": {
    "name": "BMS Roadhouse",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "traincoal": {
    "name": "BMS Rockhold",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "traincombatcarc": {
    "name": "Aegis Steelbreaker K5a",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "traincombatcarw": {
    "name": "O’Brien Warsmith v.215",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "trainengine": {
    "name": "BMS Black Bolt",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "trainflatbed": {
    "name": "BMS Longrider",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "trainhospital": {
    "name": "BMS Bloodtender",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "traininfantry": {
    "name": "BMS Holdout",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "trainlrartillery": {
    "name": "Tempest Cannon RA-2",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "traumakit": {
    "name": "Trauma Kit",
@@ -2622,7 +3336,9 @@
     "cloth": 80
    },
    "crateQuantity": 10,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "medical",
+   "faction": null
   },
   "tripod": {
    "name": "Tripod",
@@ -2630,49 +3346,65 @@
     "cloth": 100
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "truckc": {
    "name": "R-1 Hauler",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "truckdefensivew": {
    "name": "Dunne Leatherback 2a",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "truckmobilityc": {
    "name": "R-5b “Sisyphus” Hauler",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "truckmobilityw": {
    "name": "Dunne Landrunner 12c",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "truckmultic": {
    "name": "R-17 “Retiarius” Skirmisher",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "truckoffensivec": {
    "name": "R-9 “Speartip” Escort",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "c"
   },
   "truckw": {
    "name": "Dunne Transport",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": "w"
   },
   "unexplodedordnance": {
    "name": "Unexploded Ordnance",
@@ -2681,7 +3413,9 @@
     "heavyexplosive": 60
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "water": {
    "name": "Water",
@@ -2689,7 +3423,9 @@
     "water": 2
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "waterbucket": {
    "name": "Water Bucket",
@@ -2697,13 +3433,17 @@
     "cloth": 80
    },
    "crateQuantity": 50,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "watercan": {
    "name": "Water (Canned)",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": null,
+   "faction": null
   },
   "watermine": {
    "name": "E680-S Rudder Lock",
@@ -2711,7 +3451,9 @@
     "wood": 40
    },
    "crateQuantity": 1,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "windsockt": {
    "name": "Wind Sock",
@@ -2719,7 +3461,9 @@
     "cloth": 150
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "wood": {
    "name": "Refined Materials",
@@ -2727,7 +3471,9 @@
     "wood": 400
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   },
   "workhammer": {
    "name": "Hammer",
@@ -2735,7 +3481,9 @@
     "cloth": 20
    },
    "crateQuantity": 20,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "workwrench": {
    "name": "Wrench",
@@ -2743,13 +3491,17 @@
     "cloth": 75
    },
    "crateQuantity": 5,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "utility",
+   "faction": null
   },
   "wreckage": {
    "name": "Wreckage",
    "crateCost": null,
    "crateQuantity": null,
-   "isRawResource": false
+   "isRawResource": false,
+   "category": "supplies",
+   "faction": null
   }
  },
  "buildings": {

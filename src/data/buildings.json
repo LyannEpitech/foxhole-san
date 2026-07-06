@@ -179,5 +179,66 @@
   "kind": "AssemblyStation",
   "constructionCost": {},
   "prerequisites": []
+ },
+ {
+  "id": "oil-refinery",
+  "name": {
+   "en": "Oil Refinery",
+   "fr": "Raffinerie de pétrole"
+  },
+  "kind": "MaterialsFactory",
+  "constructionCost": {
+   "cmats": 50
+  },
+  "powerRequired": 1,
+  "prerequisites": []
+ },
+ {
+  "id": "concrete-mixer",
+  "name": {
+   "en": "Concrete Mixer",
+   "fr": "Bétonnière"
+  },
+  "kind": "MaterialsFactory",
+  "constructionCost": {
+   "rmats": 75
+  },
+  "prerequisites": []
+ },
+ {
+  "id": "infantry-kit-factory",
+  "name": {
+   "en": "Infantry Kit Factory",
+   "fr": "Usine d’équipement d’infanterie"
+  },
+  "kind": "MaterialsFactory",
+  "constructionCost": {
+   "cmats": 250
+  },
+  "powerRequired": 4,
+  "prerequisites": []
+ },
+ {
+  "id": "aircraft-maintenance-factory",
+  "name": {
+   "en": "Aircraft Maintenance Factory",
+   "fr": "Usine de maintenance aéronautique"
+  },
+  "kind": "MaterialsFactory",
+  "constructionCost": {
+   "pcmats": 250
+  },
+  "powerRequired": 4,
+  "prerequisites": []
+ },
+ {
+  "id": "offshore-platform",
+  "name": {
+   "en": "Offshore Platform",
+   "fr": "Plateforme offshore"
+  },
+  "kind": "MaterialsFactory",
+  "constructionCost": {},
+  "prerequisites": []
  }
 ]

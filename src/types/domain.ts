@@ -78,6 +78,8 @@ export type ItemCategory =
   | 'shippables'
   | 'vehicles'
   | 'naval'
+  | 'aircraft'
+  | 'trains'
   | 'uniforms';
 
 /** Transport capacity of a vehicle item (crates in its inventory). */

@@ -78,6 +78,8 @@ const itemSchema = z.object({
     'shippables',
     'vehicles',
     'naval',
+    'aircraft',
+    'trains',
     'uniforms',
   ]),
   faction: z.enum(['Colonial', 'Warden', 'Both']),

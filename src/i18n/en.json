@@ -25,6 +25,8 @@
     "shippables": "Shippables",
     "vehicles": "Vehicles",
     "naval": "Naval",
+    "aircraft": "Aircraft",
+    "trains": "Trains",
     "uniforms": "Uniforms"
   },
   "panels": {

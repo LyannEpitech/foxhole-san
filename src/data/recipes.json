@@ -1168,5 +1168,1750 @@
    }
   ],
   "timeSeconds": 0
+ },
+ {
+  "id": "v-ammunition-factory-flame-ammo",
+  "buildingId": "ammunition-factory",
+  "inputs": [
+   {
+    "refId": "hemats",
+    "qty": 4
+   },
+   {
+    "refId": "cmats",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "flame-ammo",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 25
+ },
+ {
+  "id": "v-ammunition-factory-unstable-substances",
+  "buildingId": "ammunition-factory",
+  "inputs": [
+   {
+    "refId": "hemats",
+    "qty": 8
+   },
+   {
+    "refId": "flame-ammo",
+    "qty": 3
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "unstable-substances",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 1800
+ },
+ {
+  "id": "v-concrete-mixer-concrete-materials",
+  "buildingId": "concrete-mixer",
+  "inputs": [
+   {
+    "refId": "components",
+    "qty": 20
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "concrete-materials",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 20
+ },
+ {
+  "id": "v-concrete-mixer-gravel",
+  "buildingId": "concrete-mixer",
+  "inputs": [
+   {
+    "refId": "coal",
+    "qty": 100
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "gravel",
+    "qty": 20
+   }
+  ],
+  "timeSeconds": 40
+ },
+ {
+  "id": "v-offshore-platform-enriched-oil",
+  "buildingId": "offshore-platform",
+  "inputs": [
+   {
+    "refId": "coal",
+    "qty": 100
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "enriched-oil",
+    "qty": 30
+   }
+  ],
+  "timeSeconds": 90
+ },
+ {
+  "id": "v-dry-dock-mercy",
+  "buildingId": "dry-dock",
+  "inputs": [
+   {
+    "refId": "naval-hull-segments",
+    "qty": 16
+   },
+   {
+    "refId": "naval-shell-plating",
+    "qty": 20
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "mercy",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 36000
+ },
+ {
+  "id": "v-dry-dock-poseidon",
+  "buildingId": "dry-dock",
+  "inputs": [
+   {
+    "refId": "naval-hull-segments",
+    "qty": 16
+   },
+   {
+    "refId": "naval-shell-plating",
+    "qty": 20
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "poseidon",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 36000
+ },
+ {
+  "id": "v-large-assembly-station-bms-black-bolt",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 200
+   },
+   {
+    "refId": "amats1",
+    "qty": 60
+   },
+   {
+    "refId": "amats4",
+    "qty": 50
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "bms-black-bolt",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 21600
+ },
+ {
+  "id": "v-large-assembly-station-bms-rockhold",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 20
+   },
+   {
+    "refId": "amats2",
+    "qty": 15
+   },
+   {
+    "refId": "amats3",
+    "qty": 5
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "bms-rockhold",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 1800
+ },
+ {
+  "id": "v-large-assembly-station-bms-holdout",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 20
+   },
+   {
+    "refId": "amats2",
+    "qty": 15
+   },
+   {
+    "refId": "amats3",
+    "qty": 5
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "bms-holdout",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 1800
+ },
+ {
+  "id": "v-large-assembly-station-bms-longrider",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 20
+   },
+   {
+    "refId": "amats2",
+    "qty": 15
+   },
+   {
+    "refId": "amats3",
+    "qty": 10
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "bms-longrider",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 1800
+ },
+ {
+  "id": "v-large-assembly-station-bms-roadhouse",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 20
+   },
+   {
+    "refId": "amats2",
+    "qty": 15
+   },
+   {
+    "refId": "amats3",
+    "qty": 5
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "bms-roadhouse",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 1800
+ },
+ {
+  "id": "v-large-assembly-station-toxot-902-blind-silver",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 40
+   },
+   {
+    "refId": "amats3",
+    "qty": 50
+   },
+   {
+    "refId": "amats4",
+    "qty": 50
+   },
+   {
+    "refId": "ralloys",
+    "qty": 2
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 10
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "toxot-902-blind-silver",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 14400
+ },
+ {
+  "id": "v-large-assembly-station-luminary-mk-ii-harbinger",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 40
+   },
+   {
+    "refId": "amats3",
+    "qty": 50
+   },
+   {
+    "refId": "amats4",
+    "qty": 50
+   },
+   {
+    "refId": "ralloys",
+    "qty": 2
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 10
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "luminary-mk-ii-harbinger",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 14400
+ },
+ {
+  "id": "v-large-assembly-station-tulka-i19-white-raven",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 40
+   },
+   {
+    "refId": "amats2",
+    "qty": 200
+   },
+   {
+    "refId": "amats3",
+    "qty": 50
+   },
+   {
+    "refId": "ralloys",
+    "qty": 2
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 10
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "tulka-i19-white-raven",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 14400
+ },
+ {
+  "id": "v-large-assembly-station-mergo-4-myrmidon",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 40
+   },
+   {
+    "refId": "amats1",
+    "qty": 85
+   },
+   {
+    "refId": "amats2",
+    "qty": 175
+   },
+   {
+    "refId": "amats3",
+    "qty": 50
+   },
+   {
+    "refId": "ralloys",
+    "qty": 4
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 10
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "mergo-4-myrmidon",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 14400
+ },
+ {
+  "id": "v-large-assembly-station-m925-austringer-man-o-war",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 25
+   },
+   {
+    "refId": "amats1",
+    "qty": 85
+   },
+   {
+    "refId": "amats2",
+    "qty": 100
+   },
+   {
+    "refId": "amats3",
+    "qty": 20
+   },
+   {
+    "refId": "ralloys",
+    "qty": 6
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 10
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "m925-austringer-man-o-war",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 14400
+ },
+ {
+  "id": "v-large-assembly-station-v-5b-pegasus",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 5
+   },
+   {
+    "refId": "amats3",
+    "qty": 20
+   },
+   {
+    "refId": "amats4",
+    "qty": 20
+   },
+   {
+    "refId": "ralloys",
+    "qty": 4
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 10
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "v-5b-pegasus",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 21600
+ },
+ {
+  "id": "v-large-assembly-station-rinnspeir-mk-i-zealot",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 5
+   },
+   {
+    "refId": "amats3",
+    "qty": 20
+   },
+   {
+    "refId": "amats4",
+    "qty": 20
+   },
+   {
+    "refId": "ralloys",
+    "qty": 4
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 10
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "rinnspeir-mk-i-zealot",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 21600
+ },
+ {
+  "id": "v-large-assembly-station-v-1-tzykalia",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 60
+   },
+   {
+    "refId": "amats5",
+    "qty": 65
+   },
+   {
+    "refId": "amats3",
+    "qty": 25
+   },
+   {
+    "refId": "amats4",
+    "qty": 40
+   },
+   {
+    "refId": "ralloys",
+    "qty": 12
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 10
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "v-1-tzykalia",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 28800
+ },
+ {
+  "id": "v-large-assembly-station-tulka-p4-welkinrive",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 60
+   },
+   {
+    "refId": "amats5",
+    "qty": 65
+   },
+   {
+    "refId": "amats3",
+    "qty": 25
+   },
+   {
+    "refId": "amats4",
+    "qty": 40
+   },
+   {
+    "refId": "ralloys",
+    "qty": 12
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 10
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "tulka-p4-welkinrive",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 28800
+ },
+ {
+  "id": "v-large-assembly-station-aegis-steelbreaker-k5a",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 30
+   },
+   {
+    "refId": "amats1",
+    "qty": 30
+   },
+   {
+    "refId": "amats4",
+    "qty": 30
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "aegis-steelbreaker-k5a",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 1800
+ },
+ {
+  "id": "v-large-assembly-station-obrien-warsmith-v215",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 30
+   },
+   {
+    "refId": "amats1",
+    "qty": 30
+   },
+   {
+    "refId": "amats4",
+    "qty": 30
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "obrien-warsmith-v215",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 1800
+ },
+ {
+  "id": "v-large-assembly-station-bms-bloodtender",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 60
+   },
+   {
+    "refId": "amats3",
+    "qty": 45
+   },
+   {
+    "refId": "amats4",
+    "qty": 55
+   },
+   {
+    "refId": "amats5",
+    "qty": 40
+   },
+   {
+    "refId": "ralloys",
+    "qty": 2
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "bms-bloodtender",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 129600
+ },
+ {
+  "id": "v-large-assembly-station-tempest-cannon-ra-2",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 285
+   },
+   {
+    "refId": "amats3",
+    "qty": 95
+   },
+   {
+    "refId": "amats4",
+    "qty": 105
+   },
+   {
+    "refId": "amats5",
+    "qty": 105
+   },
+   {
+    "refId": "ralloys",
+    "qty": 35
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 45
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "tempest-cannon-ra-2",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 259200
+ },
+ {
+  "id": "v-large-assembly-station-lance-36",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 50
+   },
+   {
+    "refId": "amats3",
+    "qty": 30
+   },
+   {
+    "refId": "amats4",
+    "qty": 60
+   },
+   {
+    "refId": "amats5",
+    "qty": 35
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "lance-36",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 64800
+ },
+ {
+  "id": "v-large-assembly-station-flood-mk-i",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 50
+   },
+   {
+    "refId": "amats3",
+    "qty": 30
+   },
+   {
+    "refId": "amats4",
+    "qty": 60
+   },
+   {
+    "refId": "amats5",
+    "qty": 35
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "flood-mk-i",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 64800
+ },
+ {
+  "id": "v-large-assembly-station-lance-25-hasta",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 60
+   },
+   {
+    "refId": "amats3",
+    "qty": 65
+   },
+   {
+    "refId": "amats4",
+    "qty": 45
+   },
+   {
+    "refId": "amats5",
+    "qty": 65
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "lance-25-hasta",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 86400
+ },
+ {
+  "id": "v-large-assembly-station-flood-juggernaut-mk-vii",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 40
+   },
+   {
+    "refId": "amats3",
+    "qty": 65
+   },
+   {
+    "refId": "amats4",
+    "qty": 30
+   },
+   {
+    "refId": "amats5",
+    "qty": 45
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "flood-juggernaut-mk-vii",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 79200
+ },
+ {
+  "id": "v-large-assembly-station-o-75b-ares",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 275
+   },
+   {
+    "refId": "amats5",
+    "qty": 105
+   },
+   {
+    "refId": "amats3",
+    "qty": 105
+   },
+   {
+    "refId": "amats4",
+    "qty": 95
+   },
+   {
+    "refId": "ralloys",
+    "qty": 3
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "o-75b-ares",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 172800
+ },
+ {
+  "id": "v-large-assembly-station-cullen-predator-mk-iii",
+  "buildingId": "large-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 275
+   },
+   {
+    "refId": "amats5",
+    "qty": 105
+   },
+   {
+    "refId": "amats3",
+    "qty": 105
+   },
+   {
+    "refId": "amats4",
+    "qty": 95
+   },
+   {
+    "refId": "ralloys",
+    "qty": 3
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "cullen-predator-mk-iii",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 172800
+ },
+ {
+  "id": "v-small-assembly-station-bms-mineseeker",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "cmats",
+    "qty": 125
+   },
+   {
+    "refId": "amats1",
+    "qty": 10
+   },
+   {
+    "refId": "amats2",
+    "qty": 20
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "bms-mineseeker",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 900
+ },
+ {
+  "id": "v-small-assembly-station-bms-railtruck",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "cmats",
+    "qty": 35
+   },
+   {
+    "refId": "amats1",
+    "qty": 15
+   },
+   {
+    "refId": "amats2",
+    "qty": 5
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "bms-railtruck",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "v-small-assembly-station-bms-linerunner",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "cmats",
+    "qty": 35
+   },
+   {
+    "refId": "amats1",
+    "qty": 15
+   },
+   {
+    "refId": "amats2",
+    "qty": 5
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "bms-linerunner",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "v-small-assembly-station-r-12b-salva-flame-truck",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "r-12-salus-ambulance",
+    "qty": 1
+   },
+   {
+    "refId": "cmats",
+    "qty": 15
+   },
+   {
+    "refId": "amats2",
+    "qty": 5
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "r-12b-salva-flame-truck",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "v-small-assembly-station-dunne-dousing-engine-3r",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "dunne-responder-3e",
+    "qty": 1
+   },
+   {
+    "refId": "cmats",
+    "qty": 15
+   },
+   {
+    "refId": "amats2",
+    "qty": 5
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "dunne-dousing-engine-3r",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "v-small-assembly-station-bms-tinderbox",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "cmats",
+    "qty": 35
+   },
+   {
+    "refId": "amats1",
+    "qty": 5
+   },
+   {
+    "refId": "amats2",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "bms-tinderbox",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "v-small-assembly-station-bms-stowheel",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "cmats",
+    "qty": 35
+   },
+   {
+    "refId": "amats1",
+    "qty": 5
+   },
+   {
+    "refId": "amats2",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "bms-stowheel",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "v-small-assembly-station-t14-vesta-tankette",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "t12-actaeon-tankette",
+    "qty": 1
+   },
+   {
+    "refId": "pcmats",
+    "qty": 10
+   },
+   {
+    "refId": "amats1",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "t14-vesta-tankette",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 600
+ },
+ {
+  "id": "v-small-assembly-station-obrien-v130-wild-jack",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "obrien-v110",
+    "qty": 1
+   },
+   {
+    "refId": "cmats",
+    "qty": 10
+   },
+   {
+    "refId": "amats1",
+    "qty": 10
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "obrien-v130-wild-jack",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "v-small-assembly-station-ga6-cestus",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "g40-sagittarii",
+    "qty": 1
+   },
+   {
+    "refId": "cmats",
+    "qty": 30
+   },
+   {
+    "refId": "amats2",
+    "qty": 20
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "ga6-cestus",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 600
+ },
+ {
+  "id": "v-small-assembly-station-duncans-coin-145mm",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "swallowtail-988-127-2",
+    "qty": 1
+   },
+   {
+    "refId": "cmats",
+    "qty": 30
+   },
+   {
+    "refId": "amats2",
+    "qty": 20
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "duncans-coin-145mm",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 600
+ },
+ {
+  "id": "v-small-assembly-station-king-jester-mk-i-1",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "king-spire-mk-i",
+    "qty": 1
+   },
+   {
+    "refId": "scmats",
+    "qty": 5
+   },
+   {
+    "refId": "amats1",
+    "qty": 15
+   },
+   {
+    "refId": "amats3",
+    "qty": 3
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "king-jester-mk-i-1",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 600
+ },
+ {
+  "id": "v-small-assembly-station-niska-mk-iii-scar-twin",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "niska-mk-i-gun-motor-carriage",
+    "qty": 1
+   },
+   {
+    "refId": "pcmats",
+    "qty": 5
+   },
+   {
+    "refId": "amats4",
+    "qty": 5
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "niska-mk-iii-scar-twin",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "v-small-assembly-station-40-45-smelter",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "aa-2-battering-ram",
+    "qty": 1
+   },
+   {
+    "refId": "pcmats",
+    "qty": 5
+   },
+   {
+    "refId": "amats4",
+    "qty": 5
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "40-45-smelter",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "v-small-assembly-station-balfour-rampart-68mm",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "collins-cannon-68mm",
+    "qty": 1
+   },
+   {
+    "refId": "pcmats",
+    "qty": 5
+   },
+   {
+    "refId": "amats4",
+    "qty": 5
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "balfour-rampart-68mm",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "v-small-assembly-station-au-a150-taurine-rigger",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 40
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "au-a150-taurine-rigger",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 600
+ },
+ {
+  "id": "v-small-assembly-station-cnute-cliffwrest",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 40
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "cnute-cliffwrest",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 600
+ },
+ {
+  "id": "v-small-assembly-station-noble-firebrand-mk-xvii",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "noble-widow-mk-xiv",
+    "qty": 1
+   },
+   {
+    "refId": "pcmats",
+    "qty": 10
+   },
+   {
+    "refId": "amats2",
+    "qty": 10
+   },
+   {
+    "refId": "amats3",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "noble-firebrand-mk-xvii",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 420
+ },
+ {
+  "id": "v-small-assembly-station-h-19-vulcan",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "h5-hatchet",
+    "qty": 1
+   },
+   {
+    "refId": "pcmats",
+    "qty": 8
+   },
+   {
+    "refId": "amats2",
+    "qty": 20
+   },
+   {
+    "refId": "amats3",
+    "qty": 5
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "h-19-vulcan",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "v-small-assembly-station-86k-c-ranseur",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "86k-a-bardiche",
+    "qty": 1
+   },
+   {
+    "refId": "pcmats",
+    "qty": 10
+   },
+   {
+    "refId": "amats2",
+    "qty": 10
+   },
+   {
+    "refId": "amats3",
+    "qty": 10
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "86k-c-ranseur",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 420
+ },
+ {
+  "id": "v-small-assembly-station-dae-2a-1-ruptura",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 135
+   },
+   {
+    "refId": "amats1",
+    "qty": 10
+   },
+   {
+    "refId": "amats4",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "dae-2a-1-ruptura",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 600
+ },
+ {
+  "id": "v-small-assembly-station-gallagher-highwayman-mk-iii",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "gallagher-brigand-mk-i",
+    "qty": 1
+   },
+   {
+    "refId": "pcmats",
+    "qty": 5
+   },
+   {
+    "refId": "amats2",
+    "qty": 10
+   },
+   {
+    "refId": "amats3",
+    "qty": 5
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "gallagher-highwayman-mk-iii",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 420
+ },
+ {
+  "id": "v-small-assembly-station-huber-starbreaker-945mm",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 135
+   },
+   {
+    "refId": "amats1",
+    "qty": 10
+   },
+   {
+    "refId": "amats4",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "huber-starbreaker-945mm",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 600
+ },
+ {
+  "id": "v-small-assembly-station-85v-g-talos",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "85k-b-falchion",
+    "qty": 1
+   },
+   {
+    "refId": "scmats",
+    "qty": 3
+   },
+   {
+    "refId": "amats1",
+    "qty": 10
+   },
+   {
+    "refId": "amats4",
+    "qty": 15
+   },
+   {
+    "refId": "amats3",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "85v-g-talos",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 600
+ },
+ {
+  "id": "v-small-assembly-station-gallagher-thornfall-mk-vi",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "gallagher-brigand-mk-i",
+    "qty": 1
+   },
+   {
+    "refId": "pcmats",
+    "qty": 60
+   },
+   {
+    "refId": "amats1",
+    "qty": 10
+   },
+   {
+    "refId": "amats4",
+    "qty": 15
+   },
+   {
+    "refId": "amats3",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "gallagher-thornfall-mk-vi",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 600
+ },
+ {
+  "id": "v-small-assembly-station-silverhand-lordscar-mk-x",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "silverhand-mk-iv",
+    "qty": 1
+   },
+   {
+    "refId": "scmats",
+    "qty": 15
+   },
+   {
+    "refId": "amats2",
+    "qty": 25
+   },
+   {
+    "refId": "amats3",
+    "qty": 25
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "silverhand-lordscar-mk-x",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 600
+ },
+ {
+  "id": "v-small-assembly-station-945g-stygian-bolt",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "aa-2-battering-ram",
+    "qty": 1
+   },
+   {
+    "refId": "scmats",
+    "qty": 15
+   },
+   {
+    "refId": "amats2",
+    "qty": 20
+   },
+   {
+    "refId": "amats3",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "945g-stygian-bolt",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 420
+ },
+ {
+  "id": "v-small-assembly-station-balfour-stockade-75mm",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "balfour-wolfhound-40mm",
+    "qty": 1
+   },
+   {
+    "refId": "scmats",
+    "qty": 15
+   },
+   {
+    "refId": "amats2",
+    "qty": 20
+   },
+   {
+    "refId": "amats3",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "balfour-stockade-75mm",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 420
+ },
+ {
+  "id": "v-small-assembly-station-40-250-alekto-heavy-cannon",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "30-250-tisiphone-field-cannon",
+    "qty": 1
+   },
+   {
+    "refId": "scmats",
+    "qty": 10
+   },
+   {
+    "refId": "amats2",
+    "qty": 20
+   },
+   {
+    "refId": "amats3",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "40-250-alekto-heavy-cannon",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 420
+ },
+ {
+  "id": "v-small-assembly-station-a0e-9-rocket-body",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "scmats",
+    "qty": 20
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 75
+   },
+   {
+    "refId": "amats1",
+    "qty": 65
+   },
+   {
+    "refId": "amats5",
+    "qty": 25
+   },
+   {
+    "refId": "ralloys",
+    "qty": 125
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "a0e-9-rocket-body",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 86400
+ },
+ {
+  "id": "v-small-assembly-station-a0e-9-rocket-warhead",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "ralloys",
+    "qty": 75
+   },
+   {
+    "refId": "unstable-substances",
+    "qty": 165
+   },
+   {
+    "refId": "amats3",
+    "qty": 45
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "a0e-9-rocket-warhead",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 86400
+ },
+ {
+  "id": "v-materials-factory-maintenance-supplies",
+  "buildingId": "materials-factory",
+  "inputs": [
+   {
+    "refId": "salvage",
+    "qty": 150
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "maintenance-supplies",
+    "qty": 20
+   }
+  ],
+  "timeSeconds": 40
+ },
+ {
+  "id": "v-oil-refinery-petrol",
+  "buildingId": "oil-refinery",
+  "inputs": [
+   {
+    "refId": "oil",
+    "qty": 50
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "petrol",
+    "qty": 50
+   }
+  ],
+  "timeSeconds": 50
+ },
+ {
+  "id": "v-oil-refinery-heavy-oil",
+  "buildingId": "oil-refinery",
+  "inputs": [
+   {
+    "refId": "oil",
+    "qty": 50
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "heavy-oil",
+    "qty": 30
+   }
+  ],
+  "timeSeconds": 55
  }
 ]

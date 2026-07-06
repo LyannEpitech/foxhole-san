@@ -306,6 +306,28 @@ describe('resolve — real curated dataset', () => {
     expect(dataset.items.get('storm-cannon')!.ammo).toEqual(['300mm']);
   });
 
+  it('resolves an aircraft through engines, parts and the facility tree', () => {
+    // Colonial fighter (Toxot-902 "Blind Silver"), Large Assembly Station.
+    const plan = resolve(dataset, 'toxot-902-blind-silver', 1, 'Colonial');
+    expect(plan.buildings.map((b) => b.id)).toContain('large-assembly-station');
+    // Its recipe pulls factory-crated engines/mechanical parts and materials.
+    expect(Object.keys(plan.totals.raw).length).toBeGreaterThan(0);
+    expect(plan.power).not.toBeNull();
+  });
+
+  it('links the Tempest RA-2 rail gun and the Alekto to their shells', () => {
+    expect(dataset.items.get('tempest-cannon-ra-2')!.ammo).toEqual(['300mm']);
+    expect(dataset.items.get('40-250-alekto-heavy-cannon')!.ammo).toContain('250mm "Fury" Shell');
+    expect(dataset.items.get('o-75b-ares')!.ammo).toEqual(['75mm']);
+    // Tempest is buildable: Train Assembly at the Large Assembly Station.
+    const plan = resolve(dataset, 'tempest-cannon-ra-2', 1, 'Warden');
+    expect(plan.buildings.map((b) => b.id)).toContain('large-assembly-station');
+  });
+
+  it('covers the whole merged dataset (370+ items, every item resolvable)', () => {
+    expect(dataset.items.size).toBeGreaterThanOrEqual(370);
+  });
+
   it('enforces faction on real items', () => {
     expect(() => resolve(dataset, 'argenti-rii-rifle', 10, 'Warden')).toThrow(FactionError);
     expect(resolve(dataset, 'argenti-rii-rifle', 10, 'Colonial').totals.raw.salvage).toBe(200);

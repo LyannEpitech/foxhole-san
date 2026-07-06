@@ -104,6 +104,14 @@ src/
   `src/data/vendor/foxholeplanner-extract.json` (376 ressources, recettes
   réelles des facilities) — croisé avec le wiki, les deux concordent.
 
+### Régénérer depuis l'extrait vendor
+
+`node tools/integrate-vendor.mjs` — idempotent. Réintègre l'extrait de données
+de jeu (`src/data/vendor/foxholeplanner-extract.json`) : ressources, bâtiments
+facility, recettes, items d'usine manquants, véhicules/avions/trains construits
+en facility. Le rapport liste tout ce qui est volontairement exclu (caisses
+alternatives, épaves, variantes endommagées…).
+
 ## Étendre les données
 
 Pour ajouter/corriger un objet :

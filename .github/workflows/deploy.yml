@@ -24,7 +24,11 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run lint
+      - run: npx tsc -b
       - run: npm run test
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
       - run: npx vite build --base=/foxhole-san/
       - uses: actions/upload-pages-artifact@v3
         with:

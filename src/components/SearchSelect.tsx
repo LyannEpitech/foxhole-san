@@ -56,6 +56,16 @@ export function SearchSelect({ groups, value, onChange, placeholder, className }
   }, [groups, query]);
 
   const flat = useMemo(() => filtered.flatMap((g) => g.options), [filtered]);
+  // Global option index per group, precomputed so render stays pure.
+  const groupStartIndex = useMemo(() => {
+    const starts: number[] = [];
+    let acc = 0;
+    for (const g of filtered) {
+      starts.push(acc);
+      acc += g.options.length;
+    }
+    return starts;
+  }, [filtered]);
 
   // Close on outside click.
   useEffect(() => {
@@ -99,8 +109,6 @@ export function SearchSelect({ groups, value, onChange, placeholder, className }
     }
   };
 
-  let index = -1;
-
   return (
     <div ref={rootRef} className={`relative ${className ?? ''}`}>
       <input
@@ -136,14 +144,13 @@ export function SearchSelect({ groups, value, onChange, placeholder, className }
           {flat.length === 0 && (
             <p className="px-3 py-2 text-sm text-slate-500">{t('search.noResults')}</p>
           )}
-          {filtered.map((group) => (
+          {filtered.map((group, gi) => (
             <div key={group.label}>
               <div className="px-3 pt-2 pb-1 text-[10px] font-semibold uppercase tracking-wide text-slate-500 sticky top-0 bg-slate-900">
                 {group.label}
               </div>
-              {group.options.map((option) => {
-                index += 1;
-                const i = index;
+              {group.options.map((option, oi) => {
+                const i = groupStartIndex[gi] + oi;
                 return (
                   <button
                     key={option.value}

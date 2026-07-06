@@ -122,9 +122,13 @@ export function HexMap({
   const [strokePoints, setStrokePoints] = useState<[number, number][] | null>(null);
   const [pendingText, setPendingText] = useState<[number, number] | null>(null);
   /** Hovered API marker + its position in CSS pixels inside the wrapper. */
-  const [hoverInfo, setHoverInfo] = useState<{ marker: ApiMarker; px: number; py: number } | null>(
-    null,
-  );
+  const [hoverInfo, setHoverInfo] = useState<{
+    marker: ApiMarker;
+    px: number;
+    py: number;
+    /** Container width at hover time, to flip the tooltip near the edge. */
+    w: number;
+  } | null>(null);
 
   const vw = VIEW.w / zoom;
   const vh = VIEW.h / zoom;
@@ -456,7 +460,12 @@ export function HexMap({
           pointerEvents={tool === 'pan' ? 'auto' : 'none'}
           onMouseEnter={(e) => {
             const rect = svgRef.current!.getBoundingClientRect();
-            setHoverInfo({ marker: m, px: e.clientX - rect.left, py: e.clientY - rect.top });
+            setHoverInfo({
+              marker: m,
+              px: e.clientX - rect.left,
+              py: e.clientY - rect.top,
+              w: rect.width,
+            });
           }}
           onMouseLeave={() => setHoverInfo((h) => (h?.marker === m ? null : h))}
         >
@@ -685,7 +694,7 @@ export function HexMap({
           left: hoverInfo.px,
           top: hoverInfo.py,
           borderColor: hoverInfo.marker.ringColor,
-          transform: `translate(${hoverInfo.px > 0.6 * (svgRef.current?.clientWidth ?? 600) ? 'calc(-100% - 14px)' : '14px'}, calc(-50% ))`,
+          transform: `translate(${hoverInfo.px > 0.6 * hoverInfo.w ? 'calc(-100% - 14px)' : '14px'}, calc(-50%))`,
         }}
       >
         <div className="font-semibold text-slate-100 text-sm leading-tight">

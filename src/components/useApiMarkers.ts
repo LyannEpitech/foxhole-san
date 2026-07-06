@@ -64,6 +64,6 @@ export function useApiMarkers(): ApiMarker[] {
       }
     }
     return out;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+     
   }, [items, layers, localized, t]);
 }

@@ -52,7 +52,33 @@
   "timeline": {
     "none": "No timed production step",
     "makespan": "Total duration (parallel queues)",
-    "incomplete": "Partial: some craft times are unknown — this is a lower bound."
+    "incomplete": "Partial: some craft times are unknown — this is a lower bound.",
+    "start": "Start at",
+    "readyAt": "Ready at"
+  },
+  "refinery": {
+    "title": "Refinery queue calculator",
+    "recipe": "Recipe",
+    "rawAmount": "Raw amount",
+    "queues": "Parallel queues",
+    "result": "Output",
+    "notify": "Notify me",
+    "notifyScheduled": "Notification scheduled",
+    "notifyDenied": "Notifications blocked",
+    "notifyHint": "Fires a browser notification when the queue completes (tab must stay open).",
+    "notifTitle": "Refinery queue complete",
+    "notifBody": "{{qty}} {{name}} ready to collect."
+  },
+  "export": {
+    "discord": "Copy for Discord",
+    "csv": "CSV",
+    "copied": "Copied"
+  },
+  "presets": {
+    "title": "Loadout presets",
+    "namePlaceholder": "Preset name…",
+    "save": "Save",
+    "apply": "Apply"
   },
   "energy": {
     "none": "No powered facility in this chain",
@@ -113,7 +139,9 @@
       "drawEnemy": "Freehand (enemy)",
       "text": "Text label",
       "erase": "Erase annotation",
-      "clear": "Clear all"
+      "clear": "Clear all",
+      "undo": "Undo",
+      "redo": "Redo"
     },
     "hint": {
       "friendly": "click the map to place",

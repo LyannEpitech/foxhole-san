@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 import type { CargoRow } from '../lib/logistics';
 
 interface LogiState {
@@ -16,7 +17,7 @@ interface LogiState {
   moveWaypoint: (index: number, delta: -1 | 1) => void;
 }
 
-export const useLogiStore = create<LogiState>((set) => ({
+export const useLogiStore = create<LogiState>()(persist((set) => ({
   cargo: [],
   vehicleItemId: null,
   waypoints: [],
@@ -40,4 +41,7 @@ export const useLogiStore = create<LogiState>((set) => ({
       [waypoints[index], waypoints[target]] = [waypoints[target], waypoints[index]];
       return { waypoints };
     }),
+}), {
+  name: 'fsak-logi',
+  partialize: (s) => ({ cargo: s.cargo, vehicleItemId: s.vehicleItemId, waypoints: s.waypoints }),
 }));

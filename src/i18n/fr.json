@@ -52,7 +52,33 @@
   "timeline": {
     "none": "Aucune étape de production chronométrée",
     "makespan": "Durée totale (files en parallèle)",
-    "incomplete": "Partiel : certains temps de fabrication sont inconnus — c'est une borne basse."
+    "incomplete": "Partiel : certains temps de fabrication sont inconnus — c'est une borne basse.",
+    "start": "Départ à",
+    "readyAt": "Prêt à"
+  },
+  "refinery": {
+    "title": "Calculateur de files de raffinerie",
+    "recipe": "Recette",
+    "rawAmount": "Quantité brute",
+    "queues": "Files en parallèle",
+    "result": "Sortie",
+    "notify": "Me notifier",
+    "notifyScheduled": "Notification programmée",
+    "notifyDenied": "Notifications bloquées",
+    "notifyHint": "Notification navigateur à la fin de la file (l'onglet doit rester ouvert).",
+    "notifTitle": "File de raffinerie terminée",
+    "notifBody": "{{qty}} {{name}} prêts à récupérer."
+  },
+  "export": {
+    "discord": "Copier pour Discord",
+    "csv": "CSV",
+    "copied": "Copié"
+  },
+  "presets": {
+    "title": "Presets d'équipement",
+    "namePlaceholder": "Nom du preset…",
+    "save": "Sauver",
+    "apply": "Appliquer"
   },
   "energy": {
     "none": "Aucune installation électrifiée dans cette chaîne",
@@ -113,7 +139,9 @@
       "drawEnemy": "Main levée (ennemi)",
       "text": "Texte",
       "erase": "Effacer une annotation",
-      "clear": "Tout effacer"
+      "clear": "Tout effacer",
+      "undo": "Annuler",
+      "redo": "Rétablir"
     },
     "hint": {
       "friendly": "cliquez sur la carte pour placer",

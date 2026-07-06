@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Region } from '../data/regions';
 import { useAnnotationStore, type ToolId } from '../store/annotationStore';
@@ -33,7 +34,7 @@ function ToolIcon({ children }: { children: React.ReactNode }) {
   );
 }
 
-const TOOL_ICONS: Record<Exclude<ToolId, never> | 'clear', React.ReactNode> = {
+const TOOL_ICONS: Record<Exclude<ToolId, never> | 'clear' | 'undo' | 'redo', React.ReactNode> = {
   pan: (
     <ToolIcon>
       <path d="M12 2v20M2 12h20M12 2l-3 3M12 2l3 3M12 22l-3-3M12 22l3-3M2 12l3-3M2 12l3 3M22 12l-3-3M22 12l-3 3" />
@@ -89,6 +90,18 @@ const TOOL_ICONS: Record<Exclude<ToolId, never> | 'clear', React.ReactNode> = {
       <path d="M10 9l5 5M21 19H11" />
     </ToolIcon>
   ),
+  undo: (
+    <ToolIcon>
+      <path d="M9 14L4 9l5-5" />
+      <path d="M4 9h10a6 6 0 010 12h-3" />
+    </ToolIcon>
+  ),
+  redo: (
+    <ToolIcon>
+      <path d="M15 14l5-5-5-5" />
+      <path d="M20 9H10a6 6 0 000 12h3" />
+    </ToolIcon>
+  ),
   clear: (
     <ToolIcon>
       <path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 10v6M14 10v6" />
@@ -128,9 +141,28 @@ export function PlanMap({
   extraControls,
 }: Props) {
   const { t } = useTranslation();
-  const { annotations, tool, setTool, addPoint, addArrow, addStroke, addText, remove, clear } =
-    useAnnotationStore();
+  const { annotations, tool, setTool, addPoint, addArrow, addStroke, addText, remove, clear,
+    undo, redo, past, future } = useAnnotationStore();
   const apiMarkers = useApiMarkers();
+
+  // A2.2 — Ctrl+Z / Ctrl+Y (or Ctrl+Shift+Z) for annotation undo/redo.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (!(e.ctrlKey || e.metaKey)) return;
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
+      if (e.key.toLowerCase() === 'z') {
+        e.preventDefault();
+        if (e.shiftKey) redo();
+        else undo();
+      } else if (e.key.toLowerCase() === 'y') {
+        e.preventDefault();
+        redo();
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [undo, redo]);
 
   const onAddPoint = (pos: [number, number]) => {
     if (tool === 'friendly' || tool === 'enemy' || tool === 'danger') addPoint(tool, pos);
@@ -187,6 +219,28 @@ export function PlanMap({
               ))}
             </div>
           ))}
+          {(past.length > 0 || future.length > 0) && (
+            <div className="flex items-center gap-1 bg-slate-900/85 backdrop-blur border border-slate-700 rounded-lg p-1 shadow-lg">
+              <button
+                type="button"
+                title={`${t('map.tool.undo')} (Ctrl+Z)`}
+                onClick={undo}
+                disabled={past.length === 0}
+                className="w-9 h-9 flex items-center justify-center rounded-md text-slate-200 hover:bg-slate-700 disabled:opacity-30"
+              >
+                {TOOL_ICONS.undo}
+              </button>
+              <button
+                type="button"
+                title={`${t('map.tool.redo')} (Ctrl+Y)`}
+                onClick={redo}
+                disabled={future.length === 0}
+                className="w-9 h-9 flex items-center justify-center rounded-md text-slate-200 hover:bg-slate-700 disabled:opacity-30"
+              >
+                {TOOL_ICONS.redo}
+              </button>
+            </div>
+          )}
           {annotations.length > 0 && (
             <button
               type="button"

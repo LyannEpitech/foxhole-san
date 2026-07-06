@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { dataset } from '../data';
 import { DIESEL_POWER_PLANT } from '../data/power';
@@ -15,18 +16,45 @@ export function formatDuration(seconds: number): string {
   return `${sec}s`;
 }
 
-/** ⏱ Per-building production queue durations + makespan. */
+/** datetime-local value for a Date, in local time. */
+export function toLocalInputValue(d: Date): string {
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+}
+
+/** Localized "ready at" clock time (adds the date when it rolls past today). */
+export function formatReadyAt(ready: Date, locale: string): string {
+  const sameDay = ready.toDateString() === new Date().toDateString();
+  return new Intl.DateTimeFormat(locale, {
+    ...(sameDay ? {} : { weekday: 'short', day: 'numeric' }),
+    hour: '2-digit',
+    minute: '2-digit',
+  }).format(ready);
+}
+
+/** ⏱ Per-building production queue durations + makespan, in real time. */
 export function TimelinePanel({ result }: { result: PlanSummary }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const localized = useLocalized();
+  const [start, setStart] = useState(() => new Date());
 
   if (result.buildingTimes.length === 0) {
     return <p className="text-sm text-slate-500">{t('timeline.none')}</p>;
   }
   const makespan = result.buildingTimes.reduce((max, bt) => Math.max(max, bt.seconds), 0);
+  const readyAt = new Date(start.getTime() + makespan * 1000);
 
   return (
     <div className="space-y-2 text-sm">
+      <div className="flex items-center justify-between gap-3">
+        <label className="text-slate-400 text-xs">{t('timeline.start')}</label>
+        <input
+          type="datetime-local"
+          value={toLocalInputValue(start)}
+          onChange={(e) => e.target.value && setStart(new Date(e.target.value))}
+          className="bg-slate-900 border border-slate-600 rounded-md px-2 py-1 text-xs text-slate-100"
+        />
+      </div>
       {result.buildingTimes.map((bt) => {
         const building = dataset.buildings.get(bt.buildingId);
         return (
@@ -41,6 +69,10 @@ export function TimelinePanel({ result }: { result: PlanSummary }) {
       <div className="flex justify-between gap-4 border-t border-slate-700 pt-2">
         <span className="text-slate-300">{t('timeline.makespan')}</span>
         <span className="font-mono text-amber-300">{formatDuration(makespan)}</span>
+      </div>
+      <div className="flex justify-between gap-4">
+        <span className="text-slate-300">{t('timeline.readyAt')}</span>
+        <span className="font-mono text-emerald-300">{formatReadyAt(readyAt, i18n.language)}</span>
       </div>
       {result.timesIncomplete && (
         <p className="text-xs text-yellow-400/80">⚠ {t('timeline.incomplete')}</p>

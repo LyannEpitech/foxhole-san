@@ -49,7 +49,12 @@ export function AttackModule() {
     updateSupportRow,
     removeSupportRow,
     applyDefaultLoadout,
+    presets,
+    savePreset,
+    applyPreset,
+    deletePreset,
   } = useAttackStore();
+  const [presetName, setPresetName] = useState('');
   const logi = useLogiStore();
   const setActive = useUiStore((s) => s.setActive);
   const [mode, setMode] = useState<MarkerMode>('objective');
@@ -239,6 +244,53 @@ export function AttackModule() {
           >
             + {t('attack.addRow')}
           </button>
+
+          {/* A4.1 — named loadout presets */}
+          <div className="mt-4 border-t border-slate-800 pt-3">
+            <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-400 mb-2">
+              {t('presets.title')}
+            </h4>
+            <div className="flex gap-2">
+              <input
+                value={presetName}
+                onChange={(e) => setPresetName(e.target.value)}
+                placeholder={t('presets.namePlaceholder')}
+                className={`${inputCls} grow min-w-0 text-sm`}
+              />
+              <button
+                type="button"
+                disabled={!presetName.trim()}
+                onClick={() => { savePreset(presetName.trim()); setPresetName(''); }}
+                className="text-sm px-3 py-1.5 rounded-md bg-slate-700 hover:bg-slate-600 text-slate-100 disabled:opacity-40"
+              >
+                💾 {t('presets.save')}
+              </button>
+            </div>
+            {presets.length > 0 && (
+              <ul className="mt-2 space-y-1">
+                {presets.map((p) => (
+                  <li key={p.name} className="flex items-center gap-2 text-sm bg-slate-800/60 border border-slate-700 rounded-md px-3 py-1.5">
+                    <span className="text-slate-100 grow truncate">{p.name}</span>
+                    <button
+                      type="button"
+                      onClick={() => applyPreset(p.name)}
+                      className="text-xs px-2 py-0.5 rounded bg-slate-700 hover:bg-slate-600 text-amber-200"
+                    >
+                      {t('presets.apply')}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => deletePreset(p.name)}
+                      className="text-red-400 hover:text-red-300"
+                      aria-label="delete"
+                    >
+                      ✕
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </Section>
 
         {/* Support */}

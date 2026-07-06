@@ -12,7 +12,10 @@
   },
   "amountProduced": 40,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "8mm"
+  ]
  },
  {
   "id": "8mm",
@@ -42,7 +45,10 @@
   },
   "amountProduced": 30,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   ".44"
+  ]
  },
  {
   "id": "the-hangman-757",
@@ -57,7 +63,10 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   ".44"
+  ]
  },
  {
   "id": "44",
@@ -88,7 +97,10 @@
   "amountProduced": 20,
   "producedBy": "factory",
   "isMfpCraftable": true,
-  "craftTimeSeconds": 70
+  "craftTimeSeconds": 70,
+  "ammo": [
+   "7.62mm"
+  ]
  },
  {
   "id": "blakerow-871",
@@ -103,7 +115,10 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "7.62mm"
+  ]
  },
  {
   "id": "clancy-cinder-m3",
@@ -118,7 +133,10 @@
   },
   "amountProduced": 15,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "7.62mm"
+  ]
  },
  {
   "id": "sampo-auto-rifle-77",
@@ -133,7 +151,10 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "7.62mm"
+  ]
  },
  {
   "id": "argenti-rii-rifle",
@@ -149,7 +170,10 @@
   "amountProduced": 20,
   "producedBy": "factory",
   "isMfpCraftable": true,
-  "craftTimeSeconds": 70
+  "craftTimeSeconds": 70,
+  "ammo": [
+   "7.62mm"
+  ]
  },
  {
   "id": "fuscina-pii",
@@ -164,7 +188,10 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "7.62mm"
+  ]
  },
  {
   "id": "krr2-790-omen",
@@ -179,7 +206,10 @@
   },
   "amountProduced": 15,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "7.62mm"
+  ]
  },
  {
   "id": "volta-ri-repeater",
@@ -194,7 +224,10 @@
   },
   "amountProduced": 15,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "7.62mm"
+  ]
  },
  {
   "id": "762mm",
@@ -225,7 +258,10 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "9mm SMG"
+  ]
  },
  {
   "id": "no1-the-liar-submachinegun",
@@ -240,7 +276,10 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "9mm SMG"
+  ]
  },
  {
   "id": "the-pitch-gun-mc-v",
@@ -255,7 +294,10 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "9mm SMG"
+  ]
  },
  {
   "id": "lionclaw-mcviii",
@@ -270,7 +312,10 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "9mm SMG"
+  ]
  },
  {
   "id": "9mm-smg",
@@ -300,7 +345,10 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "Buckshot"
+  ]
  },
  {
   "id": "buckshot",
@@ -330,7 +378,10 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "7.92mm"
+  ]
  },
  {
   "id": "booker-storm-rifle-model-838",
@@ -345,7 +396,10 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "7.92mm"
+  ]
  },
  {
   "id": "catara-moii",
@@ -360,7 +414,10 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "12.7mm"
+  ]
  },
  {
   "id": "dusk-ceiii",
@@ -375,7 +432,10 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "7.92mm"
+  ]
  },
  {
   "id": "792mm",
@@ -406,7 +466,10 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "8.5mm"
+  ]
  },
  {
   "id": "krr3-792-auger",
@@ -422,7 +485,10 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "8.5mm"
+  ]
  },
  {
   "id": "85mm",
@@ -452,7 +518,10 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "12.7mm"
+  ]
  },
  {
   "id": "malone-mk2",
@@ -467,7 +536,10 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "12.7mm"
+  ]
  },
  {
   "id": "127mm",
@@ -513,7 +585,10 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "20mm"
+  ]
  },
  {
   "id": "135-neville-anti-tank-rifle",
@@ -528,7 +603,10 @@
   },
   "amountProduced": 3,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "20mm"
+  ]
  },
  {
   "id": "20mm",
@@ -559,7 +637,10 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "30mm"
+  ]
  },
  {
   "id": "30mm",
@@ -623,7 +704,10 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "R.P.G. Shell"
+  ]
  },
  {
   "id": "cutler-foebreaker",
@@ -639,7 +723,10 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "R.P.G. Shell"
+  ]
  },
  {
   "id": "rpg-shell",
@@ -671,7 +758,10 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "AP/RPG"
+  ]
  },
  {
   "id": "ignifist-30",
@@ -703,7 +793,10 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "AP/RPG"
+  ]
  },
  {
   "id": "atrpg-shell",
@@ -735,7 +828,10 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "ARC/RPG"
+  ]
  },
  {
   "id": "mounted-bonesaw-mk3",
@@ -751,7 +847,10 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "ARC/RPG"
+  ]
  },
  {
   "id": "atrpg-indirect-shell",
@@ -783,7 +882,12 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "Mortar Shell",
+   "Mortar Shrapnel Shell",
+   "Mortar Flare Shell"
+  ]
  },
  {
   "id": "mortar-shell",
@@ -1023,7 +1127,10 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "12.7mm"
+  ]
  },
  {
   "id": "malone-ratcatcher-mk1",
@@ -1039,7 +1146,10 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "12.7mm"
+  ]
  },
  {
   "id": "shovel",
@@ -2880,7 +2990,10 @@
   },
   "amountProduced": 15,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "7.62mm"
+  ]
  },
  {
   "id": "no-2b-hawthorne",
@@ -2895,7 +3008,10 @@
   },
   "amountProduced": 15,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "7.62mm"
+  ]
  },
  {
   "id": "krf1-750-dragonfly",
@@ -2910,7 +3026,10 @@
   },
   "amountProduced": 20,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "Buckshot"
+  ]
  },
  {
   "id": "no4-the-pillory-scattergun",
@@ -2925,7 +3044,10 @@
   },
   "amountProduced": 15,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "Buckshot"
+  ]
  },
  {
   "id": "145mm",
@@ -2956,7 +3078,10 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "AP/RPG"
+  ]
  },
  {
   "id": "ap-rpg",
@@ -3004,7 +3129,10 @@
   },
   "amountProduced": 10,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "\"Molten Wind\" v.II Ammo"
+  ]
  },
  {
   "id": "klg901-2-lunaire-f",
@@ -3020,7 +3148,12 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "Green Ash Grenade",
+   "PT-815 Smoke Grenade",
+   "Tremola Grenade GPb-1"
+  ]
  },
  {
   "id": "mounted-fissura-gdi",
@@ -3036,7 +3169,12 @@
   },
   "amountProduced": 5,
   "producedBy": "factory",
-  "isMfpCraftable": true
+  "isMfpCraftable": true,
+  "ammo": [
+   "Tremola Grenade GPb-1",
+   "PT-815 Smoke Grenade",
+   "Green Ash Grenade"
+  ]
  },
  {
   "id": "willows-bane-model-845",

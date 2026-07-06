@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { AmmoCompatibility } from '../components/AmmoCompatibility';
 import { BuildingList } from '../components/BuildingList';
 import { BuildSequence } from '../components/BuildSequence';
 import { Panel } from '../components/Panel';
@@ -11,11 +12,13 @@ import { usePlanStore } from '../store/planStore';
 
 export function ProductionModule() {
   const { t } = useTranslation();
-  const { result, error } = usePlanStore();
+  const { result, error, targetId, setTarget } = usePlanStore();
 
   return (
     <div className="space-y-4">
       <TargetSelector />
+
+      {targetId && <AmmoCompatibility targetId={targetId} onPick={setTarget} />}
 
       {error && (
         <div className="border border-red-500/40 bg-red-500/10 text-red-300 rounded-xl p-4 text-sm">

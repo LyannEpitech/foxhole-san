@@ -99,4 +99,6 @@ export interface Item {
   isMfpCraftable?: boolean;
   /** Factory time for one order/crate, in seconds (wiki-verified). */
   craftTimeSeconds?: number;
+  /** Display names of the ammunition this weapon fires. */
+  ammo?: string[];
 }

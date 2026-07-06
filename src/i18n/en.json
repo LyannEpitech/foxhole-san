@@ -89,6 +89,10 @@
   "error": {
     "title": "Cannot compute plan"
   },
+  "ammo": {
+    "fires": "Uses ammunition:",
+    "usedBy": "Fired by:"
+  },
   "search": {
     "placeholder": "Search…",
     "noResults": "No results"

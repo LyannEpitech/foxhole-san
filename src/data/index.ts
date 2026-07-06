@@ -85,6 +85,7 @@ const itemSchema = z.object({
   techRequirement: techRequirement.optional(),
   isMfpCraftable: z.boolean().optional(),
   craftTimeSeconds: z.number().positive().optional(),
+  ammo: z.array(z.string().min(1)).optional(),
 });
 
 // ---------------------------------------------------------------------------
@@ -169,6 +170,33 @@ export const dataset: Dataset = buildDataset(
   z.array(recipeSchema).parse(recipesJson),
   z.array(itemSchema).parse(itemsJson),
 );
+
+// ---------------------------------------------------------------------------
+// Weapon <-> ammunition compatibility, resolved from the items' `ammo` names.
+// ---------------------------------------------------------------------------
+
+const foldName = (s: string) => s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '');
+const itemByFoldedName = new Map(
+  [...dataset.items.values()].map((i) => [foldName(i.name.en), i.id]),
+);
+
+/** weapon item id -> ammo item ids it fires. */
+export const ammoOf = new Map<string, string[]>();
+/** ammo item id -> weapon item ids that fire it. */
+export const usedBy = new Map<string, string[]>();
+for (const item of dataset.items.values()) {
+  if (!item.ammo) continue;
+  const ids = item.ammo
+    .map((name) => itemByFoldedName.get(foldName(name)))
+    .filter((id): id is string => !!id);
+  if (ids.length === 0) continue;
+  ammoOf.set(item.id, ids);
+  for (const ammoId of ids) {
+    const list = usedBy.get(ammoId) ?? [];
+    list.push(item.id);
+    usedBy.set(ammoId, list);
+  }
+}
 
 /** Transport vehicles (must reference existing items). */
 export const vehicles: VehicleSpec[] = z.array(vehicleSchema).parse(vehiclesJson);

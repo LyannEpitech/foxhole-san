@@ -89,6 +89,10 @@
   "error": {
     "title": "Impossible de calculer le plan"
   },
+  "ammo": {
+    "fires": "Utilise la munition :",
+    "usedBy": "Tirée par :"
+  },
   "search": {
     "placeholder": "Rechercher…",
     "noResults": "Aucun résultat"

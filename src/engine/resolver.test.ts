@@ -31,7 +31,7 @@ const recipes: Recipe[] = [
 
 const items: Item[] = [
   { id: 'rifle', name: name('Rifle'), category: 'smallArms', faction: 'Colonial', cost: { bmats: 100 }, amountProduced: 10, producedBy: 'factory' },
-  { id: 'shell', name: name('Shell'), category: 'heavyAmmunition', faction: 'Both', cost: { bmats: 120, hemats: 10 }, amountProduced: 5, producedBy: 'factory' },
+  { id: 'shell', name: name('Shell'), category: 'heavyArms', faction: 'Both', cost: { bmats: 120, hemats: 10 }, amountProduced: 5, producedBy: 'factory' },
 ];
 
 const data = buildDataset(resources, buildings, recipes, items);
@@ -200,7 +200,7 @@ describe('planCargo — logistics crate/trip math', () => {
 
 describe('resolve — real curated dataset', () => {
   it('plans 10x 120mm shells (2 crates): 240 bmats + 20 hemats -> 480 salvage + 100 sulfur', () => {
-    const plan = resolve(dataset, 'shell-120mm', 10, 'Warden');
+    const plan = resolve(dataset, '120mm', 10, 'Warden');
     expect(plan.tree.batches).toBe(2);
     expect(plan.totals.refined).toEqual({ bmats: 240, hemats: 20 });
     expect(plan.totals.raw).toEqual({ salvage: 480, sulfur: 100 });
@@ -208,7 +208,17 @@ describe('resolve — real curated dataset', () => {
   });
 
   it('enforces faction on real items', () => {
-    expect(() => resolve(dataset, 'argenti', 10, 'Warden')).toThrow(FactionError);
-    expect(resolve(dataset, 'argenti', 10, 'Colonial').totals.raw.salvage).toBe(200);
+    expect(() => resolve(dataset, 'argenti-rii-rifle', 10, 'Warden')).toThrow(FactionError);
+    expect(resolve(dataset, 'argenti-rii-rifle', 10, 'Colonial').totals.raw.salvage).toBe(200);
+  });
+
+  it('loads the full community dataset (190 items, all referentially valid)', () => {
+    expect(dataset.items.size).toBe(190);
+    // Every item resolves without throwing for a compatible faction.
+    for (const item of dataset.items.values()) {
+      const faction = item.faction === 'Both' ? 'Colonial' : item.faction;
+      const plan = resolve(dataset, item.id, item.amountProduced, faction);
+      expect(plan.sequence.length).toBeGreaterThan(0);
+    }
   });
 });

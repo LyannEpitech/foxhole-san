@@ -15,10 +15,13 @@
   },
   "category": {
     "smallArms": "Armes légères",
-    "ammunition": "Munitions",
-    "explosives": "Explosifs",
-    "heavyAmmunition": "Munitions lourdes",
-    "vehicle": "Véhicules"
+    "heavyArms": "Armes lourdes",
+    "utilities": "Utilitaires",
+    "medical": "Médical",
+    "supplies": "Ravitaillement",
+    "shippables": "Transportables",
+    "vehicles": "Véhicules",
+    "uniforms": "Uniformes"
   },
   "panels": {
     "tree": "Arbre des besoins",
@@ -73,7 +76,8 @@
     "trips": "Allers-retours",
     "route": "Itinéraire",
     "addWaypoint": "Ajouter une région…",
-    "emptyRoute": "Ajoutez des régions pour tracer l'itinéraire (dans l'ordre de conduite).",
+    "emptyRoute": "Cliquez sur les régions de la carte pour tracer l'itinéraire (dans l'ordre de conduite).",
+    "mapHint": "Cliquez sur une région pour l'ajouter à l'itinéraire. Glissez pour déplacer, molette pour zoomer.",
     "emptyCargo": "Ajoutez des objets au manifeste pour calculer caisses et voyages.",
     "produceCargo": "Coût de production de cette cargaison",
     "sendToProduction": "Le plan de production complet de ce manifeste est affiché ci-dessous."
@@ -88,6 +92,12 @@
     "totalNeeds": "Besoins totaux de l'opération",
     "sendToLogistics": "Envoyer vers la logistique",
     "emptyLoadout": "Ajoutez des lignes d'équipement pour dimensionner l'opération.",
-    "cost": "Coût de production de l'opération"
+    "cost": "Coût de production de l'opération",
+    "objective": "Objectif",
+    "staging": "Zone de rassemblement",
+    "mapHint": "Choisissez un mode de marqueur, puis cliquez sur une région de la carte.",
+    "clearMarkers": "Effacer les marqueurs",
+    "plan": "Plan d'opération",
+    "noMarkers": "Placez la zone de rassemblement et l'objectif sur la carte."
   }
 }

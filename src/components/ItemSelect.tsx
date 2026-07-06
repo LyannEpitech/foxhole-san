@@ -5,10 +5,13 @@ import type { Faction, Item, ItemCategory } from '../types/domain';
 
 const CATEGORY_ORDER: ItemCategory[] = [
   'smallArms',
-  'ammunition',
-  'explosives',
-  'heavyAmmunition',
-  'vehicle',
+  'heavyArms',
+  'utilities',
+  'medical',
+  'supplies',
+  'shippables',
+  'vehicles',
+  'uniforms',
 ];
 
 interface Props {

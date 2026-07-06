@@ -64,10 +64,13 @@ export interface Recipe {
 
 export type ItemCategory =
   | 'smallArms'
-  | 'ammunition'
-  | 'explosives'
-  | 'heavyAmmunition'
-  | 'vehicle';
+  | 'heavyArms'
+  | 'utilities'
+  | 'medical'
+  | 'supplies'
+  | 'shippables'
+  | 'vehicles'
+  | 'uniforms';
 
 /** Transport capacity of a vehicle item (crates in its inventory). */
 export interface VehicleSpec {

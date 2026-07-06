@@ -15,25 +15,27 @@ modules. UI bilingue **FR/EN**, filtrage par faction (Colonial / Warden).
 - 📋 **La séquence ordonnée** : débloquer → construire → produire (tri
   topologique, les entrées avant les sorties).
 
-## 🚚 Logistique
+## 🚚 Logistique — planificateur de routes
 
+- **Carte interactive** des 53 hexes du monde (SVG : glisser pour déplacer,
+  molette pour zoomer) — cliquer une région l'ajoute à l'itinéraire, les
+  étapes sont numérotées sur la carte et le tracé est dessiné.
 - **Manifeste de cargaison** : objets + quantités → nombre de caisses (arrondi
   par taille de caisse).
 - **Véhicule** : choix d'un camion (R-1 Hauler / Dunne Transport, 15 caisses) →
   nombre d'allers-retours.
-- **Itinéraire** : séquence ordonnée de régions (les 53 hexes de la carte,
-  récupérés depuis la War API officielle), réordonnables.
-- **Coût de production de la cargaison** : le manifeste est envoyé au moteur
-  (`resolveMany`) → totaux, bâtiments, séquence.
+- **Coût de production de la cargaison** (repliable) : le manifeste est envoyé
+  au moteur (`resolveMany`) → totaux, bâtiments, séquence.
 
-## ⚔️ Attaque
+## ⚔️ Attaque — planificateur d'opérations
 
+- **Carte interactive** : placer l'objectif 🎯 et la zone de rassemblement 🏕
+  en cliquant, l'axe d'attaque est tracé.
 - **Effectifs** : nombre de soldats × équipement par soldat (loadout type
   par faction en un clic) + lignes de soutien à quantité fixe.
-- **Coût total de l'opération** : agrégation → moteur → ressources, bâtiments,
-  séquence de production.
-- **Envoyer vers la logistique** : exporte les besoins comme manifeste de
-  cargaison pour planifier le transport.
+- **Envoyer vers la logistique** : exporte les besoins comme manifeste et
+  pré-remplit l'itinéraire rassemblement → objectif.
+- **Coût total de l'opération** (repliable) : ressources, bâtiments, séquence.
 
 ## Stack
 
@@ -63,11 +65,22 @@ src/
   modules/     # ProductionModule, LogisticsModule, AttackModule
 ```
 
+## Données
+
+- **Objets (190)** : importés depuis la base communautaire
+  [foxhole-item-api](https://github.com/joshuaHallee/foxhole-item-api)
+  (`setup/foxhole-db.json`), transformés vers notre schéma. Quelques coûts
+  datés ont été **corrigés avec les valeurs du
+  [Wiki Foxhole](https://foxhole.wiki.gg)** (2026-07-06) : 120mm, Bomastone,
+  A3 Harpa.
+- **Régions (53)** : géométrie des hexes issue de
+  [foxhole-map-annotate](https://github.com/attrib/foxhole-map-annotate)
+  (`public/static.json`), mêmes ids que la War API officielle.
+- **Recettes de raffinage & bâtiments** : vérifiés sur le Wiki (2026-07-06).
+
 ## Étendre les données
 
-Les données de jeu vivent dans `src/data/*.json` et sont **vérifiées à la main
-sur le [Wiki Foxhole](https://foxhole.wiki.gg)** (dernière vérification :
-2026-07-06). Pour ajouter un objet :
+Pour ajouter/corriger un objet :
 
 1. Ajouter l'entrée dans `items.json` (`cost` = coût d'une commande,
    `amountProduced` = taille de la caisse, `producedBy` = id de bâtiment).

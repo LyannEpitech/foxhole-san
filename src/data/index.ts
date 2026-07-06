@@ -56,7 +56,16 @@ const recipeSchema = z.object({
 const itemSchema = z.object({
   id: z.string().min(1),
   name: localizedString,
-  category: z.enum(['smallArms', 'ammunition', 'explosives', 'heavyAmmunition', 'vehicle']),
+  category: z.enum([
+    'smallArms',
+    'heavyArms',
+    'utilities',
+    'medical',
+    'supplies',
+    'shippables',
+    'vehicles',
+    'uniforms',
+  ]),
   faction: z.enum(['Colonial', 'Warden', 'Both']),
   cost: materialCost,
   amountProduced: z.number().int().positive(),

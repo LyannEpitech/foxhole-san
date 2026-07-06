@@ -15,10 +15,13 @@
   },
   "category": {
     "smallArms": "Small arms",
-    "ammunition": "Ammunition",
-    "explosives": "Explosives",
-    "heavyAmmunition": "Heavy ammunition",
-    "vehicle": "Vehicles"
+    "heavyArms": "Heavy arms",
+    "utilities": "Utilities",
+    "medical": "Medical",
+    "supplies": "Supplies",
+    "shippables": "Shippables",
+    "vehicles": "Vehicles",
+    "uniforms": "Uniforms"
   },
   "panels": {
     "tree": "Requirement tree",
@@ -73,7 +76,8 @@
     "trips": "Round trips",
     "route": "Route",
     "addWaypoint": "Add region…",
-    "emptyRoute": "Add regions to sketch the route (in driving order).",
+    "emptyRoute": "Click regions on the map to sketch the route (in driving order).",
+    "mapHint": "Click a region to append it to the route. Drag to pan, scroll to zoom.",
     "emptyCargo": "Add items to the manifest to compute crates and trips.",
     "produceCargo": "Production cost of this cargo",
     "sendToProduction": "The full production plan for this manifest is shown below."
@@ -88,6 +92,12 @@
     "totalNeeds": "Total operation needs",
     "sendToLogistics": "Send to logistics",
     "emptyLoadout": "Add equipment lines to size the operation.",
-    "cost": "Production cost of the operation"
+    "cost": "Production cost of the operation",
+    "objective": "Objective",
+    "staging": "Staging area",
+    "mapHint": "Pick a marker mode, then click a region on the map.",
+    "clearMarkers": "Clear markers",
+    "plan": "Operation plan",
+    "noMarkers": "Set the staging area and the objective on the map."
   }
 }

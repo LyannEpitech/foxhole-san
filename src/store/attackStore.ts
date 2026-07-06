@@ -13,14 +13,14 @@ export interface SupportRow {
 
 const DEFAULT_LOADOUT: Record<Exclude<Faction, 'Both'>, LoadoutRow[]> = {
   Colonial: [
-    { itemId: 'argenti', perSoldier: 1 },
-    { itemId: 'ammo-762', perSoldier: 3 },
-    { itemId: 'bomastone', perSoldier: 2 },
+    { itemId: 'argenti-rii-rifle', perSoldier: 1 },
+    { itemId: '762mm', perSoldier: 3 },
+    { itemId: 'bomastone-grenade', perSoldier: 2 },
   ],
   Warden: [
-    { itemId: 'loughcaster', perSoldier: 1 },
-    { itemId: 'ammo-762', perSoldier: 3 },
-    { itemId: 'harpa', perSoldier: 2 },
+    { itemId: 'no2-loughcaster', perSoldier: 1 },
+    { itemId: '762mm', perSoldier: 3 },
+    { itemId: 'a3-harpa-fragmentation-grenade', perSoldier: 2 },
   ],
 };
 
@@ -28,6 +28,12 @@ interface AttackState {
   soldiers: number;
   loadout: LoadoutRow[];
   support: SupportRow[];
+  /** Region under attack. */
+  objectiveRegion: string | null;
+  /** Region where the force assembles. */
+  stagingRegion: string | null;
+  setObjective: (regionId: string | null) => void;
+  setStaging: (regionId: string | null) => void;
   setSoldiers: (n: number) => void;
   addLoadoutRow: () => void;
   updateLoadoutRow: (index: number, row: LoadoutRow) => void;
@@ -42,7 +48,11 @@ export const useAttackStore = create<AttackState>((set) => ({
   soldiers: 10,
   loadout: DEFAULT_LOADOUT.Colonial,
   support: [],
+  objectiveRegion: null,
+  stagingRegion: null,
 
+  setObjective: (objectiveRegion) => set({ objectiveRegion }),
+  setStaging: (stagingRegion) => set({ stagingRegion }),
   setSoldiers: (soldiers) => set({ soldiers: Math.max(1, soldiers) }),
 
   addLoadoutRow: () => set((s) => ({ loadout: [...s.loadout, { itemId: '', perSoldier: 1 }] })),

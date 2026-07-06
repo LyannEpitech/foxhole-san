@@ -1,55 +1,34 @@
-// Region (hex) list, fetched from the official War API on 2026-07-06:
-// GET https://war-service-live.foxholeservices.com/api/worldconquest/maps
-// Display names are derived from the ids; proper nouns with apostrophes are
-// fixed via OVERRIDES.
-
-export const REGION_IDS = [
-  'TheFingersHex', 'KuuraStrandHex', 'TempestIslandHex', 'MarbanHollow',
-  'GutterHex', 'EndlessShoreHex', 'TyrantFoothillsHex', 'WrestaHex',
-  'WestgateHex', 'MooringCountyHex', 'MorgensCrossingHex', 'LochMorHex',
-  'RedRiverHex', 'HowlCountyHex', 'ClahstraHex', 'TerminusHex',
-  'LinnMercyHex', 'PipersEnclaveHex', 'ClansheadValleyHex', 'GodcroftsHex',
-  'FishermansRowHex', 'UmbralWildwoodHex', 'CallahansPassageHex', 'LykosIsleHex',
-  'KingsCageHex', 'SableportHex', 'GreatMarchHex', 'ViperPitHex',
-  'BasinSionnachHex', 'StemaLandingHex', 'HeartlandsHex', 'DeadLandsHex',
-  'OarbreakerHex', 'AcrithiaHex', 'WeatheredExpanseHex', 'ReaversPassHex',
-  'StonecradleHex', 'PariPeakHex', 'AllodsBightHex', 'KalokaiHex',
-  'OriginHex', 'OlavisWakeHex', 'SpeakingWoodsHex', 'ShackledChasmHex',
-  'NevishLineHex', 'CallumsCapeHex', 'ReachingTrailHex', 'StlicanShelfHex',
-  'PalantineBermHex', 'AshFieldsHex', 'FarranacCoastHex', 'DrownedValeHex',
-  'OnyxHex',
-] as const;
-
-export type RegionId = (typeof REGION_IDS)[number];
-
-const OVERRIDES: Partial<Record<RegionId, string>> = {
-  DeadLandsHex: 'Deadlands',
-  CallahansPassageHex: "Callahan's Passage",
-  CallumsCapeHex: "Callum's Cape",
-  FishermansRowHex: "Fisherman's Row",
-  AllodsBightHex: "Allod's Bight",
-  MorgensCrossingHex: "Morgen's Crossing",
-  ReaversPassHex: "Reaver's Pass",
-  KingsCageHex: "King's Cage",
-  PipersEnclaveHex: "Piper's Enclave",
-  LinnMercyHex: 'The Linn of Mercy',
-};
-
-function prettify(id: string): string {
-  return id
-    .replace(/Hex$/, '')
-    .replace(/([a-z])([A-Z])/g, '$1 $2');
-}
+// World map regions (hexes) with their in-world polygons.
+// Geometry source: attrib/foxhole-map-annotate `public/static.json`
+// (same 53 hexes as GET /api/worldconquest/maps on the official War API,
+// fetched 2026-07-06). Y axis is flipped to match SVG coordinates.
+import layout from './regionLayout.json';
 
 export interface Region {
-  id: RegionId;
+  id: string;
   name: string;
+  /** Hex outline in world units, SVG orientation (y down). */
+  polygon: [number, number][];
+  center: [number, number];
 }
 
-export const REGIONS: Region[] = [...REGION_IDS]
-  .map((id) => ({ id, name: OVERRIDES[id] ?? prettify(id) }))
-  .sort((a, b) => a.name.localeCompare(b.name));
+export const REGIONS: Region[] = layout as Region[];
+
+const byId = new Map(REGIONS.map((r) => [r.id, r]));
 
 export function regionName(id: string): string {
-  return REGIONS.find((r) => r.id === id)?.name ?? id;
+  return byId.get(id)?.name ?? id;
 }
+
+export function getRegion(id: string): Region | undefined {
+  return byId.get(id);
+}
+
+/** Bounding box of the whole world map: [minX, minY, width, height]. */
+export const WORLD_BOUNDS: [number, number, number, number] = (() => {
+  const xs = REGIONS.flatMap((r) => r.polygon.map((p) => p[0]));
+  const ys = REGIONS.flatMap((r) => r.polygon.map((p) => p[1]));
+  const minX = Math.min(...xs);
+  const minY = Math.min(...ys);
+  return [minX, minY, Math.max(...xs) - minX, Math.max(...ys) - minY];
+})();

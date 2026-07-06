@@ -13,6 +13,11 @@ interface MapDataState {
   /** Which marker families are displayed. */
   layers: Record<MapIconKind, boolean>;
   toggleLayer: (kind: MapIconKind) => void;
+  /** B2/A2.1 — region ownership tint and static town labels. */
+  showControl: boolean;
+  showLabels: boolean;
+  toggleControl: () => void;
+  toggleLabels: () => void;
   /** Fetch all regions (no-op while already loading). */
   refresh: () => Promise<void>;
 }
@@ -24,9 +29,13 @@ export const useMapDataStore = create<MapDataState>((set, get) => ({
   loadedAt: null,
   error: null,
   layers: { town: true, industry: true, field: true, military: true },
+  showControl: false,
+  showLabels: true,
 
   toggleLayer: (kind) =>
     set((s) => ({ layers: { ...s.layers, [kind]: !s.layers[kind] } })),
+  toggleControl: () => set((s) => ({ showControl: !s.showControl })),
+  toggleLabels: () => set((s) => ({ showLabels: !s.showLabels })),
 
   refresh: async () => {
     if (get().loading) return;

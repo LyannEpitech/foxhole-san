@@ -59,6 +59,10 @@ interface Props {
       Pass a function to receive the current viewport width in world units,
       so overlay elements can keep a constant on-screen size. */
   overlay?: React.ReactNode | ((ctx: { vw: number; zoom: number }) => React.ReactNode);
+  /** B2 — per-region ownership tint (regionId -> rgba fill). */
+  regionTint?: Map<string, string>;
+  /** A2.1 — static town/field labels in world coordinates. */
+  staticLabels?: { x: number; y: number; text: string; major: boolean }[];
 }
 
 const [BX, BY, BW, BH] = WORLD_BOUNDS;
@@ -111,6 +115,8 @@ export function HexMap({
   className,
   onMapClick,
   overlay,
+  regionTint,
+  staticLabels,
 }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
   const [zoom, setZoom] = useState(1);
@@ -361,6 +367,50 @@ export function HexMap({
           />
         );
       })}
+
+      {/* B2 — region ownership tint */}
+      {regionTint &&
+        REGIONS.map((region) => {
+          const fill = regionTint.get(region.id);
+          if (!fill) return null;
+          return (
+            <polygon
+              key={`tint-${region.id}`}
+              points={region.polygon.map((p) => p.join(',')).join(' ')}
+              fill={fill}
+              pointerEvents="none"
+            />
+          );
+        })}
+
+      {/* A2.1 — static town/field labels (zoomed-in only; majors first) */}
+      {staticLabels &&
+        zoom >= 2 &&
+        staticLabels
+          .filter(
+            (l) =>
+              (l.major || zoom >= 3) &&
+              l.x >= minVX && l.x <= maxVX && l.y >= minVY && l.y <= maxVY,
+          )
+          .map((l, i) => (
+            <text
+              key={`lbl-${i}`}
+              x={l.x}
+              y={l.y}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fontSize={l.major ? vw * 0.011 : vw * 0.0085}
+              fill={l.major ? '#fde68a' : '#e2e8f0'}
+              stroke="#0f172a"
+              strokeWidth={vw * 0.0009}
+              style={{ paintOrder: 'stroke' }}
+              fontWeight={l.major ? 700 : 500}
+              pointerEvents="none"
+              opacity={0.95}
+            >
+              {l.text}
+            </text>
+          ))}
 
       {/* Interaction / highlight layer */}
       {REGIONS.map((region) => {

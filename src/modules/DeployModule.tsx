@@ -4,6 +4,8 @@ import { Drawer } from '../components/Drawer';
 import { HexMap } from '../components/HexMap';
 import { MapLayersControl } from '../components/MapLayersControl';
 import { useApiMarkers } from '../components/useApiMarkers';
+import { useRegionControl, useStaticLabels } from '../components/useMapOverlays';
+import { useMapDataStore } from '../store/mapDataStore';
 import { dataset } from '../data';
 import { useLocalized } from '../i18n';
 import {
@@ -94,6 +96,9 @@ export function DeployModule() {
     setPlacing, place, removeNode, selectEdge, setTransport, reset,
   } = useDeployStore();
   const apiMarkers = useApiMarkers();
+  const { showControl, showLabels } = useMapDataStore();
+  const regionTint = useRegionControl(showControl);
+  const staticLabels = useStaticLabels(showLabels);
 
   const graph = useMemo(
     () =>
@@ -243,7 +248,13 @@ export function DeployModule() {
   return (
     <div className="relative h-[calc(100vh-7.25rem)] overflow-hidden">
       <div className="absolute inset-0 bg-slate-950">
-        <HexMap onMapClick={onMapClick} overlay={overlay} apiMarkers={apiMarkers} />
+        <HexMap
+          onMapClick={onMapClick}
+          overlay={overlay}
+          apiMarkers={apiMarkers}
+          regionTint={regionTint}
+          staticLabels={staticLabels}
+        />
       </div>
 
       {/* Placement hint + world layers */}

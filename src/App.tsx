@@ -1,5 +1,7 @@
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LanguageToggle } from './components/LanguageToggle';
+import { dayOfWar, useWarStore } from './store/warStore';
 import { AttackModule } from './modules/AttackModule';
 import { DeployModule } from './modules/DeployModule';
 import { LogisticsModule } from './modules/LogisticsModule';
@@ -18,6 +20,12 @@ export default function App() {
   const { t } = useTranslation();
   const { active, setActive } = useUiStore();
   const { faction, setFaction } = usePlanStore();
+  const { war, fetch: fetchWar } = useWarStore();
+
+  useEffect(() => {
+    void fetchWar();
+  }, [fetchWar]);
+  const day = war ? dayOfWar(war) : null;
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
@@ -28,6 +36,15 @@ export default function App() {
             <p className="text-xs text-slate-400">{t('app.subtitle')}</p>
           </div>
           <div className="flex items-center gap-3">
+            {war && (
+              <span
+                className="text-xs px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-300"
+                title={t('war.victoryTowns', { count: war.requiredVictoryTowns })}
+              >
+                ⚔ {t('war.chip', { number: war.warNumber })}
+                {day !== null && <span className="text-slate-500"> · {t('war.day', { day })}</span>}
+              </span>
+            )}
             <select
               value={faction}
               onChange={(e) => setFaction(e.target.value as 'Colonial' | 'Warden')}

@@ -16,6 +16,49 @@ interface DynamicMapResponse {
   mapItems: ApiMapItem[];
 }
 
+export interface WarInfo {
+  warNumber: number;
+  winner: string;
+  conquestStartTime: number | null;
+  requiredVictoryTowns: number;
+}
+
+/** B2 — current war metadata (number, start time, victory towns). */
+export async function fetchWar(): Promise<WarInfo> {
+  const res = await fetch(`${API_BASE}/worldconquest/war`);
+  if (!res.ok) throw new Error(`War API ${res.status} for /war`);
+  const d = await res.json();
+  return {
+    warNumber: d.warNumber,
+    winner: d.winner ?? 'NONE',
+    conquestStartTime: d.conquestStartTime ?? null,
+    requiredVictoryTowns: d.requiredVictoryTowns ?? 0,
+  };
+}
+
+export interface StaticLabel {
+  text: string;
+  /** Fraction of the hex bounding box (0..1). */
+  x: number;
+  y: number;
+  major: boolean;
+}
+
+/** A2.1 — static town/field labels of a region (changes once per war). */
+export async function fetchRegionStatic(regionId: string): Promise<StaticLabel[]> {
+  const res = await fetch(`${API_BASE}/worldconquest/maps/${regionId}/static`);
+  if (!res.ok) throw new Error(`War API ${res.status} for ${regionId}/static`);
+  const d = await res.json();
+  return (d.mapTextItems ?? []).map(
+    (it: { text: string; x: number; y: number; mapMarkerType: string }) => ({
+      text: it.text,
+      x: it.x,
+      y: it.y,
+      major: it.mapMarkerType === 'Major',
+    }),
+  );
+}
+
 export async function fetchRegionDynamic(regionId: string): Promise<ApiMapItem[]> {
   const res = await fetch(`${API_BASE}/worldconquest/maps/${regionId}/dynamic/public`);
   if (!res.ok) throw new Error(`War API ${res.status} for ${regionId}`);

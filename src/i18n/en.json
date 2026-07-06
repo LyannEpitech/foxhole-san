@@ -184,11 +184,18 @@
       "town": "Towns",
       "industry": "Industry",
       "field": "Resources",
-      "military": "Military"
+      "military": "Military",
+      "control": "Control",
+      "labels": "Names"
     },
     "refresh": "War data",
     "loading": "Loading…",
     "zoomHint": "Zoom in to reveal live War API structures. Marker and arrow tools draw on the map; annotations are saved locally."
+  },
+  "war": {
+    "chip": "War {{number}}",
+    "day": "Day {{day}}",
+    "victoryTowns": "{{count}} victory towns required"
   },
   "nav": {
     "production": "Production",

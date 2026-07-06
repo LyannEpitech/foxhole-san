@@ -7,10 +7,13 @@ const LAYERS: MapIconKind[] = ['town', 'industry', 'field', 'military'];
 /** War API layer toggles + refresh chip, overlayable on any map. */
 export function MapLayersControl() {
   const { t } = useTranslation();
-  const { loading, progress, layers, toggleLayer, refresh } = useMapDataStore();
+  const {
+    loading, progress, layers, toggleLayer, refresh,
+    showControl, showLabels, toggleControl, toggleLabels,
+  } = useMapDataStore();
 
   return (
-    <div className="inline-flex items-center gap-2 bg-slate-900/85 backdrop-blur border border-slate-700 rounded-lg px-3 py-2 shadow-lg">
+    <div className="inline-flex flex-wrap items-center gap-2 bg-slate-900/85 backdrop-blur border border-slate-700 rounded-lg px-3 py-2 shadow-lg">
       {LAYERS.map((kind) => (
         <label key={kind} className="flex items-center gap-1 text-xs text-slate-300">
           <input
@@ -22,6 +25,14 @@ export function MapLayersControl() {
           {t(`map.layer.${kind}`)}
         </label>
       ))}
+      <label className="flex items-center gap-1 text-xs text-slate-300">
+        <input type="checkbox" checked={showControl} onChange={toggleControl} className="accent-amber-500" />
+        {t('map.layer.control')}
+      </label>
+      <label className="flex items-center gap-1 text-xs text-slate-300">
+        <input type="checkbox" checked={showLabels} onChange={toggleLabels} className="accent-amber-500" />
+        {t('map.layer.labels')}
+      </label>
       <button
         type="button"
         onClick={() => void refresh()}

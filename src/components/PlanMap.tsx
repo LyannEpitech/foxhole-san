@@ -2,9 +2,11 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Region } from '../data/regions';
 import { useAnnotationStore, type ToolId } from '../store/annotationStore';
+import { useMapDataStore } from '../store/mapDataStore';
 import { HexMap, type MapMarker } from './HexMap';
 import { MapLayersControl } from './MapLayersControl';
 import { useApiMarkers } from './useApiMarkers';
+import { useRegionControl, useStaticLabels } from './useMapOverlays';
 
 interface Props {
   onRegionClick?: (region: Region) => void;
@@ -144,6 +146,9 @@ export function PlanMap({
   const { annotations, tool, setTool, addPoint, addArrow, addStroke, addText, remove, clear,
     undo, redo, past, future } = useAnnotationStore();
   const apiMarkers = useApiMarkers();
+  const { showControl, showLabels } = useMapDataStore();
+  const regionTint = useRegionControl(showControl);
+  const staticLabels = useStaticLabels(showLabels);
 
   // A2.2 — Ctrl+Z / Ctrl+Y (or Ctrl+Shift+Z) for annotation undo/redo.
   useEffect(() => {
@@ -191,6 +196,8 @@ export function PlanMap({
         onAddText={addText}
         onEraseAnnotation={remove}
         textPlaceholder={t('map.textPlaceholder')}
+        regionTint={regionTint}
+        staticLabels={staticLabels}
       />
 
       {/* Top-left overlay: tool palette + module controls */}

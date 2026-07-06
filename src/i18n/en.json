@@ -64,11 +64,26 @@
       "friendly": "Friendly marker",
       "enemy": "Enemy marker",
       "danger": "Danger marker",
-      "arrowFriendly": "Friendly arrow (drag)",
-      "arrowEnemy": "Enemy arrow (drag)",
+      "arrowFriendly": "Friendly arrow",
+      "arrowEnemy": "Enemy arrow",
+      "drawFriendly": "Freehand (friendly)",
+      "drawEnemy": "Freehand (enemy)",
+      "text": "Text label",
       "erase": "Erase annotation",
       "clear": "Clear all"
     },
+    "hint": {
+      "friendly": "click the map to place",
+      "enemy": "click the map to place",
+      "danger": "click the map to place",
+      "arrowFriendly": "drag on the map to draw",
+      "arrowEnemy": "drag on the map to draw",
+      "drawFriendly": "hold and draw on the map",
+      "drawEnemy": "hold and draw on the map",
+      "text": "click the map, type, then press Enter",
+      "erase": "click an annotation to remove it"
+    },
+    "textPlaceholder": "Text…",
     "layer": {
       "town": "Towns",
       "industry": "Industry",

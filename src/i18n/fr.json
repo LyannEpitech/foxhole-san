@@ -64,11 +64,26 @@
       "friendly": "Marqueur allié",
       "enemy": "Marqueur ennemi",
       "danger": "Marqueur danger",
-      "arrowFriendly": "Flèche alliée (glisser)",
-      "arrowEnemy": "Flèche ennemie (glisser)",
+      "arrowFriendly": "Flèche alliée",
+      "arrowEnemy": "Flèche ennemie",
+      "drawFriendly": "Main levée (allié)",
+      "drawEnemy": "Main levée (ennemi)",
+      "text": "Texte",
       "erase": "Effacer une annotation",
       "clear": "Tout effacer"
     },
+    "hint": {
+      "friendly": "cliquez sur la carte pour placer",
+      "enemy": "cliquez sur la carte pour placer",
+      "danger": "cliquez sur la carte pour placer",
+      "arrowFriendly": "glissez sur la carte pour tracer",
+      "arrowEnemy": "glissez sur la carte pour tracer",
+      "drawFriendly": "maintenez et dessinez sur la carte",
+      "drawEnemy": "maintenez et dessinez sur la carte",
+      "text": "cliquez sur la carte, tapez, puis Entrée",
+      "erase": "cliquez sur une annotation pour la supprimer"
+    },
+    "textPlaceholder": "Texte…",
     "layer": {
       "town": "Villes",
       "industry": "Industrie",

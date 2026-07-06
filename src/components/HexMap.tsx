@@ -33,7 +33,11 @@ interface Props {
   tool?: ToolId;
   onAddPoint?: (pos: [number, number]) => void;
   onAddArrow?: (from: [number, number], to: [number, number]) => void;
+  onAddStroke?: (points: [number, number][]) => void;
+  onAddText?: (pos: [number, number], text: string) => void;
   onEraseAnnotation?: (id: string) => void;
+  /** Placeholder for the inline text input. */
+  textPlaceholder?: string;
   /** Height of the map viewport (CSS). */
   className?: string;
 }
@@ -46,23 +50,29 @@ const MAX_ZOOM = 10;
 /** API markers only appear once zoomed in enough to be readable. */
 const API_MARKER_MIN_ZOOM = 1.6;
 
-const ANNOTATION_COLORS: Record<string, string> = {
+export const ANNOTATION_COLORS: Record<string, string> = {
   friendly: '#38bdf8',
   enemy: '#ef4444',
   danger: '#facc15',
   arrowFriendly: '#38bdf8',
   arrowEnemy: '#ef4444',
+  drawFriendly: '#38bdf8',
+  drawEnemy: '#ef4444',
+  text: '#f8fafc',
 };
-const POINT_GLYPHS: Record<string, string> = {
-  friendly: '⬤',
-  enemy: '✖',
-  danger: '⚠',
+
+/** 24x24 stroke icon paths shared by the toolbar and the map markers. */
+export const MARKER_PATHS: Record<string, string> = {
+  friendly: 'M12 3l7 3v5c0 4.8-3.4 8.4-7 10-3.6-1.6-7-5.2-7-10V6z',
+  enemy: 'M7 7l10 10M17 7L7 17',
+  danger: 'M12 4l9 16H3zM12 11v4M12 17.6v.4',
 };
 
 /**
  * Interactive SVG map of the 53 world hexes rendered with the official
  * region art: pan (drag), zoom (wheel), clickable regions, highlights,
- * route polyline, badges, live War API markers and custom annotations.
+ * route polyline, badges, live War API markers and custom annotations
+ * (markers, arrows, freehand strokes, text).
  */
 export function HexMap({
   onRegionClick,
@@ -75,7 +85,10 @@ export function HexMap({
   tool = 'pan',
   onAddPoint,
   onAddArrow,
+  onAddStroke,
+  onAddText,
   onEraseAnnotation,
+  textPlaceholder = '…',
   className,
 }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
@@ -85,6 +98,8 @@ export function HexMap({
   const drag = useRef<{ x: number; y: number; moved: boolean } | null>(null);
   const [drawStart, setDrawStart] = useState<[number, number] | null>(null);
   const [drawEnd, setDrawEnd] = useState<[number, number] | null>(null);
+  const [strokePoints, setStrokePoints] = useState<[number, number][] | null>(null);
+  const [pendingText, setPendingText] = useState<[number, number] | null>(null);
 
   const vw = VIEW.w / zoom;
   const vh = VIEW.h / zoom;
@@ -92,6 +107,7 @@ export function HexMap({
 
   const isArrowTool = tool === 'arrowFriendly' || tool === 'arrowEnemy';
   const isPointTool = tool === 'friendly' || tool === 'enemy' || tool === 'danger';
+  const isDrawTool = tool === 'drawFriendly' || tool === 'drawEnemy';
 
   /** Convert a mouse event into world coordinates. */
   const toWorld = useCallback(
@@ -116,16 +132,32 @@ export function HexMap({
   };
 
   const onMouseDown = (e: React.MouseEvent) => {
+    if (pendingText) return; // the inline input is open — let it handle events
     if (isArrowTool) {
       const pos = toWorld(e);
       setDrawStart(pos);
       setDrawEnd(pos);
       return;
     }
+    if (isDrawTool) {
+      setStrokePoints([toWorld(e)]);
+      return;
+    }
     drag.current = { x: e.clientX, y: e.clientY, moved: false };
   };
 
   const onMouseMove = (e: React.MouseEvent) => {
+    if (strokePoints) {
+      const p = toWorld(e);
+      setStrokePoints((pts) => {
+        if (!pts) return pts;
+        const last = pts[pts.length - 1];
+        // Light simplification: skip points closer than ~0.4% of the viewport.
+        if (Math.hypot(p[0] - last[0], p[1] - last[1]) < vw * 0.004) return pts;
+        return [...pts, p];
+      });
+      return;
+    }
     if (drawStart) {
       setDrawEnd(toWorld(e));
       return;
@@ -141,6 +173,11 @@ export function HexMap({
   };
 
   const onMouseUp = (e: React.MouseEvent) => {
+    if (strokePoints) {
+      if (strokePoints.length > 2) onAddStroke?.(strokePoints);
+      setStrokePoints(null);
+      return;
+    }
     if (drawStart && isArrowTool) {
       const end = toWorld(e);
       const dist = Math.hypot(end[0] - drawStart[0], end[1] - drawStart[1]);
@@ -153,6 +190,9 @@ export function HexMap({
     if (isPointTool && !drag.current?.moved) {
       onAddPoint?.(toWorld(e));
     }
+    if (tool === 'text' && !drag.current?.moved && !pendingText) {
+      setPendingText(toWorld(e));
+    }
     drag.current = null;
   };
 
@@ -160,12 +200,18 @@ export function HexMap({
     drag.current = null;
     setDrawStart(null);
     setDrawEnd(null);
+    setStrokePoints(null);
   };
 
   const clickRegion = (region: Region) => {
     // Region selection only in pan mode, and not at the end of a pan gesture.
     if (tool !== 'pan' || drag.current?.moved) return;
     onRegionClick?.(region);
+  };
+
+  const commitText = (value: string) => {
+    if (pendingText && value.trim()) onAddText?.(pendingText, value.trim());
+    setPendingText(null);
   };
 
   const routePoints = route
@@ -178,6 +224,7 @@ export function HexMap({
   const apiIconSize = vw * 0.03;
   const pointSize = vw * 0.022;
   const arrowWidth = vw * 0.007;
+  const textSize = vw * 0.02;
 
   // Cull API markers outside the current viewport.
   const minVX = center[0] - vw / 2 - apiIconSize;
@@ -194,7 +241,9 @@ export function HexMap({
       ? 'cursor-grab active:cursor-grabbing'
       : tool === 'erase'
         ? 'cursor-pointer'
-        : 'cursor-crosshair';
+        : tool === 'text'
+          ? 'cursor-text'
+          : 'cursor-crosshair';
 
   return (
     <svg
@@ -328,29 +377,67 @@ export function HexMap({
                 className: 'cursor-pointer',
               }
             : { pointerEvents: 'none' as const };
+
+        if (a.kind === 'text') {
+          return (
+            <text
+              key={a.id}
+              x={a.pos[0]}
+              y={a.pos[1]}
+              textAnchor="middle"
+              dominantBaseline="central"
+              fontSize={textSize}
+              fill={color}
+              stroke="#0f172a"
+              strokeWidth={textSize / 10}
+              style={{ paintOrder: 'stroke' }}
+              fontWeight={700}
+              {...eraseProps}
+            >
+              {a.text}
+            </text>
+          );
+        }
+        if ('points' in a) {
+          return (
+            <polyline
+              key={a.id}
+              points={a.points.map((p) => p.join(',')).join(' ')}
+              fill="none"
+              stroke={color}
+              strokeWidth={arrowWidth * 0.8}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              opacity={0.95}
+              {...eraseProps}
+            />
+          );
+        }
         if ('pos' in a) {
+          const s = pointSize / 12; // scale a 24x24 icon to ~2*pointSize
           return (
             <g key={a.id} {...eraseProps}>
               <circle
                 cx={a.pos[0]}
                 cy={a.pos[1]}
-                r={pointSize}
-                fill={`${color}33`}
+                r={pointSize * 1.15}
+                fill={`${color}2e`}
                 stroke={color}
-                strokeWidth={pointSize * 0.14}
+                strokeWidth={pointSize * 0.12}
               />
-              <text
-                x={a.pos[0]}
-                y={a.pos[1]}
-                textAnchor="middle"
-                dominantBaseline="central"
-                fontSize={pointSize}
-                fill={color}
-                fontWeight={700}
+              <g
+                transform={`translate(${a.pos[0] - 12 * s}, ${a.pos[1] - 12 * s}) scale(${s})`}
                 pointerEvents="none"
               >
-                {POINT_GLYPHS[a.kind]}
-              </text>
+                <path
+                  d={MARKER_PATHS[a.kind]}
+                  fill="none"
+                  stroke={color}
+                  strokeWidth={2.4}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </g>
             </g>
           );
         }
@@ -385,6 +472,52 @@ export function HexMap({
           markerEnd="url(#arrowhead)"
           pointerEvents="none"
         />
+      )}
+
+      {/* Freehand stroke preview */}
+      {strokePoints && strokePoints.length > 1 && isDrawTool && (
+        <polyline
+          points={strokePoints.map((p) => p.join(',')).join(' ')}
+          fill="none"
+          stroke={ANNOTATION_COLORS[tool]}
+          strokeWidth={arrowWidth * 0.8}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          opacity={0.8}
+          pointerEvents="none"
+        />
+      )}
+
+      {/* Inline text input */}
+      {pendingText && (
+        <foreignObject
+          x={pendingText[0] - vw * 0.12}
+          y={pendingText[1] - textSize}
+          width={vw * 0.24}
+          height={textSize * 2.4}
+        >
+          <input
+            autoFocus
+            placeholder={textPlaceholder}
+            style={{
+              width: '100%',
+              fontSize: `${textSize}px`,
+              padding: `${textSize * 0.15}px ${textSize * 0.4}px`,
+              background: 'rgba(15,23,42,0.92)',
+              color: '#f8fafc',
+              border: `${Math.max(1, textSize * 0.06)}px solid #f59e0b`,
+              borderRadius: textSize * 0.3,
+              outline: 'none',
+              textAlign: 'center',
+            }}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') commitText((e.target as HTMLInputElement).value);
+              if (e.key === 'Escape') setPendingText(null);
+            }}
+            onBlur={(e) => commitText(e.target.value)}
+            onMouseDown={(e) => e.stopPropagation()}
+          />
+        </foreignObject>
       )}
 
       {/* Waypoint / objective badges */}

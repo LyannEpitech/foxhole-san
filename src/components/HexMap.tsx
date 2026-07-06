@@ -62,8 +62,8 @@ const PAD = 400;
 const VIEW = { x: BX - PAD, y: BY - PAD, w: BW + 2 * PAD, h: BH + 2 * PAD };
 const MIN_ZOOM = 1;
 const MAX_ZOOM = 10;
-/** API markers only appear once zoomed in enough to be readable. */
-const API_MARKER_MIN_ZOOM = 1.6;
+/** Below this zoom, API markers are grouped into count bubbles. */
+const CLUSTER_MAX_ZOOM = 2.6;
 
 export const ANNOTATION_COLORS: Record<string, string> = {
   friendly: '#38bdf8',
@@ -246,7 +246,7 @@ export function HexMap({
 
   const fontSize = Math.max(180, 420 / zoom);
   // Sizes tied to the viewport so elements keep a constant on-screen size.
-  const apiIconSize = vw * 0.03;
+  const apiIconSize = vw * 0.018;
   const pointSize = vw * 0.022;
   const arrowWidth = vw * 0.007;
   const textSize = vw * 0.02;
@@ -256,10 +256,34 @@ export function HexMap({
   const maxVX = center[0] + vw / 2 + apiIconSize;
   const minVY = center[1] - vh / 2 - apiIconSize;
   const maxVY = center[1] + vh / 2 + apiIconSize;
-  const visibleApiMarkers =
-    zoom >= API_MARKER_MIN_ZOOM
-      ? apiMarkers.filter((m) => m.x >= minVX && m.x <= maxVX && m.y >= minVY && m.y <= maxVY)
-      : [];
+  const visibleApiMarkers = apiMarkers.filter(
+    (m) => m.x >= minVX && m.x <= maxVX && m.y >= minVY && m.y <= maxVY,
+  );
+
+  // Screen-space grid clustering: when zoomed out, nearby structures merge
+  // into count bubbles; zoomed in, individual icons are shown.
+  const clusters: { x: number; y: number; members: ApiMarker[] }[] = [];
+  if (zoom < CLUSTER_MAX_ZOOM && visibleApiMarkers.length > 0) {
+    const cell = vw * 0.05;
+    const byCell = new Map<string, ApiMarker[]>();
+    for (const m of visibleApiMarkers) {
+      const key = `${Math.floor(m.x / cell)}:${Math.floor(m.y / cell)}`;
+      const bucket = byCell.get(key) ?? [];
+      bucket.push(m);
+      byCell.set(key, bucket);
+    }
+    for (const members of byCell.values()) {
+      const x = members.reduce((s, m) => s + m.x, 0) / members.length;
+      const y = members.reduce((s, m) => s + m.y, 0) / members.length;
+      clusters.push({ x, y, members });
+    }
+  }
+
+  const zoomTowards = (x: number, y: number) => {
+    setZoom((z) => Math.min(MAX_ZOOM, z * 1.9));
+    setCenter([x, y]);
+    setHoverInfo(null);
+  };
 
   const cursorClass =
     tool === 'pan'
@@ -355,8 +379,60 @@ export function HexMap({
         );
       })}
 
-      {/* Live War API structures / resource fields */}
-      {visibleApiMarkers.map((m, i) => (
+      {/* Live War API structures — clustered when zoomed out */}
+      {zoom < CLUSTER_MAX_ZOOM
+        ? clusters.map((c, i) =>
+            c.members.length === 1 ? (
+              <g key={`cl-${i}`} pointerEvents="none">
+                <circle
+                  cx={c.members[0].x}
+                  cy={c.members[0].y}
+                  r={apiIconSize * 0.62}
+                  fill="rgba(15,23,42,0.72)"
+                  stroke={c.members[0].ringColor}
+                  strokeWidth={apiIconSize * 0.09}
+                />
+                <image
+                  href={c.members[0].iconUrl}
+                  x={c.members[0].x - apiIconSize / 2}
+                  y={c.members[0].y - apiIconSize / 2}
+                  width={apiIconSize}
+                  height={apiIconSize}
+                />
+              </g>
+            ) : (
+              <g
+                key={`cl-${i}`}
+                className="cursor-zoom-in"
+                onClick={(ev) => {
+                  ev.stopPropagation();
+                  zoomTowards(c.x, c.y);
+                }}
+              >
+                <circle
+                  cx={c.x}
+                  cy={c.y}
+                  r={apiIconSize * (0.62 + Math.min(0.5, Math.log10(c.members.length) * 0.35))}
+                  fill="rgba(15,23,42,0.82)"
+                  stroke="#94a3b8"
+                  strokeWidth={apiIconSize * 0.07}
+                />
+                <text
+                  x={c.x}
+                  y={c.y}
+                  textAnchor="middle"
+                  dominantBaseline="central"
+                  fontSize={apiIconSize * 0.62}
+                  fontWeight={700}
+                  fill="#e2e8f0"
+                  pointerEvents="none"
+                >
+                  {c.members.length}
+                </text>
+              </g>
+            ),
+          )
+        : visibleApiMarkers.map((m, i) => (
         <g
           key={`api-${i}`}
           // Hoverable only in pan mode so drawing tools are never blocked.

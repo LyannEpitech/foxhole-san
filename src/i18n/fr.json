@@ -38,7 +38,16 @@
     "sequence": "Séquence de construction",
     "timeline": "Chronologie",
     "energy": "Électricité & carburant",
-    "flow": "Flux de production"
+    "flow": "Flux de production",
+    "mpf": "Usine vs MPF"
+  },
+  "mpf": {
+    "none": "Aucun article MPF dans la commande",
+    "factory": "Usine",
+    "mpf": "MPF",
+    "savings": "Économie",
+    "orders": "commandes",
+    "note": "Remise de file MPF : −10 % par position de caisse jusqu'à −50 % (vérifié wiki). Les commandes en file accélèrent aussi toute la catégorie."
   },
   "graph": {
     "producedAt": "Produit à",

@@ -38,7 +38,16 @@
     "sequence": "Build sequence",
     "timeline": "Timeline",
     "energy": "Electricity & fuel",
-    "flow": "Production flow"
+    "flow": "Production flow",
+    "mpf": "Factory vs MPF"
+  },
+  "mpf": {
+    "none": "No MPF-craftable article in the order",
+    "factory": "Factory",
+    "mpf": "MPF",
+    "savings": "Savings",
+    "orders": "orders",
+    "note": "MPF queue discount: −10% per crate position up to −50% (wiki-verified). Queued orders also speed the whole category up."
   },
   "graph": {
     "producedAt": "Produced at",

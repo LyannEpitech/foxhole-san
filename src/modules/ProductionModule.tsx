@@ -4,6 +4,7 @@ import { AmmoCompatibility } from '../components/AmmoCompatibility';
 import { BuildingList } from '../components/BuildingList';
 import { BuildSequence } from '../components/BuildSequence';
 import { Panel } from '../components/Panel';
+import { MpfComparison } from '../components/MpfComparison';
 import { EnergyPanel, TimelinePanel } from '../components/PlanExtras';
 import { ProductionGraph } from '../components/ProductionGraph';
 import { RefineryCalculator } from '../components/RefineryCalculator';
@@ -140,6 +141,9 @@ export function ProductionModule() {
           </Panel>
           <Panel title={t('panels.energy')}>
             <EnergyPanel result={result} />
+          </Panel>
+          <Panel title={t('panels.mpf')}>
+            <MpfComparison targets={validTargets} />
           </Panel>
         </div>
       )}

@@ -27,6 +27,7 @@ const materialCost = z.object({
   cmats: z.number().int().positive().optional(),
   pcmats: z.number().int().positive().optional(),
   scmats: z.number().int().positive().optional(),
+  ralloys: z.number().int().positive().optional(),
 });
 
 const techRequirement = z.object({ techId: z.string().min(1), name: localizedString });
@@ -76,6 +77,7 @@ const itemSchema = z.object({
     'supplies',
     'shippables',
     'vehicles',
+    'naval',
     'uniforms',
   ]),
   faction: z.enum(['Colonial', 'Warden', 'Both']),

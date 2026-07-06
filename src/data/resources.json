@@ -158,5 +158,53 @@
    "fr": "Matériaux d’assemblage V"
   },
   "kind": "refined"
+ },
+ {
+  "id": "rare-metal",
+  "name": {
+   "en": "Rare Metal",
+   "fr": "Métal rare"
+  },
+  "kind": "raw"
+ },
+ {
+  "id": "ralloys",
+  "name": {
+   "en": "Rare Alloys",
+   "fr": "Alliages rares"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "thermal-shielding",
+  "name": {
+   "en": "Thermal Shielding",
+   "fr": "Blindage thermique"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "naval-hull-segments",
+  "name": {
+   "en": "Naval Hull Segments",
+   "fr": "Segments de coque navale"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "naval-shell-plating",
+  "name": {
+   "en": "Naval Shell Plating",
+   "fr": "Blindage de coque naval"
+  },
+  "kind": "refined"
+ },
+ {
+  "id": "naval-turbine-components",
+  "name": {
+   "en": "Naval Turbine Components",
+   "fr": "Composants de turbine navale"
+  },
+  "kind": "refined"
  }
 ]

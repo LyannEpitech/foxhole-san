@@ -1,0 +1,7143 @@
+{
+ "source": "https://foxholeplanner.com (game data extract)",
+ "fetched": "2026-07-06",
+ "resources": {
+  "aaammo": {
+   "name": "950-70b Anti-Aircraft Shell",
+   "crateCost": {
+    "cloth": 100,
+    "heavyexplosive": 15
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "aircraftammo": {
+   "name": "20mm",
+   "crateCost": {
+    "cloth": 120
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "aircraftbomberc": {
+   "name": "V-1 Tzykalia",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "aircraftbomberw": {
+   "name": "Tulka P4 Welkinrive",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "aircraftdivec": {
+   "name": "Mergo-4 “Myrmidon”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "aircraftfighterc": {
+   "name": "Toxot-902 “Blind Silver”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "aircraftfighterw": {
+   "name": "Luminary Mk. II Harbinger",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "aircraftparatrooperc": {
+   "name": "V-5b Pegasus",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "aircraftparatrooperw": {
+   "name": "Rinnspeir Mk. I Zealot",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "aircraftpartlargeenginec": {
+   "name": "Colonial Aircraft Engine (Large)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircraftpartlargeenginew": {
+   "name": "Warden Aircraft Engine (Large)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircraftpartlargeenginewreckedc": {
+   "name": "Damaged Colonial Aircraft Engine (Large)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircraftpartlargeenginewreckedw": {
+   "name": "Damaged Warden Aircraft Engine (Large)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircraftpartlargemechanicalc": {
+   "name": "Colonial Aircraft Mechanical Parts (Large)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircraftpartlargemechanicalw": {
+   "name": "Warden Aircraft Mechanical Parts (Large)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircraftpartlargemechanicalwreckedc": {
+   "name": "Damaged Colonial Aircraft Mechanical Parts (Large)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircraftpartlargemechanicalwreckedw": {
+   "name": "Damaged Warden Aircraft Mechanical Parts (Large)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircraftpartsmallenginec": {
+   "name": "Colonial Aircraft Engine (Small)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircraftpartsmallenginew": {
+   "name": "Warden Aircraft Engine (Small)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircraftpartsmallenginewreckedc": {
+   "name": "Damaged Colonial Aircraft Engine (Small)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircraftpartsmallenginewreckedw": {
+   "name": "Damaged Warden Aircraft Engine (Small)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircraftpartsmallmechanicalc": {
+   "name": "Colonial Aircraft Mechanical Parts (Small)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircraftpartsmallmechanicalw": {
+   "name": "Warden Aircraft Mechanical Parts (Small)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircraftpartsmallmechanicalwreckedc": {
+   "name": "Damaged Colonial Aircraft Mechanical Parts (Small)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircraftpartsmallmechanicalwreckedw": {
+   "name": "Damaged Warden Aircraft Mechanical Parts (Small)",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircrafttorpedoammo": {
+   "name": "Tenta Torpedo",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "aircrafttorpedow": {
+   "name": "M925 Austringer Man-O-War",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "aircraftwaterw": {
+   "name": "Tulka I1.9 White Raven",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "aluminum": {
+   "name": "Aluminum",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": true
+  },
+  "aluminuma": {
+   "name": "Aluminum Alloy",
+   "crateCost": {
+    "aluminuma": 20
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "ambulancec": {
+   "name": "R-12 - “Salus” Ambulance",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "ambulanceflamec": {
+   "name": "R-12b - “Salva” Flame Truck",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "ambulanceflamew": {
+   "name": "Dunne Dousing Engine 3r",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "ambulancew": {
+   "name": "Dunne Responder 3e",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "ammouniformw": {
+   "name": "Specialist’s Overcoat",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "armoredcar2largew": {
+   "name": "O’Brien V.101 Freeman",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "armoredcar2multiw": {
+   "name": "O’Brien v.200 Squire",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "armoredcar2twinw": {
+   "name": "O’Brien V.190 Knave",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "armoredcaratw": {
+   "name": "O’Brien V.113 Gravekeeper",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "armoredcarc": {
+   "name": "T3 “Xiphos”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "armoredcarflamew": {
+   "name": "O’Brien V.130 Wild Jack",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "armoredcarmobilityw": {
+   "name": "O’Brien V.121 Highlander",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "armoredcaroffensivec": {
+   "name": "T5 “Percutio”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "armoredcartwinc": {
+   "name": "T8 “Gemini”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "armoredcarw": {
+   "name": "O’Brien V.110",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "armouruniformc": {
+   "name": "Velian Flak Vest",
+   "crateCost": {
+    "cloth": 200
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "armouruniformw": {
+   "name": "Gunner’s Breastplate",
+   "crateCost": {
+    "cloth": 150
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "assaultrifleammo": {
+   "name": "7.92mm",
+   "crateCost": {
+    "cloth": 120
+   },
+   "crateQuantity": 30,
+   "isRawResource": false
+  },
+  "assaultriflec": {
+   "name": "Catara mo.II",
+   "crateCost": {
+    "wood": 15
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "assaultrifleheavyc": {
+   "name": "“Dusk” ce.III",
+   "crateCost": {
+    "wood": 15
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "assaultrifleheavyw": {
+   "name": "Booker Storm Rifle Model 838",
+   "crateCost": {
+    "wood": 15
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "assaultriflew": {
+   "name": "Aalto Storm Rifle 24",
+   "crateCost": {
+    "wood": 15
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "atammo": {
+   "name": "68mm",
+   "crateCost": {
+    "cloth": 120,
+    "explosive": 240
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "atgrenadew": {
+   "name": "BF5 White Ash Flask Grenade",
+   "crateCost": {
+    "cloth": 100,
+    "explosive": 80
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "atlargeammo": {
+   "name": "94.5mm",
+   "crateCost": {
+    "cloth": 200,
+    "heavyexplosive": 20
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "atlaunchedgrenadew": {
+   "name": "B2 Varsi Anti-Tank Grenade",
+   "crateCost": {
+    "cloth": 95,
+    "explosive": 125
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "atrifleammo": {
+   "name": "14.5mm",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "atrifleassaultw": {
+   "name": "228 Satterley Heavy Storm Rifle",
+   "crateCost": {
+    "cloth": 150
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "atrifleautomaticw": {
+   "name": "Booker Greyhound Model 910",
+   "crateCost": {
+    "cloth": 150
+   },
+   "crateQuantity": 3,
+   "isRawResource": false
+  },
+  "atriflelightc": {
+   "name": "“Dawn” Ve.II",
+   "crateCost": {
+    "cloth": 150
+   },
+   "crateQuantity": 3,
+   "isRawResource": false
+  },
+  "atriflesniperc": {
+   "name": "“Quickhatch” Rt.I",
+   "crateCost": {
+    "cloth": 150
+   },
+   "crateQuantity": 3,
+   "isRawResource": false
+  },
+  "atrifletc": {
+   "name": "“Typhon” ra.XII",
+   "crateCost": {
+    "cloth": 100,
+    "wood": 5
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "atriflew": {
+   "name": "Neville Anti-Tank Rifle",
+   "crateCost": {
+    "cloth": 150
+   },
+   "crateQuantity": 3,
+   "isRawResource": false
+  },
+  "atrpgammo": {
+   "name": "AP/RPG",
+   "crateCost": {
+    "cloth": 60,
+    "explosive": 150
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "atrpgc": {
+   "name": "Venom c.II 35",
+   "crateCost": {
+    "cloth": 100,
+    "wood": 15
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "atrpgheavyc": {
+   "name": "Bane 45",
+   "crateCost": {
+    "cloth": 150,
+    "wood": 40
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "atrpgheavyw": {
+   "name": "Carnyx Anti-Tank Rocket Launcher",
+   "crateCost": {
+    "cloth": 125,
+    "wood": 15
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "atrpgindirectammo": {
+   "name": "ARC/RPG",
+   "crateCost": {
+    "cloth": 60,
+    "explosive": 150
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "atrpglightc": {
+   "name": "Ignifist 30",
+   "crateCost": {
+    "cloth": 85,
+    "explosive": 70
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "atrpgtw": {
+   "name": "Mounted Bonesaw MK.3",
+   "crateCost": {
+    "cloth": 100,
+    "wood": 5
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "atrpgw": {
+   "name": "Bonesaw MK.3",
+   "crateCost": {
+    "cloth": 100,
+    "wood": 25
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "bandages": {
+   "name": "Bandages",
+   "crateCost": {
+    "cloth": 80
+   },
+   "crateQuantity": 50,
+   "isRawResource": false
+  },
+  "bannertc": {
+   "name": "Legion Vexillum",
+   "crateCost": {
+    "cloth": 150
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "bannertw": {
+   "name": "War Ensign",
+   "crateCost": {
+    "cloth": 150
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "barbedwirematerials": {
+   "name": "Barbed Wire",
+   "crateCost": {
+    "cloth": 15
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "battletankammo": {
+   "name": "75mm",
+   "crateCost": {
+    "cloth": 200,
+    "heavyexplosive": 20
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "battletankatc": {
+   "name": "Lance-25 “Hasta”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "battletankc": {
+   "name": "Lance-36",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "battletankdefensivew": {
+   "name": "Flood Juggernaut Mk. VII",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "battletankheavyartilleryc": {
+   "name": "Lance-46 “Sarissa”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "battletankheavyartilleryw": {
+   "name": "Flood Mk. IX Stain",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "battletankw": {
+   "name": "Flood Mk. I",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "bayonet": {
+   "name": "Buckhorn CCQ-18",
+   "crateCost": {
+    "cloth": 40
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "binoculars": {
+   "name": "Binoculars",
+   "crateCost": {
+    "cloth": 75
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "bloodplasma": {
+   "name": "Blood Plasma",
+   "crateCost": {
+    "cloth": 80
+   },
+   "crateQuantity": 50,
+   "isRawResource": false
+  },
+  "bomberammo": {
+   "name": "Mark II Raidbreaker",
+   "crateCost": {
+    "cloth": 200
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "cloth": {
+   "name": "Basic Materials",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 100,
+   "isRawResource": false
+  },
+  "coal": {
+   "name": "Coal",
+   "crateCost": {
+    "coal": 100
+   },
+   "crateQuantity": 100,
+   "isRawResource": true
+  },
+  "components": {
+   "name": "Components",
+   "crateCost": {
+    "components": 70
+   },
+   "crateQuantity": 100,
+   "isRawResource": true
+  },
+  "concrete": {
+   "name": "Concrete Materials",
+   "crateCost": null,
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "construction": {
+   "name": "BMS - Universal Assembly Rig",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "constructionutility": {
+   "name": "BMS - Fabricator",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "copper": {
+   "name": "Copper",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": true
+  },
+  "coppera": {
+   "name": "Copper Alloy",
+   "crateCost": {
+    "coppera": 20
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "crate": {
+   "name": "Crate",
+   "crateCost": null,
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "criticalsoldier": {
+   "name": "Critically Wounded Soldier",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 50,
+   "isRawResource": false
+  },
+  "demolitionrocketammo": {
+   "name": "Shatter Missile",
+   "crateCost": {
+    "cloth": 250,
+    "heavyexplosive": 250
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "depthchargeammo": {
+   "name": "Model-7 “Evie”",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "destroyertankflamew": {
+   "name": "Noble Firebrand Mk. XVII",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "destroyertankw": {
+   "name": "Noble Widow MK. XIV",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "diesel": {
+   "name": "Diesel",
+   "crateCost": null,
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "divebomberammo": {
+   "name": "912 Shrike Rounds",
+   "crateCost": {
+    "cloth": 120
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "emplacedaircraftc": {
+   "name": "DAE 5b “Zeal”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "emplacedaircraftw": {
+   "name": "Leary AA-70 Bolas",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "emplacedatlargew": {
+   "name": "Huber Starbreaker 94.5mm",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "emplacedcannonlargec": {
+   "name": "DAE 2a-1 “Ruptura”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "emplacedmultic": {
+   "name": "DAE 3b-2 “Hades’ Net”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "engineeruniformc": {
+   "name": "Fabri Rucksack",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "engineeruniformw": {
+   "name": "Sapper Gear",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "excavation": {
+   "name": "Excavation (No Materials)",
+   "crateCost": {
+    "cloth": 200
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "explosive": {
+   "name": "Explosive Powder",
+   "crateCost": {
+    "explosive": 200
+   },
+   "crateQuantity": 40,
+   "isRawResource": true
+  },
+  "explosivelightc": {
+   "name": "Hydra’s Whisper",
+   "crateCost": {
+    "cloth": 100,
+    "explosive": 80
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "explosivetripod": {
+   "name": "Havoc Charge",
+   "crateCost": {
+    "cloth": 75,
+    "heavyexplosive": 40
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "facilitycoal1": {
+   "name": "Coke",
+   "crateCost": {
+    "cloth": 1
+   },
+   "crateQuantity": 1,
+   "isRawResource": true
+  },
+  "facilitycomponents1": {
+   "name": "Damaged Components",
+   "crateCost": {
+    "components": 70
+   },
+   "crateQuantity": 100,
+   "isRawResource": true
+  },
+  "facilitymaterials1": {
+   "name": "Construction Materials",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "facilitymaterials10": {
+   "name": "Unstable Substances",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "facilitymaterials11": {
+   "name": "Thermal Shielding",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "facilitymaterials12": {
+   "name": "Rare Materials",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "facilitymaterials2": {
+   "name": "Processed Construction Materials",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "facilitymaterials3": {
+   "name": "Steel Construction Materials",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "facilitymaterials4": {
+   "name": "Assembly Materials I",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "facilitymaterials5": {
+   "name": "Assembly Materials II",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "facilitymaterials6": {
+   "name": "Assembly Materials III",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "facilitymaterials7": {
+   "name": "Assembly Materials IV",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "facilitymaterials8": {
+   "name": "Assembly Materials V",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "facilitymaterials9": {
+   "name": "Rare Alloys",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "facilityoil1": {
+   "name": "Heavy Oil",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "facilityoil1can": {
+   "name": "Heavy Oil (Canned)",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "facilityoil2": {
+   "name": "Enriched Oil",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "facilityoil2can": {
+   "name": "Enriched Oil (Canned)",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fieldat2c": {
+   "name": "GA6 “Cestus”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fieldat2w": {
+   "name": "Duncan’s Coin 14.5mm",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fieldatc": {
+   "name": "AA-2 \"Battering Ram\"",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fieldatdamagew": {
+   "name": "Balfour Rampart 68mm",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fieldatw": {
+   "name": "Collins Cannon 68mm",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fieldcannondamagec": {
+   "name": "40-45 “Smelter”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fieldcannonw": {
+   "name": "Balfour Wolfhound 40mm",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fieldmgc": {
+   "name": "G40 “Sagittarii”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fieldmgw": {
+   "name": "Swallowtail 988/127-2",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fieldmortarc": {
+   "name": "30-250 “Tisiphone” Field Cannon",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "firerocketammo": {
+   "name": "4C-Fire Rocket",
+   "crateCost": {
+    "cloth": 60,
+    "explosive": 15
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "firstaidkit": {
+   "name": "First Aid Kit",
+   "crateCost": {
+    "cloth": 60
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "flameammo": {
+   "name": "Flame Ammo",
+   "crateCost": {
+    "cloth": 60,
+    "explosive": 45
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "flamebackpackc": {
+   "name": "“Molten Wind” v.II Ammo",
+   "crateCost": {
+    "cloth": 160,
+    "heavyexplosive": 20
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "flamebackpackw": {
+   "name": "Willow's Bane Ammo",
+   "crateCost": {
+    "cloth": 135,
+    "heavyexplosive": 20
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "flametorchc": {
+   "name": "“Molten Wind” v.II Flame Torch",
+   "crateCost": {
+    "cloth": 185,
+    "wood": 25
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "flametorchw": {
+   "name": "Willow’s Bane Model 845",
+   "crateCost": {
+    "cloth": 165,
+    "wood": 30
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "fortconstructionpart": {
+   "name": "Construction Parts",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fortgarrisonstationpart": {
+   "name": "Underground Fortress Parts",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fortintelcenterpart": {
+   "name": "Intelligence Center Parts",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fortlargeradarpart": {
+   "name": "Aircraft Radar Parts",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fortlrartillerypart": {
+   "name": "Storm Cannon Parts",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fortstructurepart": {
+   "name": "Structure Parts",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "fortweatherstationpart": {
+   "name": "Weather Station Parts",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "gasmask": {
+   "name": "Gas Mask",
+   "crateCost": {
+    "cloth": 160
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "gasmaskfilter": {
+   "name": "Gas Mask Filter",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "greenash": {
+   "name": "Green Ash Grenade",
+   "crateCost": {
+    "cloth": 140
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "grenadeadapter": {
+   "name": "The Ospreay",
+   "crateCost": {
+    "cloth": 85,
+    "wood": 10
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "grenadec": {
+   "name": "Bomastone Grenade",
+   "crateCost": {
+    "cloth": 100,
+    "explosive": 40
+   },
+   "crateQuantity": 25,
+   "isRawResource": false
+  },
+  "grenadelauncherc": {
+   "name": "KLG901-2 Lunaire F",
+   "crateCost": {
+    "cloth": 50,
+    "wood": 15
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "grenadelaunchertc": {
+   "name": "Mounted Fissura gd.I",
+   "crateCost": {
+    "cloth": 100,
+    "wood": 5
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "grenadeuniformc": {
+   "name": "Grenadier’s Baldric",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "grenadew": {
+   "name": "A3 Harpa Fragmentation Grenade",
+   "crateCost": {
+    "cloth": 100,
+    "explosive": 40
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "groundmaterials": {
+   "name": "Gravel",
+   "crateCost": {
+    "coal": 100
+   },
+   "crateQuantity": 20,
+   "isRawResource": true
+  },
+  "halftrackartilleryc": {
+   "name": "HH-d “Peltast”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "halftrackc": {
+   "name": "HH-a “Javelin”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "halftrackdefensivec": {
+   "name": "HH-b “Hoplite”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "halftrackmultiw": {
+   "name": "Niska-Rycker Mk. IX Skycaller",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "halftrackoffensivew": {
+   "name": "Niska Mk. II Blinder",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "halftracktwinw": {
+   "name": "Niska Mk. III Scar Twin",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "halftrackw": {
+   "name": "Niska Mk. I Gun Motor Carriage",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "harvester": {
+   "name": "BMS - Scrap Hauler",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "heavyartilleryammo": {
+   "name": "150mm",
+   "crateCost": {
+    "cloth": 120,
+    "heavyexplosive": 60
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "heavyexplosive": {
+   "name": "Heavy Explosive Powder",
+   "crateCost": {
+    "heavyexplosive": 400
+   },
+   "crateQuantity": 30,
+   "isRawResource": true
+  },
+  "heavytruckc": {
+   "name": "AU-A150 Taurine Rigger",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "heavytruckw": {
+   "name": "Cnute Cliffwrest",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "hegrenade": {
+   "name": "Mammon 91-b",
+   "crateCost": {
+    "cloth": 100,
+    "explosive": 20
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "helaunchedgrenade": {
+   "name": "Tremola Grenade GPb-1",
+   "crateCost": {
+    "cloth": 75,
+    "explosive": 100
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "herocketammo": {
+   "name": "3C-High Explosive Rocket",
+   "crateCost": {
+    "cloth": 60,
+    "explosive": 15
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "infantrymine": {
+   "name": "Crow’s Foot Mine",
+   "crateCost": {
+    "cloth": 100,
+    "explosive": 20
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "iron": {
+   "name": "Iron",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": true
+  },
+  "irona": {
+   "name": "Iron Alloy",
+   "crateCost": {
+    "irona": 20
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "isgtc": {
+   "name": "Daucus isg.III",
+   "crateCost": {
+    "cloth": 100,
+    "wood": 5
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "landingcraftc": {
+   "name": "AB-8 “Acheron”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "landingcraftoffensivec": {
+   "name": "AB-11 “Doru”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "largefieldatc": {
+   "name": "945g “Stygian Bolt”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "largefieldcannonw": {
+   "name": "Balfour Stockade 75mm",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "largefieldmortarc": {
+   "name": "40-250 “Alekto” Heavy Cannon",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "largefieldmultiw": {
+   "name": "Rycker 4/3-F Wasp Nest",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "largeshipaircraftc": {
+   "name": "Poseidon",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "largeshipbaseship": {
+   "name": "BMS - Longhook",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "largeshipbattleshipaircraftw": {
+   "name": "Mercy",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "largeshipbattleshipc": {
+   "name": "Titan",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "largeshipbattleshipw": {
+   "name": "Callahan",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "largeshipdestroyerc": {
+   "name": "Conqueror",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "largeshipdestroyerw": {
+   "name": "Blacksteele",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "largeshipresourceship": {
+   "name": "BMS - Bowhead",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "largeshipstorageship": {
+   "name": "BMS - Bluefin",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "largeshipsubmarinec": {
+   "name": "AC-b “Trident”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "largeshipsubmarinew": {
+   "name": "Nakki",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "lightaaammo": {
+   "name": "Absol Anti-Aircraft Rounds",
+   "crateCost": {
+    "cloth": 150,
+    "explosive": 160
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "lightartilleryammo": {
+   "name": "120mm",
+   "crateCost": {
+    "cloth": 120,
+    "heavyexplosive": 10
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "lighttank2infantryc": {
+   "name": "HC-2 “Scorpion”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "lighttankammo": {
+   "name": "40mm",
+   "crateCost": {
+    "cloth": 160,
+    "explosive": 240
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "lighttankartilleryw": {
+   "name": "Devitt-Caine Mk. IV MMR",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "lighttankc": {
+   "name": "H-5 \"Hatchet\"",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "lighttankdefensivew": {
+   "name": "Devitt Ironhide Mk. IV",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "lighttankflamec": {
+   "name": "H-19 “Vulcan”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "lighttankmobilityc": {
+   "name": "H-8 “Kranesca”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "lighttankoffensivec": {
+   "name": "H-10 “Pelekys”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "lighttankw": {
+   "name": "Devitt Mk. III",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "listeningkit": {
+   "name": "Listening Kit",
+   "crateCost": {
+    "cloth": 150
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "lrartilleryammo": {
+   "name": "300mm",
+   "crateCost": {
+    "cloth": 135,
+    "heavyexplosive": 45
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "macew": {
+   "name": "Falias Raiding Club",
+   "crateCost": {
+    "cloth": 200
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "maintenancesupplies": {
+   "name": "Maintenance Supplies",
+   "crateCost": {
+    "cloth": 250
+   },
+   "crateQuantity": 100,
+   "isRawResource": false
+  },
+  "materialplatform": {
+   "name": "Material Pallet",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "medicuniformc": {
+   "name": "Medic Fatigues",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "medicuniformw": {
+   "name": "Physician’s Jacket",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "mediumtank2c": {
+   "name": "86K-a “Bardiche”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "mediumtank2indirectw": {
+   "name": "Gallagher Thornfall Mk. VI",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "mediumtank2multiw": {
+   "name": "Gallagher Highwayman Mk. III",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "mediumtank2rangew": {
+   "name": "Gallagher Outlaw Mk. II",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "mediumtank2twinc": {
+   "name": "86K-c “Ranseur”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "mediumtank2w": {
+   "name": "Gallagher Brigand Mk. I",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "mediumtankatw": {
+   "name": "Silverhand Lordscar - Mk. X",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "mediumtankc": {
+   "name": "85K-b “Falchion”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "mediumtanklargec": {
+   "name": "85V-g \"Talos\"",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "mediumtankoffensivec": {
+   "name": "85K-a “Spatha”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "mediumtanksiegew": {
+   "name": "Silverhand Chieftain - Mk. VI",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "mediumtankw": {
+   "name": "Silverhand - Mk. IV",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "metal": {
+   "name": "Salvage",
+   "crateCost": {
+    "metal": 45
+   },
+   "crateQuantity": 100,
+   "isRawResource": true
+  },
+  "metalbeammaterials": {
+   "name": "Metal Beam",
+   "crateCost": {
+    "cloth": 25
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "mgammo": {
+   "name": "12.7mm",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "mgc": {
+   "name": "KRN886-127 Gast Machine Gun",
+   "crateCost": {
+    "wood": 25
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "mgtc": {
+   "name": "Lamentum mm.IV",
+   "crateCost": {
+    "cloth": 100,
+    "wood": 5
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "mgtw": {
+   "name": "Malone Ratcatcher MK.1",
+   "crateCost": {
+    "cloth": 100,
+    "wood": 5
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "mgw": {
+   "name": "Malone MK.2",
+   "crateCost": {
+    "wood": 25
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "minitankammo": {
+   "name": "30mm",
+   "crateCost": {
+    "cloth": 80,
+    "explosive": 40
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "minitorpedoammo": {
+   "name": "Quillback Torpedo",
+   "crateCost": {
+    "cloth": 125,
+    "explosive": 75
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "mortar": {
+   "name": "Cremari Mortar",
+   "crateCost": {
+    "cloth": 100,
+    "wood": 25
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "mortarammo": {
+   "name": "Mortar Shell",
+   "crateCost": {
+    "cloth": 60,
+    "explosive": 70
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "mortarammofl": {
+   "name": "Flare Mortar Shell",
+   "crateCost": {
+    "cloth": 60,
+    "explosive": 15
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "mortarammoflame": {
+   "name": "Incendiary Mortar Shell",
+   "crateCost": {
+    "cloth": 60,
+    "explosive": 70
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "mortarammosh": {
+   "name": "Shrapnel Mortar Shell",
+   "crateCost": {
+    "cloth": 60,
+    "explosive": 20
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "mortartankammo": {
+   "name": "250mm \"Purity\" Shell",
+   "crateCost": {
+    "cloth": 120,
+    "heavyexplosive": 100
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "mortartankammobr": {
+   "name": "250mm \"Fury\" Shell",
+   "crateCost": {
+    "cloth": 250,
+    "heavyexplosive": 200
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "mortartankc": {
+   "name": "HC-7 \"Ballista\"",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "motorcyclec": {
+   "name": "03MM “Caster”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "motorcycleoffensivec": {
+   "name": "00MS “Stinger”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "navaluniformc": {
+   "name": "Remex Garb",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "navaluniformw": {
+   "name": "Gentleman’s Peacoat",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "officeruniformc": {
+   "name": "Officialis’ Attire",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 3,
+   "isRawResource": false
+  },
+  "officeruniformw": {
+   "name": "Officer’s Regalia",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 3,
+   "isRawResource": false
+  },
+  "oil": {
+   "name": "Oil",
+   "crateCost": {
+    "oil": 2
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "oilcan": {
+   "name": "Oil (Canned)",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "paratrooperbackpack": {
+   "name": "Paratrooper’s Ruck",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "paratrooperuniformc": {
+   "name": "Auster’s Harness",
+   "crateCost": {
+    "cloth": 150
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "paratrooperuniformw": {
+   "name": "Cloudrunner’s Vesture",
+   "crateCost": {
+    "cloth": 150
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "petrol": {
+   "name": "Petrol",
+   "crateCost": null,
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "pilotuniformc": {
+   "name": "Lodesman’s Lorica",
+   "crateCost": {
+    "cloth": 150
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "pilotuniformw": {
+   "name": "Aviator’s Raiment",
+   "crateCost": {
+    "cloth": 150
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "pipematerials": {
+   "name": "Pipe",
+   "crateCost": {
+    "cloth": 50
+   },
+   "crateQuantity": 2,
+   "isRawResource": false
+  },
+  "pistolammo": {
+   "name": "8mm",
+   "crateCost": {
+    "cloth": 40
+   },
+   "crateQuantity": 40,
+   "isRawResource": false
+  },
+  "pistolc": {
+   "name": "Ferro 879",
+   "crateCost": {
+    "cloth": 60
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "pistollightw": {
+   "name": "Cascadier 873",
+   "crateCost": {
+    "cloth": 60
+   },
+   "crateQuantity": 40,
+   "isRawResource": false
+  },
+  "pistolw": {
+   "name": "Ahti Model 2",
+   "crateCost": {
+    "cloth": 60
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "radio": {
+   "name": "Radio",
+   "crateCost": {
+    "cloth": 75
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "radioaircraft": {
+   "name": "Liaison Transmitter",
+   "crateCost": {
+    "cloth": 75
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "radiobackpack": {
+   "name": "Radio Backpack",
+   "crateCost": {
+    "cloth": 150
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "rainuniformc": {
+   "name": "Legionary’s Oilcoat",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "raremetal": {
+   "name": "Rare Metal",
+   "crateCost": {
+    "components": 100
+   },
+   "crateQuantity": 100,
+   "isRawResource": true
+  },
+  "relicmaterials": {
+   "name": "Relic Materials",
+   "crateCost": {
+    "relicmaterials": 100
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "reservepower": {
+   "name": "Reserve Power",
+   "crateCost": {
+    "cloth": 200
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "revolver": {
+   "name": "Cometa T2-9",
+   "crateCost": {
+    "cloth": 60
+   },
+   "crateQuantity": 30,
+   "isRawResource": false
+  },
+  "revolverammo": {
+   "name": ".44 Mag",
+   "crateCost": {
+    "cloth": 40
+   },
+   "crateQuantity": 40,
+   "isRawResource": false
+  },
+  "rifleammo": {
+   "name": "7.62mm",
+   "crateCost": {
+    "cloth": 80
+   },
+   "crateQuantity": 40,
+   "isRawResource": false
+  },
+  "rifleautomaticc": {
+   "name": "Catena rt.IV Auto-Rifle",
+   "crateCost": {
+    "cloth": 120
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "rifleautomaticw": {
+   "name": "Sampo Auto-Rifle 77",
+   "crateCost": {
+    "cloth": 125
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "riflec": {
+   "name": "Argenti r.II Rifle",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "rifleheavyc": {
+   "name": "Volta r.I Repeater",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "rifleheavyw": {
+   "name": "The Hangman 757",
+   "crateCost": {
+    "cloth": 125
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "riflelightc": {
+   "name": "Fuscina pi.I",
+   "crateCost": {
+    "cloth": 140
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "riflelightw": {
+   "name": "Blakerow 871",
+   "crateCost": {
+    "cloth": 140
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "riflelongc": {
+   "name": "KRR2-790 Omen",
+   "crateCost": {
+    "cloth": 155
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "riflelongw": {
+   "name": "Clancy Cinder M3",
+   "crateCost": {
+    "cloth": 130
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "rifleshortw": {
+   "name": "No.2B Hawthorne",
+   "crateCost": {
+    "cloth": 70
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "riflew": {
+   "name": "No.2 Loughcaster",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "rocketpartbottom": {
+   "name": "A0E-9 Rocket Booster",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "rocketpartcenter": {
+   "name": "A0E-9 Rocket Body",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "rocketparttop": {
+   "name": "A0E-9 Rocket Warhead",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "rpgammo": {
+   "name": "RPG",
+   "crateCost": {
+    "cloth": 60,
+    "explosive": 90
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "rpgtw": {
+   "name": "Cutler Foebreaker",
+   "crateCost": {
+    "cloth": 100,
+    "wood": 5
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "rpgw": {
+   "name": "Cutler Launcher 4",
+   "crateCost": {
+    "cloth": 100,
+    "wood": 35
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "sandbagmaterials": {
+   "name": "Sandbag",
+   "crateCost": {
+    "cloth": 15
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "satchelcharget": {
+   "name": "Havoc Charge Detonator",
+   "crateCost": {
+    "cloth": 75,
+    "heavyexplosive": 20
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "satchelchargew": {
+   "name": "Alligator Charge",
+   "crateCost": {
+    "cloth": 100,
+    "explosive": 80
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "scouttankmultiw": {
+   "name": "King Jester Mk. I-1",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "scouttankoffensivew": {
+   "name": "King Gallant Mk. II",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "scouttankw": {
+   "name": "King Spire Mk. I",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "scoutuniformc": {
+   "name": "Recon Camo",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "scoutuniformw": {
+   "name": "Outrider’s Mantle",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "scoutvehiclemobilityc": {
+   "name": "UV-05a “Argonaut”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "scoutvehicleoffensivec": {
+   "name": "UV-24 “Icarus”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "scoutvehicleoffensivew": {
+   "name": "Drummond Spitfire 100d",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "scoutvehicleutilityc": {
+   "name": "UV-5c “Odyssey”",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "scoutvehicleutilityw": {
+   "name": "Drummond Loscann 55c",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "scoutvehiclew": {
+   "name": "Drummond 100a",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "shippart1": {
+   "name": "Naval Hull Segments",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "shippart2": {
+   "name": "Naval Shell Plating",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "shippart3": {
+   "name": "Naval Turbine Components",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "shotgunammo": {
+   "name": "Buckshot",
+   "crateCost": {
+    "cloth": 80
+   },
+   "crateQuantity": 40,
+   "isRawResource": false
+  },
+  "shotgunc": {
+   "name": "KRF1-750 Dragonfly",
+   "crateCost": {
+    "cloth": 130
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "shotgunw": {
+   "name": "No.4 The Pillory Scattergun",
+   "crateCost": {
+    "cloth": 80
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "shovel": {
+   "name": "Shovel",
+   "crateCost": {
+    "cloth": 200
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "sledgehammer": {
+   "name": "Sledge Hammer",
+   "crateCost": {
+    "cloth": 200
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "smalltrainengine": {
+   "name": "BMS Mineseeker",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "smalltrainliquid": {
+   "name": "BMS Tinderbox",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "smalltrainmaterial": {
+   "name": "BMS Linerunner",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "smalltrainresource": {
+   "name": "BMS Railtruck",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "smalltrainshipping": {
+   "name": "BMS Stowheel",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "smgammo": {
+   "name": "9mm",
+   "crateCost": {
+    "cloth": 80
+   },
+   "crateQuantity": 40,
+   "isRawResource": false
+  },
+  "smgc": {
+   "name": "“The Pitch Gun” mc.V",
+   "crateCost": {
+    "cloth": 80
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "smgheavyc": {
+   "name": "“Lionclaw” mc.VIII",
+   "crateCost": {
+    "cloth": 120
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "smgheavyw": {
+   "name": "No.1 “The Liar” Submachinegun",
+   "crateCost": {
+    "cloth": 120
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "smgw": {
+   "name": "Fiddler Submachine Gun Model 868",
+   "crateCost": {
+    "cloth": 120
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "smokegrenade": {
+   "name": "PT-815 Smoke Grenade",
+   "crateCost": {
+    "cloth": 80
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "sniperriflec": {
+   "name": "KRR3-792 Auger",
+   "crateCost": {
+    "cloth": 250,
+    "wood": 30
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "sniperriflew": {
+   "name": "Clancy-Raca M4",
+   "crateCost": {
+    "cloth": 250,
+    "wood": 25
+   },
+   "crateQuantity": 3,
+   "isRawResource": false
+  },
+  "snowuniformc": {
+   "name": "Heavy Topcoat",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "snowuniformw": {
+   "name": "Caoivish Parka",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "soldiersupplies": {
+   "name": "Soldier Supplies",
+   "crateCost": {
+    "cloth": 80
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "soldieruniformc": {
+   "name": "Legionary Fatigues",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "soldieruniformw": {
+   "name": "Infantry Battledress",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "stickybomb": {
+   "name": "Anti-Tank Sticky Bomb",
+   "crateCost": {
+    "cloth": 50,
+    "explosive": 100
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "sulfur": {
+   "name": "Sulfur",
+   "crateCost": {
+    "sulfur": 105
+   },
+   "crateQuantity": 100,
+   "isRawResource": true
+  },
+  "supertankc": {
+   "name": "O-75b \"Ares\"",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "supertankw": {
+   "name": "Cullen Predator Mk. III",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "surfacewatermine": {
+   "name": "E681-B Hullbreaker Mine",
+   "crateCost": {
+    "cloth": 125,
+    "explosive": 35
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "swordc": {
+   "name": "Eleos Infantry Dagger",
+   "crateCost": {
+    "cloth": 200
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "tankettec": {
+   "name": "T12 “Actaeon” Tankette",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "tanketteflamec": {
+   "name": "T14 “Vesta” Tankette",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "tankettemultic": {
+   "name": "T13 “Deioneus” Rocket Battery",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "tanketteoffensivec": {
+   "name": "T20 “Ixion” Tankette",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "tankmine": {
+   "name": "Abisme AT-99 Mine",
+   "crateCost": {
+    "cloth": 100,
+    "explosive": 20
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "tankuniformc": {
+   "name": "Tankman’s Coveralls",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "tankuniformw": {
+   "name": "Padded Boiler Suit",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 15,
+   "isRawResource": false
+  },
+  "torpedoammo": {
+   "name": "Moray Torpedo",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "traincaboose": {
+   "name": "BMS Roadhouse",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "traincoal": {
+   "name": "BMS Rockhold",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "traincombatcarc": {
+   "name": "Aegis Steelbreaker K5a",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "traincombatcarw": {
+   "name": "O’Brien Warsmith v.215",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "trainengine": {
+   "name": "BMS Black Bolt",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "trainflatbed": {
+   "name": "BMS Longrider",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "trainhospital": {
+   "name": "BMS Bloodtender",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "traininfantry": {
+   "name": "BMS Holdout",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "trainlrartillery": {
+   "name": "Tempest Cannon RA-2",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "traumakit": {
+   "name": "Trauma Kit",
+   "crateCost": {
+    "cloth": 80
+   },
+   "crateQuantity": 10,
+   "isRawResource": false
+  },
+  "tripod": {
+   "name": "Tripod",
+   "crateCost": {
+    "cloth": 100
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "truckc": {
+   "name": "R-1 Hauler",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "truckdefensivew": {
+   "name": "Dunne Leatherback 2a",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "truckmobilityc": {
+   "name": "R-5b “Sisyphus” Hauler",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "truckmobilityw": {
+   "name": "Dunne Landrunner 12c",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "truckmultic": {
+   "name": "R-17 “Retiarius” Skirmisher",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "truckoffensivec": {
+   "name": "R-9 “Speartip” Escort",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "truckw": {
+   "name": "Dunne Transport",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "unexplodedordnance": {
+   "name": "Unexploded Ordnance",
+   "crateCost": {
+    "cloth": 100,
+    "heavyexplosive": 60
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "water": {
+   "name": "Water",
+   "crateCost": {
+    "water": 2
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "waterbucket": {
+   "name": "Water Bucket",
+   "crateCost": {
+    "cloth": 80
+   },
+   "crateQuantity": 50,
+   "isRawResource": false
+  },
+  "watercan": {
+   "name": "Water (Canned)",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  },
+  "watermine": {
+   "name": "E680-S Rudder Lock",
+   "crateCost": {
+    "wood": 40
+   },
+   "crateQuantity": 1,
+   "isRawResource": false
+  },
+  "windsockt": {
+   "name": "Wind Sock",
+   "crateCost": {
+    "cloth": 150
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "wood": {
+   "name": "Refined Materials",
+   "crateCost": {
+    "wood": 400
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "workhammer": {
+   "name": "Hammer",
+   "crateCost": {
+    "cloth": 20
+   },
+   "crateQuantity": 20,
+   "isRawResource": false
+  },
+  "workwrench": {
+   "name": "Wrench",
+   "crateCost": {
+    "cloth": 75
+   },
+   "crateQuantity": 5,
+   "isRawResource": false
+  },
+  "wreckage": {
+   "name": "Wreckage",
+   "crateCost": null,
+   "crateQuantity": null,
+   "isRawResource": false
+  }
+ },
+ "buildings": {
+  "ammunition_factory": {
+   "name": "Ammunition Factory",
+   "codeName": "FacilityFactoryAmmo",
+   "category": "factories",
+   "cost": {
+    "facilitymaterials2": 25
+   },
+   "power": -4,
+   "production": [
+    {
+     "input": {
+      "heavyexplosive": 4,
+      "facilitymaterials1": 1
+     },
+     "output": {
+      "flameammo": 1
+     },
+     "time": 25
+    },
+    {
+     "input": {
+      "heavyexplosive": 24,
+      "facilitymaterials1": 5
+     },
+     "output": {
+      "mortartankammo": 1
+     },
+     "time": 30
+    },
+    {
+     "input": {
+      "explosive": {
+       "quantity": 2,
+       "limit": 32000
+      },
+      "facilitymaterials1": {
+       "quantity": 2,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "infantrymine": {
+       "quantity": 1,
+       "limit": 3500
+      }
+     },
+     "time": 25
+    },
+    {
+     "input": {
+      "heavyexplosive": {
+       "quantity": 2,
+       "limit": 32000
+      },
+      "facilitymaterials1": {
+       "quantity": 2,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "tankmine": {
+       "quantity": 1,
+       "limit": 3500
+      }
+     },
+     "time": 25
+    },
+    {
+     "input": {
+      "heavyexplosive": 8,
+      "facilitymaterials1": 1
+     },
+     "output": {
+      "watermine": 1
+     },
+     "time": 90
+    },
+    {
+     "input": {
+      "facilitymaterials1": 2,
+      "facilitymaterials7": 5
+     },
+     "output": {
+      "facilitymaterials11": 1
+     },
+     "time": 1500
+    },
+    {
+     "input": {
+      "facilitymaterials1": 15,
+      "heavyexplosive": 24,
+      "mortartankammo": 1
+     },
+     "output": {
+      "mortartankammobr": 1
+     },
+     "time": 30
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 8,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "surfacewatermine": {
+       "quantity": 1,
+       "limit": 3500
+      }
+     },
+     "time": 25
+    },
+    {
+     "input": {
+      "facilitymaterials1": 4
+     },
+     "output": {
+      "aircraftammo": 1
+     },
+     "time": 10
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 12,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "minitorpedoammo": {
+       "quantity": 1,
+       "limit": 3500
+      }
+     },
+     "time": 25
+    }
+   ],
+   "upgrades": {
+    "tripod_factory": {
+     "name": "Tripod Factory",
+     "production": [
+      {
+       "input": {
+        "facilitymaterials1": 2
+       },
+       "output": {
+        "tripod": 1
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "facilitymaterials1": 3
+       },
+       "output": {
+        "isgtc": 1
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "facilitymaterials1": 3
+       },
+       "output": {
+        "atrifletc": 1
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "facilitymaterials1": 3
+       },
+       "output": {
+        "mgtc": 1
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "facilitymaterials1": 3
+       },
+       "output": {
+        "grenadelaunchertc": 1
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "facilitymaterials1": 3
+       },
+       "output": {
+        "rpgtw": 1
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "facilitymaterials1": 3
+       },
+       "output": {
+        "atrpgtw": 1
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "facilitymaterials1": 3
+       },
+       "output": {
+        "mgtw": 1
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "facilitymaterials1": 1,
+        "facilitymaterials4": 1
+       },
+       "output": {
+        "bannertc": 1
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "facilitymaterials1": 1,
+        "facilitymaterials4": 1
+       },
+       "output": {
+        "bannertw": 1
+       },
+       "time": 25
+      }
+     ]
+    },
+    "rocket_factory": {
+     "name": "Rocket Battery Workshop",
+     "production": [
+      {
+       "input": {
+        "heavyexplosive": 4,
+        "facilitymaterials1": 2
+       },
+       "output": {
+        "herocketammo": 1
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "heavyexplosive": 4,
+        "facilitymaterials1": 2
+       },
+       "output": {
+        "firerocketammo": 1
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "heavyexplosive": 8,
+        "flameammo": 3
+       },
+       "output": {
+        "facilitymaterials10": 1
+       },
+       "time": 1800
+      },
+      {
+       "input": {
+        "heavyexplosive": 28,
+        "facilitymaterials1": 15
+       },
+       "output": {
+        "demolitionrocketammo": 1
+       },
+       "time": 25
+      }
+     ]
+    },
+    "large_shell_factory": {
+     "name": "Large Shell Factory",
+     "production": [
+      {
+       "input": {
+        "heavyexplosive": 8,
+        "facilitymaterials1": 2
+       },
+       "output": {
+        "battletankammo": 1
+       },
+       "time": 60
+      },
+      {
+       "input": {
+        "heavyexplosive": 8,
+        "facilitymaterials1": 2
+       },
+       "output": {
+        "atlargeammo": 1
+       },
+       "time": 60
+      },
+      {
+       "input": {
+        "facilitymaterials10": 2,
+        "facilitymaterials7": 10
+       },
+       "output": {
+        "lrartilleryammo": 1
+       },
+       "time": 120
+      },
+      {
+       "input": {
+        "heavyexplosive": 2,
+        "facilitymaterials1": 2
+       },
+       "output": {
+        "lightartilleryammo": 1
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "heavyexplosive": 12,
+        "facilitymaterials1": 3
+       },
+       "output": {
+        "heavyartilleryammo": 1
+       },
+       "time": 40
+      },
+      {
+       "input": {
+        "heavyexplosive": 8,
+        "facilitymaterials1": 2
+       },
+       "output": {
+        "depthchargeammo": 1
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "heavyexplosive": 16,
+        "facilitymaterials2": 2
+       },
+       "output": {
+        "torpedoammo": 1
+       },
+       "time": 240
+      },
+      {
+       "input": {
+        "heavyexplosive": {
+         "quantity": 16,
+         "limit": 32000
+        },
+        "facilitymaterials2": {
+         "quantity": 1,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "bomberammo": {
+         "quantity": 1,
+         "limit": 32000
+        }
+       },
+       "time": 120
+      },
+      {
+       "input": {
+        "heavyexplosive": 3,
+        "facilitymaterials1": 2
+       },
+       "output": {
+        "aaammo": 1
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "heavyexplosive": {
+         "quantity": 12,
+         "limit": 32000
+        },
+        "facilitymaterials2": {
+         "quantity": 1,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "divebomberammo": {
+         "quantity": 1,
+         "limit": 32000
+        }
+       },
+       "time": 90
+      },
+      {
+       "input": {
+        "heavyexplosive": 14,
+        "facilitymaterials2": 2
+       },
+       "output": {
+        "aircrafttorpedoammo": 1
+       },
+       "time": 240
+      }
+     ]
+    }
+   }
+  },
+  "bms_foreman_stacker": {
+   "name": "BMS Foreman Stacker",
+   "codeName": "FacilityCrane",
+   "category": "factories",
+   "cost": {
+    "facilitymaterials2": 10
+   },
+   "power": -0.5,
+   "production": [],
+   "upgrades": {}
+  },
+  "coal_refinery": {
+   "name": "Coal Refinery",
+   "codeName": "FacilityRefineryCoal",
+   "category": "factories",
+   "cost": {
+    "facilitymaterials1": 50
+   },
+   "power": -3,
+   "production": [
+    {
+     "input": {
+      "coal": {
+       "quantity": 200,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "facilitycoal1": 180
+     },
+     "time": 270
+    }
+   ],
+   "upgrades": {
+    "coke_furnace": {
+     "name": "Coke Furnace",
+     "production": [
+      {
+       "input": {
+        "coal": {
+         "quantity": 200,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitycoal1": {
+         "quantity": 165,
+         "limit": 26400
+        },
+        "sulfur": {
+         "quantity": 15,
+         "limit": 2400
+        }
+       },
+       "time": 270
+      }
+     ]
+    },
+    "liquifier": {
+     "name": "Coal Liquefier",
+     "production": [
+      {
+       "input": {
+        "coal": {
+         "quantity": 300,
+         "limit": 32000
+        },
+        "water": {
+         "quantity": 50,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "concrete": {
+         "quantity": 1,
+         "limit": 105
+        },
+        "sulfur": {
+         "quantity": 10,
+         "limit": 1050
+        },
+        "oil": {
+         "quantity": 50,
+         "limit": 5330
+        }
+       },
+       "time": 270
+      }
+     ]
+    },
+    "adv_liquifier": {
+     "name": "Advanced Coal Liquefier",
+     "production": [
+      {
+       "input": {
+        "coal": {
+         "quantity": 300,
+         "limit": 32000
+        },
+        "water": {
+         "quantity": 100,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitycoal1": {
+         "quantity": 260,
+         "limit": 27300
+        },
+        "facilityoil1": {
+         "quantity": 60,
+         "limit": 6300
+        }
+       },
+       "time": 405
+      },
+      {
+       "input": {
+        "coal": {
+         "quantity": 300,
+         "limit": 32000
+        },
+        "water": {
+         "quantity": 100,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "concrete": {
+         "quantity": 1,
+         "limit": 105
+        },
+        "sulfur": {
+         "quantity": 15,
+         "limit": 1575
+        },
+        "oil": {
+         "quantity": 100,
+         "limit": 10500
+        }
+       },
+       "time": 270
+      }
+     ]
+    }
+   }
+  },
+  "concretemixer": {
+   "name": "Concrete Mixer",
+   "codeName": "ConcreteMixer",
+   "category": "shippables",
+   "cost": {
+    "wood": 75
+   },
+   "power": 0,
+   "production": [
+    {
+     "input": {
+      "components": {
+       "quantity": 20,
+       "limit": 2400
+      }
+     },
+     "output": {
+      "concrete": {
+       "quantity": 1,
+       "limit": 120
+      }
+     },
+     "time": 20
+    },
+    {
+     "input": {
+      "coal": {
+       "quantity": 100,
+       "limit": 12000
+      }
+     },
+     "output": {
+      "groundmaterials": {
+       "quantity": 20,
+       "limit": 2400
+      }
+     },
+     "time": 40
+    },
+    {
+     "input": {
+      "metal": {
+       "quantity": 120,
+       "limit": 9600
+      }
+     },
+     "output": {
+      "groundmaterials": {
+       "quantity": 20,
+       "limit": 2400
+      }
+     },
+     "time": 90
+    }
+   ],
+   "upgrades": {}
+  },
+  "diesel_power_plant": {
+   "name": "Diesel Power Plant",
+   "codeName": "FacilityPowerDiesel",
+   "category": "power",
+   "cost": {
+    "cloth": 150
+   },
+   "power": 5,
+   "production": [
+    {
+     "input": {
+      "diesel": {
+       "quantity": 25,
+       "limit": 1000
+      }
+     },
+     "time": 45
+    }
+   ],
+   "upgrades": {
+    "petrol_power": {
+     "name": "Petrol Power Plant",
+     "production": [
+      {
+       "input": {
+        "petrol": {
+         "quantity": 50,
+         "limit": 1000
+        }
+       },
+       "time": 90
+      }
+     ]
+    },
+    "coal": {
+     "name": "Coal Power Plant",
+     "production": [
+      {
+       "input": {
+        "coal": {
+         "quantity": 60,
+         "limit": 32000
+        }
+       },
+       "time": 90
+      }
+     ]
+    }
+   }
+  },
+  "facilityfactoryaircraft": {
+   "name": "Aircraft Maintenance Factory",
+   "codeName": "FacilityFactoryAircraft",
+   "category": "factories",
+   "cost": {
+    "facilitymaterials2": 250
+   },
+   "power": -4,
+   "production": [
+    {
+     "input": {
+      "facilitymaterials2": {
+       "quantity": 35,
+       "limit": 1000
+      },
+      "facilitymaterials6": {
+       "quantity": 25,
+       "limit": 1000
+      }
+     },
+     "output": {
+      "aircraftpartsmallmechanicalw": {
+       "quantity": 1,
+       "limit": 1000
+      }
+     },
+     "time": 1200
+    },
+    {
+     "input": {
+      "facilitymaterials2": {
+       "quantity": 1,
+       "limit": 1000
+      },
+      "facilitymaterials6": {
+       "quantity": 1,
+       "limit": 1000
+      },
+      "aircraftpartsmallmechanicalwreckedw": {
+       "quantity": 1,
+       "limit": 1000
+      }
+     },
+     "output": {
+      "aircraftpartsmallmechanicalw": {
+       "quantity": 1,
+       "limit": 1000
+      }
+     },
+     "time": 300
+    },
+    {
+     "input": {
+      "facilitymaterials2": {
+       "quantity": 95,
+       "limit": 1000
+      },
+      "facilitymaterials7": {
+       "quantity": 25,
+       "limit": 1000
+      }
+     },
+     "output": {
+      "aircraftpartsmallenginew": {
+       "quantity": 1,
+       "limit": 1000
+      }
+     },
+     "time": 1200
+    },
+    {
+     "input": {
+      "facilitymaterials2": {
+       "quantity": 1,
+       "limit": 1000
+      },
+      "facilitymaterials7": {
+       "quantity": 1,
+       "limit": 1000
+      },
+      "aircraftpartsmallenginewreckedw": {
+       "quantity": 1,
+       "limit": 1000
+      }
+     },
+     "output": {
+      "aircraftpartsmallenginew": {
+       "quantity": 1,
+       "limit": 1000
+      }
+     },
+     "time": 300
+    },
+    {
+     "input": {
+      "facilitymaterials2": {
+       "quantity": 35,
+       "limit": 1000
+      },
+      "facilitymaterials6": {
+       "quantity": 25,
+       "limit": 1000
+      }
+     },
+     "output": {
+      "aircraftpartsmallmechanicalc": {
+       "quantity": 1,
+       "limit": 1000
+      }
+     },
+     "time": 1200
+    },
+    {
+     "input": {
+      "facilitymaterials2": {
+       "quantity": 1,
+       "limit": 1000
+      },
+      "facilitymaterials6": {
+       "quantity": 1,
+       "limit": 1000
+      },
+      "aircraftpartsmallmechanicalwreckedc": {
+       "quantity": 1,
+       "limit": 1000
+      }
+     },
+     "output": {
+      "aircraftpartsmallmechanicalc": {
+       "quantity": 1,
+       "limit": 1000
+      }
+     },
+     "time": 300
+    },
+    {
+     "input": {
+      "facilitymaterials2": {
+       "quantity": 95,
+       "limit": 1000
+      },
+      "facilitymaterials7": {
+       "quantity": 25,
+       "limit": 1000
+      }
+     },
+     "output": {
+      "aircraftpartsmallenginec": {
+       "quantity": 1,
+       "limit": 1000
+      }
+     },
+     "time": 1200
+    },
+    {
+     "input": {
+      "facilitymaterials2": {
+       "quantity": 1,
+       "limit": 1000
+      },
+      "facilitymaterials7": {
+       "quantity": 1,
+       "limit": 1000
+      },
+      "aircraftpartsmallenginewreckedc": {
+       "quantity": 1,
+       "limit": 1000
+      }
+     },
+     "output": {
+      "aircraftpartsmallenginec": {
+       "quantity": 1,
+       "limit": 1000
+      }
+     },
+     "time": 300
+    }
+   ],
+   "upgrades": {
+    "aircraftstrategic": {
+     "name": "Strategic Maintenance Hangar",
+     "production": [
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 35,
+         "limit": 1000
+        },
+        "facilitymaterials6": {
+         "quantity": 25,
+         "limit": 1000
+        },
+        "facilitymaterials11": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "output": {
+        "aircraftpartlargemechanicalc": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "time": 1200
+      },
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 5,
+         "limit": 1000
+        },
+        "facilitymaterials6": {
+         "quantity": 5,
+         "limit": 1000
+        },
+        "aircraftpartlargemechanicalwreckedc": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "output": {
+        "aircraftpartlargemechanicalc": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 95,
+         "limit": 1000
+        },
+        "facilitymaterials7": {
+         "quantity": 25,
+         "limit": 1000
+        },
+        "facilitymaterials11": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "output": {
+        "aircraftpartlargeenginec": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "time": 1200
+      },
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 5,
+         "limit": 10000
+        },
+        "facilitymaterials7": {
+         "quantity": 5,
+         "limit": 1000
+        },
+        "aircraftpartlargeenginewreckedc": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "output": {
+        "aircraftpartlargeenginec": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 35,
+         "limit": 1000
+        },
+        "facilitymaterials6": {
+         "quantity": 25,
+         "limit": 1000
+        },
+        "facilitymaterials11": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "output": {
+        "aircraftpartlargemechanicalw": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "time": 1200
+      },
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 5,
+         "limit": 1000
+        },
+        "facilitymaterials6": {
+         "quantity": 5,
+         "limit": 1000
+        },
+        "aircraftpartlargemechanicalwreckedw": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "output": {
+        "aircraftpartlargemechanicalw": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 95,
+         "limit": 1000
+        },
+        "facilitymaterials7": {
+         "quantity": 25,
+         "limit": 1000
+        },
+        "facilitymaterials11": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "output": {
+        "aircraftpartlargeenginew": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "time": 1200
+      },
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 5,
+         "limit": 10000
+        },
+        "facilitymaterials7": {
+         "quantity": 5,
+         "limit": 1000
+        },
+        "aircraftpartlargeenginewreckedw": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "output": {
+        "aircraftpartlargeenginew": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "time": 300
+      }
+     ]
+    }
+   }
+  },
+  "facilityfactorysmallarms": {
+   "name": "Infantry Kit Factory",
+   "codeName": "FacilityFactorySmallArms",
+   "category": "factories",
+   "cost": {
+    "facilitymaterials1": 250
+   },
+   "power": -4,
+   "production": [
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 220,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:armouruniformc": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 220,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:armouruniformw": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:engineeruniformc": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:engineeruniformw": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:grenadeuniformc": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:ammouniformw": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:medicuniformc": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:medicuniformw": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:officeruniformc": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:officeruniformw": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:rainuniformc": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:scoutuniformc": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:scoutuniformw": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:snowuniformc": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:snowuniformw": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:tankuniformc": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:tankuniformw": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:navaluniformc": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    },
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 110,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "crate:navaluniformw": {
+       "quantity": 10,
+       "limit": 100
+      }
+     },
+     "time": 8100
+    }
+   ],
+   "upgrades": {
+    "specialweapons": {
+     "name": "Special-Issue Firearms Assembly",
+     "production": [
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 50,
+         "limit": 32000
+        },
+        "facilitymaterials2": {
+         "quantity": 40,
+         "limit": 32000
+        },
+        "crate:riflec": {
+         "quantity": 1,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:sniperriflec": {
+         "quantity": 1,
+         "limit": 100
+        }
+       },
+       "time": 100
+      },
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 50,
+         "limit": 32000
+        },
+        "facilitymaterials2": {
+         "quantity": 40,
+         "limit": 32000
+        },
+        "crate:riflew": {
+         "quantity": 1,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:sniperriflew": {
+         "quantity": 1,
+         "limit": 100
+        }
+       },
+       "time": 100
+      },
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 25,
+         "limit": 32000
+        },
+        "facilitymaterials4": {
+         "quantity": 5,
+         "limit": 32000
+        },
+        "crate:assaultriflec": {
+         "quantity": 1,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:atriflesniperc": {
+         "quantity": 1,
+         "limit": 750
+        }
+       },
+       "time": 120
+      },
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 3,
+         "limit": 32000
+        },
+        "facilitymaterials5": {
+         "quantity": 5,
+         "limit": 32000
+        },
+        "crate:assaultrifleheavyc": {
+         "quantity": 1,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:atriflelightc": {
+         "quantity": 1,
+         "limit": 1150
+        }
+       },
+       "time": 75
+      },
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 3,
+         "limit": 32000
+        },
+        "facilitymaterials4": {
+         "quantity": 5,
+         "limit": 32000
+        },
+        "crate:assaultrifleheavyw": {
+         "quantity": 1,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:atrifleautomaticw": {
+         "quantity": 1,
+         "limit": 1150
+        }
+       },
+       "time": 75
+      },
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 3,
+         "limit": 32000
+        },
+        "facilitymaterials5": {
+         "quantity": 5,
+         "limit": 32000
+        },
+        "crate:atriflew": {
+         "quantity": 1,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:atrifleassaultw": {
+         "quantity": 1,
+         "limit": 1150
+        }
+       },
+       "time": 75
+      },
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 5,
+         "limit": 32000
+        },
+        "flameammo": {
+         "quantity": 1,
+         "limit": 32000
+        },
+        "crate:mortarammosh": {
+         "quantity": 1,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:mortarammoflame": {
+         "quantity": 1,
+         "limit": 1150
+        }
+       },
+       "time": 75
+      },
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 10,
+         "limit": 32000
+        },
+        "crate:scoutuniformc": {
+         "quantity": 1,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:paratrooperuniformc": {
+         "quantity": 1,
+         "limit": 100
+        }
+       },
+       "time": 120
+      },
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 10,
+         "limit": 32000
+        },
+        "crate:scoutuniformw": {
+         "quantity": 1,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:paratrooperuniformw": {
+         "quantity": 1,
+         "limit": 100
+        }
+       },
+       "time": 120
+      },
+      {
+       "input": {
+        "facilitymaterials12": {
+         "quantity": 2,
+         "limit": 1000
+        },
+        "crate:officeruniformc": {
+         "quantity": 1,
+         "limit": 100
+        }
+       },
+       "output": {
+        "crate:pilotuniformc": 1
+       },
+       "time": 120
+      },
+      {
+       "input": {
+        "facilitymaterials12": {
+         "quantity": 2,
+         "limit": 1000
+        },
+        "crate:officeruniformw": {
+         "quantity": 1,
+         "limit": 100
+        }
+       },
+       "output": {
+        "crate:pilotuniformw": 1
+       },
+       "time": 120
+      },
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 20,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:paratrooperbackpack": {
+         "quantity": 1,
+         "limit": 100
+        }
+       },
+       "time": 60
+      }
+     ]
+    },
+    "infantryammo": {
+     "name": "Small Arms Workshop",
+     "production": [
+      {
+       "input": {
+        "explosive": {
+         "quantity": 110,
+         "limit": 32000
+        },
+        "facilitymaterials1": {
+         "quantity": 65,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:mortarammosh": {
+         "quantity": 10,
+         "limit": 100
+        }
+       },
+       "time": 9000
+      },
+      {
+       "input": {
+        "explosive": {
+         "quantity": 80,
+         "limit": 32000
+        },
+        "facilitymaterials1": {
+         "quantity": 65,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:mortarammofl": {
+         "quantity": 10,
+         "limit": 100
+        }
+       },
+       "time": 9000
+      },
+      {
+       "input": {
+        "explosive": {
+         "quantity": 385,
+         "limit": 32000
+        },
+        "facilitymaterials1": {
+         "quantity": 65,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:mortarammo": {
+         "quantity": 10,
+         "limit": 100
+        }
+       },
+       "time": 9000
+      },
+      {
+       "input": {
+        "explosive": {
+         "quantity": 385,
+         "limit": 32000
+        },
+        "facilitymaterials1": {
+         "quantity": 95,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:atrpglightc": {
+         "quantity": 10,
+         "limit": 150
+        }
+       },
+       "time": 6900
+      },
+      {
+       "input": {
+        "explosive": {
+         "quantity": 440,
+         "limit": 32000
+        },
+        "facilitymaterials1": {
+         "quantity": 110,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:atgrenadew": {
+         "quantity": 10,
+         "limit": 150
+        }
+       },
+       "time": 6900
+      },
+      {
+       "input": {
+        "explosive": {
+         "quantity": 550,
+         "limit": 32000
+        },
+        "facilitymaterials1": {
+         "quantity": 55,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:stickybomb": {
+         "quantity": 10,
+         "limit": 150
+        }
+       },
+       "time": 6900
+      },
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 110,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:atrifleammo": {
+         "quantity": 10,
+         "limit": 100
+        }
+       },
+       "time": 9000
+      },
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 135,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:smokegrenade": {
+         "quantity": 10,
+         "limit": 100
+        }
+       },
+       "time": 6900
+      }
+     ]
+    },
+    "heavyammo": {
+     "name": "Heavy Munitions Foundry",
+     "production": [
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 175,
+         "limit": 32000
+        },
+        "explosive": {
+         "quantity": 1320,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:lighttankammo": {
+         "quantity": 10,
+         "limit": 100
+        }
+       },
+       "time": 18000
+      },
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 130,
+         "limit": 32000
+        },
+        "explosive": {
+         "quantity": 1320,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:atammo": {
+         "quantity": 10,
+         "limit": 100
+        }
+       },
+       "time": 18000
+      },
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 45,
+         "limit": 32000
+        },
+        "explosive": {
+         "quantity": 220,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:minitankammo": {
+         "quantity": 10,
+         "limit": 100
+        }
+       },
+       "time": 9000
+      },
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 65,
+         "limit": 32000
+        },
+        "explosive": {
+         "quantity": 825,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:atrpgammo": {
+         "quantity": 10,
+         "limit": 100
+        }
+       },
+       "time": 9000
+      },
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 65,
+         "limit": 32000
+        },
+        "explosive": {
+         "quantity": 825,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:atrpgindirectammo": {
+         "quantity": 10,
+         "limit": 100
+        }
+       },
+       "time": 9000
+      },
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 65,
+         "limit": 32000
+        },
+        "explosive": {
+         "quantity": 495,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:rpgammo": {
+         "quantity": 10,
+         "limit": 100
+        }
+       },
+       "time": 9000
+      },
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 80,
+         "limit": 32000
+        },
+        "explosive": {
+         "quantity": 550,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:helaunchedgrenade": {
+         "quantity": 10,
+         "limit": 100
+        }
+       },
+       "time": 7200
+      },
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 105,
+         "limit": 32000
+        },
+        "explosive": {
+         "quantity": 685,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "crate:atlaunchedgrenadew": {
+         "quantity": 10,
+         "limit": 100
+        }
+       },
+       "time": 7200
+      }
+     ]
+    }
+   }
+  },
+  "facilitymineoilrig": {
+   "name": "Offshore Platform",
+   "codeName": "FacilityMineOilRig",
+   "category": "logistics",
+   "cost": false,
+   "power": 0,
+   "production": [
+    {
+     "output": {
+      "facilityoil1": {
+       "quantity": 30,
+       "limit": 3000
+      }
+     },
+     "time": 50
+    },
+    {
+     "input": {
+      "coal": {
+       "quantity": 100,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "facilityoil2": {
+       "quantity": 30,
+       "limit": 3000
+      }
+     },
+     "time": 90
+    }
+   ],
+   "upgrades": {}
+  },
+  "facilityvehiclefactory3": {
+   "name": "Dry Dock",
+   "codeName": "FacilityVehicleFactory3",
+   "category": "factories",
+   "cost": {
+    "facilitymaterials9": 35
+   },
+   "power": -10,
+   "production": [
+    {
+     "input": {
+      "shippart1": 8,
+      "shippart2": 15
+     },
+     "output": {
+      "largeshipbaseship": 1
+     },
+     "time": 14400
+    },
+    {
+     "input": {
+      "shippart1": 8,
+      "shippart2": 15
+     },
+     "output": {
+      "largeshipresourceship": 1
+     },
+     "time": 14400
+    },
+    {
+     "input": {
+      "shippart1": 25,
+      "shippart2": 25
+     },
+     "output": {
+      "largeshipstorageship": 1
+     },
+     "time": 28800
+    },
+    {
+     "input": {
+      "shippart1": 12,
+      "shippart2": 12
+     },
+     "output": {
+      "largeshipdestroyerc": 1
+     },
+     "time": 21600
+    },
+    {
+     "input": {
+      "shippart1": 15,
+      "shippart2": 15
+     },
+     "output": {
+      "largeshipsubmarinew": 1
+     },
+     "time": 21600
+    },
+    {
+     "input": {
+      "shippart1": 20,
+      "shippart2": 20,
+      "shippart3": 4
+     },
+     "output": {
+      "largeshipbattleshipc": 1
+     },
+     "time": 36000
+    },
+    {
+     "input": {
+      "shippart1": 20,
+      "shippart2": 20,
+      "shippart3": 4
+     },
+     "output": {
+      "largeshipbattleshipw": 1
+     },
+     "time": 36000
+    },
+    {
+     "input": {
+      "shippart1": 16,
+      "shippart2": 20
+     },
+     "output": {
+      "largeshipbattleshipaircraftw": 1
+     },
+     "time": 36000
+    },
+    {
+     "input": {
+      "shippart1": 12,
+      "shippart2": 12
+     },
+     "output": {
+      "largeshipdestroyerw": 1
+     },
+     "time": 21600
+    },
+    {
+     "input": {
+      "shippart1": 15,
+      "shippart2": 15
+     },
+     "output": {
+      "largeshipsubmarinec": 1
+     },
+     "time": 21600
+    },
+    {
+     "input": {
+      "shippart1": 16,
+      "shippart2": 20
+     },
+     "output": {
+      "largeshipaircraftc": 1
+     },
+     "time": 36000
+    }
+   ],
+   "upgrades": {}
+  },
+  "field_modification_center": {
+   "name": "Field Modification Center",
+   "codeName": "FacilityModificationCenter",
+   "category": "factories",
+   "cost": {
+    "facilitymaterials2": 150
+   },
+   "power": -8,
+   "production": [],
+   "upgrades": {}
+  },
+  "fortt2": {
+   "name": "Bunker (Tier 2)",
+   "codeName": "FortT2",
+   "cost": {
+    "cloth": 75
+   },
+   "power": 0,
+   "production": [],
+   "upgrades": {
+    "engineroomt2": {
+     "name": "Engine Room (Tier 2)",
+     "production": [
+      {
+       "input": {
+        "diesel": {
+         "quantity": 0.5,
+         "limit": 1000
+        }
+       },
+       "output": {
+        "reservepower": 1
+       },
+       "time": 144
+      },
+      {
+       "input": {
+        "petrol": {
+         "quantity": 0.5,
+         "limit": 1000
+        }
+       },
+       "output": {
+        "reservepower": 1
+       },
+       "time": 144
+      },
+      {
+       "output": {
+        "reservepower": 1
+       },
+       "time": 144
+      }
+     ]
+    }
+   }
+  },
+  "fortt3": {
+   "name": "Bunker (Tier 3)",
+   "codeName": "FortT3",
+   "cost": {
+    "concrete": 15
+   },
+   "power": 0,
+   "production": [],
+   "upgrades": {
+    "engineroomt3": {
+     "name": "Engine Room (Tier 3)",
+     "production": [
+      {
+       "input": {
+        "diesel": {
+         "quantity": 0.5,
+         "limit": 1000
+        }
+       },
+       "output": {
+        "reservepower": 1
+       },
+       "time": 144
+      },
+      {
+       "input": {
+        "petrol": {
+         "quantity": 0.5,
+         "limit": 1000
+        }
+       },
+       "output": {
+        "reservepower": 1
+       },
+       "time": 144
+      },
+      {
+       "output": {
+        "reservepower": 1
+       },
+       "time": 144
+      }
+     ]
+    }
+   }
+  },
+  "large_assembly_factory": {
+   "name": "Large Assembly Station",
+   "codeName": "FacilityVehicleFactory2",
+   "category": "factories",
+   "cost": {
+    "facilitymaterials2": 250
+   },
+   "power": -8,
+   "production": [
+    {
+     "input": {
+      "facilitymaterials2": 200,
+      "facilitymaterials4": 60,
+      "facilitymaterials7": 50
+     },
+     "output": {
+      "trainengine": 1
+     },
+     "time": 21600
+    },
+    {
+     "input": {
+      "facilitymaterials2": 20,
+      "facilitymaterials5": 15,
+      "facilitymaterials6": 5
+     },
+     "output": {
+      "traincoal": 1
+     },
+     "time": 1800
+    },
+    {
+     "input": {
+      "facilitymaterials2": 20,
+      "facilitymaterials5": 15,
+      "facilitymaterials6": 5
+     },
+     "output": {
+      "traininfantry": 1
+     },
+     "time": 1800
+    },
+    {
+     "input": {
+      "facilitymaterials2": 20,
+      "facilitymaterials5": 15,
+      "facilitymaterials6": 10
+     },
+     "output": {
+      "trainflatbed": 1
+     },
+     "time": 1800
+    },
+    {
+     "input": {
+      "facilitymaterials2": 20,
+      "facilitymaterials5": 15,
+      "facilitymaterials6": 5
+     },
+     "output": {
+      "traincaboose": 1
+     },
+     "time": 1800
+    }
+   ],
+   "upgrades": {
+    "aircraftassembly": {
+     "name": "Aircraft Assembly",
+     "production": [
+      {
+       "input": {
+        "facilitymaterials2": 40,
+        "facilitymaterials6": 50,
+        "facilitymaterials7": 50,
+        "facilitymaterials9": 2,
+        "facilitymaterials11": 10
+       },
+       "output": {
+        "aircraftfighterc": 1
+       },
+       "time": 14400
+      },
+      {
+       "input": {
+        "facilitymaterials2": 40,
+        "facilitymaterials6": 50,
+        "facilitymaterials7": 50,
+        "facilitymaterials9": 2,
+        "facilitymaterials11": 10
+       },
+       "output": {
+        "aircraftfighterw": 1
+       },
+       "time": 14400
+      },
+      {
+       "input": {
+        "facilitymaterials2": 40,
+        "facilitymaterials5": 200,
+        "facilitymaterials6": 50,
+        "facilitymaterials9": 2,
+        "facilitymaterials11": 10
+       },
+       "output": {
+        "aircraftwaterw": 1
+       },
+       "time": 14400
+      },
+      {
+       "input": {
+        "facilitymaterials2": 40,
+        "facilitymaterials4": 85,
+        "facilitymaterials5": 175,
+        "facilitymaterials6": 50,
+        "facilitymaterials9": 4,
+        "facilitymaterials11": 10
+       },
+       "output": {
+        "aircraftdivec": 1
+       },
+       "time": 14400
+      },
+      {
+       "input": {
+        "facilitymaterials2": 25,
+        "facilitymaterials4": 85,
+        "facilitymaterials5": 100,
+        "facilitymaterials6": 20,
+        "facilitymaterials9": 6,
+        "facilitymaterials11": 10
+       },
+       "output": {
+        "aircrafttorpedow": 1
+       },
+       "time": 14400
+      },
+      {
+       "input": {
+        "facilitymaterials3": 5,
+        "facilitymaterials6": 20,
+        "facilitymaterials7": 20,
+        "facilitymaterials9": 4,
+        "facilitymaterials11": 10
+       },
+       "output": {
+        "aircraftparatrooperc": 1
+       },
+       "time": 21600
+      },
+      {
+       "input": {
+        "facilitymaterials3": 5,
+        "facilitymaterials6": 20,
+        "facilitymaterials7": 20,
+        "facilitymaterials9": 4,
+        "facilitymaterials11": 10
+       },
+       "output": {
+        "aircraftparatrooperw": 1
+       },
+       "time": 21600
+      },
+      {
+       "input": {
+        "facilitymaterials3": 60,
+        "facilitymaterials8": 65,
+        "facilitymaterials6": 25,
+        "facilitymaterials7": 40,
+        "facilitymaterials9": 12,
+        "facilitymaterials11": 10
+       },
+       "output": {
+        "aircraftbomberc": 1
+       },
+       "time": 28800
+      },
+      {
+       "input": {
+        "facilitymaterials3": 60,
+        "facilitymaterials8": 65,
+        "facilitymaterials6": 25,
+        "facilitymaterials7": 40,
+        "facilitymaterials9": 12,
+        "facilitymaterials11": 10
+       },
+       "output": {
+        "aircraftbomberw": 1
+       },
+       "time": 28800
+      }
+     ]
+    },
+    "train_assembly": {
+     "name": "Train Assembly",
+     "production": [
+      {
+       "input": {
+        "facilitymaterials3": 30,
+        "facilitymaterials4": 30,
+        "facilitymaterials7": 30
+       },
+       "output": {
+        "traincombatcarc": 1
+       },
+       "time": 1800
+      },
+      {
+       "input": {
+        "facilitymaterials3": 30,
+        "facilitymaterials4": 30,
+        "facilitymaterials7": 30
+       },
+       "output": {
+        "traincombatcarw": 1
+       },
+       "time": 1800
+      },
+      {
+       "input": {
+        "facilitymaterials3": 60,
+        "facilitymaterials6": 45,
+        "facilitymaterials7": 55,
+        "facilitymaterials8": 40,
+        "facilitymaterials9": 2
+       },
+       "output": {
+        "trainhospital": 1
+       },
+       "time": 129600
+      },
+      {
+       "input": {
+        "facilitymaterials3": 285,
+        "facilitymaterials6": 95,
+        "facilitymaterials7": 105,
+        "facilitymaterials8": 105,
+        "facilitymaterials9": 35,
+        "facilitymaterials11": 45
+       },
+       "output": {
+        "trainlrartillery": 1
+       },
+       "time": 259200
+      }
+     ]
+    },
+    "heavy_tank_assembly": {
+     "name": "Heavy Tank Assembly",
+     "production": [
+      {
+       "input": {
+        "facilitymaterials3": 50,
+        "facilitymaterials6": 30,
+        "facilitymaterials7": 60,
+        "facilitymaterials8": 35
+       },
+       "output": {
+        "battletankc": 1
+       },
+       "time": 64800
+      },
+      {
+       "input": {
+        "facilitymaterials3": 50,
+        "facilitymaterials6": 30,
+        "facilitymaterials7": 60,
+        "facilitymaterials8": 35
+       },
+       "output": {
+        "battletankw": 1
+       },
+       "time": 64800
+      },
+      {
+       "input": {
+        "facilitymaterials3": 60,
+        "facilitymaterials6": 65,
+        "facilitymaterials7": 45,
+        "facilitymaterials8": 65
+       },
+       "output": {
+        "battletankatc": 1
+       },
+       "time": 86400
+      },
+      {
+       "input": {
+        "facilitymaterials3": 40,
+        "facilitymaterials6": 65,
+        "facilitymaterials7": 30,
+        "facilitymaterials8": 45
+       },
+       "output": {
+        "battletankdefensivew": 1
+       },
+       "time": 79200
+      },
+      {
+       "input": {
+        "facilitymaterials3": 150,
+        "facilitymaterials6": 65,
+        "facilitymaterials7": 40,
+        "facilitymaterials8": 85
+       },
+       "output": {
+        "battletankheavyartilleryc": 1
+       },
+       "time": 86400
+      },
+      {
+       "input": {
+        "facilitymaterials3": 150,
+        "facilitymaterials6": 65,
+        "facilitymaterials7": 40,
+        "facilitymaterials8": 85
+       },
+       "output": {
+        "battletankheavyartilleryw": 1
+       },
+       "time": 86400
+      },
+      {
+       "input": {
+        "facilitymaterials3": 275,
+        "facilitymaterials8": 105,
+        "facilitymaterials6": 105,
+        "facilitymaterials7": 95,
+        "facilitymaterials9": 3
+       },
+       "output": {
+        "supertankc": 1
+       },
+       "time": 172800
+      },
+      {
+       "input": {
+        "facilitymaterials3": 275,
+        "facilitymaterials8": 105,
+        "facilitymaterials6": 105,
+        "facilitymaterials7": 95,
+        "facilitymaterials9": 3
+       },
+       "output": {
+        "supertankw": 1
+       },
+       "time": 172800
+      }
+     ]
+    }
+   }
+  },
+  "light_vehicle_assembly_station": {
+   "name": "Small Assembly Station",
+   "codeName": "FacilityVehicleFactory1",
+   "category": "factories",
+   "cost": {
+    "facilitymaterials1": 75
+   },
+   "power": -2,
+   "production": [
+    {
+     "input": {
+      "cloth": 25
+     },
+     "output": {
+      "materialplatform": 1
+     },
+     "time": 15
+    },
+    {
+     "input": {
+      "motorcyclec": 1,
+      "facilitymaterials1": 5
+     },
+     "output": {
+      "motorcycleoffensivec": 1
+     },
+     "time": 180
+    },
+    {
+     "input": {
+      "truckc": 1,
+      "facilitymaterials1": 10
+     },
+     "output": {
+      "truckmobilityc": 1
+     },
+     "time": 300
+    },
+    {
+     "input": {
+      "truckc": 1,
+      "facilitymaterials1": 10
+     },
+     "output": {
+      "truckoffensivec": 1
+     },
+     "time": 300
+    },
+    {
+     "input": {
+      "truckw": 1,
+      "facilitymaterials1": 10
+     },
+     "output": {
+      "truckdefensivew": 1
+     },
+     "time": 300
+    },
+    {
+     "input": {
+      "truckw": 1,
+      "facilitymaterials1": 10
+     },
+     "output": {
+      "truckmobilityw": 1
+     },
+     "time": 300
+    },
+    {
+     "input": {
+      "facilitymaterials1": 125,
+      "facilitymaterials4": 10,
+      "facilitymaterials5": 20
+     },
+     "output": {
+      "smalltrainengine": 1
+     },
+     "time": 900
+    },
+    {
+     "input": {
+      "facilitymaterials1": 35,
+      "facilitymaterials4": 15,
+      "facilitymaterials5": 5
+     },
+     "output": {
+      "smalltrainresource": 1
+     },
+     "time": 300
+    },
+    {
+     "input": {
+      "facilitymaterials1": 35,
+      "facilitymaterials4": 15,
+      "facilitymaterials5": 5
+     },
+     "output": {
+      "smalltrainmaterial": 1
+     },
+     "time": 300
+    },
+    {
+     "input": {
+      "ambulancec": 1,
+      "facilitymaterials1": 15,
+      "facilitymaterials5": 5
+     },
+     "output": {
+      "ambulanceflamec": 1
+     },
+     "time": 300
+    },
+    {
+     "input": {
+      "ambulancew": 1,
+      "facilitymaterials1": 15,
+      "facilitymaterials5": 5
+     },
+     "output": {
+      "ambulanceflamew": 1
+     },
+     "time": 300
+    },
+    {
+     "input": {
+      "facilitymaterials1": 35,
+      "facilitymaterials4": 5,
+      "facilitymaterials5": 15
+     },
+     "output": {
+      "smalltrainliquid": 1
+     },
+     "time": 300
+    },
+    {
+     "input": {
+      "facilitymaterials1": 35,
+      "facilitymaterials4": 5,
+      "facilitymaterials5": 15
+     },
+     "output": {
+      "smalltrainshipping": 1
+     },
+     "time": 300
+    }
+   ],
+   "upgrades": {
+    "shipassembly": {
+     "name": "Naval Works",
+     "production": [
+      {
+       "input": {
+        "facilitymaterials2": 60,
+        "facilitymaterials4": 2,
+        "facilitymaterials5": 2,
+        "facilitymaterials7": 10,
+        "facilitymaterials9": 4,
+        "facilitymaterials11": 4
+       },
+       "output": {
+        "shippart1": 1
+       },
+       "time": 1500
+      },
+      {
+       "input": {
+        "facilitymaterials1": 2,
+        "facilitymaterials11": 1
+       },
+       "output": {
+        "shippart2": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "facilitymaterials8": 20,
+        "facilitymaterials9": 20
+       },
+       "output": {
+        "shippart3": 1
+       },
+       "time": 43200
+      }
+     ]
+    },
+    "motor_pool": {
+     "name": "Motor Pool",
+     "production": [
+      {
+       "input": {
+        "armoredcarc": 1,
+        "facilitymaterials1": 10,
+        "facilitymaterials4": 10
+       },
+       "output": {
+        "armoredcaroffensivec": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "armoredcarc": 1,
+        "facilitymaterials1": 10,
+        "facilitymaterials4": 10
+       },
+       "output": {
+        "armoredcartwinc": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "tankettec": 1,
+        "facilitymaterials1": 10,
+        "facilitymaterials4": 15
+       },
+       "output": {
+        "tanketteoffensivec": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "tankettec": 1,
+        "facilitymaterials2": 10,
+        "facilitymaterials4": 15
+       },
+       "output": {
+        "tanketteflamec": 1
+       },
+       "time": 600
+      },
+      {
+       "input": {
+        "scoutvehiclemobilityc": 1,
+        "facilitymaterials1": 3
+       },
+       "output": {
+        "scoutvehicleutilityc": 1
+       },
+       "time": 180
+      },
+      {
+       "input": {
+        "scoutvehiclemobilityc": 1,
+        "facilitymaterials1": 3,
+        "facilitymaterials5": 10
+       },
+       "output": {
+        "scoutvehicleoffensivec": 1
+       },
+       "time": 180
+      },
+      {
+       "input": {
+        "armoredcarw": 1,
+        "facilitymaterials2": 10,
+        "facilitymaterials4": 10
+       },
+       "output": {
+        "armoredcaratw": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "armoredcarw": 1,
+        "facilitymaterials1": 5,
+        "facilitymaterials4": 5
+       },
+       "output": {
+        "armoredcarmobilityw": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "armoredcarw": 1,
+        "facilitymaterials1": 10,
+        "facilitymaterials4": 10
+       },
+       "output": {
+        "armoredcarflamew": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "armoredcar2twinw": 1,
+        "facilitymaterials1": 15,
+        "facilitymaterials4": 15
+       },
+       "output": {
+        "armoredcar2largew": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "scoutvehiclew": 1,
+        "facilitymaterials1": 3,
+        "facilitymaterials5": 10
+       },
+       "output": {
+        "scoutvehicleoffensivew": 1
+       },
+       "time": 180
+      },
+      {
+       "input": {
+        "scoutvehiclew": 1,
+        "facilitymaterials1": 3,
+        "facilitymaterials5": 5
+       },
+       "output": {
+        "scoutvehicleutilityw": 1
+       },
+       "time": 180
+      },
+      {
+       "input": {
+        "fieldmgc": 1,
+        "facilitymaterials1": 30,
+        "facilitymaterials5": 20
+       },
+       "output": {
+        "fieldat2c": 1
+       },
+       "time": 600
+      },
+      {
+       "input": {
+        "fieldmgw": 1,
+        "facilitymaterials1": 30,
+        "facilitymaterials5": 20
+       },
+       "output": {
+        "fieldat2w": 1
+       },
+       "time": 600
+      }
+     ]
+    },
+    "rocket_factory": {
+     "name": "Battery Line",
+     "production": [
+      {
+       "input": {
+        "truckc": 1,
+        "facilitymaterials2": 70,
+        "facilitymaterials4": 10,
+        "facilitymaterials6": 8
+       },
+       "output": {
+        "truckmultic": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "facilitymaterials2": 20,
+        "facilitymaterials5": 15,
+        "facilitymaterials7": 3
+       },
+       "output": {
+        "emplacedmultic": 1
+       },
+       "time": 600
+      },
+      {
+       "input": {
+        "halftrackw": 1,
+        "facilitymaterials2": 10,
+        "facilitymaterials4": 10,
+        "facilitymaterials6": 8
+       },
+       "output": {
+        "halftrackmultiw": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "halftrackc": 1,
+        "facilitymaterials2": 3,
+        "facilitymaterials7": 3
+       },
+       "output": {
+        "halftrackdefensivec": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "halftrackc": 1,
+        "facilitymaterials2": 5,
+        "facilitymaterials5": 5,
+        "facilitymaterials7": 3
+       },
+       "output": {
+        "halftrackartilleryc": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "halftrackw": 1,
+        "facilitymaterials2": 5,
+        "facilitymaterials5": 10,
+        "facilitymaterials7": 3
+       },
+       "output": {
+        "halftrackoffensivew": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "scouttankw": 1,
+        "facilitymaterials3": 5,
+        "facilitymaterials4": 15,
+        "facilitymaterials6": 3
+       },
+       "output": {
+        "scouttankmultiw": 1
+       },
+       "time": 600
+      },
+      {
+       "input": {
+        "tankettec": 1,
+        "facilitymaterials2": 20,
+        "facilitymaterials4": 15,
+        "facilitymaterials6": 3
+       },
+       "output": {
+        "tankettemultic": 1
+       },
+       "time": 600
+      },
+      {
+       "input": {
+        "halftrackw": 1,
+        "facilitymaterials2": 5,
+        "facilitymaterials7": 5
+       },
+       "output": {
+        "halftracktwinw": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "facilitymaterials2": 20,
+        "facilitymaterials5": 15,
+        "facilitymaterials7": 3
+       },
+       "output": {
+        "largefieldmultiw": 1
+       },
+       "time": 600
+      },
+      {
+       "input": {
+        "armoredcar2twinw": 1,
+        "facilitymaterials2": 35,
+        "facilitymaterials4": 10,
+        "facilitymaterials6": 8
+       },
+       "output": {
+        "armoredcar2multiw": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "facilitymaterials2": 30,
+        "facilitymaterials4": 10,
+        "facilitymaterials7": 20
+       },
+       "output": {
+        "emplacedaircraftc": 1
+       },
+       "time": 600
+      },
+      {
+       "input": {
+        "facilitymaterials2": 30,
+        "facilitymaterials4": 10,
+        "facilitymaterials7": 20
+       },
+       "output": {
+        "emplacedaircraftw": 1
+       },
+       "time": 600
+      }
+     ]
+    },
+    "field_station": {
+     "name": "Field Station",
+     "production": [
+      {
+       "input": {
+        "facilitymaterials2": 90,
+        "facilitymaterials7": 25
+       },
+       "output": {
+        "harvester": 1
+       },
+       "time": 900
+      },
+      {
+       "input": {
+        "construction": 1,
+        "facilitymaterials2": 10
+       },
+       "output": {
+        "constructionutility": 1
+       },
+       "time": 900
+      },
+      {
+       "input": {
+        "landingcraftc": 1,
+        "facilitymaterials2": 5,
+        "facilitymaterials6": 3
+       },
+       "output": {
+        "landingcraftoffensivec": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "fieldatc": 1,
+        "facilitymaterials2": 5,
+        "facilitymaterials7": 5
+       },
+       "output": {
+        "fieldcannondamagec": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "scouttankw": 1,
+        "facilitymaterials2": 5,
+        "facilitymaterials6": 5
+       },
+       "output": {
+        "scouttankoffensivew": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "fieldatw": 1,
+        "facilitymaterials2": 5,
+        "facilitymaterials7": 5
+       },
+       "output": {
+        "fieldatdamagew": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "facilitymaterials2": 40
+       },
+       "output": {
+        "heavytruckc": 1
+       },
+       "time": 600
+      },
+      {
+       "input": {
+        "facilitymaterials2": 40
+       },
+       "output": {
+        "heavytruckw": 1
+       },
+       "time": 600
+      }
+     ]
+    },
+    "tank_factory": {
+     "name": "Tank Factory",
+     "production": [
+      {
+       "input": {
+        "destroyertankw": 1,
+        "facilitymaterials2": 10,
+        "facilitymaterials5": 10,
+        "facilitymaterials6": 15
+       },
+       "output": {
+        "destroyertankflamew": 1
+       },
+       "time": 420
+      },
+      {
+       "input": {
+        "lighttankc": 1,
+        "facilitymaterials2": 8,
+        "facilitymaterials5": 20,
+        "facilitymaterials6": 5
+       },
+       "output": {
+        "lighttankflamec": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "lighttankc": 1,
+        "facilitymaterials2": 8,
+        "facilitymaterials5": 20,
+        "facilitymaterials6": 5
+       },
+       "output": {
+        "lighttankoffensivec": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "lighttankc": 1,
+        "facilitymaterials2": 5,
+        "facilitymaterials4": 20,
+        "facilitymaterials7": 5
+       },
+       "output": {
+        "lighttankmobilityc": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "mediumtankc": 1,
+        "facilitymaterials2": 12,
+        "facilitymaterials4": 10,
+        "facilitymaterials7": 8
+       },
+       "output": {
+        "mediumtankoffensivec": 1
+       },
+       "time": 420
+      },
+      {
+       "input": {
+        "mediumtank2c": 1,
+        "facilitymaterials2": 10,
+        "facilitymaterials5": 10,
+        "facilitymaterials6": 10
+       },
+       "output": {
+        "mediumtank2twinc": 1
+       },
+       "time": 420
+      },
+      {
+       "input": {
+        "facilitymaterials2": 135,
+        "facilitymaterials4": 10,
+        "facilitymaterials7": 15
+       },
+       "output": {
+        "emplacedcannonlargec": 1
+       },
+       "time": 600
+      },
+      {
+       "input": {
+        "lighttankw": 1,
+        "facilitymaterials2": 8,
+        "facilitymaterials5": 20,
+        "facilitymaterials6": 5
+       },
+       "output": {
+        "lighttankdefensivew": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "lighttankw": 1,
+        "facilitymaterials2": 3,
+        "facilitymaterials4": 20,
+        "facilitymaterials7": 3
+       },
+       "output": {
+        "lighttankartilleryw": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "mediumtankw": 1,
+        "facilitymaterials2": 5,
+        "facilitymaterials4": 10,
+        "facilitymaterials7": 8
+       },
+       "output": {
+        "mediumtanksiegew": 1
+       },
+       "time": 420
+      },
+      {
+       "input": {
+        "mediumtank2w": 1,
+        "facilitymaterials2": 5,
+        "facilitymaterials5": 10,
+        "facilitymaterials6": 5
+       },
+       "output": {
+        "mediumtank2multiw": 1
+       },
+       "time": 420
+      },
+      {
+       "input": {
+        "facilitymaterials2": 135,
+        "facilitymaterials4": 10,
+        "facilitymaterials7": 15
+       },
+       "output": {
+        "emplacedatlargew": 1
+       },
+       "time": 600
+      },
+      {
+       "input": {
+        "mediumtank2w": 1,
+        "facilitymaterials2": 10,
+        "facilitymaterials4": 10,
+        "facilitymaterials7": 10
+       },
+       "output": {
+        "mediumtank2rangew": 1
+       },
+       "time": 420
+      },
+      {
+       "input": {
+        "lighttank2infantryc": 1,
+        "facilitymaterials2": 15,
+        "facilitymaterials5": 15
+       },
+       "output": {
+        "mortartankc": 1
+       },
+       "time": 180
+      }
+     ]
+    },
+    "weapons_platform": {
+     "name": "Weapons Platform",
+     "production": [
+      {
+       "input": {
+        "mediumtankc": 1,
+        "facilitymaterials3": 3,
+        "facilitymaterials4": 10,
+        "facilitymaterials7": 15,
+        "facilitymaterials6": 15
+       },
+       "output": {
+        "mediumtanklargec": 1
+       },
+       "time": 600
+      },
+      {
+       "input": {
+        "mediumtank2w": 1,
+        "facilitymaterials2": 60,
+        "facilitymaterials4": 10,
+        "facilitymaterials7": 15,
+        "facilitymaterials6": 15
+       },
+       "output": {
+        "mediumtank2indirectw": 1
+       },
+       "time": 600
+      },
+      {
+       "input": {
+        "mediumtankw": 1,
+        "facilitymaterials3": 15,
+        "facilitymaterials5": 25,
+        "facilitymaterials6": 25
+       },
+       "output": {
+        "mediumtankatw": 1
+       },
+       "time": 600
+      },
+      {
+       "input": {
+        "fieldatc": 1,
+        "facilitymaterials3": 15,
+        "facilitymaterials5": 20,
+        "facilitymaterials6": 15
+       },
+       "output": {
+        "largefieldatc": 1
+       },
+       "time": 420
+      },
+      {
+       "input": {
+        "fieldcannonw": 1,
+        "facilitymaterials3": 15,
+        "facilitymaterials5": 20,
+        "facilitymaterials6": 15
+       },
+       "output": {
+        "largefieldcannonw": 1
+       },
+       "time": 420
+      },
+      {
+       "input": {
+        "fieldmortarc": 1,
+        "facilitymaterials3": 10,
+        "facilitymaterials5": 20,
+        "facilitymaterials6": 15
+       },
+       "output": {
+        "largefieldmortarc": 1
+       },
+       "time": 420
+      }
+     ]
+    },
+    "rocketassembly": {
+     "name": "Advanced Structure Manufactory",
+     "production": [
+      {
+       "input": {
+        "facilitymaterials3": 20,
+        "facilitymaterials11": 75,
+        "facilitymaterials5": 55,
+        "facilitymaterials9": 150,
+        "facilitymaterials8": 25
+       },
+       "output": {
+        "rocketpartbottom": 1
+       },
+       "time": 86400
+      },
+      {
+       "input": {
+        "facilitymaterials3": 20,
+        "facilitymaterials11": 75,
+        "facilitymaterials4": 65,
+        "facilitymaterials8": 25,
+        "facilitymaterials9": 125
+       },
+       "output": {
+        "rocketpartcenter": 1
+       },
+       "time": 86400
+      },
+      {
+       "input": {
+        "facilitymaterials9": 75,
+        "facilitymaterials10": 165,
+        "facilitymaterials6": 45
+       },
+       "output": {
+        "rocketparttop": 1
+       },
+       "time": 86400
+      },
+      {
+       "input": {
+        "facilitymaterials2": 250,
+        "facilitymaterials4": 225,
+        "facilitymaterials5": 225
+       },
+       "output": {
+        "fortconstructionpart": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "facilitymaterials2": 50,
+        "facilitymaterials7": 40,
+        "facilitymaterials11": 15
+       },
+       "output": {
+        "fortstructurepart": 1
+       },
+       "time": 300
+      },
+      {
+       "input": {
+        "facilitymaterials2": 300,
+        "facilitymaterials9": 20,
+        "facilitymaterials11": 45
+       },
+       "output": {
+        "fortlrartillerypart": 1
+       },
+       "time": 1500
+      },
+      {
+       "input": {
+        "facilitymaterials2": 50,
+        "facilitymaterials9": 3,
+        "facilitymaterials11": 15
+       },
+       "output": {
+        "fortintelcenterpart": 1
+       },
+       "time": 1500
+      },
+      {
+       "input": {
+        "facilitymaterials2": 150,
+        "facilitymaterials4": 150,
+        "facilitymaterials5": 150
+       },
+       "output": {
+        "fortweatherstationpart": 1
+       },
+       "time": 1500
+      },
+      {
+       "input": {
+        "facilitymaterials2": 200,
+        "facilitymaterials9": 5,
+        "facilitymaterials11": 35
+       },
+       "output": {
+        "fortgarrisonstationpart": 1
+       },
+       "time": 1500
+      },
+      {
+       "input": {
+        "facilitymaterials2": 50,
+        "facilitymaterials9": 3,
+        "facilitymaterials11": 15
+       },
+       "output": {
+        "fortlargeradarpart": 1
+       },
+       "time": 1500
+      }
+     ]
+    }
+   }
+  },
+  "materials_factory": {
+   "name": "Materials Factory",
+   "codeName": "FacilityRefinery1",
+   "category": "factories",
+   "cost": {
+    "cloth": 200
+   },
+   "power": -2,
+   "production": [
+    {
+     "input": {
+      "metal": {
+       "quantity": 10,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "facilitymaterials1": {
+       "quantity": 1,
+       "limit": 3200
+      }
+     },
+     "time": 25
+    },
+    {
+     "input": {
+      "metal": {
+       "quantity": 150,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "maintenancesupplies": {
+       "quantity": 20,
+       "limit": 32000
+      }
+     },
+     "time": 40
+    }
+   ],
+   "upgrades": {
+    "forge": {
+     "name": "Forge",
+     "production": [
+      {
+       "input": {
+        "metal": {
+         "quantity": 15,
+         "limit": 32000
+        },
+        "facilitycoal1": {
+         "quantity": 75,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials4": {
+         "quantity": 1,
+         "limit": 425
+        }
+       },
+       "time": 60
+      },
+      {
+       "input": {
+        "metal": {
+         "quantity": 15,
+         "limit": 32000
+        },
+        "petrol": {
+         "quantity": 50,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials5": {
+         "quantity": 1,
+         "limit": 425
+        }
+       },
+       "time": 60
+      }
+     ]
+    },
+    "metal_press": {
+     "name": "Metal Press",
+     "production": [
+      {
+       "input": {
+        "metal": {
+         "quantity": 15,
+         "limit": 32000
+        },
+        "petrol": {
+         "quantity": 25,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials1": {
+         "quantity": 3,
+         "limit": 3840
+        }
+       },
+       "time": 25
+      }
+     ]
+    },
+    "recycler": {
+     "name": "Assembly Bay",
+     "production": [
+      {
+       "input": {
+        "metal": {
+         "quantity": 25,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials1": {
+         "quantity": 1,
+         "limit": 1280
+        },
+        "sandbagmaterials": {
+         "quantity": 5,
+         "limit": 6400
+        }
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "metal": {
+         "quantity": 25,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials1": {
+         "quantity": 1,
+         "limit": 6400
+        },
+        "barbedwirematerials": {
+         "quantity": 5,
+         "limit": 6400
+        }
+       },
+       "time": 25
+      },
+      {
+       "input": {
+        "metal": {
+         "quantity": 25,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials1": {
+         "quantity": 1,
+         "limit": 1280
+        },
+        "metalbeammaterials": {
+         "quantity": 1,
+         "limit": 1280
+        }
+       },
+       "time": 25
+      }
+     ]
+    },
+    "smelter": {
+     "name": "Smelter",
+     "production": [
+      {
+       "input": {
+        "metal": {
+         "quantity": 15,
+         "limit": 32000
+        },
+        "facilitycoal1": {
+         "quantity": 25,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials1": {
+         "quantity": 3,
+         "limit": 3840
+        }
+       },
+       "time": 25
+      }
+     ]
+    }
+   }
+  },
+  "metalworks_factory": {
+   "name": "Metalworks Factory",
+   "codeName": "FacilityRefinery2",
+   "category": "factories",
+   "cost": {
+    "facilitymaterials1": 125
+   },
+   "power": -5,
+   "production": [
+    {
+     "input": {
+      "facilitymaterials1": {
+       "quantity": 3,
+       "limit": 32000
+      },
+      "components": {
+       "quantity": 20,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "facilitymaterials2": {
+       "quantity": 1,
+       "limit": 1600
+      }
+     },
+     "time": 60
+    },
+    {
+     "input": {
+      "facilitymaterials2": {
+       "quantity": 3,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "pipematerials": {
+       "quantity": 1,
+       "limit": 10665
+      }
+     },
+     "time": 120
+    }
+   ],
+   "upgrades": {
+    "recycler": {
+     "name": "Recycler",
+     "production": [
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 15,
+         "limit": 32000
+        },
+        "metalbeammaterials": {
+         "quantity": 1,
+         "limit": 32000
+        },
+        "facilityoil1": {
+         "quantity": 10,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials2": {
+         "quantity": 1,
+         "limit": 2130
+        }
+       },
+       "time": 90
+      },
+      {
+       "input": {
+        "facilitycomponents1": {
+         "quantity": 75,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "components": {
+         "quantity": 5,
+         "limit": 2130
+        }
+       },
+       "time": 25
+      }
+     ]
+    },
+    "blast_furnace": {
+     "name": "Blast Furnace",
+     "production": [
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 1,
+         "limit": 32000
+        },
+        "facilityoil1": {
+         "quantity": 66,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials7": {
+         "quantity": 1,
+         "limit": 1600
+        }
+       },
+       "time": 120
+      },
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 3,
+         "limit": 32000
+        },
+        "sulfur": {
+         "quantity": 20,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials6": {
+         "quantity": 1,
+         "limit": 1600
+        }
+       },
+       "time": 120
+      },
+      {
+       "input": {
+        "facilitymaterials1": {
+         "quantity": 3,
+         "limit": 32000
+        },
+        "components": {
+         "quantity": 55,
+         "limit": 32000
+        },
+        "facilityoil1": {
+         "quantity": 6,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials2": {
+         "quantity": 3,
+         "limit": 1715
+        }
+       },
+       "time": 60
+      },
+      {
+       "input": {
+        "raremetal": {
+         "quantity": 20,
+         "limit": 32000
+        },
+        "facilitymaterials2": {
+         "quantity": 5,
+         "limit": 32000
+        },
+        "facilitycoal1": {
+         "quantity": 60,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials9": {
+         "quantity": 1,
+         "limit": 530
+        }
+       },
+       "time": 180
+      },
+      {
+       "input": {
+        "raremetal": {
+         "quantity": 1,
+         "limit": 32000
+        },
+        "facilitymaterials1": {
+         "quantity": 5,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials12": {
+         "quantity": 1,
+         "limit": 530
+        }
+       },
+       "time": 180
+      }
+     ]
+    },
+    "engineering_station": {
+     "name": "Engineering Station",
+     "production": [
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 3,
+         "limit": 32000
+        },
+        "facilitycoal1": {
+         "quantity": 200,
+         "limit": 32000
+        },
+        "sulfur": {
+         "quantity": 65,
+         "limit": 32000
+        },
+        "facilityoil1": {
+         "quantity": 35,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials3": {
+         "quantity": 1,
+         "limit": 160
+        }
+       },
+       "time": 90
+      },
+      {
+       "input": {
+        "facilitymaterials2": {
+         "quantity": 9,
+         "limit": 32000
+        },
+        "facilitycoal1": {
+         "quantity": 375,
+         "limit": 32000
+        },
+        "facilityoil2": {
+         "quantity": 90,
+         "limit": 32000
+        },
+        "water": {
+         "quantity": 100,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials3": {
+         "quantity": 3,
+         "limit": 130
+        }
+       },
+       "time": 90
+      },
+      {
+       "input": {
+        "facilitymaterials3": {
+         "quantity": 3,
+         "limit": 32000
+        },
+        "facilitycoal1": {
+         "quantity": 245,
+         "limit": 32000
+        },
+        "facilitymaterials4": {
+         "quantity": 10,
+         "limit": 32000
+        },
+        "facilitymaterials5": {
+         "quantity": 10,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilitymaterials8": {
+         "quantity": 1,
+         "limit": 130
+        }
+       },
+       "time": 120
+      }
+     ]
+    }
+   }
+  },
+  "oil_refinery": {
+   "name": "Oil Refinery",
+   "codeName": "FacilityRefineryOil",
+   "category": "factories",
+   "cost": {
+    "facilitymaterials1": 50
+   },
+   "power": -1,
+   "production": [
+    {
+     "input": {
+      "oil": {
+       "quantity": 50,
+       "limit": 32000
+      }
+     },
+     "output": {
+      "petrol": {
+       "quantity": 50,
+       "limit": 32000
+      }
+     },
+     "time": 50
+    }
+   ],
+   "upgrades": {
+    "reformer": {
+     "name": "Reformer",
+     "production": [
+      {
+       "input": {
+        "oil": {
+         "quantity": 40,
+         "limit": 32000
+        },
+        "water": {
+         "quantity": 10,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "petrol": {
+         "quantity": 50,
+         "limit": 32000
+        }
+       },
+       "time": 50
+      }
+     ]
+    },
+    "cracking_unit": {
+     "name": "Cracking Unit",
+     "production": [
+      {
+       "input": {
+        "oil": {
+         "quantity": 50,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilityoil1": {
+         "quantity": 30,
+         "limit": 19200
+        }
+       },
+       "time": 55
+      }
+     ]
+    },
+    "petro_plant": {
+     "name": "Petrochemical Plant",
+     "production": [
+      {
+       "input": {
+        "sulfur": {
+         "quantity": 60,
+         "limit": 32000
+        },
+        "facilityoil1": {
+         "quantity": 30,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "facilityoil2": {
+         "quantity": 30,
+         "limit": 16000
+        }
+       },
+       "time": 200
+      }
+     ]
+    }
+   }
+  },
+  "oil_well": {
+   "name": "Oil Well",
+   "codeName": "FacilityMineOil",
+   "category": "harvesters",
+   "cost": {
+    "facilitymaterials1": 35
+   },
+   "power": 0,
+   "production": [
+    {
+     "output": {
+      "oil": {
+       "quantity": 50,
+       "limit": 2500
+      }
+     },
+     "time": 50
+    }
+   ],
+   "upgrades": {
+    "electric_oil": {
+     "name": "Electric Oil Well",
+     "production": [
+      {
+       "output": {
+        "oil": {
+         "quantity": 50,
+         "limit": 2500
+        }
+       },
+       "time": 26
+      }
+     ]
+    },
+    "fracking_oil": {
+     "name": "Fracker",
+     "production": [
+      {
+       "input": {
+        "water": {
+         "quantity": 25,
+         "limit": 32000
+        }
+       },
+       "output": {
+        "oil": {
+         "quantity": 100,
+         "limit": 2500
+        }
+       },
+       "time": 40
+      }
+     ]
+    }
+   }
+  },
+  "power_station": {
+   "name": "Power Station",
+   "codeName": "FacilityPowerOil",
+   "category": "power",
+   "cost": {
+    "facilitymaterials2": 25
+   },
+   "power": 15,
+   "production": [
+    {
+     "input": {
+      "oil": {
+       "quantity": 50,
+       "limit": 1000
+      }
+     },
+     "time": 90
+    },
+    {
+     "input": {
+      "coal": {
+       "quantity": 30,
+       "limit": 32000
+      },
+      "water": {
+       "quantity": 1,
+       "limit": 1000
+      }
+     },
+     "time": 90
+    }
+   ],
+   "upgrades": {
+    "sulfuric_reactor": {
+     "name": "Sulfuric Reactor",
+     "production": [
+      {
+       "input": {
+        "facilityoil1": {
+         "quantity": 50,
+         "limit": 1000
+        }
+       },
+       "output": {
+        "sulfur": {
+         "quantity": 5,
+         "limit": 5330
+        }
+       },
+       "time": 120
+      },
+      {
+       "input": {
+        "facilitycoal1": {
+         "quantity": 30,
+         "limit": 32000
+        },
+        "water": {
+         "quantity": 1,
+         "limit": 1000
+        }
+       },
+       "output": {
+        "sulfur": {
+         "quantity": 5,
+         "limit": 5330
+        }
+       },
+       "time": 120
+      }
+     ]
+    }
+   }
+  },
+  "stationary_harvester_coal": {
+   "name": "Stationary Harvester (Coal)",
+   "codeName": "FacilityMineResource4",
+   "category": "harvesters",
+   "cost": {
+    "facilitymaterials1": 175
+   },
+   "power": 0,
+   "production": [
+    {
+     "input": {
+      "petrol": {
+       "quantity": 1,
+       "limit": 50
+      }
+     },
+     "output": {
+      "coal": {
+       "quantity": 50,
+       "limit": 1850
+      }
+     },
+     "time": 18
+    }
+   ],
+   "upgrades": {
+    "excavator": {
+     "name": "Excavator",
+     "production": [
+      {
+       "input": {
+        "petrol": {
+         "quantity": 2,
+         "limit": 100
+        }
+       },
+       "output": {
+        "coal": {
+         "quantity": 15,
+         "limit": 555
+        }
+       },
+       "time": 18
+      }
+     ]
+    }
+   }
+  },
+  "stationary_harvester_components": {
+   "name": "Stationary Harvester (Components)",
+   "codeName": "FacilityMineResource2",
+   "category": "harvesters",
+   "cost": {
+    "facilitymaterials2": 45
+   },
+   "power": 0,
+   "production": [
+    {
+     "input": {
+      "facilityoil1": {
+       "quantity": 4,
+       "limit": 200
+      }
+     },
+     "output": {
+      "components": {
+       "quantity": 6,
+       "limit": 300
+      }
+     },
+     "time": 12
+    }
+   ],
+   "upgrades": {
+    "excavator": {
+     "name": "Excavator",
+     "production": [
+      {
+       "input": {
+        "facilityoil1": {
+         "quantity": 3,
+         "limit": 200
+        }
+       },
+       "output": {
+        "facilitycomponents1": {
+         "quantity": 18,
+         "limit": 1200
+        }
+       },
+       "time": 12
+      }
+     ]
+    }
+   }
+  },
+  "stationary_harvester_scrap": {
+   "name": "Stationary Harvester (Salvage)",
+   "codeName": "FacilityMineResource1",
+   "category": "harvesters",
+   "cost": {
+    "facilitymaterials1": 150
+   },
+   "power": 0,
+   "production": [
+    {
+     "input": {
+      "petrol": {
+       "quantity": 4,
+       "limit": 200
+      }
+     },
+     "output": {
+      "metal": {
+       "quantity": 50,
+       "limit": 1850
+      }
+     },
+     "time": 18
+    }
+   ],
+   "upgrades": {
+    "excavator": {
+     "name": "Excavator",
+     "production": [
+      {
+       "input": {
+        "petrol": {
+         "quantity": 6,
+         "limit": 300
+        }
+       },
+       "output": {
+        "metal": {
+         "quantity": 15,
+         "limit": 555
+        }
+       },
+       "time": 18
+      }
+     ]
+    }
+   }
+  },
+  "stationary_harvester_sulfur": {
+   "name": "Stationary Harvester (Sulfur)",
+   "codeName": "FacilityMineResource3",
+   "category": "harvesters",
+   "cost": {
+    "facilitymaterials2": 45
+   },
+   "power": 0,
+   "production": [
+    {
+     "input": {
+      "facilityoil1": {
+       "quantity": 4,
+       "limit": 200
+      }
+     },
+     "output": {
+      "sulfur": {
+       "quantity": 6,
+       "limit": 300
+      }
+     },
+     "time": 12
+    }
+   ],
+   "upgrades": {
+    "excavator": {
+     "name": "Excavator",
+     "production": [
+      {
+       "input": {
+        "facilityoil1": {
+         "quantity": 6,
+         "limit": 200
+        }
+       },
+       "output": {
+        "sulfur": {
+         "quantity": 2,
+         "limit": 100
+        },
+        "coal": {
+         "quantity": 5,
+         "limit": 250
+        }
+       },
+       "time": 18
+      }
+     ]
+    }
+   }
+  },
+  "water_pump": {
+   "name": "Water Pump",
+   "codeName": "FacilityMineWater",
+   "category": "liquids",
+   "cost": {
+    "facilitymaterials1": 35
+   },
+   "power": 0,
+   "production": [
+    {
+     "output": {
+      "water": {
+       "quantity": 50,
+       "limit": 2500
+      }
+     },
+     "time": 50
+    }
+   ],
+   "upgrades": {}
+  }
+ }
+}

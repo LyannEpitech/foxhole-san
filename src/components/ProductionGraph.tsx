@@ -227,11 +227,14 @@ export function ProductionGraph({ result }: { result: PlanResult }) {
               <text
                 x={n.x + 14}
                 y={n.y + 21}
-                fontSize={12}
+                fontSize={11}
                 fontWeight={600}
                 fill="#f1f5f9"
               >
-                {localized(refName(n.refId)).slice(0, 24)}
+                {(() => {
+                  const label = localized(refName(n.refId));
+                  return label.length > 27 ? `${label.slice(0, 26)}…` : label;
+                })()}
               </text>
               <text
                 x={n.x + 14}

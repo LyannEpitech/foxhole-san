@@ -504,5 +504,369 @@
    }
   ],
   "timeSeconds": 86400
+ },
+ {
+  "id": "make-ralloys",
+  "buildingId": "metalworks",
+  "inputs": [
+   {
+    "refId": "rare-metal",
+    "qty": 20
+   },
+   {
+    "refId": "pcmats",
+    "qty": 5
+   },
+   {
+    "refId": "coke",
+    "qty": 60
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "ralloys",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 180
+ },
+ {
+  "id": "make-thermal-shielding",
+  "buildingId": "ammunition-factory",
+  "inputs": [
+   {
+    "refId": "cmats",
+    "qty": 2
+   },
+   {
+    "refId": "amats4",
+    "qty": 5
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "thermal-shielding",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 1500
+ },
+ {
+  "id": "make-hull-segments",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "pcmats",
+    "qty": 60
+   },
+   {
+    "refId": "amats1",
+    "qty": 2
+   },
+   {
+    "refId": "amats2",
+    "qty": 2
+   },
+   {
+    "refId": "amats4",
+    "qty": 10
+   },
+   {
+    "refId": "ralloys",
+    "qty": 4
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 4
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "naval-hull-segments",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 1500
+ },
+ {
+  "id": "make-shell-plating",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "cmats",
+    "qty": 2
+   },
+   {
+    "refId": "thermal-shielding",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "naval-shell-plating",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 300
+ },
+ {
+  "id": "make-turbine-components",
+  "buildingId": "small-assembly-station",
+  "inputs": [
+   {
+    "refId": "amats5",
+    "qty": 20
+   },
+   {
+    "refId": "ralloys",
+    "qty": 20
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "naval-turbine-components",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 43200
+ },
+ {
+  "id": "make-3c-rocket",
+  "buildingId": "ammunition-factory",
+  "inputs": [
+   {
+    "refId": "hemats",
+    "qty": 4
+   },
+   {
+    "refId": "cmats",
+    "qty": 2
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "3c-high-explosive-rocket",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 25
+ },
+ {
+  "id": "make-4c-rocket",
+  "buildingId": "ammunition-factory",
+  "inputs": [
+   {
+    "refId": "hemats",
+    "qty": 4
+   },
+   {
+    "refId": "cmats",
+    "qty": 2
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "4c-fire-rocket",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 25
+ },
+ {
+  "id": "build-callahan",
+  "buildingId": "dry-dock",
+  "inputs": [
+   {
+    "refId": "naval-hull-segments",
+    "qty": 20
+   },
+   {
+    "refId": "naval-shell-plating",
+    "qty": 20
+   },
+   {
+    "refId": "naval-turbine-components",
+    "qty": 4
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "callahan",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 36000
+ },
+ {
+  "id": "build-titan",
+  "buildingId": "dry-dock",
+  "inputs": [
+   {
+    "refId": "naval-hull-segments",
+    "qty": 20
+   },
+   {
+    "refId": "naval-shell-plating",
+    "qty": 20
+   },
+   {
+    "refId": "naval-turbine-components",
+    "qty": 4
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "titan",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 36000
+ },
+ {
+  "id": "build-blacksteele",
+  "buildingId": "dry-dock",
+  "inputs": [
+   {
+    "refId": "naval-hull-segments",
+    "qty": 12
+   },
+   {
+    "refId": "naval-shell-plating",
+    "qty": 12
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "blacksteele",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 21600
+ },
+ {
+  "id": "build-conqueror",
+  "buildingId": "dry-dock",
+  "inputs": [
+   {
+    "refId": "naval-hull-segments",
+    "qty": 12
+   },
+   {
+    "refId": "naval-shell-plating",
+    "qty": 12
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "conqueror",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 21600
+ },
+ {
+  "id": "build-nakki",
+  "buildingId": "dry-dock",
+  "inputs": [
+   {
+    "refId": "naval-hull-segments",
+    "qty": 15
+   },
+   {
+    "refId": "naval-shell-plating",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "nakki",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 21600
+ },
+ {
+  "id": "build-ac-b-trident",
+  "buildingId": "dry-dock",
+  "inputs": [
+   {
+    "refId": "naval-hull-segments",
+    "qty": 15
+   },
+   {
+    "refId": "naval-shell-plating",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "ac-b-trident",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 21600
+ },
+ {
+  "id": "build-bms-longhook",
+  "buildingId": "dry-dock",
+  "inputs": [
+   {
+    "refId": "naval-hull-segments",
+    "qty": 8
+   },
+   {
+    "refId": "naval-shell-plating",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "bms-longhook",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 14400
+ },
+ {
+  "id": "build-bms-bowhead",
+  "buildingId": "dry-dock",
+  "inputs": [
+   {
+    "refId": "naval-hull-segments",
+    "qty": 8
+   },
+   {
+    "refId": "naval-shell-plating",
+    "qty": 15
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "bms-bowhead",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 14400
+ },
+ {
+  "id": "build-bms-bluefin",
+  "buildingId": "dry-dock",
+  "inputs": [
+   {
+    "refId": "naval-hull-segments",
+    "qty": 25
+   },
+   {
+    "refId": "naval-shell-plating",
+    "qty": 25
+   }
+  ],
+  "outputs": [
+   {
+    "refId": "bms-bluefin",
+    "qty": 1
+   }
+  ],
+  "timeSeconds": 28800
  }
 ]

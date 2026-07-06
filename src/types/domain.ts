@@ -25,6 +25,7 @@ export interface MaterialCost {
   cmats?: number;
   pcmats?: number;
   scmats?: number;
+  ralloys?: number;
 }
 
 /** A tech / world prerequisite (e.g. Town Base "Industry" upgrade). */
@@ -76,6 +77,7 @@ export type ItemCategory =
   | 'supplies'
   | 'shippables'
   | 'vehicles'
+  | 'naval'
   | 'uniforms';
 
 /** Transport capacity of a vehicle item (crates in its inventory). */

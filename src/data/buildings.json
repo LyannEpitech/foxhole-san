@@ -143,5 +143,31 @@
   },
   "powerRequired": 8,
   "prerequisites": []
+ },
+ {
+  "id": "ammunition-factory",
+  "name": {
+   "en": "Ammunition Factory",
+   "fr": "Usine de munitions"
+  },
+  "kind": "Factory",
+  "constructionCost": {
+   "pcmats": 25
+  },
+  "powerRequired": 4,
+  "prerequisites": []
+ },
+ {
+  "id": "dry-dock",
+  "name": {
+   "en": "Dry Dock",
+   "fr": "Cale sèche"
+  },
+  "kind": "LargeAssemblyStation",
+  "constructionCost": {
+   "ralloys": 35
+  },
+  "powerRequired": 10,
+  "prerequisites": []
  }
 ]

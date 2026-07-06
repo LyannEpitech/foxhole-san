@@ -13,6 +13,7 @@ const CATEGORY_ORDER: ItemCategory[] = [
   'supplies',
   'shippables',
   'vehicles',
+  'naval',
   'uniforms',
 ];
 

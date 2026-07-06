@@ -448,7 +448,7 @@
   "cost": {
    "bmats": 120
   },
-  "amountProduced": 20,
+  "amountProduced": 30,
   "producedBy": "factory",
   "isMfpCraftable": true
  },
@@ -461,10 +461,10 @@
   "category": "smallArms",
   "faction": "Warden",
   "cost": {
-   "bmats": 200,
-   "rmats": 15
+   "bmats": 250,
+   "rmats": 25
   },
-  "amountProduced": 5,
+  "amountProduced": 3,
   "producedBy": "factory",
   "isMfpCraftable": true,
   "ammo": [
@@ -480,8 +480,8 @@
   "category": "smallArms",
   "faction": "Colonial",
   "cost": {
-   "bmats": 200,
-   "rmats": 15
+   "bmats": 250,
+   "rmats": 30
   },
   "amountProduced": 5,
   "producedBy": "factory",
@@ -1044,9 +1044,9 @@
   "faction": "Both",
   "cost": {
    "bmats": 135,
-   "hemats": 30
+   "hemats": 45
   },
-  "amountProduced": 5,
+  "amountProduced": 1,
   "producedBy": "factory"
  },
  {
@@ -3048,7 +3048,7 @@
   "cost": {
    "bmats": 130
   },
-  "amountProduced": 20,
+  "amountProduced": 15,
   "producedBy": "factory",
   "isMfpCraftable": true,
   "ammo": [
@@ -4083,7 +4083,10 @@
   "faction": "Colonial",
   "cost": {},
   "amountProduced": 1,
-  "producedBy": "small-assembly-station"
+  "producedBy": "small-assembly-station",
+  "ammo": [
+   "3C-High Explosive Rocket"
+  ]
  },
  {
   "id": "niska-rycker-mk-ix-skycaller",
@@ -4095,7 +4098,10 @@
   "faction": "Warden",
   "cost": {},
   "amountProduced": 1,
-  "producedBy": "small-assembly-station"
+  "producedBy": "small-assembly-station",
+  "ammo": [
+   "3C-High Explosive Rocket"
+  ]
  },
  {
   "id": "t13-deioneus-rocket-battery",
@@ -4107,7 +4113,10 @@
   "faction": "Colonial",
   "cost": {},
   "amountProduced": 1,
-  "producedBy": "small-assembly-station"
+  "producedBy": "small-assembly-station",
+  "ammo": [
+   "3C-High Explosive Rocket"
+  ]
  },
  {
   "id": "rycker-4-3-f-wasp-nest",
@@ -4119,7 +4128,10 @@
   "faction": "Warden",
   "cost": {},
   "amountProduced": 1,
-  "producedBy": "small-assembly-station"
+  "producedBy": "small-assembly-station",
+  "ammo": [
+   "4C-Fire Rocket"
+  ]
  },
  {
   "id": "dae-3b-2-hades-net",
@@ -4131,7 +4143,10 @@
   "faction": "Colonial",
   "cost": {},
   "amountProduced": 1,
-  "producedBy": "small-assembly-station"
+  "producedBy": "small-assembly-station",
+  "ammo": [
+   "4C-Fire Rocket"
+  ]
  },
  {
   "id": "obrien-v200-squire",
@@ -4143,7 +4158,10 @@
   "faction": "Warden",
   "cost": {},
   "amountProduced": 1,
-  "producedBy": "small-assembly-station"
+  "producedBy": "small-assembly-station",
+  "ammo": [
+   "Shatter Missle"
+  ]
  },
  {
   "id": "lance-46-sarissa",
@@ -4174,5 +4192,162 @@
   "ammo": [
    "150mm"
   ]
+ },
+ {
+  "id": "3c-high-explosive-rocket",
+  "name": {
+   "en": "3C-High Explosive Rocket",
+   "fr": "3C-High Explosive Rocket"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "ammunition-factory"
+ },
+ {
+  "id": "4c-fire-rocket",
+  "name": {
+   "en": "4C-Fire Rocket",
+   "fr": "4C-Fire Rocket"
+  },
+  "category": "heavyArms",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "ammunition-factory"
+ },
+ {
+  "id": "callahan",
+  "name": {
+   "en": "Callahan",
+   "fr": "Callahan"
+  },
+  "category": "naval",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "dry-dock",
+  "ammo": [
+   "150mm",
+   "120mm"
+  ]
+ },
+ {
+  "id": "titan",
+  "name": {
+   "en": "Titan",
+   "fr": "Titan"
+  },
+  "category": "naval",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "dry-dock",
+  "ammo": [
+   "150mm",
+   "120mm",
+   "68mm"
+  ]
+ },
+ {
+  "id": "blacksteele",
+  "name": {
+   "en": "Blacksteele",
+   "fr": "Blacksteele"
+  },
+  "category": "naval",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "dry-dock",
+  "ammo": [
+   "120mm",
+   "68mm"
+  ]
+ },
+ {
+  "id": "conqueror",
+  "name": {
+   "en": "Conqueror",
+   "fr": "Conqueror"
+  },
+  "category": "naval",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "dry-dock",
+  "ammo": [
+   "120mm",
+   "68mm"
+  ]
+ },
+ {
+  "id": "nakki",
+  "name": {
+   "en": "Nakki",
+   "fr": "Nakki"
+  },
+  "category": "naval",
+  "faction": "Warden",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "dry-dock",
+  "ammo": [
+   "Quillback Torpedo",
+   "68mm"
+  ]
+ },
+ {
+  "id": "ac-b-trident",
+  "name": {
+   "en": "AC-b \"Trident\"",
+   "fr": "AC-b \"Trident\""
+  },
+  "category": "naval",
+  "faction": "Colonial",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "dry-dock",
+  "ammo": [
+   "Quillback Torpedo",
+   "120mm"
+  ]
+ },
+ {
+  "id": "bms-longhook",
+  "name": {
+   "en": "BMS - Longhook",
+   "fr": "BMS - Longhook"
+  },
+  "category": "naval",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "dry-dock"
+ },
+ {
+  "id": "bms-bowhead",
+  "name": {
+   "en": "BMS - Bowhead",
+   "fr": "BMS - Bowhead"
+  },
+  "category": "naval",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "dry-dock"
+ },
+ {
+  "id": "bms-bluefin",
+  "name": {
+   "en": "BMS - Bluefin",
+   "fr": "BMS - Bluefin"
+  },
+  "category": "naval",
+  "faction": "Both",
+  "cost": {},
+  "amountProduced": 1,
+  "producedBy": "dry-dock"
  }
 ]

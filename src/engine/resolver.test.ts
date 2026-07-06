@@ -263,6 +263,36 @@ describe('resolve — real curated dataset', () => {
     expect(plan.power!.totalMW).toBeGreaterThan(0);
   });
 
+  it('resolves a battleship through the naval chain down to raw ores', () => {
+    // Callahan = 20 hull segments + 20 shell plating + 4 turbine components
+    // at the Dry Dock (game-data extract from foxholeplanner, 2026-07-06).
+    const plan = resolve(dataset, 'callahan', 1, 'Warden');
+    expect(plan.totals.refined['naval-hull-segments']).toBe(20);
+    expect(plan.totals.refined['naval-shell-plating']).toBe(20);
+    expect(plan.totals.refined['naval-turbine-components']).toBe(4);
+    // Rare Alloys pull Rare Metal; hull segments pull the whole facility tree.
+    expect(plan.totals.raw['rare-metal']).toBeGreaterThan(0);
+    expect(plan.totals.raw.coal).toBeGreaterThan(0);
+    const buildings = plan.buildings.map((b) => b.id);
+    for (const b of ['dry-dock', 'small-assembly-station', 'metalworks', 'ammunition-factory', 'coal-refinery']) {
+      expect(buildings).toContain(b);
+    }
+    expect(plan.power!.totalMW).toBeGreaterThanOrEqual(20);
+    // The 36000s dry dock queue dominates the timeline.
+    const dd = plan.buildingTimes.find((bt) => bt.buildingId === 'dry-dock');
+    expect(dd?.seconds).toBe(36000);
+  });
+
+  it('links rocket artillery to its rockets', () => {
+    const retiarius = dataset.items.get('r-17-retiarius-skirmisher')!;
+    expect(retiarius.ammo).toEqual(['3C-High Explosive Rocket']);
+    const rocket = resolve(dataset, '3c-high-explosive-rocket', 10, 'Colonial');
+    // 10 rockets = 40 hemats + 20 cmats -> sulfur + salvage
+    expect(rocket.totals.refined.hemats).toBe(40);
+    expect(rocket.totals.refined.cmats).toBe(20);
+    expect(rocket.totals.raw.sulfur).toBe(200);
+  });
+
   it('enforces faction on real items', () => {
     expect(() => resolve(dataset, 'argenti-rii-rifle', 10, 'Warden')).toThrow(FactionError);
     expect(resolve(dataset, 'argenti-rii-rifle', 10, 'Colonial').totals.raw.salvage).toBe(200);

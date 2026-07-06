@@ -99,6 +99,10 @@ src/
 - **Marqueurs live** : appels directs (CORS ouvert) à
   `war-service-live.foxholeservices.com/api/worldconquest/maps/<hex>/dynamic/public`,
   mapping iconType aligné sur foxhole-map-annotate.
+- **Chaînes facility, navales et audit des coûts** : extrait de données de jeu
+  de [foxholeplanner.com](https://foxholeplanner.com) figé dans
+  `src/data/vendor/foxholeplanner-extract.json` (376 ressources, recettes
+  réelles des facilities) — croisé avec le wiki, les deux concordent.
 
 ## Étendre les données
 

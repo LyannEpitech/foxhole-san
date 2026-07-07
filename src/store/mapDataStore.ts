@@ -19,6 +19,9 @@ interface MapDataState {
   showLabels: boolean;
   toggleControl: () => void;
   toggleLabels: () => void;
+  /** Detected in-game road network overlay (public/roads.geojson). */
+  showRoads: boolean;
+  toggleRoads: () => void;
   /** Fetch all regions (no-op while already loading). */
   refresh: () => Promise<void>;
 }
@@ -32,11 +35,13 @@ export const useMapDataStore = create<MapDataState>()(persist((set, get) => ({
   layers: { town: true, industry: true, field: true, military: true },
   showControl: false,
   showLabels: true,
+  showRoads: false,
 
   toggleLayer: (kind) =>
     set((s) => ({ layers: { ...s.layers, [kind]: !s.layers[kind] } })),
   toggleControl: () => set((s) => ({ showControl: !s.showControl })),
   toggleLabels: () => set((s) => ({ showLabels: !s.showLabels })),
+  toggleRoads: () => set((s) => ({ showRoads: !s.showRoads })),
 
   refresh: async () => {
     if (get().loading) return;

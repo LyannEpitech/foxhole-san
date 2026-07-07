@@ -7,7 +7,7 @@ import { useMapDataStore } from '../store/mapDataStore';
 import { HexMap, type MapMarker } from './HexMap';
 import { MapLayersControl } from './MapLayersControl';
 import { useApiMarkers } from './useApiMarkers';
-import { useRegionControl, useStaticLabels } from './useMapOverlays';
+import { useRegionControl, useStaticLabels, useRoads } from './useMapOverlays';
 
 interface Props {
   onRegionClick?: (region: Region) => void;
@@ -153,7 +153,7 @@ export function PlanMap({
     undo, redo, past, future } = useAnnotationStore();
   const apiMarkers = useApiMarkers();
   const mapRef = useRef<HTMLDivElement>(null);
-  const { showControl, showLabels } = useMapDataStore();
+  const { showControl, showLabels, showRoads } = useMapDataStore();
 
   const exportPng = () => {
     const svg = mapRef.current?.querySelector('svg');
@@ -161,6 +161,7 @@ export function PlanMap({
   };
   const regionTint = useRegionControl(showControl);
   const staticLabels = useStaticLabels(showLabels);
+  const roads = useRoads(showRoads);
 
   // A2.2 — Ctrl+Z / Ctrl+Y (or Ctrl+Shift+Z) for annotation undo/redo.
   useEffect(() => {
@@ -210,6 +211,7 @@ export function PlanMap({
         textPlaceholder={t('map.textPlaceholder')}
         regionTint={regionTint}
         staticLabels={staticLabels}
+        roads={roads}
         overlay={overlay}
         onMapClick={onMapClick}
       />

@@ -186,7 +186,8 @@
       "field": "Resources",
       "military": "Military",
       "control": "Control",
-      "labels": "Names"
+      "labels": "Names",
+      "roads": "Roads"
     },
     "refresh": "War data",
     "loading": "Loading…",

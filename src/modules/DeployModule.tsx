@@ -4,7 +4,7 @@ import { Drawer } from '../components/Drawer';
 import { HexMap } from '../components/HexMap';
 import { MapLayersControl } from '../components/MapLayersControl';
 import { useApiMarkers } from '../components/useApiMarkers';
-import { useRegionControl, useStaticLabels } from '../components/useMapOverlays';
+import { useRegionControl, useStaticLabels, useRoads } from '../components/useMapOverlays';
 import { useMapDataStore } from '../store/mapDataStore';
 import { dataset } from '../data';
 import { useLocalized } from '../i18n';
@@ -96,9 +96,10 @@ export function DeployModule() {
     setPlacing, place, removeNode, selectEdge, setTransport, reset,
   } = useDeployStore();
   const apiMarkers = useApiMarkers();
-  const { showControl, showLabels } = useMapDataStore();
+  const { showControl, showLabels, showRoads } = useMapDataStore();
   const regionTint = useRegionControl(showControl);
   const staticLabels = useStaticLabels(showLabels);
+  const roads = useRoads(showRoads);
 
   const graph = useMemo(
     () =>
@@ -251,6 +252,7 @@ export function DeployModule() {
           apiMarkers={apiMarkers}
           regionTint={regionTint}
           staticLabels={staticLabels}
+          roads={roads}
         />
       </div>
 

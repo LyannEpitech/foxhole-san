@@ -86,7 +86,9 @@ Efforts estimés : **S** (heures), **M** (jours), **L** (semaine+).
 | B6 | **PWA / mode hors-ligne** | App installable ; JSON de données et coquille applicative en cache ; carte utilisable hors-ligne avec le dernier snapshot War API. | Site Vite statique → `vite-plugin-pwa` quasi drop-in. `fetchAllDynamic` dégrade déjà proprement en cas d'échec ; persister le dernier snapshot de `mapDataStore` pour l'affichage hors-ligne. | S–M |
 | B7 | **Comparateur coût/caisse Usine vs MPF** | Petit tableau par article : coût unitaire à l'Usine vs MPF (remise incluse), caisses par camion, efficacité bmats par chargement. | Entièrement dérivable de `items.json` + les maths de A1.3 ; à afficher dans le détail d'article ou `ResourceTotals`. | S (après A1.3) |
 
-**Écarté volontairement** : import OCR complet des stockpiles (nécessite un backend ou du WASM lourd), routage routier réel (aucune donnée de routes dans le projet ni dans l'API publique), toute fonctionnalité à compte/synchronisation (backend).
+**Écarté volontairement** : import OCR complet des stockpiles (nécessite un backend ou du WASM lourd), toute fonctionnalité à compte/synchronisation (backend).
+
+**Réseau routier** — auparavant écarté faute de données, il est désormais extrait hors-ligne des images de carte par vision par ordinateur (`tools/extract-roads/`, Python/OpenCV : filtre de Frangi + top-hat, priorité au minimum de faux positifs) vers `public/roads.geojson` (unités monde), affiché comme couche « Routes » activable dans `MapLayersControl`. Le routage suivant les routes réelles dans `logistics.ts` (au lieu de l'estimation centre-à-centre) reste une évolution possible au-dessus de ces données.
 
 ---
 

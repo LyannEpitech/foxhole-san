@@ -240,5 +240,15 @@
   "kind": "MaterialsFactory",
   "constructionCost": {},
   "prerequisites": []
+ },
+ {
+  "id": "construction-yard",
+  "name": {
+   "en": "Construction Yard",
+   "fr": "Chantier de construction"
+  },
+  "kind": "AssemblyStation",
+  "constructionCost": {},
+  "prerequisites": []
  }
 ]

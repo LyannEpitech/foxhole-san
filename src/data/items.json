@@ -1422,10 +1422,10 @@
   "category": "shippables",
   "faction": "Both",
   "cost": {
-   "rmats": 225
+   "rmats": 75
   },
-  "amountProduced": 3,
-  "producedBy": "factory",
+  "amountProduced": 1,
+  "producedBy": "construction-yard",
   "isMfpCraftable": true
  },
  {
@@ -1455,10 +1455,10 @@
   "category": "shippables",
   "faction": "Colonial",
   "cost": {
-   "rmats": 585
+   "rmats": 195
   },
-  "amountProduced": 3,
-  "producedBy": "factory",
+  "amountProduced": 1,
+  "producedBy": "construction-yard",
   "isMfpCraftable": true,
   "ammo": [
    "150mm"
@@ -1473,10 +1473,10 @@
   "category": "shippables",
   "faction": "Warden",
   "cost": {
-   "rmats": 525
+   "rmats": 175
   },
-  "amountProduced": 3,
-  "producedBy": "factory",
+  "amountProduced": 1,
+  "producedBy": "construction-yard",
   "isMfpCraftable": true,
   "ammo": [
    "150mm"
@@ -1491,10 +1491,10 @@
   "category": "shippables",
   "faction": "Warden",
   "cost": {
-   "rmats": 105
+   "rmats": 35
   },
-  "amountProduced": 3,
-  "producedBy": "factory",
+  "amountProduced": 1,
+  "producedBy": "construction-yard",
   "isMfpCraftable": true,
   "ammo": [
    "120mm"
@@ -1539,10 +1539,10 @@
   "category": "shippables",
   "faction": "Both",
   "cost": {
-   "bmats": 150
+   "bmats": 50
   },
-  "amountProduced": 3,
-  "producedBy": "factory",
+  "amountProduced": 1,
+  "producedBy": "construction-yard",
   "isMfpCraftable": true
  },
  {
@@ -1569,10 +1569,10 @@
   "category": "shippables",
   "faction": "Both",
   "cost": {
-   "bmats": 300
+   "bmats": 100
   },
-  "amountProduced": 3,
-  "producedBy": "factory",
+  "amountProduced": 1,
+  "producedBy": "construction-yard",
   "isMfpCraftable": true
  },
  {
@@ -3587,10 +3587,10 @@
   "category": "shippables",
   "faction": "Both",
   "cost": {
-   "bmats": 75
+   "bmats": 25
   },
-  "amountProduced": 3,
-  "producedBy": "factory",
+  "amountProduced": 1,
+  "producedBy": "construction-yard",
   "isMfpCraftable": true
  },
  {
@@ -3602,10 +3602,10 @@
   "category": "shippables",
   "faction": "Warden",
   "cost": {
-   "rmats": 525
+   "rmats": 175
   },
-  "amountProduced": 3,
-  "producedBy": "factory",
+  "amountProduced": 1,
+  "producedBy": "construction-yard",
   "isMfpCraftable": true
  },
  {
@@ -3617,10 +3617,10 @@
   "category": "shippables",
   "faction": "Warden",
   "cost": {
-   "bmats": 450
+   "bmats": 150
   },
-  "amountProduced": 3,
-  "producedBy": "factory",
+  "amountProduced": 1,
+  "producedBy": "construction-yard",
   "isMfpCraftable": true,
   "ammo": [
    "68mm"
@@ -3635,10 +3635,10 @@
   "category": "shippables",
   "faction": "Colonial",
   "cost": {
-   "rmats": 525
+   "rmats": 175
   },
-  "amountProduced": 3,
-  "producedBy": "factory",
+  "amountProduced": 1,
+  "producedBy": "construction-yard",
   "isMfpCraftable": true
  },
  {
@@ -3665,10 +3665,10 @@
   "category": "shippables",
   "faction": "Colonial",
   "cost": {
-   "bmats": 375
+   "bmats": 125
   },
-  "amountProduced": 3,
-  "producedBy": "factory",
+  "amountProduced": 1,
+  "producedBy": "construction-yard",
   "isMfpCraftable": true
  },
  {
@@ -3680,10 +3680,10 @@
   "category": "shippables",
   "faction": "Colonial",
   "cost": {
-   "bmats": 300
+   "bmats": 100
   },
-  "amountProduced": 3,
-  "producedBy": "factory",
+  "amountProduced": 1,
+  "producedBy": "construction-yard",
   "isMfpCraftable": true
  },
  {
@@ -3695,10 +3695,10 @@
   "category": "shippables",
   "faction": "Both",
   "cost": {
-   "rmats": 150
+   "rmats": 50
   },
-  "amountProduced": 3,
-  "producedBy": "factory",
+  "amountProduced": 1,
+  "producedBy": "construction-yard",
   "isMfpCraftable": true
  },
  {
@@ -3710,10 +3710,10 @@
   "category": "shippables",
   "faction": "Both",
   "cost": {
-   "bmats": 300
+   "bmats": 100
   },
-  "amountProduced": 3,
-  "producedBy": "factory",
+  "amountProduced": 1,
+  "producedBy": "construction-yard",
   "isMfpCraftable": true
  },
  {

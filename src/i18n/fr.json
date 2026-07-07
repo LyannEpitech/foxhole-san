@@ -255,7 +255,7 @@
     "place": "Placer",
     "move": "Déplacer",
     "clickToPlace": "Cliquez sur la carte pour placer : {{name}}",
-    "suggestion": "Structure monde correspondante la plus proche entourée en rouge ({{region}})",
+    "suggestion": "Structures monde correspondantes entourées en rouge — la plus proche : {{region}}",
     "multiTargets": "{{count}} articles",
     "flows": "Flux",
     "placeBoth": "placez les deux extrémités pour tracer le trait",

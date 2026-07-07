@@ -255,7 +255,7 @@
     "place": "Place",
     "move": "Move",
     "clickToPlace": "Click the map to place: {{name}}",
-    "suggestion": "Nearest matching world structure circled in red ({{region}})",
+    "suggestion": "Matching world structures circled in red — nearest: {{region}}",
     "multiTargets": "{{count}} articles",
     "flows": "Flows",
     "placeBoth": "place both endpoints to draw the line",

@@ -160,19 +160,16 @@ export function DeployModule() {
     const labelFs = vw * 0.008;
     return (
       <g>
-        {/* Placement guidance: candidate world structures + the recommended one in red */}
+        {/* Placement guidance: every matching world structure ringed in red
+            for visibility; the nearest one gets an extra dashed halo. */}
         {guidance && (
           <g pointerEvents="none">
-            {guidance.candidates.map((c, i) =>
-              c === guidance.nearest ? null : (
-                <circle key={`cand-${i}`} cx={c.x} cy={c.y} r={nodeR * 1.15}
-                  fill="none" stroke="#fbbf24" strokeWidth={nodeR * 0.09} opacity={0.55} />
-              ),
-            )}
-            <circle cx={guidance.nearest.x} cy={guidance.nearest.y} r={nodeR * 1.5}
-              fill="none" stroke="#ef4444" strokeWidth={nodeR * 0.18} />
+            {guidance.candidates.map((c, i) => (
+              <circle key={`cand-${i}`} cx={c.x} cy={c.y} r={nodeR * 1.4}
+                fill="none" stroke="#ef4444" strokeWidth={nodeR * 0.15} opacity={0.9} />
+            ))}
             <circle cx={guidance.nearest.x} cy={guidance.nearest.y} r={nodeR * 2.1}
-              fill="none" stroke="#ef4444" strokeWidth={nodeR * 0.07} opacity={0.6}
+              fill="none" stroke="#ef4444" strokeWidth={nodeR * 0.09}
               strokeDasharray={`${nodeR * 0.4} ${nodeR * 0.3}`} />
           </g>
         )}

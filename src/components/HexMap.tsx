@@ -69,7 +69,7 @@ const [BX, BY, BW, BH] = WORLD_BOUNDS;
 const PAD = 400;
 const VIEW = { x: BX - PAD, y: BY - PAD, w: BW + 2 * PAD, h: BH + 2 * PAD };
 const MIN_ZOOM = 1;
-const MAX_ZOOM = 10;
+const MAX_ZOOM = 40;
 /** Below this zoom, API markers are grouped into count bubbles. */
 const CLUSTER_MAX_ZOOM = 2.6;
 
@@ -316,9 +316,14 @@ export function HexMap({
     .filter((r): r is Region => !!r)
     .map((r) => r.center);
 
-  const fontSize = Math.max(180, 420 / zoom);
+  // Region names: readable when zoomed out, but capped to a fraction of the
+  // viewport so they don't dominate when deeply zoomed (town labels take over).
+  const fontSize = Math.min(vw * 0.05, Math.max(180, 420 / zoom));
   // Sizes tied to the viewport so elements keep a constant on-screen size.
-  const apiIconSize = vw * 0.018;
+  // World-structure icons additionally shrink on screen the deeper you zoom,
+  // so heavy zoom reveals the underlying terrain instead of a wall of icons.
+  const iconShrink = Math.max(0.35, Math.min(1, Math.sqrt(CLUSTER_MAX_ZOOM / zoom)));
+  const apiIconSize = vw * 0.018 * iconShrink;
   const pointSize = vw * 0.022;
   const arrowWidth = vw * 0.007;
   const textSize = vw * 0.02;

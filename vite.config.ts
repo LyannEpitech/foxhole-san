@@ -37,6 +37,15 @@ export default defineConfig({
             },
           },
           {
+            // Detected road network overlay — static, fetched on first toggle.
+            urlPattern: /\/roads\.geojson$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'fsak-roads',
+              expiration: { maxEntries: 2, maxAgeSeconds: 60 * 60 * 24 * 90 },
+            },
+          },
+          {
             urlPattern: /^https:\/\/war-service-live\.foxholeservices\.com\//,
             handler: 'NetworkFirst',
             options: { cacheName: 'fsak-warapi', networkTimeoutSeconds: 6 },

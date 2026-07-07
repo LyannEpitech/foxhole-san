@@ -63,6 +63,8 @@ interface Props {
   regionTint?: Map<string, string>;
   /** A2.1 — static town/field labels in world coordinates. */
   staticLabels?: { x: number; y: number; text: string; major: boolean }[];
+  /** Detected in-game roads (world-coordinate polylines). */
+  roads?: { points: [number, number][]; confidence: number }[];
 }
 
 const [BX, BY, BW, BH] = WORLD_BOUNDS;
@@ -117,6 +119,7 @@ export function HexMap({
   overlay,
   regionTint,
   staticLabels,
+  roads,
 }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
   const [zoom, setZoom] = useState(1);
@@ -422,6 +425,32 @@ export function HexMap({
           />
         );
       })}
+
+      {/* Detected in-game road network (world-coordinate polylines) */}
+      {roads &&
+        roads.map((r, i) => {
+          let lo0 = Infinity, hi0 = -Infinity, lo1 = Infinity, hi1 = -Infinity;
+          for (const [x, y] of r.points) {
+            if (x < lo0) lo0 = x;
+            if (x > hi0) hi0 = x;
+            if (y < lo1) lo1 = y;
+            if (y > hi1) hi1 = y;
+          }
+          if (hi0 < minVX || lo0 > maxVX || hi1 < minVY || lo1 > maxVY) return null;
+          return (
+            <polyline
+              key={`road-${i}`}
+              points={r.points.map((p) => p.join(',')).join(' ')}
+              fill="none"
+              stroke="#2dd4bf"
+              strokeWidth={vw * 0.0016}
+              strokeLinejoin="round"
+              strokeLinecap="round"
+              opacity={0.9}
+              pointerEvents="none"
+            />
+          );
+        })}
 
       {/* B2 — region ownership tint */}
       {regionTint &&

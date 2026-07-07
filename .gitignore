@@ -10,3 +10,9 @@ graphify-out/
 # stray scratchpad verification scripts
 .shot*.mjs
 .verify*.mjs
+
+# road-extraction tool (Python venv + intermediate outputs)
+tools/extract-roads/.venv/
+tools/extract-roads/out/
+tools/extract-roads/**/__pycache__/
+tools/extract-roads/__pycache__/

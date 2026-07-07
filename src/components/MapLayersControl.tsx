@@ -10,6 +10,7 @@ export function MapLayersControl() {
   const {
     loading, progress, layers, toggleLayer, refresh,
     showControl, showLabels, toggleControl, toggleLabels,
+    showRoads, toggleRoads,
   } = useMapDataStore();
 
   return (
@@ -32,6 +33,10 @@ export function MapLayersControl() {
       <label className="flex items-center gap-1 text-xs text-slate-300">
         <input type="checkbox" checked={showLabels} onChange={toggleLabels} className="accent-amber-500" />
         {t('map.layer.labels')}
+      </label>
+      <label className="flex items-center gap-1 text-xs text-slate-300">
+        <input type="checkbox" checked={showRoads} onChange={toggleRoads} className="accent-amber-500" />
+        {t('map.layer.roads')}
       </label>
       <button
         type="button"

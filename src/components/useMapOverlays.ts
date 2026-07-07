@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { REGIONS } from '../data/regions';
 import { useMapDataStore } from '../store/mapDataStore';
 import { useStaticStore } from '../store/staticStore';
@@ -72,6 +72,65 @@ export function useStaticLabels(enabled: boolean): WorldLabel[] | undefined {
     }
     return out;
   }, [enabled, labels]);
+}
+
+/** A polyline of a detected road, already in world coordinates. */
+export interface RoadLine {
+  points: [number, number][];
+  /** Road class ("road", or "paved"/"dirt" if tiering is enabled). */
+  cls: string;
+  /** Mean ridge strength along the line (0..1); higher = more road-like. */
+  confidence: number;
+}
+
+interface RoadGeoJSON {
+  features: {
+    geometry: { type: string; coordinates: number[][] };
+    properties: { class?: string; confidence?: number };
+  }[];
+}
+
+// Module-level cache so the (static) road network is fetched at most once.
+let roadsCache: RoadLine[] | null = null;
+let roadsPromise: Promise<RoadLine[]> | null = null;
+
+function loadRoads(): Promise<RoadLine[]> {
+  if (roadsCache) return Promise.resolve(roadsCache);
+  if (!roadsPromise) {
+    roadsPromise = fetch(`${import.meta.env.BASE_URL}roads.geojson`)
+      .then((r) => (r.ok ? (r.json() as Promise<RoadGeoJSON>) : Promise.reject(r.status)))
+      .then((gj) => {
+        roadsCache = gj.features.map((f) => ({
+          points: f.geometry.coordinates as [number, number][],
+          cls: f.properties.class ?? 'road',
+          confidence: f.properties.confidence ?? 1,
+        }));
+        return roadsCache;
+      })
+      .catch(() => {
+        roadsPromise = null; // allow a later retry
+        return [];
+      });
+  }
+  return roadsPromise;
+}
+
+/**
+ * Detected in-game road network (from tools/extract-roads), lazy-fetched from
+ * public/roads.geojson the first time the layer is enabled. Coordinates are
+ * already world units, so no projection is needed.
+ */
+export function useRoads(enabled: boolean): RoadLine[] | undefined {
+  const [roads, setRoads] = useState<RoadLine[] | null>(roadsCache);
+  useEffect(() => {
+    if (!enabled || roads) return;
+    let alive = true;
+    void loadRoads().then((r) => alive && setRoads(r));
+    return () => {
+      alive = false;
+    };
+  }, [enabled, roads]);
+  return enabled ? roads ?? undefined : undefined;
 }
 
 /** Overlay toggles shared by every map (persist-free, session state). */

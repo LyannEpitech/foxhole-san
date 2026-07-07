@@ -263,7 +263,7 @@
     "transport": "Transport",
     "reset": "Reset layout",
     "kind": { "source": "deposit", "building": "building", "output": "product" },
-    "cargo": { "liquid": "liquids", "bulk": "raw resources", "crate": "crates" }
+    "cargo": { "liquid": "liquids", "raw": "raw resources", "refined": "refined materials", "crate": "crates" }
   },
   "logi": {
     "cargo": "Cargo manifest",

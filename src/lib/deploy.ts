@@ -110,16 +110,32 @@ export function buildDeployGraph(
 
 const LIQUIDS = new Set(['oil', 'water', 'petrol', 'diesel', 'heavy-oil', 'enriched-oil']);
 
-export type CargoClass = 'liquid' | 'bulk' | 'crate';
+// Cargo classes, matching the game's transport rules (wiki-verified
+// 2026-07-07):
+//  - liquid: fuel/water — carried ONLY by fuel tankers or a Liquid Container.
+//  - raw:    mined resources (salvage, components, coal, sulfur, ores) — go
+//            in resource-hopper trucks, a Resource Container (raw only,
+//            5000), or loose in a general truck.
+//  - refined: refined materials (bmats, rmats, coke, assembly mats…) — do
+//            NOT fit hoppers or Resource Containers; carried loose in a
+//            general truck or crated onto flatbeds / Shipping Containers.
+//  - crate:  finished items (weapons, ammo, vehicles as crates) — general
+//            trucks, flatbeds, Shipping Container (crates only, 60).
+export type CargoClass = 'liquid' | 'raw' | 'refined' | 'crate';
 
-/** Dominant cargo class of an edge (liquids > raw bulk > crates). */
+/** Dominant cargo class of an edge (liquid > raw > refined > crate). */
 export function cargoClassOf(data: Dataset, resources: { refId: string }[]): CargoClass {
-  let hasBulk = false;
+  let hasRaw = false;
+  let hasRefined = false;
   for (const { refId } of resources) {
     if (LIQUIDS.has(refId)) return 'liquid';
-    if (data.resources.get(refId)?.kind === 'raw') hasBulk = true;
+    const kind = data.resources.get(refId)?.kind;
+    if (kind === 'raw') hasRaw = true;
+    else if (kind === 'refined') hasRefined = true;
   }
-  return hasBulk ? 'bulk' : 'crate';
+  if (hasRaw) return 'raw';
+  if (hasRefined) return 'refined';
+  return 'crate';
 }
 
 export interface TransportOption {
@@ -131,17 +147,28 @@ export interface TransportOption {
 /** id -> generic (non-item) label */
 const GENERIC: Record<CargoClass, LocalizedString[]> = {
   liquid: [{ en: 'Train — liquid wagon', fr: 'Train — wagon-citerne' }],
-  bulk: [{ en: 'Train — resource wagon', fr: 'Train — wagon de ressources' }],
+  raw: [{ en: 'Train — resource wagon', fr: 'Train — wagon de ressources' }],
+  refined: [{ en: 'Train — resource wagon', fr: 'Train — wagon de ressources' }],
   crate: [{ en: 'Train — container wagon', fr: 'Train — wagon conteneur' }],
 };
 
+// General-purpose trucks (loose resources or crates), flatbed and freighters
+// reused across the non-liquid classes.
+const GENERAL_TRUCKS = ['r-1-hauler', 'dunne-transport'];
+const CRATE_HAULERS = ['bms-packmule-flatbed', 'shipping-container', 'bms-bluefin', 'bms-longhook'];
+
 const ITEM_OPTIONS: Record<CargoClass, string[]> = {
+  // Fuel tankers + liquid container only — hard requirement.
   liquid: ['dunne-fuelrunner-2d', 'rr-3-stolon-tanker', 'liquid-container'],
-  bulk: ['bms-scrap-hauler', 'r-5-atlas-hauler', 'dunne-loadlugger-3c', 'resource-container', 'bms-bowhead'],
-  crate: [
-    'r-1-hauler', 'dunne-transport', 'bms-packmule-flatbed', 'dunne-loadlugger-3c',
-    'r-5-atlas-hauler', 'shipping-container', 'bms-bluefin', 'bms-longhook',
+  // Hoppers + resource container (raw only) + general trucks + freighter.
+  raw: [
+    'bms-scrap-hauler', 'r-5-atlas-hauler', 'dunne-loadlugger-3c', 'resource-container',
+    ...GENERAL_TRUCKS, 'bms-bowhead',
   ],
+  // Loose in a general truck or crated — never hoppers / resource container.
+  refined: [...GENERAL_TRUCKS, ...CRATE_HAULERS],
+  // Finished crated goods — general trucks + flatbeds + shipping container.
+  crate: [...GENERAL_TRUCKS, ...CRATE_HAULERS],
 };
 
 /** Transports compatible with the edge's cargo, filtered by faction. */

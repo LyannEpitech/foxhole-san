@@ -301,17 +301,42 @@ describe('buildDeployGraph — production plan projected on the map', () => {
     expect(orderOf('bld:factory->out:shell')).toBe(g.edges.length);
   });
 
-  it('classifies cargo and proposes compatible faction-filtered transports', () => {
+  it('classifies cargo by the strictest transport constraint', () => {
+    // liquid > raw > refined > crate
     expect(cargoClassOf(dataset, [{ refId: 'diesel' }])).toBe('liquid');
-    expect(cargoClassOf(dataset, [{ refId: 'salvage' }, { refId: 'bmats' }])).toBe('bulk');
-    expect(cargoClassOf(dataset, [{ refId: 'bmats' }])).toBe('crate');
+    expect(cargoClassOf(dataset, [{ refId: 'salvage' }, { refId: 'bmats' }])).toBe('raw');
+    expect(cargoClassOf(dataset, [{ refId: 'bmats' }, { refId: 'hemats' }])).toBe('refined');
+    expect(cargoClassOf(dataset, [{ refId: 'shell' }])).toBe('crate'); // a finished item
+  });
 
-    const liquidW = transportOptions(dataset, 'liquid', 'Warden').map((o) => o.itemId);
-    expect(liquidW).toContain('dunne-fuelrunner-2d');
-    expect(liquidW).not.toContain('rr-3-stolon-tanker'); // Colonial tanker filtered out
-    const liquidC = transportOptions(dataset, 'liquid', 'Colonial').map((o) => o.itemId);
-    expect(liquidC).toContain('rr-3-stolon-tanker');
-    // Generic train option always closes the list
+  it('offers only game-legal transports per cargo class', () => {
+    const ids = (c: 'liquid' | 'raw' | 'refined' | 'crate', f: 'Colonial' | 'Warden') =>
+      transportOptions(dataset, c, f).map((o) => o.itemId);
+
+    // Liquids: fuel tankers + liquid container only, faction-filtered.
+    expect(ids('liquid', 'Warden')).toContain('dunne-fuelrunner-2d');
+    expect(ids('liquid', 'Warden')).not.toContain('rr-3-stolon-tanker'); // Colonial
+    expect(ids('liquid', 'Colonial')).toContain('rr-3-stolon-tanker');
+    expect(ids('liquid', 'Warden')).not.toContain('r-1-hauler'); // general trucks can't carry fuel
+
+    // Raw resources: hoppers + resource container allowed.
+    expect(ids('raw', 'Colonial')).toEqual(
+      expect.arrayContaining(['r-5-atlas-hauler', 'resource-container']),
+    );
+
+    // Refined + crated: general trucks / flatbeds / shipping container —
+    // never the raw-only hoppers or the Resource Container.
+    for (const cls of ['refined', 'crate'] as const) {
+      expect(ids(cls, 'Warden')).toContain('dunne-transport'); // Warden general truck
+      expect(ids(cls, 'Colonial')).toContain('r-1-hauler'); // Colonial general truck
+      const list = ids(cls, 'Warden');
+      expect(list).toContain('shipping-container'); // faction-neutral
+      expect(list).not.toContain('dunne-loadlugger-3c'); // raw-only hopper
+      expect(list).not.toContain('r-5-atlas-hauler'); // raw-only hopper
+      expect(list).not.toContain('resource-container'); // raw only
+    }
+
+    // Generic train option always closes the list.
     expect(transportOptions(dataset, 'crate', 'Warden').some((o) => o.itemId === null)).toBe(true);
   });
 });

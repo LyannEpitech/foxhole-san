@@ -263,7 +263,7 @@
     "transport": "Transport",
     "reset": "Réinitialiser le placement",
     "kind": { "source": "gisement", "building": "bâtiment", "output": "produit" },
-    "cargo": { "liquid": "liquides", "bulk": "ressources brutes", "crate": "caisses" }
+    "cargo": { "liquid": "liquides", "raw": "ressources brutes", "refined": "matériaux raffinés", "crate": "caisses" }
   },
   "logi": {
     "cargo": "Manifeste de cargaison",

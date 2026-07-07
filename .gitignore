@@ -6,3 +6,7 @@ dist/
 coverage/
 .DS_Store
 graphify-out/
+
+# stray scratchpad verification scripts
+.shot*.mjs
+.verify*.mjs

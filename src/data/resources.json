@@ -85,7 +85,7 @@
    "en": "Petrol (L)",
    "fr": "Essence (L)"
   },
-  "kind": "raw"
+  "kind": "refined"
  },
  {
   "id": "heavy-oil",
@@ -93,7 +93,7 @@
    "en": "Heavy Oil (L)",
    "fr": "Huile lourde (L)"
   },
-  "kind": "raw"
+  "kind": "refined"
  },
  {
   "id": "coke",
@@ -285,7 +285,7 @@
    "en": "Gravel",
    "fr": "Gravier"
   },
-  "kind": "raw"
+  "kind": "refined"
  },
  {
   "id": "aluminum",

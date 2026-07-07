@@ -17,6 +17,9 @@ interface Props {
   markers?: MapMarker[];
   /** Module-specific controls rendered under the tool palette overlay. */
   extraControls?: React.ReactNode;
+  /** Passthroughs to HexMap for module-specific interactions. */
+  overlay?: React.ReactNode | ((ctx: { vw: number; zoom: number }) => React.ReactNode);
+  onMapClick?: (pos: [number, number]) => void;
 }
 
 /** Small 24x24 stroke icon used in the toolbar. */
@@ -142,6 +145,8 @@ export function PlanMap({
   routeColor,
   markers,
   extraControls,
+  overlay,
+  onMapClick,
 }: Props) {
   const { t } = useTranslation();
   const { annotations, tool, setTool, addPoint, addArrow, addStroke, addText, remove, clear,
@@ -205,6 +210,8 @@ export function PlanMap({
         textPlaceholder={t('map.textPlaceholder')}
         regionTint={regionTint}
         staticLabels={staticLabels}
+        overlay={overlay}
+        onMapClick={onMapClick}
       />
 
       {/* Top-left overlay: tool palette + module controls */}

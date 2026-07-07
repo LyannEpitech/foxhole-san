@@ -44,8 +44,13 @@ interface AttackState {
   objectiveRegion: string | null;
   /** Region where the force assembles. */
   stagingRegion: string | null;
+  /** B4 — artillery gun/target positions in world coordinates. */
+  artyGun: [number, number] | null;
+  artyTarget: [number, number] | null;
   setObjective: (regionId: string | null) => void;
   setStaging: (regionId: string | null) => void;
+  setArtyGun: (pos: [number, number] | null) => void;
+  setArtyTarget: (pos: [number, number] | null) => void;
   setSoldiers: (n: number) => void;
   addLoadoutRow: () => void;
   updateLoadoutRow: (index: number, row: LoadoutRow) => void;
@@ -63,6 +68,8 @@ export const useAttackStore = create<AttackState>()(persist((set) => ({
   presets: [],
   objectiveRegion: null,
   stagingRegion: null,
+  artyGun: null,
+  artyTarget: null,
 
   savePreset: (name) =>
     set((s) => ({
@@ -81,6 +88,8 @@ export const useAttackStore = create<AttackState>()(persist((set) => ({
 
   setObjective: (objectiveRegion) => set({ objectiveRegion }),
   setStaging: (stagingRegion) => set({ stagingRegion }),
+  setArtyGun: (artyGun) => set({ artyGun }),
+  setArtyTarget: (artyTarget) => set({ artyTarget }),
   setSoldiers: (soldiers) => set({ soldiers: Math.max(1, soldiers) }),
 
   addLoadoutRow: () => set((s) => ({ loadout: [...s.loadout, { itemId: '', perSoldier: 1 }] })),
@@ -105,5 +114,7 @@ export const useAttackStore = create<AttackState>()(persist((set) => ({
     presets: s.presets,
     objectiveRegion: s.objectiveRegion,
     stagingRegion: s.stagingRegion,
+    artyGun: s.artyGun,
+    artyTarget: s.artyTarget,
   }),
 }));

@@ -215,7 +215,12 @@
     "spotterToTarget": "Spotter → target",
     "solution": "Firing solution",
     "outOfRange": "Out of range for this piece ({{min}}–{{max}} m)",
-    "note": "Wiki ranges. Wind and accuracy dispersion are not modeled — correct on observation."
+    "note": "Wiki ranges. Wind and accuracy dispersion are not modeled — correct on observation.",
+    "placeGun": "Place the gun",
+    "placeTarget": "Place the target",
+    "mapHint": "Click the map to drop the marker, then drag markers to fine-tune. Range rings follow the selected piece.",
+    "noMarkers": "Place the gun and the target on the map to get a firing solution.",
+    "manual": "Manual entry (via spotter)"
   },
   "plans": {
     "title": "Plans",

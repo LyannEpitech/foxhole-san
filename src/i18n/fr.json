@@ -215,7 +215,12 @@
     "spotterToTarget": "Observateur → cible",
     "solution": "Solution de tir",
     "outOfRange": "Hors de portée pour cette pièce ({{min}}–{{max}} m)",
-    "note": "Portées wiki. Vent et dispersion non modélisés — corrigez à l'observation."
+    "note": "Portées wiki. Vent et dispersion non modélisés — corrigez à l'observation.",
+    "placeGun": "Placer le canon",
+    "placeTarget": "Placer la cible",
+    "mapHint": "Cliquez sur la carte pour déposer le marqueur, puis glissez les marqueurs pour ajuster. Les anneaux de portée suivent la pièce sélectionnée.",
+    "noMarkers": "Placez le canon et la cible sur la carte pour obtenir une solution de tir.",
+    "manual": "Saisie manuelle (via observateur)"
   },
   "plans": {
     "title": "Plans",
